@@ -1,31 +1,29 @@
 \section{Capitolato C5 - Stalker}
 \subsection{Descrizione Generale}
-Lo scopo di questo progetto è la creazione di una applicazione mobile in grado di segnare ad un serve dedicato l'ingresso  e l'uscita, del proprietario del dispositivo, da una determinata area di interesse.
+Lo scopo di questo progetto è la creazione di un'applicazione mobile che permette di identificare l'entrata e l'uscita da una determinata area di interesse.
 \subsection{Finalità di progetto}% accorciare
-Nel progetto si possono distinguere due situazioni distinte: tracciamento del singolo individuo all'intero di un luogo di lavoro, tracciamento delle persone presenti all'interno di un luogo pubblico, come una fiera. Il serve dedicato deve essere in grado di gestire varie organizzazioni e pemettere di distinguere il tipo di tracciatura. L'applicazione deve quindi essere in grado di effettuare il recupero della lista di organizzazioni, permettere all'utente di effettuare la registrazione ad una determinata organizzazione, permettere all'utente di effettuare il login, memorizzare lo storico degli accessi, visualizzare in tempo reale la presenza all'interno di un luogo monitorato, e permettere all'untente di risultare presente in maniera anonima all'interno di una struttura.
+L'obiettivo è quello di creare un'applicazione che permette di tracciare e monitorare lo spostamento di una persona in una determinata area. L'applicazione deve permettere all'utente di effettuare la registrazione, e quindi essere identificato nei luoghi dove richiesto (per esempio nel luogo di lavoro), oppure permettere all'utente di registrarsi in maniera anonima, nelle strutture dove non è prevista la registrazione (per esempio in una fiera).
 \subsection{Tecnologie interessate}
 Le tecnologie consigliate sono:
-%• utilizzo di protocolli asincroni per le comunicazioni app mobile-server;
-%• utilizzo del pattern di Publisher/Subscriberiii;
 %• utilizzo dell’IAAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del Server nonché per la gestione della scalabilità orizzontale.  
 \begin{itemize} %Da segnare sul glossario?
-	\item \textbf{Java(versione 8 o superiori)}/\textbf{Python}/\textbf{Nodejs}: come linguaggi da utilizzare per la sviluppazione del server back-end.
-	\item \textbf{IAAS Kubernetes}/\textbf{PAAS}/\textbf{Openshift}/\textbf{Rancher}:
-	\item \textbf{Android}: sistema operativo dove sviluppare l'applicazione.
-	\item \textbf{GPS}: per la localizzazione.
+	\item \textbf{Java\glo(versione 8 o superiori)}/\textbf{Python\glo}/\textbf{Nodejs\glo}: come linguaggi da utilizzare per la sviluppazione del server back-end;
+	\item \textbf{IAAS Kubernetes\glo}/\textbf{PAAS\glo}/\textbf{Openshift\glo}/\textbf{Rancher\glo}:
+	\item \textbf{Android\glo}: sistema operativo dove sviluppare l'applicazione;
+	\item \textbf{GPS\glo}: per la localizzazione.
 \end{itemize}
 \subsection{Aspetti positivi}
 Gli aspetti positivi sono:
 \begin{itemize}
-	\item L'apprendimento di tecnologie che non si studiano all'università.
-	\item Possibilità di comprendere nel dettaglio il funzionamento e le metodologie utilizzate per la localizzazione.
+	\item l'apprendimento di tecnologie che non si studiano all'università;
+	\item possibilità di comprendere nel dettaglio il funzionamento e le metodologie utilizzate per la localizzazione.
 	
 \end{itemize}
 \subsection{Aspetti negativi}
 Gli aspetti negativi sono:
 \begin{itemize}
-	\item Difficoltà di tracciamento all'interno di un ambiente chiuso. Quindi presenza di un margine di errore.
-	\item Limite dato dalla batteria del dispositivo.
+	\item difficoltà di tracciamento all'interno di un ambiente chiuso. Quindi presenza di un margine di errore;
+	\item limite dato dalla batteria del dispositivo.
 	
 \end{itemize}
 \subsection{Valutazione conclusiva}
