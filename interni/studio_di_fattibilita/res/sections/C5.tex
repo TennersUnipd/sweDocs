@@ -1,28 +1,28 @@
 \section{Capitolato C5 - Stalker}
 \subsection{Descrizione Generale}
-Lo scopo di questo progetto è la creazione di un'applicazione mobile che permette di identificare l'entrata e l'uscita da una determinata area di interesse.
-\subsection{Finalità di progetto}% accorciare
-L'obiettivo è quello di creare un'applicazione che permette di tracciare e monitorare lo spostamento di una persona in una determinata area. L'applicazione deve permettere all'utente di effettuare la registrazione, e quindi essere identificato nei luoghi dove richiesto (per esempio nel luogo di lavoro), oppure permettere all'utente di registrarsi in maniera anonima, nelle strutture dove non è prevista la registrazione (per esempio in una fiera).
+Lo scopo del progetto, proposto da Imola Informatica, è la creazione di un'applicazione mobile che permetta di identificare l'entrata e l'uscita da una determinata area di interesse.
+\subsection{Finalità di progetto}
+Il prodotto finale dovrà essere strutturato nelle seguenti parti:
+\begin{itemize}
+	\item un applicativo mobile che consenta all'utente finale di registrare la propria presenza. Essa verrà segnalata in maniera anonima o trasmettendo al server il proprio identificativo in base alla tipologia del luogo di interesse. L'utente avrà la possibilità di visualizzare in tempo reale la propria presenza all'interno del luogo e da quanto tempo si trova al suo interno;
+	\item una UI\glo dedicata, dove gli amministratori avranno la possibilità di eseguire il login all'interno del server e di gestire gli eventi di interesse e lo storico degli ingressi di ciascuna persona.
+\end{itemize}
 \subsection{Tecnologie interessate}
 Le tecnologie consigliate sono:
 %• utilizzo dell’IAAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del Server nonché per la gestione della scalabilità orizzontale.  
 \begin{itemize} %Da segnare sul glossario?
-	\item \textbf{Java\glo(versione 8 o superiori)}/\textbf{Python\glo}/\textbf{Nodejs\glo}: come linguaggi da utilizzare per la sviluppazione del server back-end;
-	\item \textbf{IAAS Kubernetes\glo}/\textbf{PAAS\glo}/\textbf{Openshift\glo}/\textbf{Rancher\glo}:
-	\item \textbf{Android\glo}: sistema operativo dove sviluppare l'applicazione;
-	\item \textbf{GPS\glo}: per la localizzazione.
+	\item \textbf{Java\glo(versione 8 o superiori)}/\textbf{Python\glo}/\textbf{Nodejs\glo}: come linguaggi da utilizzare per la sviluppo del server back-end;
+	\item \textbf{IAAS Kubernetes\glo}/\textbf{PAAS\glo}/\textbf{Openshift\glo}/\textbf{Rancher\glo}: piattaforme per applicazioni per il rilascio delle componenti del Server e la gestione della scalabilità orizzontale.
+	\item \textbf{Android\glo}/\textbf{IOS\glo}: sistema operativo dove sviluppare l'applicazione;
+	\item \textbf{GPS\glo}: per localizzare il dispositivo.
 \end{itemize}
 \subsection{Aspetti positivi}
-Gli aspetti positivi sono:
 \begin{itemize}
-	\item l'apprendimento di tecnologie che non si studiano all'università;
-	\item possibilità di comprendere nel dettaglio il funzionamento e le metodologie utilizzate per la localizzazione.
-	
+	\item Possibilità di comprendere nel dettaglio il funzionamento e le metodologie utilizzate per la localizzazione.
 \end{itemize}
-\subsection{Aspetti negativi}
-Gli aspetti negativi sono:
+\subsection{Criticità}
 \begin{itemize}
-	\item difficoltà di tracciamento all'interno di un ambiente chiuso;
-	\item limite dato dalla batteria del dispositivo.
+	\item Come specificato durante la presentazione del capitolato potrebbero esserci difficoltà di tracciamento all'interno di un ambiente chiuso e problematiche derivanti dalla batteria limitata del dispositivo.
 \end{itemize}
 \subsection{Valutazione conclusiva}
+Il capitolato non è stato scelto dal gruppo per l'utilizzo di tecnologie ritenute poco interessanti, oltre che per la considerevole mole di lavoro preventivata nello sviluppo delle varie parti del prodotto. Oltretutto la criticità relativa alla localizzazione in ambienti chiusi ha fatto si che il gruppo spostasse il proprio interesse verso altri capitolati.
