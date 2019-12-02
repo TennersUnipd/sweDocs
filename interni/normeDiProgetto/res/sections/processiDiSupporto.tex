@@ -1,0 +1,33 @@
+\section{Processi di supporto}
+  \subsection{Documentazione}
+
+  \subsubsection{Scopo}
+  Ogni processo di sviuluppo e attivit\`a significativa atta allo sviluppo che siano documenti o software necessita di documentazione.
+  Questa sezione in particolare si occupa di documentare il processo di stesura e gestione di tale processo quando si redige un documento.
+  I documenti verranno rilasciati nel repository\glo.
+  \href{https://github.com/Jatus93/sweDocs}{link temporaneo}
+
+  \subsubsection{Aspettative}
+  Le aspettativa di questa parte di documento \`e la definizione di norme con le
+  quali si gestiscono i documenti dalla creazione all'approvazione.
+
+  \subsubsection{Descrizione}
+  Questa parte del documento contiene le decisoni che sono state prese per una
+  migliore gestione dei documenti a cui tutti si devono attenere per produrre un
+  documento valido e ufficiale, senza eccezioni.
+
+  \subsubsection{Ciclo di vita del documento}
+  Ogni documento segue diverse farsi del ciclo di vita:
+  \begin{itemize}
+    \item \textbf{Preparazione alla creazione di un documento}: come da norme di sviluppo interne per ogni nuova componente del progetto è necessaro creare un feature branch\glo con il nome del componente in snake case\glo dopodich\'e si potr\`a creare il documento;
+
+    \item \textbf{Creazione del documento}: il documento deve essere creato in un percorso che ne rifletta la destinazione d'uso, interno o esterno, e all'interno di una cartella che indichi il nome del del documento in camel case\glo al suo interno vi sar\`a il file main.tex;
+
+    \item \textbf{Preparazione al primo push e push in repository}: prima del primo push bisogna modificare il file .filesToCompile con il path del documento, questo è necessario alla github action\glo per testare in maniera continuativa la stesura del documento e fare una varifica della validit\`a del codice \LaTeX \space utilizzato per scriverlo;
+
+    \item \textbf{Realizzazione}: il documento viene scritto in maniera incrementale considerando le osservazioni e le necissit\`a che si evidenziano nel corso del progetto
+
+    \item \textbf{Revisione delle modifiche}: dopo che il processo della github action\glo è terminato con esito posivitivo è possibile marcare il documento pronto per la verifica e quindi si può fare richiesta di merge\glo con il branch\glo development dove il documento verr\`a sottoposto a verifica manuale dei verificatori assegnati i quali, in caso di esito positivo, produranno il file PDF da far approvare al responsabile altrimenti lo informeranno  che il file non ha superato il processo di verifica il quale si preoccuper\`a di marcare il documento da completare con le note di riferimento;
+
+    \item \textbf{Approvato}: il responsabile di progetto dopo aver letto le modifiche al documento e averle ritenute adeguate marcher\`a il documento pronto per la release\glo facendo il merge\glo sul branch master\glo
+  \end{itemize}
