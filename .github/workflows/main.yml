@@ -1,0 +1,15 @@
+name: Continuos Testing
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository contents
+      uses: actions/checkout@v1
+        
+    - name: Latex-multicompiler
+      uses: Jatus93/Latex-multicompiler@0.0.4d
