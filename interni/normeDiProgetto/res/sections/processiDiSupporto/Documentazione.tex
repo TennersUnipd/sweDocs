@@ -1,0 +1,91 @@
+\section{Processi di supporto}
+\subsection{Documentazione}
+
+\subsubsection{Scopo}
+Ogni processo di sviuluppo e attivit\`a significativa atta allo sviluppo che
+siano documenti o software necessita di documentazione.
+Questa sezione in particolare si occupa di documentare il processo di stesura e
+gestione di tale processo quando si redige un documento.
+I documenti verranno rilasciati nel repository\glo.
+\href{https://github.com/Jatus93/sweDocs}{link temporaneo}
+
+\subsubsection{Aspettative}
+Le aspettative di questa parte di documento sono la definizione di norme con le
+quali si gestiscono i documenti dalla creazione all'approvazione.
+
+\subsubsection{Descrizione}
+Questa parte del documento contiene le decisoni che sono state prese per una
+migliore gestione dei documenti a cui tutti si devono attenere per produrre un
+documento valido e ufficiale, senza eccezioni.
+
+\subsubsection{Ciclo di vita del documento}
+Ogni documento segue diverse farsi del ciclo di vita:
+\begin{itemize}
+  \item \textbf{Preparazione alla creazione di un documento}: come da norme di
+  sviluppo interne per ogni nuova componente del progetto \`e necessaro creare un
+  feature branch\glo con il nome del componente in snake case\glo dopodich\'e
+  si potr\`a creare il documento;
+
+  \item \textbf{Creazione del documento}: il documento deve essere creato in un
+  percorso che ne rifletta la destinazione d'uso, interno o esterno, e
+  all'interno di una cartella che indichi il nome del del documento in
+  camel case\glo al suo interno vi sar\`a il file main.tex;
+
+  \item \textbf{Preparazione al primo push e push in repository}: prima del primo
+   push bisogna modificare il file .filesToCompile con il path del documento,
+   questo \`e necessario alla github action\glo per testare in maniera continuativa
+   la stesura del documento e fare una varifica della validit\`a del codice
+   \LaTeX \space utilizzato per scriverlo;
+
+  \item \textbf{Realizzazione}: il documento viene scritto in maniera incrementale
+  considerando le osservazioni e le necessit\`a che si evidenziano nel corso del
+  progetto.
+
+  \item \textbf{Verifica automatica in un feature branch}: una volta fato il push
+  sul repository del progetto se i file si trovano in una branch di sviluppo
+  sotto feature verranno compilati da i tool automatici segnalando eventuali errori;
+
+  \item \textbf{Richiesta di verifica manuale}: una volta terminata la verifica
+  automatica il redattore segnala ai verificatori che le modifiche richieste
+  sono state eseguite facendo una pull request sul branch develop;
+
+  \item \textbf{Revisione delle modifiche}: ricevuta la pull request i verificatori
+  prendono in considerazione le modifiche fatte e se ritenute adeguate, faranno a
+  loro volta una pull request sul branch master.
+
+  \item \textbf{Verifica automatica e produzione automatica del documento nel
+  branch develop}: Una volta nel branch develop i tool automatici produrrano il
+  documento in formato pdf pronto per essere approvato del Responsabile di progetto;
+
+  \item \textbf{Approvazione}: il Responsabile di progetto dopo aver ricevuto la notifica
+  di pull request su master, si preoccuper\`a di leggere le modifiche apportate al documento
+  e per approvarle accetter\`a la pull request sul branch master;
+
+  \item \textbf{Generazione del documento}: Dopo che il documento ha raggiunto il
+  branch master il sistema automatico si preoccuper\`a di creare la release del
+  documento con i relativi changelog;
+\end{itemize}
+
+\subsubsection{Template}
+\`E stato creato un template per la creazione dei documenti per uniformare la
+stesura di un documento \LaTeX \space valido, unificando il carattere logo e
+stile di formattazione del documento in modo da velocizzare il processo di
+stesura verifica e approvazione dei documenti.
+
+\subsubsection{Struttura dei documenti}
+Una directory valida per la creazione di un documento deve essere così configurata
+\begin{itemize}
+  \item /
+  \begin{itemize}
+    \item main.tex
+    \item res che contiene immagini e sezioni del documento
+    \begin{itemize}
+      \item img che contiene le immagini
+      \item sections che contiene le sezioni del documento
+    \end{itemize}
+    \item config
+    \begin{itemize}
+      \item config.tex contiene tutte le configurazioni relative al documento
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
