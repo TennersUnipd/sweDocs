@@ -17,6 +17,7 @@ jobs:
       uses: Jatus93/Latex-multicompiler@0.0.5a
       with:
         arg: -r
+
     - name: actions/upload-artifact@v1
       with:
         name: Documents.tar.gz
