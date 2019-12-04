@@ -1,7 +1,9 @@
 name: Continuos Testing
 
-on: [push]
-
+on: 
+  push:
+    branches: 
+      - 'feature/**'
 jobs:
   build:
 
@@ -10,6 +12,6 @@ jobs:
     steps:
     - name: Checkout repository contents
       uses: actions/checkout@v1
-        
+
     - name: Latex-multicompiler
-      uses: Jatus93/Latex-multicompiler@0.0.4d
+      uses: Jatus93/Latex-multicompiler@0.0.5a
