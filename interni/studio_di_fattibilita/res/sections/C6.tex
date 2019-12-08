@@ -1,7 +1,7 @@
 \section{Capitolato C6 - Things Relationship Management}
 
 \subsection{Descrizione generale}
-\textit{Sanmarco Informatica} propone lo sviluppo di un software in grado di ricevere misurazioni da sensori eterogenei, divisibili nelle macro-categorie {dati operativi} e {fattori influenzanti}, ed accumularli in uno o piú database. L'applicazione quindi deve poter fornire un servizio di dispatching, basato su Telegram, per inoltre le informazioni piú utili o urgenti per la gestione dei dispositivi installati.
+\textit{Sanmarco Informatica} propone lo sviluppo di un software in grado di ricevere misurazioni da sensori eterogenei, divisibili nelle macro-categorie {dati operativi} e {fattori influenzanti}, ed accumularli in uno o piú database. L'applicazione quindi deve poter fornire un servizio di dispatching\glos, basato su Telegram, per inoltrare le informazioni piú utili o urgenti per la gestione dei dispositivi installati.
 
 \subsection{Finalità del progetto}
 Il prodotto finale deve essere conforme ai seguenti compiti:
@@ -9,20 +9,20 @@ Il prodotto finale deve essere conforme ai seguenti compiti:
 	\item la creazione di uno o piú componenti (Producer) atti a convertire i dati inviati dai sensori in messaggi utilizzabili da Kafka (JSON);
 	\item la creazione di un componente (Connect) atto alla scrittura dei dati nel database;
 	\item la creazione di una serie di componenti (Stream) atti alla modifica e trasformazione dei dati presenti nel database;
-	\item dispatching delle informazioni basato su Telegram.
+	\item dispatching\glos delle informazioni basato su Telegram.
 \end{itemize}
 
 \subsection{Tecnologie interessate}
 \begin{itemize}
-	\item \textbf{Apache Kafka}: cluster che si interfaccia fra i sensori ed il database;
+	\item \textbf{Apache Kafka}: cluster\glos che si interfaccia fra i sensori ed il database;
 	\item \textbf{Java}: linguaggio di programmazione utilizzato per sviluppare le componenti;
-	\item \textbf{PostgreSQL}: possibile database relazione utilizzabile;
-	\item \textbf{TimescaleDB}: possibile database improntato alla gestione temporale dei dati;
+	\item \textbf{PostgreSQL}: database relazionale utilizzabile;
+	\item \textbf{TimescaleDB}: database improntato alla gestione temporale dei dati;
 	\item \textbf{ClickHouse}: database improntato alla gestione dei dati per colonna;
-	\item \textbf{Bootstrap}: libreria per la creazione della parte front-end;
-	\item \textbf{Docker}: container nel quale istanziare le componenti custom di Apache Kafka;
-	\item \textbf{Github}: sistema di versionamento;
-	\item \textbf{Telegram}: servizio tramite il quale effetturare il dispatching.
+	\item \textbf{Bootstrap}: libreria per la creazione della parte front-end\glos;
+	\item \textbf{Docker}: container\glos nel quale istanziare le componenti custom di Apache Kafka;
+	\item \textbf{Github}: sistema di versionamento\glos;
+	\item \textbf{Telegram}: servizio tramite il quale effetturare il dispatching\glos.
 \end{itemize}
 
 \subsection{Aspetti positivi}
