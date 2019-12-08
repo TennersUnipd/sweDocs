@@ -1,0 +1,58 @@
+\section{Capitolato C2 - Etherless}
+
+\subsection{Descrizione generale}
+\textit{Etherless} è una piattaforma che permette agli sviluppatori di caricare funzioni JavaScript\glo sul cloud\glo per poi renderle disponibili a terzi. Il servizio si presenta come un CaaS\glo (Computation-as-a-Service) in cui l'utente finale paga per l'esecuzione di una singola funzione in modo automatico mediante l'utilizzo della rete \textit{Ethereum}\glo e degli \textit{smart contract}\glo. 
+\subsection{Finalità del progetto}
+L'obbiettivo finale è quello di avere un ambiente in cui lo sviluppatore \textit{Bob}, dopo aver sviluppato una funzionalità che potrebbe essere di interesse per altri sviluppatori (es. \textit{Alice}), carica il suo codice JavaScript su \textit{Etherless} mediante la sua utenza e imposta un costo di esecuzione per quella funzione. \textit{Alice}, abile programmatrice, siccome ha bisogno di tale funzionalità, decide che conviene pagare la quota di esecuzione piuttosto che riscrivere la stessa procedura; attraverso la sua utenza \textit{Etherless}, \textit{Alice} è quindi capace di usufruire della funzione in cloud e sostenere il costo di esecuzione.
+\\\\
+La piattaforma deve essere conforme a quanto segue:
+\begin{itemize}
+	\item gli utenti avranno la possibilità elencare le funzioni disponibili,  caricarne di nuove, aggiornarle, eseguirle oppure eliminare attraverso una interfaccia CLI\glo;
+	\item utilizzo della rete \textit{Ethereum}\glo per la comunicazione tra i vari componenti di \textit{Etherless}, per la definizione della logica di interazione tra le varie parti (smart contract\glo) e per lo storage\glo di dati;
+	\item i ricavato monetario ricavato dall'esecuzione di una funzione deve essere distribuito all'autore del codice e al sostenimento dell'infrastruttura cloud su cui avviene l'esecuzione
+	\item la granularità del pagamento deve corrispondere alla singola esecuzione  di una funzione;
+	\item per la realizzazione dell backend deve essere prevista una infrastruttura Serverless\glo;
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+\begin{itemize}
+	\item \textbf{AWS (Amazon Web Services)}: piattaforma che si occupa di fornire servizi di cloud computing\glo;
+	\item \textbf{AWS - Lambda}: servizio che consente di eseguire codice nel cloud;
+	\item \textbf{Ethereum}: una rete globale per il trasferimento di criptovalute\glo e per la realizzazione di applicativi decentralizzati
+	\item \textbf{Solidity}: linguaggio OOP\glo per la definizione di smart contract\glo;
+	\item \textbf{Truffle}: framework per lo sviluppo di smart contract su rete Ethereum\glo;
+	\item \textbf{Web3}: API\glo JavaScript per l'interazione con un noto Ethereum\glo locale o remote;
+	\item \textbf{Ropsten}: Rete Ethereum\glo pubblica usato per il testing di applicativi Ethereum\glo prima del porting\glo in produzione sulla \textit{MainNet};
+	\item \textbf{MainNet}: Rete Ethereum\glo principale
+	\item \textbf{Ganache}: Ambiente di sviluppo Ethereum\glo utilizzato per la simulazione locale si una rete Ethereum\glo e per l'analisi delle transazioni e log;
+	\item \textbf{TypeScript 3.6}: versione standardizzata da Microsoft del linguaggio JavaScript;
+	\item \textbf{Node.js}: ambiente di runtime open-source per JavaScript;
+	\item \textbf{The Serverless Framework}: framework per la costruzione e deploy\glo di ambienti serverless\glo
+	\item \textbf{Smart Contract}: protocolli informatico che facilita, verifica, fa rispettare ed esegue un contratto (insieme di regole);
+	\item \textbf{ESLint}: strumento di analisi del codice utilizzato per identificare pattern\glo problematici nel codice JavaScript;
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+	\item Possibilità di apprendere e utilizzare tecnologie nuove
+		\begin{itemize}
+			\item \textbf{Amazon Web Services} leader nell'industria dei servizi cloud
+			\item \textbf{Blockchain} tecnologia in crescita che mette a disposizione strumenti nuovi che permetto la realizzazioni di applicativi con caratteristiche innovative
+			\item \textbf{Node.js} sviluppo in un ambiente che negli ultimi anni ha avuto larga diffusione
+		\end{itemize}
+	\item Si entra in contatto con una azienda estera implicata in tecnologie del futuro
+	\item Una volta compresi gli aspetti tecnici al momento sconosciuti, l'implementazione non risulta complicata
+	\item Idea del progetto interessante per una applicazione nel mondo reale
+\end{itemize}
+
+\subsection{Criticità}
+\begin{itemize}
+	\item Seppur stimolante, l'apprendimento e il corretto utilizzo della piattaforma AWS può risultare dispendioso
+	\item Una progettazione iniziale incorretta del servizio potrebbe invalidare parte dello sviluppo; in particolare perché
+	\item Alla base del progetto ci sono tecnologie prima non approfondite
+\end{itemize}
+
+\subsection{Valutazione conclusiva}
+La prima impressione percepita dopo la lettura della richiesta del cliente è stata una poco rassicurante in quanto le tecnologie risultano essere nuove per tutti i membri del team. In seguito ad una accurata analisi dell'obbiettivo principale del servizio \textit{Etherless}, il progetto ha preso una sfumatura accattivante. Usare piattaforma Ethereum\glo per realizzare un applicativo decentralizzato ha stimolato l'interesse per la sua diversità dagli ormai tipici standard pattern\glo di architetture\glo per applicativi software.
+\\\\
+La difficoltà delle nuove tecnologie è stata valuta come "media" e quindi, in seguito ad un breve approfondimento dell'argomento, il team è capace di portare a termine il progetto nei tempi richiesti.
