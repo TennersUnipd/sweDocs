@@ -23,7 +23,7 @@ Ogni documento ha diversi stadi nel suo ciclo di vita:
 \begin{itemize}
   \item \textbf{Preparazione alla creazione di un documento}: come da norme di
   sviluppo interne, per ogni nuova componente del progetto \`e necessaro creare un
-  feature branch\glo con il nome del componente in snake case\glo dopodich\'e
+  feature branch\glo con il nome del componente in camel case\glo dopodich\'e
   si potr\`a creare il documento;
 
   \item \textbf{Creazione del documento}: il documento deve essere creato in un
@@ -67,7 +67,7 @@ Ogni documento ha diversi stadi nel suo ciclo di vita:
 
   \item \textbf{Generazione del documento}: Dopo che il documento ha raggiunto il
   branch master il sistema automatico si preoccuper\`a di creare la release del
-  documento con i relativi changelog;
+  documento con i relativi changelog.
 \end{itemize}
 
 \subsubsection{Template}
@@ -92,3 +92,62 @@ Una directory valida per la creazione di un documento deve essere così configur
     \end{itemize}
   \end{itemize}
 \end{itemize}
+\paragraph{Copertina di un documento}
+Il frontespizio di un documento di progetto deve essere così strutturato:
+\begin{itemize}
+  \item Il nome del gruppo di progetto e il capitolato che è stato scelto;
+  \item Il logo del gruppo di progetto;
+  \item Il titolo del documento;
+  \item Tabella di gestione del documento che comprenda i seguenti elementi:
+  \begin{itemize}
+    \item Versione del documento;
+    \item I redattori del documento;
+    \item I verificatori del documento;
+    \item I il Responsabile che ha approvato il documento;
+    \item Destinazione d'uso;
+  \end{itemize}
+  \item La descrizione sintetica del contenuto del documento;
+  \item Recapito email del gruppo di progetto.
+\end{itemize}
+\paragraph{Registro delle modifiche}
+Ogni documento basato sul template fornito deve avere una sezione dedicata al versionamento
+del documento segnalando le modifiche effettuate.
+La tabella di registro delle modifiche deve avere le seguenti parti:
+\begin{itemize}
+  \item versione
+  \item Data in formato YYYY-MM-DD
+  \item Nominativo di chi ha effetuato, verificato e approvato modifiche
+  \item Ruolo del modificatore del documento
+  \item Descrizione delle modifiche effettuate
+\end{itemize}
+\paragraph{Indice}
+L'indice dell'intero documento viene generato al momento della compilazione
+automaticamente, esso è necessari per falicitare la navigazione all'interno del
+documento.
+L'indice viene posto dopo la tabella delle modifiche per permettere una più facile
+lettura di quest'ultime.
+\paragraph{Contenuto, capitoli e sezioni}
+Il documento è formato principalmente da capitoli che definiscono un argomento,
+ognuo di essesi deve essere formato con un pragrafo introduttivo che illustri
+di cosa tratta il capitolo in questione.
+Il redattore è libero di gestire i capitoli, mantenendo la coeranza con gli altri
+redattori, come ritiene più opportuno.
+\subsubsection{Norme tipografiche}
+\paragraph{Convenzioni su nomi delle directory e file}
+I nomi delle directory devono seguire determinate regole per facilitare le operazioni
+automtiche di verifica e per rendere più facile la navigazione.
+I sorgenti \LaTeX \space dei documenti dovranno esse così organizzati:
+\begin{itemize}
+  \item destinazione d'uso: interno o esterno;
+  \begin{itemize}
+    \item nome del documento in camel case;
+    \begin{itemize}
+      \item main.tex
+      \begin{itemize}
+        \item res, che contiene tutte le risorse, immagini, capitoli e sezioni
+        \item config che contiene tutti i file di configurazione necessari alla compilazione
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+Un esempio di path corretto per un documento è interno/normeDiProgetto/main.tex
