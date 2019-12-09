@@ -277,3 +277,5 @@ TSWLatexianTemp*
 
 # Output file
 *.pdf
+interni/studio_di_fattibilita/res/.DS_Store
+.DS_Store
