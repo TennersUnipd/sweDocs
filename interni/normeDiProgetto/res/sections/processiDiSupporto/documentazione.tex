@@ -137,17 +137,14 @@ redattori, come ritiene più opportuno.
 I nomi delle directory devono seguire determinate regole per facilitare le operazioni
 automatiche di verifica e per rendere più facile la navigazione.
 I sorgenti \LaTeX \space dei documenti dovranno esse così organizzati:
-\begin{itemize}
-  \item destinazione d'uso: interno o esterno;
-  \begin{itemize}
-    \item nome del documento in camel case;
-    \begin{itemize}
-      \item main.tex
-      \begin{itemize}
-        \item res, che contiene tutte le risorse, immagini, capitoli e sezioni
-        \item config che contiene tutti i file di configurazione necessari alla compilazione
-      \end{itemize}
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
+
+\dirtree{%
+.1 /.
+.2 destinazione d'uso.
+.3 nome del documento in camel case.
+.4 main.tex.
+.4 config.
+.4 res.
+}
+
 Un esempio di path corretto per un documento è interno/normeDiProgetto/main.tex
