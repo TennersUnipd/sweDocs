@@ -1,0 +1,49 @@
+\section{Capitolato C3 - NaturalAPI }
+
+\subsection{Descrizione generale}
+\textit Il progetto NaturalAPI presentato, dall’azienda di Bergamo teal.blue, parte da un idea che riguarda le diverse lingue utilizzate all’interno di un azienda internazionale per risolvere/descrivere diversi problemi e/o soluzioni. Le problematiche che riguardano i diversi linguaggi di programmazione e quelle del linguaggio comune (come inglese o italiano ecc.) di solito vengono gestiti dai responsabili dei progetti.
+
+\subsection{Finalità del progetto}
+Il prodotto finale deve essere conforme ai seguenti compiti in modo da poter ridurre il divario tra le specifiche di progetto (espresse in inglese) e  le API: 
+\begin{itemize}
+	\item NaturalAPI Discover: un estrattore di linguaggio di dominio aziendale (BDL), farà estrarre potenziali entità aziendali (oggetti / nomi), processi (azioni / verbi), e loro combinazioni (predicati) da testi non strutturati rilevanti per i documenti di business; 
+	\item NaturalAPI Design:  un parser di funzionalità e scenari creerà una business API della lingua dell’applicazione (BAL) utilizzando dei documenti Gherkin e dei documenti .bdl (business domain language) legati allo stesso dominio. Questi strumenti produrranno dei documenti con estensione .bdl;
+	\item NaturalAPI Develop: è un esportatore e convertitore di lingue che convertirà il BAL (prodotti da NaturalAPI Design) per testare i casi e API in uno dei disponibili linguaggi di programmazione/framework, supportando sia la creazione di nuovi repository di codici che l'aggiornamento di quelli esistenti. 
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+Non c’è alcun vincolo sul linguaggio di programmazione/framework da utilizzare. 
+\begin{itemize}
+	\item Gherkin: formato per scrivere i testi in Cucumber tramite delle keyword (Given, When, And, Then) molto simile al linguaggio naturale; 
+	\item \textbf{OpenAPI Specification}: definisce invece la descrizione dell’interfaccia standard e non dipende da i vari linguaggi di programmazione utilizzati E’ consigliato usarla nella parte finale delle API il cui compito è affidato al NaturalAPI Develop;
+	\item NaturalAPI: deve essere disponibile in almeno una tra le seguenti piattaforme desktop;
+	\item NaturalAPI deve essere disponibile in almeno una tra le seguenti piattaforme desktop (Ubuntu, macOS, Windows o tramite browser);
+	\item Ogni strumento facente parte di NaturalAPI deve poter essere accessibile almeno tramite due tra le seguenti interfacce: 
+	\begin{itemize}
+		\item Interfaccia con linea di comando;
+		\item Interfaccia grafica minimale;
+		\item Interfaccia grafica minimale;
+	\end{itemize}
+	\item Gli strati logici devono essere rilasciati in una delle seguenti modalità:
+	\begin{itemize}
+		\item Come una libreria (statica o dinamica);
+		\item Come parte degli stessi eseguibili delle modalità di rilascio scelte; 
+		\item Come un processo/servizio indipendente (locale o remoto).
+	\end{itemize}
+	\item Le modalità di rilascio devono condividere gli stessi layers logici, che non devono avere nessuna dipendenza dalla modalità di rilascio.
+	\item Tutte le risorse in input/output devono seguire la codifica UTF-8 e interruzioni di riga Unix.
+
+\end{itemize}
+
+\subsection{Aspetti positivi}
+ DA FARE
+
+
+
+\subsection{Criticità}
+\begin{itemize}
+	\item Poco interessante dal punto di vista delle tecnologie utilizzate. Il capitolato ha riscosso scarso interesse nella maggior parte dei membri del gruppo. Gherkin, per esempio, sembra un linguaggio che non si può usare in diversi progetti che faremmo in futuro. 
+\end{itemize}
+
+\subsection{Valutazione conclusiva}
+Dopo un'attenta valutazione, il capitolato\glos  è stato escluso in quanto non è risultato molto stimolante e lo sviluppo di alcune componenti sembra caratterizzato da attività ripetitive.
