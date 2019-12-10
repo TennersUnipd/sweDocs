@@ -3,30 +3,30 @@
 \subsection{Descrizione generale}
 \textit{Etherless} è una piattaforma che permette agli sviluppatori di caricare funzioni JavaScript sul cloud\glo per poi renderle disponibili a terzi. Il servizio si presenta come un CaaS\glo (Computation-as-a-Service) in cui l'utente finale paga per l'esecuzione di una singola funzione in modo automatico mediante l'utilizzo della rete Ethereum\glo e degli smart contract\glos. 
 \subsection{Finalità del progetto}
-L'obbiettivo finale è quello di avere un ambiente in cui lo sviluppatore \textit{Bob}, dopo aver sviluppato una funzionalità che potrebbe essere di interesse per altri sviluppatori (es. \textit{Alice}), carica il suo codice JavaScript su \textit{Etherless} mediante la sua utenza e imposta un costo di esecuzione per quella funzione. \textit{Alice}, avendo bisogno di tale funzionalità, ha la possibilità di pagare una quota di esecuzione piuttosto che riscrivere la stessa procedura; attraverso la sua utenza \textit{Etherless}, \textit{Alice} è quindi capace di usufruire della funzione in cloud e sostenere il costo di esecuzione.
+L'obbiettivo finale è quello di avere un ambiente in cui lo sviluppatore \textit{Bob}, dopo aver sviluppato una funzionalità che potrebbe essere di interesse per altri sviluppatori (es. \textit{Alice}), carica il suo codice JavaScript su \textit{Etherless} mediante la sua utenza e imposta un costo di esecuzione per quella funzione. \textit{Alice}, avendo bisogno di tale funzionalità, ha la possibilità di pagare una quota di esecuzione piuttosto che riscrivere la stessa procedura; attraverso la sua utenza \textit{Etherless}, \textit{Alice} è quindi capace di usufruire della funzione in cloud\glo e sostenere il costo di esecuzione.
 \\\\
 La piattaforma deve essere conforme a quanto segue:
 \begin{itemize}
-	\item gli utenti avranno la possibilità elencare le funzioni disponibili,  caricarne di nuove, aggiornarle, eseguirle oppure eliminare attraverso una interfaccia CLI\glos;
+	\item gli utenti avranno la possibilità elencare le funzioni disponibili,  caricarne di nuove, aggiornarle, eseguirle oppure eliminare attraverso una CLI\glos;
 	\item utilizzo della rete Ethereum\glo per la comunicazione tra i vari componenti di \textit{Etherless}, per la definizione della logica di interazione tra le varie parti (smart contract\glos) e per lo storage di dati;
 	\item il guadagno proveniente dall'esecuzione di una funzione deve essere distribuito tra l'autore della stessa e i proprietari della piattaforma Ethereum\glos, per il sostenimento dell'infrastruttura cloud\glo su cui avviene l'esecuzione;
 	\item la granularità del pagamento deve corrispondere alla singola esecuzione di una funzione;
-	\item per la realizzazione del back-end deve essere prevista una infrastruttura Serverless\glos.
+	\item per la realizzazione del back-end\glo deve essere prevista una infrastruttura Serverless\glos.
 \end{itemize}
 
 \subsection{Tecnologie interessate}
 \begin{itemize}
-	\item \textbf{AWS (Amazon Web Services)}: piattaforma che si occupa di fornire servizi di cloud computing\glos;
+	\item \textbf{AWS (Amazon Web Services)}: piattaforma che si occupa di fornire servizi di cloud\glo computing\glos;
 	\item \textbf{AWS - Lambda}: servizio che consente di eseguire codice nel cloud\glos;
-	\item \textbf{Ethereum}: una rete globale per il trasferimento di criptovalute\glo e per la realizzazione di applicativi decentralizzati
+	\item \textbf{Ethereum\glos}: una rete globale per il trasferimento di criptovalute\glo e per la realizzazione di applicativi decentralizzati
 	\item \textbf{Solidity}: linguaggio OOP\glo per la definizione di smart contract\glos;
-	\item \textbf{Truffle}: framework per lo sviluppo di smart contract su rete Ethereum\glos;
+	\item \textbf{Truffle}: framework per lo sviluppo di smart contract\glo su rete Ethereum\glos;
 	\item \textbf{Web3}: API\glo JavaScript per l'interazione con un nodo Ethereum\glos, locale o remoto;
 	\item \textbf{Ropsten}: rete Ethereum\glo pubblica usato per il testing di applicativi Ethereum\glo prima del porting\glo in produzione sulla \textit{MainNet};
 	\item \textbf{MainNet}: rete Ethereum\glo principale
 	\item \textbf{Ganache}: ambiente di sviluppo Ethereum\glo utilizzato per la simulazione locale si una rete Ethereum\glo e per l'analisi delle transazioni e log;
 	\item \textbf{TypeScript 3.6}: versione standardizzata da Microsoft del linguaggio JavaScript;
-	\item \textbf{Node.js}: ambiente di runtime open-source per JavaScript;
+	\item \textbf{Node.js}: ambiente di runtime open-source\glo per JavaScript;
 	\item \textbf{The Serverless Framework}: framework\glo per la costruzione e deploy\glo di ambienti serverless\glo
 	\item \textbf{Smart Contract}: protocollo informatico che facilita, verifica, fa rispettare ed esegue un contratto (insieme di regole);
 	\item \textbf{ESLint}: strumento di analisi del codice utilizzato per identificare pattern\glo problematici durante lo sviluppo in JavaScript.
@@ -36,7 +36,7 @@ La piattaforma deve essere conforme a quanto segue:
 \begin{itemize}
 	\item Possibilità di apprendere e utilizzare tecnologie nuove, come ad esempio:
 		\begin{itemize}
-			\item \textbf{Amazon Web Services} leader nell'industria dei servizi cloud;
+			\item \textbf{Amazon Web Services} leader nell'industria dei servizi cloud\glo;
 			\item \textbf{Blockchain\glo} tecnologia in crescita che mette a disposizione strumenti nuovi che permetto la realizzazioni di applicativi con caratteristiche innovative;
 			\item \textbf{Node.js} ambiente di sviluppo che negli ultimi anni ha avuto larga diffusione.
 		\end{itemize}

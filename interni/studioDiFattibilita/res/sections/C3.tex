@@ -1,49 +1,35 @@
 \section{Capitolato C3 - NaturalAPI }
 
 \subsection{Descrizione generale}
-\textit Il progetto NaturalAPI presentato, dall’azienda di Bergamo teal.blue, parte da un idea che riguarda le diverse lingue utilizzate all’interno di un azienda internazionale per risolvere/descrivere diversi problemi e/o soluzioni. Le problematiche che riguardano i diversi linguaggi di programmazione e quelle del linguaggio comune (come inglese o italiano ecc.) di solito vengono gestiti dai responsabili dei progetti.
+Il progetto \textit{NaturalAPI}, presentato dall’azienda di Bergamo \textit{teal.blue}, parte dall'idea di stabilire un linguaggio comune che possa descrivere problemi e soluzioni nell'ambito di un progetto software. Gli stakeholders\glo coinvolti nella progettazione di un software, hanno infatti metodi differenti di comunicare a causa del dominio di appartenenza differente e spesso si può andare incontro ad una errata comprensione dei problemi o casi di ambiguità.
 
 \subsection{Finalità del progetto}
-Il prodotto finale deve essere conforme ai seguenti compiti in modo da poter ridurre il divario tra le specifiche di progetto (espresse in inglese) e  le API: 
+\textit{NaturalAPI} ha come obiettivo ridurre il divario tra le specifiche di un progetto (espresse in lingua inglese) e le API\glos. Per realizzare ciò verrà utilizzata la metodologia del Behaviour Driven Development (BDD)\glos, e il progetto si fonderà concetti chiave come le user story\glo e i criteri di accettazione\glo. Ogni nuova caratteristica da aggiungere al prodotto finale, può essere descritta mediante lo schema \textit{As a - I want - So that}. Ad ogni caratteristica corrisponderanno uno o più possibili scenari descritti mediante una struttura \textit{Given -When -Then}. Più dettagliatamente, il prodotto dovrà essere dotato delle seguenti suddivisioni a livello logico:  
 \begin{itemize}
-	\item NaturalAPI Discover: un estrattore di linguaggio di dominio aziendale (BDL), farà estrarre potenziali entità aziendali (oggetti / nomi), processi (azioni / verbi), e loro combinazioni (predicati) da testi non strutturati rilevanti per i documenti di business; 
-	\item NaturalAPI Design:  un parser di funzionalità e scenari creerà una business API della lingua dell’applicazione (BAL) utilizzando dei documenti Gherkin e dei documenti .bdl (business domain language) legati allo stesso dominio. Questi strumenti produrranno dei documenti con estensione .bdl;
-	\item NaturalAPI Develop: è un esportatore e convertitore di lingue che convertirà il BAL (prodotti da NaturalAPI Design) per testare i casi e API in uno dei disponibili linguaggi di programmazione/framework, supportando sia la creazione di nuovi repository di codici che l'aggiornamento di quelli esistenti. 
+	\item un \textbf{NaturalAPI Discover} in grado di estrarre, a partire da un qualsiasi documento non strutturato appartenente ad un determinato dominio, le potenziali entità coinvolte, i loro processi e le relazioni che le legano tra loro. In altre parole, a partire da un documento testuale, ne verranno estratti verbi, nomi e predicati, con relativa frequenza;
+	\item un \textbf{NaturalAPI Design} il cui compito è quello di utilizzare i diversi scenari descritti tramite Gherkin e la lista dei termini precedentemente estratti per creare un business application language (BAL) con il quale poter scrivere le API\glos;
+	\item un \textbf{NaturalAPI Develop} con cui convertire il BAL e testare le API\glo in uno dei  linguaggi di programmazione/framework disponibili. 
 \end{itemize}
 
 \subsection{Tecnologie interessate}
-Non c’è alcun vincolo sul linguaggio di programmazione/framework da utilizzare. 
 \begin{itemize}
-	\item Gherkin: formato per scrivere i testi in Cucumber tramite delle keyword (Given, When, And, Then) molto simile al linguaggio naturale; 
-	\item \textbf{OpenAPI Specification}: definisce invece la descrizione dell’interfaccia standard e non dipende da i vari linguaggi di programmazione utilizzati E’ consigliato usarla nella parte finale delle API il cui compito è affidato al NaturalAPI Develop;
-	\item NaturalAPI: deve essere disponibile in almeno una tra le seguenti piattaforme desktop;
-	\item NaturalAPI deve essere disponibile in almeno una tra le seguenti piattaforme desktop (Ubuntu, macOS, Windows o tramite browser);
-	\item Ogni strumento facente parte di NaturalAPI deve poter essere accessibile almeno tramite due tra le seguenti interfacce: 
-	\begin{itemize}
-		\item Interfaccia con linea di comando;
-		\item Interfaccia grafica minimale;
-		\item Interfaccia grafica minimale;
-	\end{itemize}
-	\item Gli strati logici devono essere rilasciati in una delle seguenti modalità:
-	\begin{itemize}
-		\item Come una libreria (statica o dinamica);
-		\item Come parte degli stessi eseguibili delle modalità di rilascio scelte; 
-		\item Come un processo/servizio indipendente (locale o remoto).
-	\end{itemize}
-	\item Le modalità di rilascio devono condividere gli stessi layers logici, che non devono avere nessuna dipendenza dalla modalità di rilascio.
-	\item Tutte le risorse in input/output devono seguire la codifica UTF-8 e interruzioni di riga Unix.
-
+	\item \textbf{Gherkin:} linguaggio usato per scrivere gli scenari e le features in Cucumber, molto simile al linguaggio naturale; 
+	\item \textbf{Cucumber:} software che supporta lo sviluppo basato sul BDD\glos;
+	\item \textbf{HipTest}: piattaforma per il continuous testing con supporto nativo del BDD\glos;
+	\item \textbf{Jbehave}: framework\glo per il BDD\glos;
 \end{itemize}
 
 \subsection{Aspetti positivi}
- DA FARE
 
+\begin{itemize}
+	\item Interessante l'utilizzo di approcci statistici o mediante grammatiche context-free\glo per l'elaborazione del linguaggio naturale;
+	\item Utilizzo di tecnologie completamente nuove per tutti i componenti del gruppo;
+\end{itemize}
 
 
 \subsection{Criticità}
-\begin{itemize}
-	\item Poco interessante dal punto di vista delle tecnologie utilizzate. Il capitolato ha riscosso scarso interesse nella maggior parte dei membri del gruppo. Gherkin, per esempio, sembra un linguaggio che non si può usare in diversi progetti che faremmo in futuro. 
-\end{itemize}
+Alcune problematiche relative all'ambiguità del linguaggio naturale, spiegate anche durante la conferenza di approfondimento del capitolato\glo, sembrano apparentemente difficili da risolvere e dunque eventualmente dispendiose in termini di tempo.
+
 
 \subsection{Valutazione conclusiva}
-Dopo un'attenta valutazione, il capitolato\glos  è stato escluso in quanto non è risultato molto stimolante e lo sviluppo di alcune componenti sembra caratterizzato da attività ripetitive.
+\textit{Natural API} non ha creato molto interesse nel gruppo soprattutto se paragonato agli altri capitolati proposti. L'idea generale è stata di un progetto poco spendibile nel mondo del lavoro nonostante l'utilizzo di tecnologie e metodi di sviluppo prima sconosciuti al gruppo.

@@ -1,39 +1,36 @@
-\section{Capitolato C6 - Things Relationship Management}
+\section{Capitolato C6 - Things Relationship Management (ThiReMa)}
 
 \subsection{Descrizione generale}
-\textit{Sanmarco Informatica} propone lo sviluppo di un software in grado di ricevere misurazioni da sensori eterogenei, divisibili nelle macro-categorie {dati operativi} e {fattori influenzanti}, ed accumularli in uno o piú database. L'applicazione quindi deve poter fornire un servizio di dispatching\glos, basato su Telegram, per inoltrare le informazioni piú utili o urgenti per la gestione dei dispositivi installati.
+\textit{Sanmarco Informatica} propone lo sviluppo di un software in grado di ricevere misurazioni da sensori eterogenei, divisibili nelle macro-categorie dati operativi e fattori influenzanti, ed accumularli in uno o più database. L'applicazione quindi deve poter fornire un servizio di dispatching\glos, basato su Telegram, per inoltrare le informazioni più utili o urgenti per la gestione dei dispositivi installati.
 
 \subsection{Finalità del progetto}
-Il prodotto finale deve essere conforme ai seguenti compiti:
+Il software \textit{ThiReMa} deve provvedere all'interazione tra i sensori e il database sviluppando le seguenti componenti:
 \begin{itemize}
-	\item la creazione di uno o piú componenti (Producer) atti a convertire i dati inviati dai sensori in messaggi utilizzabili da Kafka (JSON);
-	\item la creazione di un componente (Connect) atto alla scrittura dei dati nel database;
-	\item la creazione di una serie di componenti (Stream) atti alla modifica e trasformazione dei dati presenti nel database;
+	\item uno o piú "Producer" con il compito di convertire i dati inviati dai sensori in messaggi utilizzabili da Kafka (in formato .JSON);
+	\item un "Connect" atto alla scrittura dei dati nel database;
+	\item una serie di componenti "Stream" per la modifica e trasformazione dei dati presenti nel database;
 	\item dispatching\glos delle informazioni basato su Telegram.
 \end{itemize}
 
 \subsection{Tecnologie interessate}
 \begin{itemize}
-	\item \textbf{Apache Kafka}: cluster\glos che si interfaccia fra i sensori ed il database;
+	\item \textbf{Apache Kafka}: cluster\glo che si interfaccia fra i sensori ed il database;
 	\item \textbf{Java}: linguaggio di programmazione utilizzato per sviluppare le componenti;
 	\item \textbf{PostgreSQL}: database relazionale utilizzabile;
 	\item \textbf{TimescaleDB}: database improntato alla gestione temporale dei dati;
 	\item \textbf{ClickHouse}: database improntato alla gestione dei dati per colonna;
 	\item \textbf{Bootstrap}: libreria per la creazione della parte front-end\glos;
-	\item \textbf{Docker}: container\glos nel quale istanziare le componenti custom di Apache Kafka;
+	\item \textbf{Docker}: container\glo nel quale istanziare le componenti custom di Apache Kafka;
 	\item \textbf{Github}: sistema di versionamento\glos;
-	\item \textbf{Telegram}: servizio tramite il quale effetturare il dispatching\glos.
+	\item \textbf{Telegram}: servizio tramite il quale effettuare il dispatching\glos.
 \end{itemize}
 
 \subsection{Aspetti positivi}
-\begin{itemize}
-	\item Stimolante la possibilità di lavorare con cosí tante tecnologie in modo da approfondirne la sinergia.
-\end{itemize}
+Stimolante la possibilità di lavorare per un progetto che richiede competenze in ambito IoT\glo e di Big Data\glos.
+
 
 \subsection{Criticità}
-\begin{itemize}
-	\item Grande complessitá di esecuzione dovuta alla mole di applicativi differenti con il quale lavorare.
-\end{itemize}
+Grande complessità di esecuzione dovuta alla mole di applicativi differenti con il quale lavorare.
 
 \subsection{Valutazione conclusiva}
-Nonostante sia stato preso in considerazione per il gran numero di competenze che si sarebbero potute affinare o sviluppare, il gruppo ha deciso di focalizzare la proprio attenzione su di un altro capitolato\glos, in quanto lo sforzo per imparare cosí tante tecnologie assieme e la possibilitá che il lavoro finale non sarebbe stato all'altezza delle aspettative, lo hanno reso meno appetibile.
+Il team ha ritenuto interessante la possibilità di realizzare una web application implicata nel mondo dell'IoT\glo e dei Big Data\glos. Nonostante sia stato preso in considerazione per il gran numero di competenze che si sarebbero potute affinare, lo sforzo per imparare così tante tecnologie e la possibilità che il lavoro finale non potesse essere all'altezza delle aspettative, lo hanno reso meno appetibile.
