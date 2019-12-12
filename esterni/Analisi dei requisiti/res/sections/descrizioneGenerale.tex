@@ -60,12 +60,24 @@ A questo proposito, per la realizzazione del servizio sono previste la realizzaz
 		\item \textbf{\textit{etherless-smart:}} applicativo che si occupa della definizione e del deploy\glo dello smart contract sulla rete Ethereum;
 		\item \textbf{\textit{etherless-server:}} applicativo server che ascolta e soddisfa le richieste di esecuzione delle funzioni caricate interfacciandosi con il servizio AWS Lambda mediante l'apposito SDK;
 	\end{itemize}
-	
+\subsubsection{Trasferimento del denaro}
+La granularità di accredito deve essere per singola chiamata di funzione. Inoltre, sono state individuate due modalità di trasferimento del denaro dall'utilizzato allo sviluppatore della funzione richiamata:
+\begin{itemize}
+	\item trasferimento diretto dei fondi quando il contratto riceve la richiesta di esecuzione
+	\item mediante escrow: i soldi vengono prelevati dall'utilizzatore alla ricezione della richiesta di esecuzione e accreditati allo sviluppatore solamente quando l'output della funzione richiesta raggiunge l'utilizzatore.
+\end{itemize}
+Il committente ha specificato che la prima versione è accettata.
+
 \subsubsection{Archiviazione dei dati}
 Per lo storage\glo dei dati non è previsto l'utilizzo di database. Emerge dall'analisi fatta sulle specifiche richieste che non è necessario il salvataggio di dati di lungo formato (quali immagini o descrizioni). Informazioni come nomi di funzioni, ownership\glo e costi di esecuzioni vengono salvati direttamente sulla rete Ethereum\glo attraverso lo smart contract\glo; 
 \\\\
 Nel caso in cui durante la fase di sviluppo del progetto sorga la necessità di salvare quantitativi più grandi di dati, verra utilizzato un database relazionale o non-relazionale disponibile sotto Amazon Web Services;
-
+\subsubsection{Accesso alle risorse}
+\begin{itemize}
+	\item L'utente in generale ha accesso a tutte le funzioni pubblicate: vederne il nome, i parametri richiesti, e richiederne l'esecuzione;
+	\item Lo sviluppatore, sulle funzioni di sua proprietà può: vederne il nome e parametri associati, caricare e modificare il codice, eliminare una funzione e crearne di nuove;
+	\item Alle risorse disponibili su AWS hanno accesso solo \textit{etherless-cli} e \textit{etherless-server};
+\end{itemize}
 \subsubsection{Tecnologie}
 Tecnologie da utilizzare
 \begin{itemize}
@@ -94,16 +106,24 @@ Il cliente ha richiesto la possibilità di eseguire il programma nelle seguenti 
 \end{itemize}
 A tale scopo deve essere prevista la configurazione dei vari ambienti su \textit{etherless-smart}, \textit{etherless-cli} e \textit{etherless-server}.
 \subsection{Architetture del progetto}
-Come supporto alla documentazione, viene fornito un \textit{Glossario v.1.0.0}, contenente delle definizioni per termini specifici che possono richiedere chiarimento. Ognuno di questi verrà contrassegnato con un pedice \glo nel documento e la sua spiegazione verrà riportata sotto la corrispondente lettera del glossario. Ciò consentirà di avere un linguaggio comune ed evitare ambiguità. 
+Come già anticipato, le componenti necessarie per la realizzazione di \textit{Etherless} sono \textit{etherless-cli, etherless-smart} e \textit{etherless-server}. L'architettura del servizio sarà quella di una app decentralizzata\glo (DApp\glo). Le DApp\glo girano su una rete di computer P2P piuttosto che su un singolo computer, sfruttando la tecnologia blockchain\glo.\\
+\includegraphics[width=\textwidth]{res/img/archi}
 \subsubsection{Etherum\glo network}
-	Logica gestita da ether e smart contract e bla cla e storage di dati
+Il servizio baserà il suo funzionamento su uno {smart contract}\glo che si occuperà di regolare indirettamente le interazioni tra sviluppatori, e in modo diretto gesiticse l'esecuzione delle funzioni e l'interazione dell'utente con il servizio. Inoltre, lo smart contract viene usato anche come storage per i dati dell'applicazione. Una volta definite le regole del contratto, questo viene reso pubblico mediante la sua compilazione e deploy\glo sul network\glo. Questa operazione ci fa ottenere l'indirizzo (address) del contratto nella rete e l'ABI\gli del contratto stesso. Questi dati saranno utili a \textit{etherless-cli} e \textit{etherless-server} per potersi interfacciare il contratto stesso.
 \subsubsection{Front-end}
-	\\L'interazione dell'utente con il servizio avviene attraverso una interfaccia a linea di comando (CLI\glo) e tale applicativo verrà identificato con il nome di \textit{etherless-cli}.
-\subsubsection{Back-end}
-	Serverless
+L'interazione dell'utente con con il servizio avviene attraverso una interfaccia a linea di comando (CLI\glo) e tale applicativo prende il nome di \textit{etherless-cli}. L'utilizzo è di tipo richiesta e risposta: l'utente avvia il processo digitando un comando specifico, l'applicativo ricava l'output corrispondente, lo mostra a video e poi interrompe la sua esecuzione. \\Per completare la richiesta dell'utente, il processo può richiamare funzioni del contratto oppure mettersi in ascolto di eventi sulla rete Ethereum\glo.
+\\Nel caso in cui l'utente sia uno sviluppatore e viene richiesta la creazione di una nuova funzione, questo componente sarà in grado di usare l'sdk\glo di AWS per caricare la funzione su AWS Lambda\glo.
+\subsubsection{Serverless}
+Quando il contratto riceve una richiesta di esecuzione di una funzione remota, viene emesso un evento che specifica il nome della funzione e i paramateri con cui eseguire tale procedura. Questi tipi di eventi vengono ascoltati da \textit{etherless-server}. Una volta ricevuto viene utilizzato l'sdk\glo di AWS per ottenere il risultato dell'esecuzione della funzione stessa. Tale risultato viene emesso sulla rete dal contratto in modo che \textit{etherless-cli} possa leggerlo e mostrarlo all'utente richiedente.
+\\\\
+\textit{etherless-server} è processo che verrà messo in esecuzione continua in un ambiente serverless, utilizza il framework Serverless e impostando AWS come destinazione del deploy\glo.
+\subsubsection{Schema di interazione}
+Di seguito viene mostrato quale deve essere il flusso delle interazioni dei vari componenti.\\
+	\includegraphics[width=\textwidth]{res/img/calls-flow}
 \subsection{Vincoli del sistema}
-
-
-	
+\subsubsection{Per l'utente}
+Per l'esecuzione è necessaria una connessine ad Internet, l'installazione di node.js, e il download\glo di \textit{etherless-cli}. Per accedere al servizio l'utente dovrà prima creare una utenza oppure accedere con una già esistente. Preferibilmente richieste conoscenze nell' utilizzo del terminale\glo.
+\subsubsection{Per il servizio}
+Per l'esecuzione serverless del servizio è richiesta una utenza AWS e la corretta configurazione di tale ambiente. Inoltre, è necessario poter accedere a un network Ethereum\glo al quale appoggiare il servizio.
 	
 	
