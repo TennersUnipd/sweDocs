@@ -16,8 +16,8 @@ jobs:
     - name: Latex compiler
       uses: Jatus93/Latex-multicompiler@master
       with:
+        path_to_list: .fileToCompile
         build: true
-      id: compiler
 
     - name: upload artifact
       uses: actions/upload-artifact@v1
