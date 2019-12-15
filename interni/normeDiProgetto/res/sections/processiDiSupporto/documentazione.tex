@@ -76,22 +76,6 @@ approvazione dei documenti, unificando carattere, logo e stile di formattazione
 di un documento \LaTeX \space valido.
 
 \subsubsection{Struttura dei documenti}
-Una directory valida per la creazione di un documento deve essere così configurata
-\begin{itemize}
-  \item /
-  \begin{itemize}
-    \item main.tex
-    \item res che contiene immagini e sezioni del documento
-    \begin{itemize}
-      \item img che contiene le immagini
-      \item sections che contiene le sezioni del documento
-    \end{itemize}
-    \item config
-    \begin{itemize}
-      \item config.tex contiene tutte le configurazioni relative al documento
-    \end{itemize}
-  \end{itemize}
-\end{itemize}
 \paragraph{Copertina di un documento}
 Il frontespizio di un documento di progetto deve essere così strutturato:
 \begin{itemize}
@@ -144,7 +128,24 @@ I sorgenti \LaTeX \space dei documenti dovranno esse così organizzati:
 .3 nome del documento in camel case.
 .4 main.tex.
 .4 config.
+.5 config.tex.
 .4 res.
 }
 
-Un esempio di path corretto per un documento è interno/normeDiProgetto/main.tex
+\\ Un esempio di path corretto per un documento è interno/normeDiProgetto/main.tex
+
+\subsection{Linguaggi e Strumenti}
+\subsubsection{\LaTeX}
+Il linguaggio scelto per la stesura dei documenti è \LaTeX \space in quanto permette
+la suddivisione di un documento in parti diverse e quindi permette a più persone
+di lavorare in contemporanea ad un documento.
+Questo linguaggio ha anche il vantaggio di avere un numero cospicuo di plug-in
+che permettono una facile estensione delle funzionalità.
+
+\paragraph{Compilatore}
+Essendo \LaTeX \space un linguaggio di markup da compilare per ottenere un documento
+leggibile si è scelto l'uso di un
+\href{https://github.com/dante-ev/docker-texlive}{compilatore} in ambiente Docker\glo
+per assicurarci di utilizzare tutti la stessa versione con gli stessi plug-in.
+Lo stesso compilatore in ambiente docker è utilizzato per il controllo online dei
+documenti.
