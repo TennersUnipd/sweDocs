@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'feature/**'
+      - develop
 jobs:
   build:
 
@@ -15,3 +16,12 @@ jobs:
 
     - name: Latex-multicompiler
       uses: Jatus93/Latex-multicompiler@v1.0
+      with:
+        path_to_list: .fileToCompile
+        artifact: true
+  
+    - name: upload artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: Documents.tar.gz
+        path: ./Documents.tar.gz
