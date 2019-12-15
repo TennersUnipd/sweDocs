@@ -15,11 +15,12 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Latex compiler
-      uses: Jatus93/Latex-multicompiler@0.0.6a
+      uses: Jatus93/Latex-multicompiler@master
       with:
-        build: true
+        path_to_list: .fileToCompile
+        artifact: true
 
-    - name: Actifact uplad
+    - name: upload artifact
       uses: actions/upload-artifact@v1
       with:
         name: Documents.tar.gz
