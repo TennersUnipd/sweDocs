@@ -1,6 +1,3 @@
-# Custom script
-*.sh
-
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -280,6 +277,7 @@ TSWLatexianTemp*
 
 # Output file
 *.pdf
-interni/studio_di_fattibilita/res/.DS_Store
-.DS_Store
-interni/.DS_Store
+*.tar.gz
+
+#DUMB FILES
+*DS_Store*
