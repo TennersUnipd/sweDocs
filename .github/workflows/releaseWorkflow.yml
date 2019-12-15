@@ -1,4 +1,4 @@
-name: Continuous Testing
+name: Continuos Testing
 
 on:
   push:
@@ -13,9 +13,12 @@ jobs:
     - name: Checkout repository contents
       uses: actions/checkout@v1
 
-    - name: Latex-multicompiler
-      uses: Jatus93/Latex-multicompiler@v1.0
-
+    - name: Latex compiler
+      uses: Jatus93/Latex-multicompiler@master
+      with:
+        path_to_list: .fileToCompile
+        artifact: true
+        
     - name: Create Release
       uses: actions/create-release@v1
       env:
