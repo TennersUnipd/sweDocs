@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Latex compiler
-      uses: Jatus93/Latex-multicompiler@master
+      uses: Jatus93/Latex-multicompiler@v1.0
       with:
         path_to_list: .fileToCompile
         artifact: true
