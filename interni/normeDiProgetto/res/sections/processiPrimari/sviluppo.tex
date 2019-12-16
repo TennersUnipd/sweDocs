@@ -1,1 +1,90 @@
 \subsection{Sviluppo}
+\subsubsection{Scopo}
+Il processo di Sviluppo contiene tutte le attività volte alla produzione del software dal Analisi dei Requisiti, al  design, codifica, integrazione e testing.
+\subsubsection{Analisi dei Requisiti}
+Parte fondamentale dello Sviluppo è descrivere i requisiti per procedere nel progetto. La specifica dei requisiti deve analizzare funzioni e capacità del sistema, interfaccia, operazioni di manutenzione e vincoli di progettazione. I requisiti devono essere verificabili e classificabili in questa maniera:
+
+\centerline{\textbf{[Priorità][Tipologia][Codice]}}
+\begin{itemize}
+  \item \textbf{Priorità}:
+  \begin{itemize}
+    \item \textbf{0 Obbligatorio}: se uno stakeholder richiede esplicitamente che il requisito deve essere presente a tutti i costi
+    \item \textbf{1 Desiderabile}: non necessario, ma che aggiunge valore al progetto
+    \item \textbf{2 Opzionale}: utile, ma contrattabile più avanti durante l'avanzamento del progetto
+  \end{itemize}
+  \item \textbf{Tipologia}:
+  \begin{itemize}
+    \item F Funzionali
+    \item P Prestazionali
+    \item Q Qualitativi
+    \item D Dichiarativi
+  \end{itemize}
+  \item \textbf{Codice Identificativo}: univoco
+\end{itemize}
+Devono contenere anche:
+\begin{itemize}
+  \item \textbf{Descrizione}: breve descrizione del requisito, in modo da essere il meno ambigui possibili.
+  \item \textbf{Fonte}: da dove proviene il requisito, chi l'ha richiesto o dove è stato ricavato.
+\end{itemize}
+\paragraph{Documento di Analisi dei Requisiti}
+Il documento deve essere:
+\begin{itemize}
+  \item Privo di ambiguità: tramite l'uso di un glossario e di norme per classificare i requisiti su citate.
+  \item Verificabile
+  \item Modificabile
+  \item Tracciabile e Ordinato
+\end{itemize}
+\paragraph{Casi d'Uso}
+Per raccogliere i requisiti è necessario descrivere alcuni casi d'uso e sono composti in questo modo:
+\begin{itemize}
+  \item Nome/Identificatore
+  \item Scenario principale
+  \item Scenari alternativi
+  \item pre-condizioni
+  \item post-condizioni
+  \item Evento scatenante del caso d’uso
+  \item Attori principali
+  \item Attori secondari
+  \item Inclusione
+  \item Esclusione
+  \item Generalizzazione
+\end{itemize}
+Ogni caso d'uso sarà identificato univocamente da un codice formato da
+
+\centerline{\textbf{UC[codiceattuale].[codicefiglio]}}
+\begin{itemize}
+  \item codicepadre è il codice del caso d'uso a cui questo è associato
+  \item codicefiglio è il codice progressivo che identifica il sottocaso corrente
+\end{itemize}
+\paragraph{UML}
+Il gruppo Tenners utilizzerà la versione del linguaggio UML v2.0.
+\subsubsection{Progettazione}
+La progettazione o design è un processo che si attiva subito dopo l'Analisi dei Requisiti e si prefigge di capire come soddisfare i requisiti in modo efficiente ed efficace. La progettazione deve essere chiara agli stakeholder\glo, i quali devono convincersi della bontà della soluzione proposta ai problemi sollevati nell'Analisi dei Requisiti.
+\paragraph{Architettura}
+È necessario definire un'architettura per comporre le varie parti nel miglior modo. Essa è descritta nei due documenti:
+\begin{itemize}
+  \item \textbf{Tecnology BaseLine}: che descrive il prodotto e la sua architettura e dovrà contenere:
+  \begin{itemize}
+    \item Diagrammi UML (classi package, attvità, sequenza)
+    \item Design Pattern utilizzato
+    \item Tracciamento delle componenti
+    \item Test di integrazione
+  \end{itemize}
+  \item \textbf{Product BaseLine}: approfondisce la Tecnology BaseLine, approfondendo:
+  \begin{itemize}
+    \item definizione delle classi: ogni classe è descritta in modo approfondito, descrivendo scopo e funzionalità.
+    \item tracciamento delle classi: è necessario legare ogni requisito a una o più classi che lo soddisfino.
+    \item test di unità: vengono definiti per verificare che ogni componente funzioni.
+  \end{itemize}
+\end{itemize}
+\subsubsection{Codifica}
+La Codifica è la fase in cui viene scritto il codice dai programmatori. È fondamentale che questo sia uniforme per migliorare le attività di manutenzione, verifica e validazione. È quindi necessario normare il lavoro in modo tale che il loro codice sia leggibile, attraverso uno stile di codifica.
+\paragraph{Stile di Codifica}
+Le regole di codifica cercano di seguire degli standard per i vari linguaggi utilizzati. In generale le norme utilizzate saranno:
+\begin{itemize}
+  \item \textbf{Indentazione}: per l'indentazione dei blocchi saranno utilizzato 4 caratteri spazio (e non il classico carattere tab), per uniformare la decodifica dei sistemi operativi.
+  \item \textbf{Parentesizzazione}: le parentesi vanno inserite in linea con i costrutti stessi.
+  \item \textbf{Nomenclatura}: tutti i nomi devono essere in CamelCase. La distinzione ovvia tra classe in maiuscola e metodi in minuscolo va rispettata. L'unica eccezione sono le costanti che vanno scritte tutte in maiuscolo. I nomi devono essere univoci e devono rispecchiare la funzione di ciò che definiscono.
+  \item \textbf{Lingua}: il codice come anche i commenti vanno scritti in lingua inglese.
+\end{itemize}
+%\subparagraph{TypeScript}
