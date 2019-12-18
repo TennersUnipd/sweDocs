@@ -19,11 +19,11 @@ jobs:
         path_to_list: .fileToCompile
         artifact: true
         
-        
     - name: Spell Check
       uses: Jatus93/spellCheck@master
       with:
         directory: ./Documents
+        languages: "en_GB;en_US;italiano"
 
     - name: upload artifact
       uses: actions/upload-artifact@v1
