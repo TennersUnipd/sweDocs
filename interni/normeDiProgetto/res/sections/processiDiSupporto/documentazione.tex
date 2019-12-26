@@ -189,17 +189,46 @@
 
 
   \subsection{Linguaggi e Strumenti}
-  \subsubsection{\LaTeX}
+  \subsubsection{Linguaggi}
+  Per la stesura dei documenti si è decisio di utilizzare principalmente due Linguaggi
+  \LaTeX e CSV\glos.
+  \paragraph{\LaTeX}
   Il linguaggio scelto per la stesura dei documenti è \LaTeX \space in quanto permette
   la suddivisione di un documento in parti diverse e quindi permette a più persone
   di lavorare in contemporanea ad un documento.
   Questo linguaggio ha anche il vantaggio di avere un numero cospicuo di plug-in
   che permettono una facile estensione delle funzionalità.
+  \paragraph{\CSV}
+  Il linguaggio CSV è necessario per la creazione del glossario e viene utilizzato
+  per alleggerire la stesura del documento automatizzandola.
+
+  \subsubsection{Strumenti}
+  Per supportare lo svilluppo e la stesura dei documenti sono stati utilizzati diversi
+  strumenti.
+  gli strumenti usati fin ora sono i seguenti
+
+  \paragraph{GitHub Actions}
+  GitHub Actions è un ambiente per l'esecuzione di script e programmi quando viene
+  fatto un'operazione sul repository del progetto ed automatizza i alcuni processi.
 
   \paragraph{Compilatore}
   Essendo \LaTeX \space un linguaggio di markup da compilare per ottenere un documento
   leggibile si è scelto l'uso di un
   \href{https://github.com/dante-ev/docker-texlive}{compilatore} in ambiente Docker\glo
   per assicurarci di utilizzare tutti la stessa versione con gli stessi plug-in.
-  Lo stesso compilatore in ambiente docker è utilizzato per il controllo online dei
-  documenti.
+  Il compilatore sopracitato è stato utilizzato per creare una GitHub Action utile
+  alla verifica e creazione dei documenti, tale Acion è stata resa pubblica sotto licenza MIT
+  ed è possibile visionarla \href{https://github.com/Jatus93/Latex-multicompiler}qui
+
+  \paragraph{Spell checker}
+  Per facilitare e velocizzare le operazioni di verifica e validazione dei documenti è
+  stato scritto, ed inserito in un docker container apposito, uno script per lo
+  spell checking, ovvero il controllo di errori di digitazione.
+  Anchesso è stato rilasciato pubblicamente ed è reperibile \href{https://github.com/Jatus93/spellCheck}qui
+
+  \paragraph{Script Generazione di glossario}
+  Come accennato è stato scritto un script in python per velocizzare la stesura
+  del glossario, esso prende in input un file di estensione csv che usa come
+  separatore il caratter ',', e ne restituisce un documento che contiene tutti i
+  termini in ordine alfabetico e il registo delle modifiche realizzato automaticamente
+  in base ai commit del sistema di versionamento utilizzato.
