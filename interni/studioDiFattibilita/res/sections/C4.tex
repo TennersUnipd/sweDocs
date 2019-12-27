@@ -1,0 +1,36 @@
+\section{Capitolato C4 - Predire in Grafana}
+
+\subsection{Descrizione generale}
+\textit{Zucchetti}, prima software house\glo italiana, propone lo sviluppo di un plugin\glo per il software Grafana, prodotto realizzato per monitoraggio e presentazione dei flussi di dati raccolti dall'azienda. In questo contesto, l'applicativo da realizzare avrà lo scopo di utilizzare i dati ricevuti per allarmi o segnalazioni, per compiere delle previsioni visualizzabili sotto forma di grafici e dashboard\glos.
+
+\subsection{Finalità del progetto}
+Il prodotto finale deve essere conforme ai seguenti compiti:
+\begin{itemize}
+	\item addestrare il modello producendo un file in formato JSON contenente i parametri per le previsioni con SVM o la Regressione Lineare;
+	\item utilizzare i predittori del file JSON al flusso di dati di cui si vuole compiere la previsione;
+	\item applicare la previsione e fornire i risultati dei valori attesi con un'adeguata interfaccia grafica mediante l'utilizzo di opportuni grafici.
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+\begin{itemize}
+	\item \textbf{Grafana}: software open-source\glo che, a partire da flussi di dati, ne permette il monitoraggio tramite grafici e dashboard\glo dedicate;
+	\item \textbf{Regressione lineare}: metodo statistico utilizzato per la stima di un valore atteso mecapcadiante una retta;
+	\item \textbf{SVM (Support Vector Machine)}:  modello di apprendimento automatico che, dato un training set\glo con valori appartenenti a due possibili classi distinte, assegna i nuovi valori ad una di esse;
+	\item \textbf{Javascript}: linguaggio di programmazione utilizzato per sviluppare il plugin\glos;
+	\item \textbf{InfluxDB}: database open-source\glo a Serie Temporali (Time Series\glos), efficiente per il basso consumo di banda e per l'ottimizzazione della memoria.
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+	\item Stimolante la possibilità di realizzare un prodotto per una grande e rinomata azienda;
+	\item Possibilità di approfondire nozioni teoriche mai affrontate prima riguardanti i modelli statistici.
+\end{itemize}
+
+\subsection{Criticità}
+\begin{itemize}
+	\item Poco interessante dal punto di vista delle tecnologie utilizzate. Il linguaggio Javascript, per esempio, è già stato studiato durante il percorso di studio;
+	\item Non si ha la possibilità di cimentarsi nello sviluppo di un software stand-alone\glos, ma solo di un plugin\glo dipendente da Grafana. 
+\end{itemize}
+
+\subsection{Valutazione conclusiva}
+Sebbene siano stati individuati alcuni aspetti positivi, il gruppo ha ritenuto che l'utilizzo di linguaggi di programmazione per lo più già noti, fosse un fattore determinante per non prendere in considerazione questo progetto. Oltre a ciò, la presentazione del capitolato\glo effettuata dal proponente, è sembrata poco dettagliata, incentrata più nella presentazione dell'azienda, del software Grafana e di alcuni metodi statistici, piuttosto che nella descrizione effettiva del prodotto da realizzare.
