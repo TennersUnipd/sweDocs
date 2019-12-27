@@ -280,7 +280,3 @@ TSWLatexianTemp*
 *.tar.gz
 #DUMB FILES
 *.DS_Store*
-
-interni/studio_di_fattibilita/script.sh
-
-interni/normeDiProgetto/script.sh

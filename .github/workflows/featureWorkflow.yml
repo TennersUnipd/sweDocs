@@ -1,0 +1,27 @@
+name: Continuous Testing
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+      - develop
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository contents
+      uses: actions/checkout@v1
+
+    - name: Latex-multicompiler
+      uses: Jatus93/Latex-multicompiler@v1.0
+      with:
+        path_to_list: .fileToCompile
+        artifact: true
+  
+    - name: upload artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: Documents.tar.gz
+        path: ./Documents.tar.gz
