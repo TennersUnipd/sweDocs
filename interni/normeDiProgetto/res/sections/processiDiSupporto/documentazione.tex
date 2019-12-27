@@ -7,7 +7,7 @@
   di documentazione, in particolare si occupa di descrivere il processo di stesura e
   di gestione di testi validi.
   I documenti prodotti verranno rilasciati nel repository\glo.
-  \href{https://github.com/Jatus93/sweDocs}{link temporaneo}
+  \href{https://GitHub.com/Jatus93/sweDocs}{link temporaneo}
 
   \subsubsection{Aspettative}
   Le aspettative sono la definizione di norme con le quali
@@ -33,7 +33,7 @@
 
     \item \textbf{Preparazione al primo push\glo e push in repository\glo}: prima del primo
      push bisogna modificare il file .filesToCompile con il path\glo del documento,
-     questo \`e necessario alla github action\glo per testare in maniera continuativa
+     questo \`e necessario alla GitHub action\glo per testare in maniera continuativa
      la stesura del documento e fare una verifica della validit\`a del codice
      \LaTeX \space utilizzato per scriverlo;
 
@@ -51,7 +51,7 @@
     sono state eseguite facendo una pull request sul branch develop;
 
     \item \textbf{Seconda verifica automatica}: eseguita la pull request sul branch
-    develop il sistema attiva la github action di controllo relativa.
+    develop il sistema attiva la GitHub action di controllo relativa.
 
     \item \textbf{Revisione delle modifiche}: ricevuta la pull request i verificatori
     prendono in considerazione le modifiche fatte e se ritenute adeguate, faranno a
@@ -118,7 +118,7 @@
   redattori, come ritiene più opportuno.
   \subsubsection{Norme tipografiche}
   \paragraph{Intestazione e piè di pagina}
-  Ogno documento deve avere l'intestazione e il piè di pagina così costituiti
+  Ogni documento deve avere l'intestazione e il piè di pagina così costituiti
   Intestazione:
   \begin{itemize}
     \item \textbf{Logo}: deve trovarsi sull'angolo superiore sinistro;
@@ -133,12 +133,12 @@
   \end{itemize}
 
   \paragraph{Struttura e Gestione delle tabelle}
-  Tutte le tabelle deveno essere costruite utilizzando un preciso stile e devono
-  essere numerate all'interno del documento per facilitarne la referenziazione
-  interna ed esterna.
+  Tutte le tabelle devono essere costruite utilizzando un preciso stile e necessitano
+  di essere numerate all'interno del documento per facilitarne il riferimento
+  intero ed esterno.
   Ogni tabella, e per ogni colonna, deve avere un'intestazione ogni cella d'intestazione
   deve avere il contento in grassetto e centrato.
-  Ogni cella della tabella deve avere il contentuo centrato ad eccezione dei campi
+  Ogni cella della tabella deve avere il contenuto centrato ad eccezione dei campi
   descrittivi dove il testo deve essere corsivo ed allineato a sinistra.
   \paragraph{L'uso del corsivo e dei pedici}
   Nella stesura dei documenti ci sono dei termini che necessitano di pedici per
@@ -146,7 +146,7 @@
   vanno evidenziati con l'uso del corsivo
   Principalmente ci sono due pedici da utilizzare
     \begin{itemize}
-      \item pedice "D": questo pedice si utilizzat quando si sta facendo rifermento
+      \item pedice "D": questo pedice si utilizza quando si sta facendo rifermento
       ad un documento in particolare
       \item pedice "G": questo pedice si utilizza quando una parola ha un significato
       di non immediata comprensione e quindi viene riportata la definizione del
@@ -172,17 +172,17 @@
   Un esempio di path corretto per un documento è interno/normeDiProgetto/main.tex
   \subsubsection{Verbali}
   Oltre ad ereditare lo scheletro di base dei documenti, i verbali devono seguire
-  una nomeclatura relativa all'uso e il giorno.
+  una nomenclatura relativa all'uso e il giorno.
   Il nome del documento quindi dovrà essere così composto
-  verbale[Esterno/Interno]\_YYYY-MM-DD segliendo "Esterno" o "Interno" in base
+  verbale[Esterno/Interno]\_YYYY-MM-DD scegliendo "Esterno" o "Interno" in base
   all'uso, la parte successiva è la data relativa al verbale in formato concordato.
 
     \paragraph{Tracciabilità delle decisioni}
       Quando vengono prese delle decisioni in una riunione devono essere
       riportate nel paragrafo apposito del verbale di rifermento e devono
-      seguirea una numerazione.
+      seguire una numerazione.
       Quando in un documento si fa rifermento ad una decisione presa in riunione
-      bisona fornire il percorso di rifermento.
+      bisgona fornire il percorso di rifermento.
       Il rifermento deve riportare il documento dove è contenuta la decisione
       ad esempio \textit{verbaleEsterno\_YYYY-MM-DD\_ND} dove ND è il numero della
       decisione presa in quell'evento.
@@ -190,7 +190,7 @@
 
   \subsection{Linguaggi e Strumenti}
   \subsubsection{Linguaggi}
-  Per la stesura dei documenti si è decisio di utilizzare principalmente due Linguaggi
+  Per la stesura dei documenti si è deciso di utilizzare principalmente due Linguaggi
   \LaTeX e CSV\glos.
   \paragraph{\LaTeX}
   Il linguaggio scelto per la stesura dei documenti è \LaTeX \space in quanto permette
@@ -203,7 +203,7 @@
   per alleggerire la stesura del documento automatizzandola.
 
   \subsubsection{Strumenti}
-  Per supportare lo svilluppo e la stesura dei documenti sono stati utilizzati diversi
+  Per supportare lo sviluppo e la stesura dei documenti sono stati utilizzati diversi
   strumenti.
   gli strumenti usati fin ora sono i seguenti
 
@@ -214,21 +214,21 @@
   \paragraph{Compilatore}
   Essendo \LaTeX \space un linguaggio di markup da compilare per ottenere un documento
   leggibile si è scelto l'uso di un
-  \href{https://github.com/dante-ev/docker-texlive}{compilatore} in ambiente Docker\glo
+  \href{https://GitHub.com/dante-ev/docker-texlive}{compilatore} in ambiente Docker\glo
   per assicurarci di utilizzare tutti la stessa versione con gli stessi plug-in.
   Il compilatore sopracitato è stato utilizzato per creare una GitHub Action utile
-  alla verifica e creazione dei documenti, tale Acion è stata resa pubblica sotto licenza MIT
-  ed è possibile visionarla \href{https://github.com/Jatus93/Latex-multicompiler}qui
+  alla verifica e creazione dei documenti, tale Action è stata resa pubblica sotto licenza MIT
+  ed è possibile visionarla \href{https://GitHub.com/Jatus93/Latex-multicompiler}qui
 
   \paragraph{Spell checker}
   Per facilitare e velocizzare le operazioni di verifica e validazione dei documenti è
   stato scritto, ed inserito in un docker container apposito, uno script per lo
   spell checking, ovvero il controllo di errori di digitazione.
-  Anchesso è stato rilasciato pubblicamente ed è reperibile \href{https://github.com/Jatus93/spellCheck}qui
+  Anch'esso è stato rilasciato pubblicamente ed è reperibile \href{https://GitHub.com/Jatus93/spellCheck}qui
 
   \paragraph{Script Generazione di glossario}
   Come accennato è stato scritto un script in python per velocizzare la stesura
   del glossario, esso prende in input un file di estensione csv che usa come
-  separatore il caratter ',', e ne restituisce un documento che contiene tutti i
-  termini in ordine alfabetico e il registo delle modifiche realizzato automaticamente
+  separatore il carattere ',', e ne restituisce un documento che contiene tutti i
+  termini in ordine alfabetico e il registro delle modifiche realizzato automaticamente
   in base ai commit del sistema di versionamento utilizzato.
