@@ -1,8 +1,9 @@
-name: Continuos Testing
+name: Continuous Testing
 
-on: 
+on:
   pull_request:
-    branches: 
+    branches:
+      - develop
       - master
 jobs:
   build:
@@ -12,21 +13,15 @@ jobs:
     steps:
     - name: Checkout repository contents
       uses: actions/checkout@v1
-      
+
     - name: Latex compiler
-      uses: Jatus93/Latex-multicompiler@master
+      uses: Jatus93/Latex-multicompiler@v1.0
       with:
         path_to_list: .fileToCompile
         artifact: true
-        
-    - name: Spell Check
-      uses: Jatus93/spellCheck@master
-      with:
-        directory: ./Documents
-        languages: "en_GB;en_US;italiano"
 
     - name: upload artifact
       uses: actions/upload-artifact@v1
       with:
         name: Documents.tar.gz
-        path: ./Documents
+        path: ./Documents.tar.gz
