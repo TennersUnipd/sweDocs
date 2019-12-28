@@ -1,8 +1,40 @@
 \section{Casi d'uso}
 
 \subsection{Attori}
-Con questo documento verrà descritto ed analizzato il processo che ha portato il team Tenners alla scelta del capitolato\glo C2, motivandone la preferenza rispetto ai restanti capitolati.
+In un diagramma dei casi d'uso, gli attori rappresentano le entità esterne che interagiscono con il prodotto \textit{Etherless}. Essi si possono distinguere in due categorie:
+\begin{itemize}
+	\item \textbf{Attori primari:} coinvolti nell'esecuzione dei casi d'uso, interagiscono con il servizio per soddisfare i propri bisogni;
+	\item \textbf{Attori secondari:} forniscono servizio o supporto al sistema. 
+\end{itemize}
+Per l'applicativo non è stato individuato alcun attore secondario, verranno dunque riportati in seguito i soli attori primari.
+
 \subsubsection{Attori primari}
-\subsubsection{Attori secondari}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9cm]{res/img/gerarchiaAttoriPrimari.jpg}
+	\caption{Gerarchia attori primari}
+\end{figure}
+
+Sono state identificate quattro diverse tipologie di attori primari relazionati tra loro in maniera gerarchica:
+
+\begin{itemize}
+	\item \textbf{Utente generico:} utente che ha eseguito il comando per l'avvio dell'applicativo tramite \textit{Etherlesss-cli};
+	\item \textbf{Utente non autenticato:} utente che non ha ancora eseguito l'accesso o la registrazione al network \textit{Ethereum\glo} e che dunque non potrà usufruire delle funzionalità dell'applicazione;
+	\item \textbf{Utente autenticato:} utente che ha eseguito l'accesso al network \textit{Ethereum\glo} e che potrà eseguire i comandi messi a disposizione del servizio per gli utenti utilizzatori;
+	\item \textbf{Utente sviluppatore:} utente che ha la possibilità di eseguire il deploy di funzioni Javascipt proprie, oltre che eseguire le altre funzioni messe a disposizione dagli altri utenti del servizio.
+\end{itemize}
+
+\newpage
 
 \subsection{Elenco dei casi d'uso}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12.3cm]{res/img/useCaseDiagram.jpg}
+	\caption{Casi d'uso principali}
+\end{figure}
+\newpage
+\input{res/sections/UC/UC1}
+\input{res/sections/UC/UC2}
+	
+\subsection{Tracciamento attori - casi d'uso}	
