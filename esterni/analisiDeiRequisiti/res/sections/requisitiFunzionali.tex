@@ -1,0 +1,66 @@
+\subsection{Requisiti funzionali}
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|c|p{8cm}|c|}
+	
+	\caption{Tabella riassuntiva dei requisiti funzionali}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Requisito} & \centering{\textbf{Descrizione}} & \textbf{Fonte}\\
+	
+	\hline
+	
+	R2V1 & Un utente ha la possibilità di visualizzare una guida introduttiva contenente la lista dei comandi eseguibili e il loro funzionamento. & Capitolato \\
+	
+	R1V2 & Un utente ha la possibilità di autenticarsi a \textit{Ethereum} mediante un utenza \textit{Ethereum\glos}. & Capitolato \\
+	
+	R1V2.1 & L'utente si può autenticare mediante login manuale.  & Capitolato \\
+	
+	R2V2.2 & L'utente si può autenticare mediante login automatico. & Capitolato \\
+	
+	R1V2.1.1 &  L'utente viene autenticato al sistema mediante l'inserimento di una coppia di address e private key\glo che identificano un utente univocamente all'interno della rete \textit{Ethereum\glos}. & Capitolato \\
+	
+	R2V2.2.1 &  L'utente viene autenticato automaticamente al sistema mediante un file salvato sul suo dispositivo durante la prima autenticazione o registrazione mediante \textit{Etherless}.  & Capitolato \\
+	
+	R1V3 &  L'utente ha la possibilità di registrarsi su \textit{Etherless}  & Capitolato \\
+
+	R1V3.1 &  La registrazione su \textit{Etherless} avverrà richiedendo una coppia univoca di address - \textit{private key\glo} alla rete \textit{Ethereum\glos}.  & Capitolato \\	
+	
+	R2V4 &  Ogni qualvolta l'utente effettuerà un accesso manuale o la registrazione al sistema, verrà salvato un file contenente le credenziali di accesso per permettere l'autenticazione automatica per le successive esecuzioni della applicazione.  & Capitolato \\
+	
+	R2V5 &  Un utente autenticato può eseguire il logout richiedendo al sistema di eliminare il file di autenticazione salvato sulla propria macchina.  & Capitolato \\
+	
+	R1V6 &  Un utente autenticato può ricercare una funzione caricata da un altro utente sviluppatore sull \textit{Etherless-server}.  & Capitolato \\
+	
+	R1V6.1 &  La ricerca della funzione verrà eseguita inserendo il comando seguito dal nome della funzione stessa.  & Capitolato \\
+	
+	R1V6.2 &  La ricerca della funzione permetterà di visualizzare sull'\textit{Etherless-cli} il nome della funzione, i parametri, una descrizione riassuntiva delle sue funzionalità, il costo e l'autore.  & Capitolato \\
+	
+	R1V6.3 &  Verrà segnalato un errore mediante \textit{Etherless-cli} se il nome della funzione inserito non fosse disponibile su \textit{Etherless-server}.  & Capitolato \\
+	
+	R1V7 &  Un utente autenticato può eseguire una funzione caricata da un altro utente sviluppatore sull \textit{Etherless-server}.  & Capitolato \\
+	
+	R1V7.1 &  L'esecuzione della funzione deve avvenire inserendo il comando apposito seguito dal nome e dal valore dei parametri.  & Capitolato \\
+
+	R1V7.2 &  Il sistema deve restituire un messaggio di errore nel caso in cui il nome della funzione, il numero dei parametri, il tipo dei parametri fossero errati.  & Capitolato \\
+	
+	R1V7.3 &  L'esecuzione di una funzione può avvenire previo pagamento al suo sviluppatore e alla piattaforma \textit{Etherless}. & Capitolato \\
+	
+	R1V7.3.1 &  Il pagamento dovrà avvenire con valuta \textit{Ether\glos}. & Capitolato \\
+	
+	R1V7.3.2 &  La transazione avverrà in maniera diretta. & Capitolato \\
+	
+	R3V7.3.3 &  La transazione potrà avvenire tramite \textit{escrow\glos}. & Capitolato \\
+	
+	R1V7.3.4 &  Il sistema deve restituire un messaggio di errore all'utente nel caso non avesse fondi  \textit{Ether\glos} sufficienti per coprire il costo dell'esecuzione. & Capitolato \\
+	
+	R1V7.3.5 &  Il sistema deve restituire un messaggio di errore all'utente nel caso lo sviluppatore della funzione non dovesse averne ancora associato un costo. & Capitolato \\
+	
+	R1V8 &  L'utente può richiedere un log di tutte le funzioni eseguite. & Capitolato \\	
+	
+	R1V8.1 &  Il sistema dovrà restituire un log delle funzioni eseguite composto da: data e ora di esecuzione, nome, parametri e costo della funzione. & Capitolato \\
+	\hline
+\end{longtable}

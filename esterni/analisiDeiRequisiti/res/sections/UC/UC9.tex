@@ -1,11 +1,16 @@
 \subsubsection{UC9 - Esecuzione funzione}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente autenticato;
-	\item \textbf{Descrizione:} l'utente autenticato esegue una delle funzioni disponibili sulla piattaforma \textit{Etherless}; 
+	\item \textbf{Descrizione:} l'utente autenticato esegue una delle funzioni disponibili sulla piattaforma \textit{Etherless} con l'apposito comando; 
 	\item \textbf{Pre-condizioni:} l'utente ha effettuato l'accesso ad \textit{Etherless} e vuole eseguire una tra le funzioni messe a disposizione dagli utenti sviluppatori pagando la somma richiesta;
 	\item \textbf{Post-condizioni:} il sistema visualizzerà a schermo gli output della funzione eseguita dall'utente;
 	\item \textbf{Scenario principale:} 
+	\begin{enumerate}
+		\item L'utente inserisce il comando per l'esecuzione della funzione;
+		\item Il sistema mostrerà sulla \textit{CLI\glo} l'output della funzione richiesta in base al valore dei parametri inseriti.
+	\end{enumerate}
+	\item \textbf{Inclusioni:} 
 	\begin{itemize}
-		\item 
+		\item \textbf{UC10:} Ogni qualvolta l'utente esegua una funzione, deve corrispondere il pagamento della cifra imposta dall'utente sviluppatore.
 	\end{itemize}
 \end{itemize}
