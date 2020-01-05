@@ -1,0 +1,67 @@
+%Tutti gli usepackage vanno qui
+
+\usepackage{geometry}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=blue,
+}
+% % Numerazione figure
+% \let\counterwithout\relax
+% \let\counterwithin\relax
+% \usepackage{chngcntr}
+
+\counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
+
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+
+%header e footer
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.11]{./res/img/logo.png}}
+\rhead{Studio di fattibilità}
+\rfoot{Pagina \thepage}
+\lfoot{\small{\texttt{tenners.unipd@gmail.com}}}
+\cfoot{}
+\setlength{\headheight}{40pt}
+\renewcommand{\footrulewidth}{0.4pt}    %linea footer fondo pagina
+
+
+%tabelle
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\definecolor{pari}{HTML}{EAEAEA}
+\definecolor{dispari}{HTML}{FFFFFF}
+\definecolor{header}{HTML}{b4b4b4}
+
+
+%glossario
+\newcommand{\glo}{$_{G}$ }
+\newcommand{\glos}{$_{G}$} % pedice glossario senza spazio dopo la parola
+
+%label custom
+\makeatletter
+\newcommand{\uclabel}[2]{%
+	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{\thepage}{#2}{#1}{}} }%
+	\hypertarget{#1}{#2}
+}
+\makeatother
+
+%codice
+\definecolor{codegray}{gray}{0.9}
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
