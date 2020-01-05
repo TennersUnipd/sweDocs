@@ -21,58 +21,19 @@
   migliore gestione dei documenti a cui tutti si devono attenere per produrre un
   documento valido e ufficiale, senza eccezioni.
 
-  \subsubsection{Ciclo di vita del documento}
+  \subsubsection{Ciclo di vita nuovo}:
   Ogni documento ha diversi stadi nel suo ciclo di vita:
   \begin{itemize}
-    \item \textbf{Preparazione alla creazione di un documento}: come da norme di
-    sviluppo interne, per ogni nuova componente del progetto \`e necessario creare un
-    \textit{feature branch}\glo con il nome del componente in \textit{camel case}\glo
-    dopodich\'e si potr\`a creare il documento;
-
-    \item \textbf{Creazione del documento}: il documento deve essere creato in un
-    percorso che ne rifletta la destinazione d'uso, interno o esterno, e
-    all'interno di una cartella che indichi il nome del del documento in
-    \textit{camel case}\glo che conterr\`a, al suo interno, il file main.tex;
-
-    \item \textbf{Preparazione al primo \textit{push}\glo e push in \textit{repository}\glo}:
-    prima del primo push bisogna modificare il file .filesToCompile con il path\glo del documento,
-     questo \`e necessario alla \textit{GitHub action}\glo per testare in maniera continuativa
-     la stesura del documento e fare una verifica della validit\`a del codice
-     \LaTeX \space utilizzato per scriverlo;
-
-    \item \textbf{Realizzazione}: il documento viene scritto in maniera incrementale
-    considerando le osservazioni e le necessit\`a che si evidenziano nel corso del
-    progetto.
-
-    \item \textbf{Verifica automatica in un feature branch}: una volta fatto il push
-    sul repository del progetto, se i file si trovano in un branch di sviluppo
-    sotto feature, verranno compilati dai tool automatici segnalando eventuali errori
-    nella sintassi del linguaggio \LaTeX \space utilizzato;
-
-    \item \textbf{Richiesta di verifica manuale}: una volta terminata la verifica
-    automatica il redattore segnala ai verificatori che le modifiche richieste
-    sono state eseguite facendo una pull request sul branch develop;
-
-    \item \textbf{Seconda verifica automatica}: eseguita la pull request sul branch
-    develop il sistema attiva la GitHub action di controllo relativa.
-
-    \item \textbf{Revisione delle modifiche}: ricevuta la pull request i verificatori
-    prendono in considerazione le modifiche fatte e se ritenute adeguate, faranno a
-    loro volta una pull request sul branch master.
-
-    \item \textbf{Verifica automatica e produzione automatica del documento nel
-    branch develop}: Una volta nel branch develop i tool automatici produrranno il
-    documento in formato pdf pronto per essere approvato del Responsabile di progetto;
-
-    \item \textbf{Approvazione}: il Responsabile di progetto, dopo aver ricevuto la notifica
-    di pull request su master, si preoccuper\`a di leggere le modifiche apportate al documento
-    ed eventualmente di approvarle accettando la pull request sul branch master;
-
-    \item \textbf{Generazione del documento}: Dopo che il documento ha raggiunto il
-    branch master il sistema automatico si preoccuper\`a di creare la release del
-    documento con i relativi changelog.
+    \item \textbf{Da revisionare}: il documento è stato scritto o modificato ed è
+    in attesa di revisione da parte del verificatore e prende il TAG di prerelease
+     TBR nel suo numero di versione;
+    \item \textbf{Da approvare}: il documento è stato revisionato e verificato ed
+    è in attesa di approvazione da parte del responsabile e prende il TAG di prerelease
+    TBA.
+    \item \textbf{Approvato}: il documento è stato approvato ed è pronto per la release
+    e perde ogni TAG di prerelease.
   \end{itemize}
-
+  
   \subsubsection{Template}
   \`E stato creato un template, che velocizza il processo di stesura verifica e
   approvazione dei documenti, unificando carattere, logo e stile di formattazione
