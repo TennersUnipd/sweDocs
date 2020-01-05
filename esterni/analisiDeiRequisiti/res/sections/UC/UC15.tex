@@ -1,12 +1,17 @@
-\subsubsection{UC15 - Creazione funzione DA RIVEDERE}
+\subsubsection{UC15 - Deploy funzione}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{res/img/UC15.jpg}
+	\caption{Diagramma UC15 - Deploy funzione}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente sviluppatore;
-	\item \textbf{Descrizione:} l'utente, utilizzando lo specifico comando, crea l'istanza di una nuova funzione da rendere disponibile a tutti gli utenti; 
-	\item \textbf{Pre-condizioni:} l'utente ha utilizzato il comando per la creazione di una nuova funzione;
-	\item \textbf{Post-condizioni:} il sistema si occuperà di creare una nuova istanza su AWS Lambda con il nome specificato in fase di creazione e rendere disponibile la sua esecuzione a tutti gli utenti di \textit{Etherless}. L'utente visualizzerà a schermo l'esito del comando;
+	\item \textbf{Descrizione:} l'utente potrà eseguire il deploy di una propria funzione Javascript su \textit{Etherless-server} rendendola disponibile a tutti gli utenti del servizio; 
+	\item \textbf{Pre-condizioni:} l'utente possiede una funzione Javascript sul proprio dispositivo;
+	\item \textbf{Post-condizioni:} il sistema si occuperà di creare una nuova istanza su AWS Lambda con il nome specificato e rendere disponibile la sua esecuzione a tutti gli utenti di \textit{Etherless}. L'utente visualizzerà a schermo l'esito del comando;
 	\item \textbf{Scenario principale:} 
 	\begin{enumerate}
-		\item L'utente crea una nuova funzione mediante l'apposito comando;
-		\item Il sistema visualizzerà su schermo l'esito della creazione della funzione.
+		\item L'utente tramite il comando "deploy" crea una nuova istanza della funzione su AWS Lambda;
+		\item Il sistema visualizzerà su schermo l'esito dell'operazione.
 	\end{enumerate}
 \end{itemize}
