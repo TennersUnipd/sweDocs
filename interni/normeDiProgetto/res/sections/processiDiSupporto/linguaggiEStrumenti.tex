@@ -27,6 +27,8 @@ di programmazione e Scripting:
    \item \textbf{\textit{Python\glos}}:Il linguaggio Python è stato utilizzato per creare uno strumento per la generazione
    automatica del glossario partendo da un CSV e utilizzando i commit relativi
    al repository per creare una tabella dei cambiamenti;
+   \item \textbf{\textit{php\glos}}:questo linguaggio viene utilizzato per  fare
+   un \textit{webhook}\glo che mette in comunicazione Automate.io con google drive;
    \item \textbf{\textit{YAML\glos}}: questo linguaggio viene utilizzato per la configurazione dello strumento \textit{GitHub Actions\glos}.
  \end{itemize}
 
@@ -50,13 +52,13 @@ gli strumenti usati fin ora sono i seguenti:
   stato scritto, ed inserito in un docker container apposito, uno script per lo
   spell checking, ovvero il controllo di errori di digitazione.
   Anch'esso è stato rilasciato pubblicamente ed è reperibile \href{https://GitHub.com/Jatus93/spellCheck}qui;
-
   \item \textbf{Script Generazione di glossario}: è stato scritto un script in python per velocizzare la stesura
   del glossario, esso prende in input un file di estensione csv che usa come
   separatore il carattere ',', e ne restituisce un documento che contiene tutti i
   termini in ordine alfabetico e il registro delle modifiche realizzato automaticamente
   in base ai commit del sistema di versionamento utilizzato;
-
+  \item \textbf{Google Sheet}: Questo strumento viene utilizzato per la stesura del glossario
+  in congiunzione con gli scritp di automatzione e il webhook;
   \item \textbf{\textit{Truffle\glos}}: come è emerso da \textit{verbaleEsterno\_2019-12-20\_01} è il framework che
   utilizzeremo per lo sviluppo e gestione delle appplicazioni in \textit{Ethereum\glos}.
 \end{itemize}
