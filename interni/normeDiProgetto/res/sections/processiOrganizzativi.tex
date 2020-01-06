@@ -24,10 +24,10 @@
 				di \textit{SCRUM}\glo come template per la gestione del gruppo.
 				Tale approccio è stato adeguato alle nostre esigenze di tempo e di capacità
 				organizzativa impostando la durata degli \textit{sprint}\glo a una settimana.
-				Ogni sprint è caratterizzato da un'attività da esegure e concludere.
+				Ogni sprint è caratterizzato da un'attività da eseguire e concludere.
 				Questa tecnica prevedere l'inclusione del proponente all'interno dei
 				\textit{Stand-up meeting}\glos, considerando lo stato attuale del progetto
-				si è optato per un'incontro
+				si è optato per un incontro al termine di ogni sprint.
 
 			\subsubsection{Gestione di un'attività}
 				La prima cosa da fare quando si inizia una nuova attività, sia che si tratti di software
@@ -85,7 +85,7 @@
    				\item segnalare al \textit{Responsabile} eventuali situazioni di conflitto che violano ciò che è indicato nel \textit{Piano di Progetto 1.0.0\docs}.
    			\end{itemize}
    			\paragraph{Responsabile} \mbox{}\\ \mbox{}\\
-   			Il Responsabile è il punto di riferimento sia per il fornitore che per il committente. Inoltre è colui che raccoglie su di sè le responsabilità decisionali di scelta e approvazione e costituisce il centro di coordinamento per l'intero progetto.
+   			Il Responsabile è il punto di riferimento sia per il fornitore che per il committente. Inoltre è colui che raccoglie su di sé le responsabilità decisionali di scelta e approvazione e costituisce il centro di coordinamento per l'intero progetto.
 
    			I suoi compiti principali sono:
    			\begin{itemize}
@@ -110,19 +110,19 @@
 				\paragraph{Il flusso di lavoro}
 
 				\subparagraph{Procedura da seguire per l'implementazione di una nuova attività}
-				All'inzio di una nuova attività ogni componente del gruppo con ruolo implementativo
+				All’inizio di una nuova attività ogni componente del gruppo con ruolo implementativo
 				deve creare un nuovo branch feature, partire dal branch di sviluppo develop,
 				che deve avere nome il nome delle issue assegnatagli.
 
-				\subparagraph{Procedura da seguire per la richiesta di verifica delle attivtà svolte}
+				\subparagraph{Procedura da seguire per la richiesta di verifica delle attività svolte}
 				Quando un'attività si ritiene svolta, e se ne vuole richiedere la verifica
 				e validazione da parte dei verificatori,il componente del gruppo, prima
 				di fare una \textit{pull request}\glo sul branch di partenza, deve accertarsi che gli
 				strumenti di verifica automatica siano stati eseguiti correttamente,senza
-				errori, e deve appore il TAG di versione TBR.
+				errori, e deve apporre il TAG di versione TBR.
 				Dopodiché sarà possibile fare la \textit{pull request}\glos.
 
-				\subparagraph{Procedura da segure per verifica e validazione}
+				\subparagraph{Procedura da seguire per verifica e validazione}
 				Quando viene fatta una pull request il primo verificatore libero se ne fa
 				carico e dopo aver verificato che i test automatici non hanno rilevato nulla
 				passa ad una analisi dei contenuti.
@@ -134,8 +134,8 @@
 				In questo caso viene rimosso il TAG di prerelease TBR e viene posto il TAG
 				TBA.
 					\item \textbf{Rifiuto}
-				In caso di rifiuto il verificatore dovra scrivere nella sezione dedicata della
-				\textit{pull request}\glo il modivo del rifiuto delle modifiche.
+				In caso di rifiuto il verificatore dovrà scrivere nella sezione dedicata della
+				\textit{pull request}\glo il motivo del rifiuto delle modifiche.
 					\end{itemize}
 
 				\subparagraph{Procedure per l'accettazione e release}
@@ -162,7 +162,7 @@
 			  }
 
 				\subparagraph{Etherless}
-				Il repository Etherless contiene tutto il progetto in tutte le sue compontenti
+				Il repository Etherless contiene tutto il progetto in tutte le sue componenti
 				ad eccezione di Env-Configs in quanto necessario solo alla gestione interna
 				degli strumenti di sviluppo.
 				Questa organizzazione permette di avere repository separate per ogni parte
@@ -238,7 +238,7 @@
    				\subparagraph{Tickecting}
    					Il tickecting permette ai vari membri del gruppo di monitorare, in qualsiasi momento, le attività in corso, permette al \textit{Responsabile} di monitorare l'andamento delle attività.
 
-   					Come strumento di tickecting e' stato deciso di usare i servizzi di project board offerti da GitHub.
+   					Come strumento di tickecting e' stato deciso di usare i servizi di project board offerti da GitHub.
 
    					Su GitHub è stato creato un'organizzazione, la quale contiene tutte le reposity, in modo da separare le singole unità (esempio dividere il codice dai documenti).
    					La project board principale del gruppo è collegata alle project board di ciascun repository.
@@ -246,14 +246,14 @@
    					Ogni project board è suddivisa in cinque sezioni:
    					\begin{itemize}
    						\item \textbf{To do}: indica le attività da svolgere;
-   						\item \textbf{In progess}: indica tutte le attività che sono in fase di svolgimento;
+   						\item \textbf{In progress}: indica tutte le attività che sono in fase di svolgimento;
    						\item \textbf{Review in progress}: indica le verifiche in fase di svolgimento;
    						\item \textbf{Review approved}: indica tutte le verifiche approvate;
    						\item \textbf{Done}: indica tutte le attività completate;
    					\end{itemize}
    					Inoltre la project board principale gruppo contiene le macro attività da svolgere, le quali una volta completate diventano una milestone per il progetto.
 
-   					Le varie attività vengono riportate come milestone per il reposity di riferimento, e vengono analizzati e suddivisi in issues. Questo permette di inserire i vari requisiti usando un approccio top-down, e di usare un metodo botton-up per soddisfarli.
+   					Le varie attività vengono riportate come milestone per il reposity di riferimento, e vengono analizzati e suddivisi in issues. Questo permette di inserire i vari requisiti usando un approccio top-down, e di usare un metodo bottom-up per soddisfarli.
    			\paragraph{Gestione rischi}\mbox{}\\ \mbox{}\\
    				Il \textit{Responsabile} ha il compito di individuare i rischi descritti nel \textit{Piano di Progetto\docs}, e una volta trovati, inserirli nell'analisi dei rischi.
 
