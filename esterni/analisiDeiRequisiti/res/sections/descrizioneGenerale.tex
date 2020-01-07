@@ -27,9 +27,10 @@ Un \textbf{utente utlizzatore} può:
 \end{itemize}
 Un utente diventa \textbf{utente sviluppatore} quando decide di rendere disponibile su \textit{Etherless} una delle sue funzioni scritte in linguaggio Javascript. Egli, oltre a poter effettuare le stesse operazioni rese disponibili agli utenti utilizzatori, può inoltre:
 \begin{itemize}
-	\item creare ed eseguire il deploy di una funzione su \textit{Etherless};
+	\item eseguire il deploy di una funzione su \textit{Etherless};
 	\item eliminare una funzione da lui pubblicata;
-	\item modificare costo, descrizione, parametri, tipo di ritorno della funzione.
+	\item modificare costo, descrizione, firma della funzione.
+	\item aggiornare il codice di una sua funzione presente su \textit{Etherless}.
 \end{itemize}
 
 
@@ -52,9 +53,9 @@ Ogni utente ha associato al suo account un certo numero di \textit{Ether\glos}. 
 
 L'intero sistema si basa su tre applicativi software:
 	\begin{itemize}
-		\item \textbf{\textit{Etherless-cli:}} \textit{CLI\glo} attraverso la quale gli utenti si interfacciano con il servizio ed eseguono le funzionalità disponibili;
-		\item \textbf{\textit{Etherless-smart:}} applicativo che si occupa della definizione e del \textit{deploy\glo} dello \textit{smart-contract} sulla rete \textit{Ethereum\glos};
-		\item \textbf{\textit{Etherless-server:}} applicativo server che rimane in ascolto e soddisfa le richieste di esecuzione delle funzioni caricate, interfacciandosi con il servizio AWS Lambda mediante l'apposito \textit{SDK\glos}.
+		\item \textbf{Etherless-cli:} \textit{CLI\glo} attraverso la quale gli utenti si interfacciano con il servizio ed eseguono le funzionalità disponibili;
+		\item \textbf{Etherless-smart:} applicativo che si occupa della definizione e del \textit{deploy\glo} dello \textit{smart-contract} sulla rete \textit{Ethereum\glos};
+		\item \textbf{Etherless-server:} applicativo server che rimane in ascolto e soddisfa le richieste di esecuzione delle funzioni caricate, interfacciandosi con il servizio AWS Lambda mediante l'apposito \textit{SDK\glos}.
 	\end{itemize}
 
 \subsubsection{Trasferimento del denaro}
