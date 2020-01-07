@@ -1,0 +1,200 @@
+\section{Processi di supporto}
+  \subsection{Documentazione}
+
+  \subsubsection{Scopo}
+  Questa sezione si occupa di illustrare i processi necessari alla stesura di un
+  documento; poiché ogni processo e attivit\`a di sviluppo significativa necessita
+  di documentazione, in particolare si occupa di descrivere il processo di stesura e
+  di gestione di testi validi.
+  I documenti prodotti verranno rilasciati nel \textit{repository}\glo.
+  \href{https://GitHub.com/Jatus93/sweDocs}{link temporaneo}
+  Ci si propone quindi di seguire uno dei principi proposti da Google in
+  \textit{Better is better than perfect}
+  \textbf{Miglioramenti Incrementali sono meglio di un lungo dibattito}
+
+  \subsubsection{Aspettative}
+  Le aspettative sono la definizione di norme con le quali
+  si gestiscono i documenti dalla creazione all'approvazione.
+
+  \subsubsection{Descrizione}
+  Questa parte del documento contiene le regole che sono state definite per una
+  migliore gestione dei documenti a cui tutti si devono attenere per produrre un
+  documento valido e ufficiale, senza eccezioni.
+
+  \subsubsection{Ciclo di vita del documento}
+  Ogni documento ha diversi stadi nel suo ciclo di vita:
+  \begin{itemize}
+    \item \textbf{Preparazione alla creazione di un documento}: come da norme di
+    sviluppo interne, per ogni nuova componente del progetto \`e necessario creare un
+    \textit{feature branch}\glo con il nome del componente in \textit{camel case}\glo
+    dopodich\'e si potr\`a creare il documento;
+
+    \item \textbf{Creazione del documento}: il documento deve essere creato in un
+    percorso che ne rifletta la destinazione d'uso, interno o esterno, e
+    all'interno di una cartella che indichi il nome del del documento in
+    \textit{camel case}\glo che conterr\`a, al suo interno, il file main.tex;
+
+    \item \textbf{Preparazione al primo \textit{push}\glo e push in \textit{repository}\glo}:
+    prima del primo push bisogna modificare il file .filesToCompile con il path\glo del documento,
+     questo \`e necessario alla \textit{GitHub action}\glo per testare in maniera continuativa
+     la stesura del documento e fare una verifica della validit\`a del codice
+     \LaTeX \space utilizzato per scriverlo;
+
+    \item \textbf{Realizzazione}: il documento viene scritto in maniera incrementale
+    considerando le osservazioni e le necessit\`a che si evidenziano nel corso del
+    progetto.
+
+    \item \textbf{Verifica automatica in un feature branch}: una volta fatto il push
+    sul repository del progetto, se i file si trovano in un branch di sviluppo
+    sotto feature, verranno compilati dai tool automatici segnalando eventuali errori
+    nella sintassi del linguaggio \LaTeX \space utilizzato;
+
+    \item \textbf{Richiesta di verifica manuale}: una volta terminata la verifica
+    automatica il redattore segnala ai verificatori che le modifiche richieste
+    sono state eseguite facendo una pull request sul branch develop;
+
+    \item \textbf{Seconda verifica automatica}: eseguita la pull request sul branch
+    develop il sistema attiva la GitHub action di controllo relativa.
+
+    \item \textbf{Revisione delle modifiche}: ricevuta la pull request i verificatori
+    prendono in considerazione le modifiche fatte e se ritenute adeguate, faranno a
+    loro volta una pull request sul branch master.
+
+    \item \textbf{Verifica automatica e produzione automatica del documento nel
+    branch develop}: Una volta nel branch develop i tool automatici produrranno il
+    documento in formato pdf pronto per essere approvato del Responsabile di progetto;
+
+    \item \textbf{Approvazione}: il Responsabile di progetto, dopo aver ricevuto la notifica
+    di pull request su master, si preoccuper\`a di leggere le modifiche apportate al documento
+    ed eventualmente di approvarle accettando la pull request sul branch master;
+
+    \item \textbf{Generazione del documento}: Dopo che il documento ha raggiunto il
+    branch master il sistema automatico si preoccuper\`a di creare la release del
+    documento con i relativi changelog.
+  \end{itemize}
+
+  \subsubsection{Template}
+  \`E stato creato un template, che velocizza il processo di stesura verifica e
+  approvazione dei documenti, unificando carattere, logo e stile di formattazione
+  di un documento \LaTeX \space valido.
+
+  \subsubsection{Struttura dei documenti}
+  \paragraph{Copertina di un documento}
+  Il frontespizio di un documento di progetto deve essere così strutturato:
+  \begin{itemize}
+    \item Il nome del gruppo di progetto e il capitolato che è stato scelto;
+    \item Il logo del gruppo di progetto;
+    \item Il titolo del documento;
+    \item Tabella di gestione del documento che comprenda i seguenti elementi:
+    \begin{itemize}
+      \item Versione del documento;
+      \item I redattori del documento;
+      \item I verificatori del documento;
+      \item I il Responsabile che ha approvato il documento;
+      \item Destinazione d'uso;
+    \end{itemize}
+    \item La descrizione sintetica del contenuto del documento;
+    \item Recapito email del gruppo di progetto.
+  \end{itemize}
+  \paragraph{Registro delle modifiche}
+  Ogni documento basato sul template fornito deve avere una sezione dedicata al versionamento
+  del documento segnalando le modifiche effettuate.
+  La tabella di registro delle modifiche deve avere le seguenti parti:
+  \begin{itemize}
+    \item versione
+    \item Data in formato YYYY-MM-DD
+    \item Nominativo di chi ha effettuato, verificato e approvato modifiche
+    \item Ruolo del modificatore del documento
+    \item Descrizione delle modifiche effettuate
+  \end{itemize}
+  \paragraph{Indice}
+  L'indice dell'intero documento viene generato al momento della compilazione
+  automaticamente, esso è necessari per facilitare la navigazione all'interno del
+  documento.
+  L'indice viene posto dopo la tabella delle modifiche per permettere una più facile
+  lettura di quest'ultima.
+  \paragraph{Contenuto, capitoli e sezioni}
+  Il documento è formato principalmente da capitoli che definiscono un argomento,
+  ognuno di essesi deve essere formato con un paragrafo introduttivo che illustri
+  di cosa tratta il capitolo in questione.
+  Il redattore è libero di gestire i capitoli, mantenendo la coerenza con gli altri
+  redattori, come ritiene più opportuno.
+  \subsubsection{Norme tipografiche}
+  \paragraph{Intestazione e piè di pagina}
+  Ogni documento deve avere l'intestazione e il piè di pagina così costituiti
+  Intestazione:
+  \begin{itemize}
+    \item \textbf{Logo}: deve trovarsi sull'angolo superiore sinistro;
+    \item \textbf{Nome del documento}: deve riportare il nome del documento sull'angolo superiore destro.
+  \end{itemize}
+  Piè di pagina:
+  \begin{itemize}
+    \item \textbf{e-mail}: deve riportare l'indirizzo e-mail del gruppo di progetto
+    nell'angolo inferiore destro;
+    \item \textbf{Numero di pagina}: deve riportare il numero di pagina corrente
+     nell'angolo inferiore destro
+  \end{itemize}
+
+  \paragraph{Struttura e Gestione delle tabelle}
+  Tutte le tabelle devono essere costruite utilizzando un preciso stile e necessitano
+  di essere numerate all'interno del documento per facilitarne il riferimento
+  intero ed esterno.
+  Ogni tabella, e per ogni colonna, deve avere un'intestazione ogni cella d'intestazione
+  deve avere il contento in grassetto e centrato.
+  Ogni cella della tabella deve avere il contenuto centrato ad eccezione dei campi
+  descrittivi dove il testo deve essere corsivo ed allineato a sinistra.
+
+  \paragraph{Uso e gestione delle immagini}
+  Nei documenti e consentito l'uso di immagini che portino un valore esplicativo
+  aggouintivo.
+  Per gestire correttamente l'uso il redattore del documento è tenuto ad apporre
+  un numero identificativo alle immagini con relativa didascalia.
+  In oltre è tenuto a generare una tabella che contenga la pagina di appartenenza,
+  numero e didascalia delle relative immagini.
+
+  \paragraph{L'uso del corsivo e dei pedici}
+  Nella stesura dei documenti ci sono dei termini che necessitano di pedici per
+  specificarne il significato, tutti i termini che vengono seguiti da un pedice
+  vanno evidenziati con l'uso del corsivo
+  Principalmente ci sono due pedici da utilizzare
+    \begin{itemize}
+      \item pedice "D": questo pedice si utilizza quando si sta facendo rifermento
+      ad un documento in particolare
+      \item pedice "G": questo pedice si utilizza quando una parola ha un significato
+      di non immediata comprensione e quindi viene riportata la definizione del
+      \textit{Glossario}\doc
+      permettendo a tutti i lettori di capirne il significato
+    \end{itemize}
+
+  \paragraph{Convenzioni su nomi delle directory e file}
+  I nomi delle directory devono seguire determinate regole per facilitare le operazioni
+  automatiche di verifica e per rendere più facile la navigazione.
+  I sorgenti \LaTeX \space dei documenti dovranno esse così organizzati:
+
+  \dirtree{%
+  .1 /.
+  .2 destinazione d'uso.
+  .3 nome del documento in camel case.
+  .4 main.tex.
+  .4 config.
+  .5 config.tex.
+  .4 res.
+  }
+
+  Un esempio di path corretto per un documento è interno/normeDiProgetto/main.tex
+  \subsubsection{Verbali}
+  Oltre ad ereditare lo scheletro di base dei documenti, i verbali devono seguire
+  una nomenclatura relativa all'uso e il giorno.
+  Il nome del documento quindi dovrà essere così composto
+  verbale[Esterno/Interno]\_YYYY-MM-DD scegliendo "Esterno" o "Interno" in base
+  all'uso, la parte successiva è la data relativa al verbale in formato concordato.
+
+    \paragraph{Tracciabilità delle decisioni}
+      Quando vengono prese delle decisioni in una riunione devono essere
+      riportate nel paragrafo apposito del verbale di rifermento e devono
+      seguire una numerazione.
+      Quando in un documento si fa rifermento ad una decisione presa in riunione
+      bisgona fornire il percorso di rifermento.
+      Il rifermento deve riportare il documento dove è contenuta la decisione
+      ad esempio \textit{verbaleEsterno\_YYYY-MM-DD\_ND} dove ND è il numero della
+      decisione presa in quell'evento.
