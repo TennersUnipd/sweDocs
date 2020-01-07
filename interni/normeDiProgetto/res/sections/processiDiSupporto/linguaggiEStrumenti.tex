@@ -12,24 +12,16 @@ Per la stesura dei documenti si è deciso di utilizzare principalmente due Lingu
     di lavorare in contemporanea ad un documento.
     Questo linguaggio ha anche il vantaggio di avere un numero cospicuo di plug-in
     che permettono una facile estensione delle funzionalità.
-    \item \textbf{CSV}:Il linguaggio CSV è necessario per la creazione del glossario e viene utilizzato
-    per alleggerire la stesura del documento automatizzandola.
   \end{itemize}
 
 \paragraph{Linguaggi di codifica del software di supporto}
 Per il supporto dello sviluppo software e di documenti sono emersi diversi linguaggi
 di programmazione e Scripting:
  \begin{itemize}
-   \item \textbf{\textit{JavaScript\glos}}: verrà utilizzato per scrivere gli unit test per l'applicazione \textit{CLI}\glos;
-   \item \textbf{\textit{Solidity\glos}}: verrà utilizzato per scrivere gli unit test per la componente \textit{smart contract}\glos;
-   \item \textbf{\textit{Bash Script\glos}}:questo linguaggio è stato utilizzato per la creazione del compilatore automatico
-   dei documenti \LaTeX e per fare il controllo sulla digitazione.
-   \item \textbf{\textit{Python\glos}}:Il linguaggio Python è stato utilizzato per creare uno strumento per la generazione
-   automatica del glossario partendo da un CSV e utilizzando i commit relativi
-   al repository per creare una tabella dei cambiamenti;
-   \item \textbf{\textit{php\glos}}:questo linguaggio viene utilizzato per  fare
-   un \textit{webhook}\glo che mette in comunicazione Automate.io con google drive;
-   \item \textbf{\textit{YAML\glos}}: questo linguaggio viene utilizzato per la configurazione dello strumento \textit{GitHub Actions\glos}.
+   \item \textbf{\textit{Bash Script\glos}}: per la creazione del compilatore automatico dei documenti \LaTeX e per il controllo lessicale ssulla documentazione;
+   \item \textbf{\textit{Python\glos}}: per la generazione automatica del glossario partendo da un file in formato CSV;
+   \item \textbf{\textit{PHP\glos}}: per la creazione di un \textit{webhook}\glo che permetta l'aggiornamento del glossario a partire da un documento condiviso su Google Drive;
+   \item \textbf{\textit{YAML\glos}}: per la configurazione delle \textit{GitHub Actions\glos}.
  \end{itemize}
 
 \subsubsection{Strumenti}
