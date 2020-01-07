@@ -1,0 +1,32 @@
+name: Continuos Testing
+
+on: 
+  pull_request:
+    branches: 
+      - master
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository contents
+      uses: actions/checkout@v1
+      
+    - name: Latex compiler
+      uses: Jatus93/Latex-multicompiler@master
+      with:
+        path_to_list: .fileToCompile
+        artifact: true
+        
+    - name: Spell Check
+      uses: Jatus93/spellCheck@master
+      with:
+        directory: ./Documents
+        languages: "en_GB;en_US;italiano"
+
+    - name: upload artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: Documents.tar.gz
+        path: ./Documents
