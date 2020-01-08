@@ -60,17 +60,17 @@ I casi d'uso descrivono l'insieme delle casistiche con cui il sistema si interfa
 \end{itemize}
 Ogni caso d'uso, oltre ad avere un relativo diagramma, verrà descritto 
 \begin{itemize}
-  \item Codice;
-  \item Nome;
-  \item Diagramma del caso d'uso;
-  \item Attori principali;
-  \item Attori secondari (opzionale);
-  \item Pre-condizioni;
-  \item Post-condizioni;
-  \item Scenario principale;
-  \item Inclusione (opzionale);
-  \item Esclusione (opzionale);
-  \item Specializzazione (opzionale).
+  \item codice;
+  \item nome;
+  \item diagramma del caso d'uso;
+  \item attori principali;
+  \item attori secondari (opzionale);
+  \item pre-condizioni;
+  \item post-condizioni;
+  \item scenario principale;
+  \item inclusioni (opzionale);
+  \item esclusioni (opzionale);
+  \item specializzazioni (opzionale).
 \end{itemize}
 
 \paragraph{UML\glo}
@@ -95,11 +95,40 @@ Per facilitare la descrizione dell'architettura del prodotto finale, si ricorre 
 \subsubsection{Codifica}
 La Codifica è la fase in cui viene sviluppato il codice del prodotto dai programmatori. È fondamentale che questo sia uniforme per migliorare le attività di manutenzione, verifica e validazione. È quindi necessario normare il lavoro in modo tale che il loro codice sia leggibile, attraverso uno stile di codifica.
 \paragraph{Stile di Codifica}
-Le regole di codifica cercano di seguire degli standard per i vari linguaggi utilizzati. In generale le norme utilizzate saranno:
+Stabilire convenzioni di codifica comuni, migliora la leggibilità del codice e lo rende più facilmente mantenibile. Il gruppo Tenners, per aumentare l'omogeneità e l'uniformità durante la stesura del codice, ha scelto delle regole comuni da seguire:
 \begin{itemize}
-  \item \textbf{Indentazione}: per l'indentazione dei blocchi saranno utilizzato 4 caratteri spazio (e non il classico carattere tab), per uniformare la codifica dei caratteri su diversi sistemi operativi.
-  \item \textbf{Posizione delle parentesi}: le parentesi vanno inserite in linea con i costrutti stessi.
-  \item \textbf{Nomenclatura}: tutti i nomi devono essere in CamelCase. La distinzione ovvia tra classe in maiuscola e metodi in minuscolo va rispettata. L'unica eccezione sono le costanti che vanno scritte tutte in maiuscolo. I nomi devono essere univoci e devono rispecchiare la funzione di ciò che definiscono.
-  \item \textbf{Lingua}: il codice come anche i commenti vanno scritti in lingua inglese.
+  \item \textbf{Indentazione}: per l'indentazione dei blocchi saranno utilizzati 4 caratteri spazio (e non il classico tab), per uniformare la codifica dei caratteri su diversi sistemi operativi;
+  \item \textbf{Posizione delle parentesi}: le parentesi per l'apertura di un blocco vanno inserite in linea con i costrutti mentre, quelle di chiusura, vanno inserite alla linea successiva rispetto all'ultima istruzione del blocco.
+  Esempio:
+  \begin{lstlisting}
+  	function toCelsius(fahrenheit){
+  		return (5 / 9) * (fahrenheit - 32);
+  	}
+  \end{lstlisting}
+  \item \textbf{Nomenclatura}: i nomi contenuti nel codice devono aderire alle seguenti convenzioni:
+  \begin{itemize}
+  	\item \textbf{Nome delle classi:} scritti in UpperCamelCase, senza l'utilizzo degli spazi, con la prima lettera di ciascuna parola in maiuscolo Esempio:
+  	\begin{lstlisting}
+  	class AccountingDepartment {
+  		....
+  	}
+  	\end{lstlisting}
+  	\item \textbf{Nome dei metodi e delle variabili:} scritti in lowerCamelCase, senza l'utilizzo degli spazi, con la prima lettera di ciascuna parola in maiuscolo eccetto la prima. Esempio:
+  	\begin{lstlisting}
+  	let z = 100;
+  	function addToZ(x, y) {
+  		return x + y + z;
+  	}
+  	\end{lstlisting}
+  \end{itemize}
+  Per facilitare la lettura e la comprensione del codice, tutti i nomi devono essere significativi e parlanti;
+  \item \textbf{Lingua}: il codice e i commenti vanno scritti in lingua inglese.
+  \item \textbf{Spazi intorno agli operatori:} verranno inseriti degli spazi intorno agli operatori ( = + - * / ) , e dopo le virgole. 
+  Esempio:
+  \begin{lstlisting}
+  var x = y + z;
+  var values = ["Volvo", "Saab", "Fiat"];
+  \end{lstlisting}
+  
 \end{itemize}
 %\subparagraph{TypeScript}
