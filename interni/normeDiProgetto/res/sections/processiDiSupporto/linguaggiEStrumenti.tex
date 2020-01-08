@@ -1,56 +1,46 @@
-\subsection{Linguaggi e Strumenti}
-\subsection{Scopo}
-Questa sezione del documento si prefigge di spiegare quali \textbf{Linguaggi} e
-\textbf{Strumenti} sono stati selezionati per semplificare lo sviluppo di documenti
-e di codice anche in relazione alle richieste del proponente.
-\subsubsection{Linguaggi}
-\paragraph{Linguaggi per la stesura dei documenti}:
-Per la stesura dei documenti si è deciso di utilizzare principalmente due Linguaggi:
-  \begin{itemize}
-    \item \textbf{\LaTeX}:Il linguaggio scelto per la stesura dei documenti è \LaTeX \space in quanto permette
-    la suddivisione di un documento in parti diverse e quindi permette a più persone
-    di lavorare in contemporanea ad un documento.
-    Questo linguaggio ha anche il vantaggio di avere un numero cospicuo di plug-in
-    che permettono una facile estensione delle funzionalità.
-  \end{itemize}
+\subsubsection{Linguaggi e Strumenti}
+\paragraph{Linguaggi}
+Per la stesura dei documenti si è deciso di utilizzare \LaTeX \space in quanto permette una semplice suddivisione in sezioni di un documento e risulta facile da utilizzare in collaborazione. Oltre a ciò, fornisce la generazione automatica degli indici dei contenuti, delle immagini e delle tabelle a seguito della compilazione del file.tex. Questo linguaggio ha anche il vantaggio di avere un numero cospicuo di plug-in che ne permettono una facile estensione delle funzionalità.
 
-\paragraph{Linguaggi di codifica del software di supporto}
-Per il supporto dello sviluppo software e di documenti sono emersi diversi linguaggi
-di programmazione e Scripting:
- \begin{itemize}
-   \item \textbf{\textit{Bash Script\glos}}: per la creazione del compilatore automatico dei documenti \LaTeX e per il controllo lessicale ssulla documentazione;
-   \item \textbf{\textit{Python\glos}}: per la generazione automatica del glossario partendo da un file in formato CSV;
-   \item \textbf{\textit{PHP\glos}}: per la creazione di un \textit{webhook}\glo che permetta l'aggiornamento del glossario a partire da un documento condiviso su Google Drive;
-   \item \textbf{\textit{YAML\glos}}: per la configurazione delle \textit{GitHub Actions\glos}.
- \end{itemize}
-
-\subsubsection{Strumenti}
-Per supportare lo sviluppo e la stesura dei documenti sono stati utilizzati diversi
-strumenti.
-gli strumenti usati fin ora sono i seguenti:
+\paragraph{Strumenti}
+Per la scrittura effettiva della documentazione, il gruppo Tenners ha concordato l'utilizzo di alcuni strumenti:
 \begin{itemize}
-  \item \textbf{\textit{GitHub Actions\glos}}:
-  GitHub Actions è un ambiente per l'esecuzione di script e programmi quando viene
-  fatto un'operazione su i repository del progetto ed automatizza i alcuni processi;
-  \item \textbf{\textit{Compilatore \LaTeX\glos}}:\LaTeX \space è un linguaggio
-  di markup da compilare per ottenere un documento leggibile, si è scelto quindi l'uso di un
-  \href{https://GitHub.com/dante-ev/docker-texlive}{compilatore} in ambiente Docker\glos,
-  per assicurarci di utilizzare tutti la stessa versione con gli stessi plug-in,
-  è stato utilizzato per creare una GitHub Action utile
-  alla verifica e creazione dei documenti, tale Action è stata resa pubblica sotto licenza MIT
-  ed è possibile visionare \href{https://GitHub.com/Jatus93/Latex-multicompiler}qui lo script;
-  \item \textbf{Spell checker}:
-  Per facilitare e velocizzare le operazioni di verifica e validazione dei documenti è
-  stato scritto, ed inserito in un docker container apposito, uno script per lo
-  spell checking, ovvero il controllo di errori di digitazione.
-  Anch'esso è stato rilasciato pubblicamente ed è reperibile \href{https://GitHub.com/Jatus93/spellCheck}qui;
-  \item \textbf{Script Generazione di glossario}: è stato scritto un script in python per velocizzare la stesura
-  del glossario, esso prende in input un file di estensione csv che usa come
-  separatore il carattere ',', e ne restituisce un documento che contiene tutti i
-  termini in ordine alfabetico e il registro delle modifiche realizzato automaticamente
-  in base ai commit del sistema di versionamento utilizzato;
-  \item \textbf{Google Sheet}: Questo strumento viene utilizzato per la stesura del glossario
-  in congiunzione con gli scritp di automatzione e il webhook;
-  \item \textbf{\textit{Truffle\glos}}: come è emerso da \textit{verbaleEsterno\_2019-12-20\_01} è il framework che
-  utilizzeremo per lo sviluppo e gestione delle applicazioni in \textit{Ethereum\glos}.
-\end{itemize}
+	\item \textbf{TexStudio:} un software \textit{multipiattaforma\glo} che include un correttore ortografico interattivo;
+	\item \textbf{Script in Python per la generazione del glossario:} per automatizzare l'inserimento dei termini di glossario, è stato sviluppato uno script che, a partire da un file con estensione .csv, genererà il documento corrispondente;
+	\item \textbf{Spell checker}: per facilitare e velocizzare le operazioni di verifica e validazione dei documenti è
+	stato scritto, ed inserito in un \textit{Docker container\glo} apposito, uno script per lo
+	spell checking, ovvero il controllo per gli errori di digitazione.
+	\item \textbf{Compilatore \LaTeX}: si è scelto l'uso di un compilatore in ambiente Docker\glo (\url{https://GitHub.com/dante-ev/docker-texlive}) per garantire l'utilizzo della stessa versione di \LaTeX ed evitare errori derivanti dalla differente codifica dei caratteri sui diversi sistemi operativi. Tale compilatore è stato integrato in un'opportuna \textit{Github Action\glo} resa pubblica sotto licenza MIT. È possibile visionare lo script al link \url{https://GitHub.com/Jatus93/Latex-multicompiler};
+	\item \textbf{Visual Paradigm 13 CE:} Per la rappresentazione dei diagrammi \textit{UML\glo};
+	\item \textbf{Microsoft Project:} per modellare i diagrammi di Grantt.
+\end{itemize} 
+
+%\paragraph{Linguaggi di codifica del software di supporto}
+%Per il supporto dello sviluppo software e di documenti sono emersi diversi linguaggi
+%di programmazione e Scripting:
+% \begin{itemize}
+%   \item \textbf{\textit{Bash Script\glos}}: per la creazione del compilatore automatico dei documenti \LaTeX e per il controllo lessicale ssulla documentazione;
+%   \item \textbf{\textit{Python\glos}}: per la generazione automatica del glossario partendo da un file in formato CSV;
+%   \item \textbf{\textit{PHP\glos}}: per la creazione di un \textit{webhook}\glo che permetta l'aggiornamento del glossario a partire da un documento condiviso su Google Drive;
+%   \item \textbf{\textit{YAML\glos}}: per la configurazione delle \textit{GitHub Actions\glos}.
+% \end{itemize}
+%
+%\subsubsection{Strumenti}
+%Per supportare lo sviluppo e la stesura dei documenti sono stati utilizzati diversi
+%strumenti.
+%gli strumenti usati fin ora sono i seguenti:
+%\begin{itemize}
+%  \item \textbf{\textit{GitHub Actions\glos}}:
+%  GitHub Actions è un ambiente per l'esecuzione di script e programmi quando viene
+%  fatto un'operazione su i repository del progetto ed automatizza i alcuni processi;
+
+%  \item \textbf{Script Generazione di glossario}: è stato scritto un script in python per velocizzare la stesura
+%  del glossario, esso prende in input un file di estensione csv che usa come
+%  separatore il carattere ',', e ne restituisce un documento che contiene tutti i
+%  termini in ordine alfabetico e il registro delle modifiche realizzato automaticamente
+%  in base ai commit del sistema di versionamento utilizzato;
+%  \item \textbf{Google Sheet}: Questo strumento viene utilizzato per la stesura del glossario
+%  in congiunzione con gli scritp di automatzione e il webhook;
+%  \item \textbf{\textit{Truffle\glos}}: come è emerso da \textit{verbaleEsterno\_2019-12-20\_01} è il framework che
+%  utilizzeremo per lo sviluppo e gestione delle applicazioni in \textit{Ethereum\glos}.
+%\end{itemize}
