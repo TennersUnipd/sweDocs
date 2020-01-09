@@ -1,0 +1,75 @@
+\subsection{Verifica}
+\subsubsection{Scopo}
+La verifica del prodotto garantisce che tutte le attività di processo compiute in un periodo di tempo del progetto, non abbiano introdotto errori nel prodotto. Per ogni prodotto intermedio che causa variazioni significative rispetto al precedente, è necessario compiere un processo di verifica. Avvenendo in passi intermedi, la verifica supporta la validazione finale del prodotto.
+
+\subsubsection{Tipi di verifica}
+La verifica è un processo analitico che può essere di due tipi:
+\begin{itemize}
+	\item \textbf{Analisi statica:} verifica del prodotto effettuata senza la necessità di esecuzione; 
+	\item \textbf{Analisi dinamica:} verifica del prodotto effettuata eseguendo il software o una sua parte.
+\end{itemize}
+
+\subsubsection{Analisi statica}
+\noindent Esistono due metodi per attuare il processo di analisi statica di un prodotto:
+\begin{itemize}
+	\item \textbf{Walkthrough:} verifica a "largo spettro" che analizza il prodotto in tutti i suoi aspetti. Non si basa su una conoscenza pregressa riguardo errori comuni, bensì sulla analisi totalitaria del prodotto, alla ricerca delle difformità e delle criticità. Proprio a causa di queste caratteristiche, è una metodologia di verifica che dispendiosa in termini di tempo;
+	\item \textbf{Inspection:} differentemente dalla metodologia Walkthrough, l'Inspection si basa sull'esperienza.Sapendo gli errori tipici durante i diversi periodi del ciclo di vita di un prodotto, è possibile stilare una lista di controllo e procedere ad analizzare i soli punti critici della struttura. Ogni qualvolta venga eseguita una verifica e vengano trovati nuovi punti critici per il controllo, si aggiorna la lista a disposizione di tutti i verificatori.
+\end{itemize}
+Inizialmente il gruppo procederà con un tipo di verifica Walkthrough, iniziando a stilare progressivamente una lista di controllo utile ad effettuare i successivi controlli con il metodo Inspection.\\
+
+\noindent Viene riportata in seguito la lista di controllo errori e criticità comuni durante la stesura dei documenti:
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4cm}|C{8.5cm}|}
+	\arrayrulecolor{white}
+	\caption{Tabella per la lista di controllo}\\
+	\rowcolor{header}
+	\textbf{Tipologia} & \textbf{Descrizione controllo}\\
+	\endfirsthead
+	
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	
+	Grammatica & Devono essere evitati errori grammaticali. Particolare attenzione dovrà esser posta sui tempi verbali, sull'utilizzo corretto di articoli e preposizioni, sulla coerenza di genere e numero nei sostantivi e aggettivi all'interno della stessa frase. \\
+	
+	Struttura della frase & Le frasi devono essere più semplici possibili e preferibilmente poste in forma attiva facendone risaltare il soggetto. \\
+	
+	Elenchi puntati & Gli elenchi puntati dovranno essere coerenti con quanto scritto nella sezione \textsection3.1.5.4 \\
+	
+	Glossario & Tutti i termini di Glossario devono essere riportati nel documento coerentemente con quanto scritto nella sezione \textsection3.1.5.3 \\
+	
+	Data e ora & Tutti gli orari e le date devono essere riportate in formato corretto, come descritto nella sezione \textsection3.1.5.5 \\
+	\hline
+\end{longtable}
+
+
+
+\subsubsection{Analisi dinamica}
+L'analisi dinamica viene effettuata tramite l'ausilio di test. Ogni test per essere significativo, deve essere ripetibile. Per soddisfare tale richiesta, ogni test deve possedere le seguenti caratteristiche:
+\begin{itemize}
+	\item considera \textbf{l'ambiente} hardware e software di esecuzione;
+	\item è caratterizzato da uno \textbf{stato iniziale};
+	\item riceve in \textbf{input} dei valori;
+	\item restituisce un \textbf{output} corrispondente con quello atteso;
+	\item può contenere delle \textbf{istruzioni aggiuntive} sulle modalità di esecuzione del test e sulla loro interpretazione.
+\end{itemize}
+Esistono varie tipologie di test in base all'oggetto e allo scopo, che verranno utilizzate durante verifica del prodotto software.
+
+\paragraph{Test di unità}
+Vengono effettuate delle prove sulle unità che compongono il prodotto software. Le unità rappresentano la più piccola parte del prodotto che è possibile eseguire e verificare autonomamente. Questa tipologia di test è effettuata con l'ausilio degli \textit{stub\glo} e dei \textit{driver\glos}.
+
+\paragraph{Test di integrazione}
+Test che agiscono a livello di componente. Possono essere eseguiti solo su un insieme di unità precedentemente testate. Il compito dei test di integrazione è di verificare se le unità presentano il comportamento atteso quando operano insieme a livello di componente.
+
+\paragraph{Test di sistema} 
+Si basano sull'intero sistema e hanno lo scopo di verificare del funzionamento del prodotto dopo l'assemblamento delle varie componenti che lo costituiscono. Essi dovranno verificare e coprire tutti i requisiti definiti nell'\textit{Analisi dei requisiti\docs}.
+
+\paragraph{Test di accettazione}
+Verificano il prodotto nella sua completezza e si basano sull'esperienza del cliente rispetto ai bisogni espressi nel \textit{capitolato\glos}.
+
+\paragraph{Test di regressione}
+Vengono effettuati a seguito di una modifica apportata al sistema. Ogni modifica deve essere necessariamente seguita dall'esecuzione di tutti i test esistenti. Ciò servirà per accertare che la correttezza della modifica effettuata. 
