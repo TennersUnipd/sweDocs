@@ -25,7 +25,8 @@
 \usepackage[bottom]{footmisc}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
-\setcounter{secnumdepth}{4}
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
 \usepackage{amsmath, amssymb}
 \usepackage{array}
 \usepackage{graphicx}
@@ -98,3 +99,6 @@
 	breakatwhitespace=true,
 	tabsize=3
 }
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
