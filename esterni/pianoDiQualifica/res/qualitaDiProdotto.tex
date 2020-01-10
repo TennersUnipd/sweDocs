@@ -1,0 +1,137 @@
+\section{Qualità di Prodotto}
+Per quanto riguarda la qualità del prodotto, il gruppo ha deciso di aderire allo \textit{standard ISO/IEC 9126\glos}. Esso definisce tutte le caratteristiche che garantiscono l'ottenimento di un prodotto software di qualità. Il gruppo ha deciso di essere conforme ad alcune di queste qualità software.
+
+\subsection{Funzionalità}
+Rappresenta la capacità del prodotto di soddisfare tutti i requisiti che il sistema deve avere.
+\subsubsection{Obiettivi}
+\begin{itemize}
+	\item \textbf{Accuratezza:} il prodotto deve fornire i risultati attesi nel modo più preciso possibile;
+	\item \textbf{Appropriatezza:} il prodotto deve fornire il corretto numero di funzionalità per le specifiche concordate;
+	\item \textbf{Interoperabilità:} il prodotto deve interagire e operare nella maniera corretta con altri sistemi.
+\end{itemize}
+\subsubsection{Metriche}
+\begin{itemize}
+	\item \textbf{Copertura funzionale:} indica la percentuale di implementazione delle funzionalità prestabilite. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		PERC_{FS}=100*\frac{N_{FS}}{N_FR}
+		\end{math}
+	}
+	\\\\
+	Dove:
+	\begin{itemize}
+		\item \textbf{N\textsubscript{FS}:} numero di funzionalità soddisfatte;
+		\item \textbf{N\textsubscript{FR}:} numero di funzionalità richieste.
+	\end{itemize}
+\end{itemize}
+
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{2.25cm}|C{2.25cm}|C{3cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Metriche per la funzionalità del prodotto}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{Intervallo di accettazione}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
+	\tabularnewline
+	\endfirsthead
+	
+	Copertura funzionale &  100 & 100 & Percentuale \\ 
+
+\end{longtable}
+%\begin{itemize}
+%	\item \textbf{Requisiti obbligatori soddisfatti:} indica la percentuale di requisiti obbligatori soddisfatti. Il calcolo avviene secondo la formula:\\\\
+%	\centerline{
+%		\begin{math}
+%		PERC_{OS}=100*\frac{R_{OS}}{R_O}
+%		\end{math}
+%	}
+%	\\\\Dove:
+%	\begin{itemize}
+%		\item \textbf{R\textsubscript{OS}:} numero di requisiti obbligatori soddisfatti;
+%		\item \textbf{R\textsubscript{O}:} numero di requisiti obbligatori
+%	\end{itemize}
+%	\item \textbf{Requsiiti desiderabili soddisfatti:} indica la percentuale di requisiti desiderabili soddisfatti. Il calcolo avviene secondo la formula:\\\\
+%		\centerline{
+%		\begin{math}
+%		PERC_{DS}=100*\frac{R_{DS}}{R_D}
+%		\end{math}
+%	}
+%	\\\\Dove:
+%	\begin{itemize}
+%		\item \textbf{R\textsubscript{DS}:} numero di requisiti obbligatori soddisfatti;
+%		\item \textbf{R\textsubscript{D}:} numero di requisiti obbligatori
+%	\end{itemize}	
+%\end{itemize}
+%
+%\renewcommand{\arraystretch}{2.2}
+%\rowcolors{2}{pari}{dispari}
+%\begin{longtable}{|C{4.5cm}|C{2.25cm}|C{2.25cm}|C{3cm}|}
+%	\arrayrulecolor{white}
+%	
+%	\caption{Metriche per la funzionalità del prodotto}\\
+%	\hline
+%	\rowcolor{header}
+%	
+%	\textbf{Metrica} & \textbf{Intervallo di accettazione}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
+%	\tabularnewline
+%	\endfirsthead
+%	
+%	Requisiti obbligatori soddisfatti &  100 & 100 & Percentuale \\ 
+%	Requisiti desiderabili soddisfatti &  > 50 & 100 & Percentuale \\ 
+%\end{longtable}
+
+
+\subsection{Usabilità}
+Rappresenta la capacità del prodotto di essere comprensibile ed utilizzabile dall'utente.
+\subsubsection{Obiettivi}
+\begin{itemize}
+	\item \textbf{Comprensibilità:} il prodotto deve essere facile da comprendere nelle funzionalità e nei metodi di utilizzo;
+	\item \textbf{Apprendibilità:} il prodotto deve permettere l'apprendimento delle funzionalità da parte dell'utente in poco tempo e in maniera corretta;
+	\item \textbf{Operabilità:} il prodotto deve consentire all'utente un utilizzo autonomo, per i propri scopi.
+\end{itemize}
+\subsubsection{Metriche}
+\begin{itemize}
+	\item \textbf{Numero comandi falliti:} indica il numero di inserimenti errati che l'utente invia tramite \textit{CLI\glos} per l'esecuzione di una specifica funzionalità.
+	\item \textbf{Percentuale fallimenti in una sessione:} indica la percentuale di comandi inseriti e inviati dall'utente in maniera errata durante una sessione di utilizzo dell'applicativo. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		PERC_{F}=100*\frac{N_{F}}{N_T}
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{N\textsubscript{F}:} numero dei comandi inseriti in maniera errata durante la sessione di utilizzo;
+		\item \textbf{N\textsubscript{T}:} numero totale di comandi inseriti durante la sessione di utilizzo.
+	\end{itemize}	
+\end{itemize}
+
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{2.25cm}|C{2.25cm}|C{3cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Metriche per l'usabilità del prodotto}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{Intervallo di accettazione}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
+	\tabularnewline
+	\endfirsthead
+	
+	Numero comandi falliti &  <= 3 & 0 & Valore numerico \\ 
+	Percentuale fallimenti in una sessione &  > 70 & 100 & Percentuale \\ 
+\end{longtable}
+
+
+
+\subsection{Portabilità}
+Rappresenta la capacità del prodotto di tenere funzionalità e comportamento invariati a seconda del sistema hardware o software utilizzato.
+\subsubsection{Obiettivi}
+\begin{itemize}
+	\item \textbf{Comprensibilità:} il prodotto deve essere facile da comprendere nelle funzionalità e nei metodi di utilizzo;
+	\item \textbf{Apprendibilità:} il prodotto deve permettere l'apprendimento delle funzionalità da parte dell'utente in poco tempo e in maniera corretta;
+	\item \textbf{Operabilità:} il prodotto deve consentire all'utente un utilizzo autonomo, per i propri scopi.
+\end{itemize}
