@@ -34,7 +34,7 @@ Rappresenta la capacità del prodotto di soddisfare tutti i requisiti che il sis
 	\hline
 	\rowcolor{header}
 	
-	\textbf{Metrica} & \textbf{Intervallo di accettazione}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
+	\textbf{Metrica} & \textbf{Intervallo preferibile}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
 	\tabularnewline
 	\endfirsthead
 	
@@ -94,7 +94,7 @@ Rappresenta la capacità del prodotto di essere comprensibile ed utilizzabile da
 \end{itemize}
 \subsubsection{Metriche}
 \begin{itemize}
-	\item \textbf{Numero comandi falliti:} indica il numero di inserimenti errati che l'utente invia tramite \textit{CLI\glos} per l'esecuzione di una specifica funzionalità.
+	\item \textbf{Numero comandi falliti:} indica il numero di inserimenti errati che l'utente invia tramite \textit{CLI\glos} per l'esecuzione di una specifica funzionalità;
 	\item \textbf{Percentuale fallimenti in una sessione:} indica la percentuale di comandi inseriti e inviati dall'utente in maniera errata durante una sessione di utilizzo dell'applicativo. Il calcolo avviene secondo la formula:\\\\
 	\centerline{
 		\begin{math}
@@ -117,21 +117,64 @@ Rappresenta la capacità del prodotto di essere comprensibile ed utilizzabile da
 	\hline
 	\rowcolor{header}
 	
-	\textbf{Metrica} & \textbf{Intervallo di accettazione}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
+	\textbf{Metrica} & \textbf{Intervallo preferibile}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
 	\tabularnewline
 	\endfirsthead
 	
-	Numero comandi falliti &  <= 3 & 0 & Valore numerico \\ 
+	Numero comandi falliti &  <= 3 & 0 & Valore numerico intero positivo \\ 
 	Percentuale fallimenti in una sessione &  > 70 & 100 & Percentuale \\ 
 \end{longtable}
 
 
 
-\subsection{Portabilità}
-Rappresenta la capacità del prodotto di tenere funzionalità e comportamento invariati a seconda del sistema hardware o software utilizzato.
+\subsection{Manutenibilità}
+Rappresenta la capacità del prodotto nel subire modifiche o miglioramenti a seguito di cambiamenti dell'ambiente, delle specifiche o dei requisiti del sistema.
 \subsubsection{Obiettivi}
 \begin{itemize}
-	\item \textbf{Comprensibilità:} il prodotto deve essere facile da comprendere nelle funzionalità e nei metodi di utilizzo;
-	\item \textbf{Apprendibilità:} il prodotto deve permettere l'apprendimento delle funzionalità da parte dell'utente in poco tempo e in maniera corretta;
-	\item \textbf{Operabilità:} il prodotto deve consentire all'utente un utilizzo autonomo, per i propri scopi.
+	\item \textbf{Analizzabilità:} il prodotto, per come è realizzato, deve permette di rilevare velocemente le cause di possibili errori o malfunzionamenti;
+	\item \textbf{Modificabilità:} una modifica correttiva del prodotto deve causare cambiamenti minimi al resto del sistema;
+	\item \textbf{Stabilità:} apportando una modifica al prodotto, devono essere ridotti al minimo effetti inaspettati.
 \end{itemize}
+\subsubsection{Metriche}
+\begin{itemize}
+	\item \textbf{Indice di manutenibilità:} indica con un valore numerico, il grado di manutenibilità di un prodotto software, basandosi su metriche note di implementazione. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		MI= 171-5.2*ln(HV)-0.23*(CC)-16.2*ln(LC)
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{HV:} rappresenta l'Halstead Volume;
+		\item \textbf{CC:} indica la complessità ciclomatica del codice;
+		\item \textbf{LC:} indica le linee di codice.
+	\end{itemize}	
+	\item \textbf{Percentuale commenti:} indica, con un valore percentuale, la quantità di documentazione sotto forma di codice commentato nel prodotto software . Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		PERC_{COD}=100*\frac{NR_{COD}}{NR}
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{NR\textsubscript{COD}:} indica il numero di righe commentate nel codice del prodotto;
+		\item \textbf{NR:} indica il numero di righe totali del codice del prodotto.
+	\end{itemize}
+\end{itemize}
+
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{3cm}|C{3cm}|C{3cm}|C{3cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Metriche per la manutenibilità del prodotto}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{Intervallo preferibile}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
+	\tabularnewline
+	\endfirsthead
+	
+	Indice di manutenibilità &  >= 10 e <= 100 & >= 20 e <= 100 & Valore numerico positivo (da 0 a 100) \\ 
+	Percentuale commenti &  >= 20 e <= 50 & >= 20 e <= 50 & Percentuale \\ 
+\end{longtable}
