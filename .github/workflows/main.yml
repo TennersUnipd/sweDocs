@@ -28,5 +28,5 @@ jobs:
     - name: upload artifact
       uses: actions/upload-artifact@v1
       with:
-        name: Documents.tar.gz
+        name: Documents
         path: ./Documents
