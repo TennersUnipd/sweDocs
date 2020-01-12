@@ -57,7 +57,7 @@
     \item \textbf{Nominativo:} nome di chi ha effettuato, verificato o approvato la modifica;
     \item \textbf{Ruolo:} ruolo di chi ha apportato la modifica;
     \item \textbf{Descrizione:} breve descrizione delle modifiche effettuate;
-    \item \textbf{Data:} data della modifica in formato YYYY-MM-DD.
+    \item \textbf{Data:} data della modifica.
   \end{itemize}
   \paragraph{Indice}
   L'indice dell'intero documento viene generato con l'apposito comando al momento della compilazione
@@ -88,8 +88,7 @@
   Tutte le tabelle adottano il medesimo stile:
   \begin{itemize}
   	\item Ad eccezione del registro delle modifiche, tutte le tabelle devono essere numerate e devono avere un indice associato, posizionato dopo quello relativo ai contenuti e alle immagini;
-  	\item Le celle di intestazione di ogni tabella devono avere il contenuto in grassetto;
-  	\item Ogni cella della tabella deve avere il contenuto centrato ad eccezione dei campi descrittivi che avranno un allineamento a sinistra;
+  	\item Le celle di intestazione di ogni tabella devono avere il contenuto centrato e in grassetto;
   	\item Le celle relative alla descrizione nel registro delle modifiche hanno il contenuto in corsivo.
   \end{itemize}
 
@@ -126,7 +125,7 @@
   	\item \textbf{Giorno (DD):} utilizzando due cifre (con valori compresi tra 1-31).
   \end{itemize}
   Gli orari sono indicati utilizzando il seguente formato:\\\\
-  \centerline{\textbf{hh-mm-ss}} 
+  \centerline{\textbf{hh:mm:ss}} 
   \begin{itemize}
   	\item \textbf{Ore (hh):} utilizzando due cifre (con valori compresi tra 0-23);
   	\item \textbf{Minuti (mm):} utilizzando due cifre (con valori compresi tra 0-59);
@@ -137,14 +136,14 @@
   
   \subsubsection{Verbali}
   Oltre ad ereditare la struttura base dei documenti, i verbali devono seguire
-  una nomenclatura relativa propria relativa alla destinazione d'uso e al giorno.
+  una nomenclatura propria relativa alla destinazione d'uso e al giorno della riunione di riferimento.
   Questa decisione è stata presa per favorire un miglior tracciamento di ciascun verbale.
   Il nome del documento quindi dovrà essere così composto:\\\\
   \centerline{\textbf{verbale[Esterno/Interno]\_YYYY-MM-DD}} 
   
 
     \paragraph{Tracciabilità delle decisioni}
-      Ogni decisione presa all'interno di una riunione deve essere numerabile, tracciabile e menzionabile al di fuori del verbale. Quando in un documento si fa rifermento ad una decisione durante una riunione
+      Ogni decisione presa all'interno di una riunione deve essere numerabile, tracciabile e menzionabile negli altri documenti al di fuori del verbale. Quando in un documento si fa rifermento ad una decisione durante una riunione
       occorre specificare un codice identificativo come mostrato in seguito:\\\\
       \centerline{\textbf{V[I/E]\_YYYY-MM-DD\_ND}} 
       \begin{itemize}
@@ -153,3 +152,13 @@
       	\item \textbf{YYYY-MM-DD:} data del verbale;
       	\item \textbf{ND:} numero della decisione utilizzando due cifre e iniziando la numerazione da 00.
       \end{itemize}
+  
+  \subsubsection{Abbreviazioni}
+  Nella stesura dei documenti può essere talvolta utile l'utilizzo di sigle per riferirsi ad alcuni termini. Vengono elencate di seguito le principali:
+  \begin{itemize}
+  	\item \textbf{NdP:} Norme di Progetto;
+  	\item \textbf{PdQ:} Piano di Qualifica;
+  	\item \textbf{PdP:} Piano di Progetto;
+  	\item \textbf{SdF:} Studio di Fattibilità;
+  	\item \textbf{AdR:} Analisi dei Requisiti.
+  \end{itemize}
