@@ -1,15 +1,19 @@
 \section{Modello di sviluppo}
-Per lo svolgimento del progetto \textit{Etherless} è stato scelto il modello incrementale.
+Per lo svolgimento del progetto \textit{Etherless} è stato scelto l'utilizzo di un modello incrementale.
 \subsection{Modello incrementale}
-Il modello incrementale consiste nella realizzazione del prodotto finale per incrementi, ognuno dei quali introduce una funzionalità. \\Questa modalità si combina bene anche con il versionamento del codice che traccia e raggruppa le modifiche. L'aggiunta, modifica e cancellazione di requisiti sono consentite previa discussione con il proponente e sua approvazione. Tuttavia non sono permesse durante la fase di sviluppo dell'incremento corrente.
+Il modello incrementale consiste nella realizzazione del prodotto finale per incrementi, ognuno dei quali introduce una funzionalità. Questo modello è particolarmente adatto per rilasci multipli in cui, con l'aggiunta progressiva di nuove funzionalità, si approssima sempre più il prodotto parziale a quello finale.\\\\
+ I requisiti sono da trattare in ordine di importanza con l'aggiunta delle funzionalità che necessitano di essere realizzate con più urgenza. Questo approccio di tipo adattivo, differentemente da quello predittivo adottato nei modelli sequenziali, consente una maggiore flessibilità e si adatta maggiormente a situazioni in cui i requisiti possono non essere chiari e ben definiti da qualcuno degli \textit{stakeholders\glos}. \\\\
+  L'aggiunta, modifica e cancellazione di requisiti sono consentite previa discussione con il proponente e sua approvazione. Tuttavia non sono permesse durante l'incremento corrente.
 \subsubsection{Vantaggi}
 \begin{itemize}
-	\item Le funzionalità principali vengono sviluppate prima e il committente può subito valutarle e comunicare il suo feedback;
-	\item sviluppare per incrementi successivi limita l'introduzione di errori;
-	\item le modifiche, l'individuazione e la correzione degli errori sono più economiche;
-	\item fase di test più semplice e mirata.
+	\item Le funzionalità principali vengono subito sviluppate e dunque il committente può rilasciare un feedback velocemente;
+	\item Ogni rilascio risulta utile per il miglioramento dei successivi;
+	\item Sviluppare per incrementi limita l'introduzione di errori;
+	\item Le modifiche, l'individuazione e la correzione degli errori sono più economiche;
+	\item Le funzionalità introdotte inizialmente subiranno più volte il processo di verifica poiché eseguito per ogni ciclo.	
 \end{itemize}
 \subsubsection{Svantaggi}
 \begin{itemize}
-	\item È necessario prevedere delle attività di refactoring del codice: ad ogni incremento avviene un degradamento del sistema causato dall'aumentare del codice e della sua complessità che rende gli incrementi successivi più difficili.
+	\item Un approccio predittivo, differentemente da quello adattivo attuato dal modello incrementale, consentirebbe una stima più precisa di tempi e costi;
+	\item Necessita che l'intero sistema sia preventivamente definito e scomposto in modo tale da poterlo costruire incrementalmente.
 \end{itemize}
