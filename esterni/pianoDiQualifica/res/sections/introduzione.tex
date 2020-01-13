@@ -1,8 +1,7 @@
 \section{Introduzione}
 
 \subsection{Scopo del Documento}
-Questo documento si prefigge di dichiarare le strategie atte a garantire la qualit\'a \glo, definendo quindi i processi di verifica \glo e validazione \glo. Saranno presentate qui non solo le politiche trasversali all'intera organizzazione Tenners, ma anche gli obiettivi da perseguire sul progetto intero. Sar\'a necessario quindi rendere note le procedure e gli strumenti di controllo attraverso le quali ci prefissiamo di raggiungere la qualit'a \glo.
-\'E necessario specificare che il documento non \'e statico, ma cambier\'a durante tutta la durata del progetto. Infatti, molte delle politiche o dei processi selezionati inizialmente potranno rivelarsi insufficienti o inadeguati, costringendoci a modificare o aggiungerli. Il piano di qualifica \glo sar\'a prodotto in maniera incrementale e i cambiamenti saranno tracciati nella sezione del registro delle modifiche.
+Questo documento descrive le strategie atte a garantire la qualit\'a dei processi coinvolti nel ciclo di vita del prodotto e del prodotto stesso. Per garantire la qualità verranno utilizzate delle apposite metriche. Le metriche adottate, avranno lo scopo di quantificare in maniera oggettiva il processo di verifica e validazione. Il piano di qualifica sar\'a prodotto in maniera incrementale e i cambiamenti saranno tracciati nella sezione del registro delle modifiche.
 
 \subsection{Scopo del prodotto}
 Il capitolato C2 ha come obbiettivo una piattaforma per svilippatori che metta
@@ -22,57 +21,19 @@ consentir\`a di avere un linguaggio comune ed evitare ambiguit\`a.
 
 \subsection{Rifermenti}
 \subsubsection{Rifermenti normativi}
-\begin{enumerate}
-  \item Piano di qualifica in particola la sezione legata al capitolato C2.
-\end{enumerate}
+\begin{itemize}
+\item \textbf{ISO/IEC 9126:} \url{https://en.wikipedia.org/wiki/ISO/IEC_9126}
+\item \textbf{ISO/IEC 12207\:1995:} \url{https://www.math.unipd.it/~tullio/IS-1/2009/Approfondimenti/ISO_12207-1995.pdf}
+\item \textbf{Capitolato\glo d'appalto C2 - Etherless:} \url{https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C2.pdf}
+\item \textbf{Norme di Progetto:} \textit{Norme di Progetto X.X.X}
+\end{itemize}
 \subsubsection{Rifermenti informativi}
-\begin{enumerate}
-  \item ISO Standards
-	\url{https://www.praxiom.com/}
-\end{enumerate}
-\subsection{Strategia di gestione della qualità nel dettaglio}
-\subsubsection{Risorse}
-Le risorse utilizzate per effettuare il controllo di qualità sono sia umane che tecnologiche.
-
-I ruoli principali nel team che hanno un forte impatto nella qualità del prodotto sono il Responsabile e il Verificatore. Tali ruoli sono stati descritti nelle \textit{Norme di progetto 1.0.0}\docs. Il compito del primo è di monitorare la qualità del prodotto, mentre quello del Verificatore è collegato alla qualità di processo.
-
-Le risorse tecnologiche comprendono tutti gli strumenti software e hardware usati per effettuare le procedure di verifica. 
-\subsubsection{Misure e metriche}
-\`{E} importante per raggiungere degli obiettivi di qualità è far si che il processo di verifica produca dei risultati quantificabili che si possono confrontare con obbiettivi fissati a priori. Per questo vengono scelti le metriche ed i valori di sufficienza minimi necessari, che indicano se i livelli qualitativi di processo e di prodotto sono conformi agli obiettivi prefissati.
-
-Ogni metrica considerata verrà presentata in tre elementi principali:
 \begin{itemize}
-	\item \textbf{Nome e descrizione}: presenta una breve descrizione della metrica utilizzata e indica cosa rappresenta;
-	\item \textbf{Valore minimo}: indica il valore minimo da raggiungere in modo che il processo o il prodotto siano considerati accettabili;
-	\item \textbf{Valore ottimale}: indica il valore nel quale si può collocare il risultato della verifica.
+\item \textbf{Metriche del Software v.1.0:} \url{http://www.colonese.it/00-Manuali_Pubblicatii/08-Metriche%20del%20software_v1.0.pdf}
+\item \textbf{Qualità Software v.2.0:} \url{http://www.colonese.it/00-Manuali_Pubblicatii/06-Qualit%C3%A0Software_v2.pdf}
+\item \textbf{Metriche per la pianificazione:} \url{https://it.wikipedia.org/wiki/Metriche_di_progetto}
+\item \textbf{Indice Gulpease:} \url{https://it.wikipedia.org/wiki/Indice_Gulpease}
+\item \textbf{Indice di Manutenibilità:} \url{https://docs.microsoft.com/it-it/archive/blogs/codeanalysis/maintainability-index-range-and-meaning}
+\item \textbf{Qualità di prodotto - slides del corso Ingegneria del Software:} \url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L12.pdf}
+\item \textbf{Qualità di processo - slides del corso Ingegneria del Software:} \url{https://www.math.unipd.it/~tullio/IS-1/2019/Dispense/L13.pdf}
 \end{itemize}
-
-\paragraph{Metriche per il processo}
-\paragraph{Metriche per i documenti}
-Per verificare la validità dei documenti, dato che viene usata la lingua italiana, abbiamo deciso di usare l'indice Gulplease. 
-\subparagraph*{Indice Gulplease}
-Tale indice è stato definito nel 1988 dal GULP (Gruppo Universitario Linguistico Pedagogico) presso l'Istituto Filosofia dell'Università degli studi di Roma "La Sapienza".
-
-Il vantaggio di tale metodo è dato dal fatto che utilizza la lunghezza delle parole e non sulle sillabe, semplificando di molto il calcolo. L'indice si basa su due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetta al numero di lettere.
-
-La formula è la seguente:
-\begin{center}
-	$89+\dfrac{300\times(numerodellefrasi)-10\times(numero delle lettere)}{numero di parole}$
-\end{center}
-Il valore che si ottiene è un numero compreso tra 0 e 100 ed è possibile suddividerlo in tre indici distinti:
-\begin{itemize}
-	\item inferiore a 80: indica che il testo risulta difficile da leggere per tutti coloro che hanno una licenza elementare;
-	\item inferiore a 60: indica che il testo risulta difficile da leggere per tutti coloro che hanno una licenza media;
-	\item inferiore a 40: indica che il testo risulta difficile da leggere per tutti coloro che hanno un diploma superiore.
-\end{itemize}
-\textbf{Valori}
-\begin{itemize}
-	\item \textbf{Valore minimo}: $\geq$50;
-	\item \textbf{Valore ottimale}: 100.
-\end{itemize}
-\paragraph{Metriche per il software}
-\subparagraph*{Code coverage}
-%\subparagraph*{Valori}
-\subparagraph*{Halstead complexity measures}
-%\subparagraph{Valori}
-%indice dipendenza
