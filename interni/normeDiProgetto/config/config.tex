@@ -23,7 +23,7 @@
 %\counterwithin{figure}{subsection}
 
 \usepackage[bottom]{footmisc}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr, LastPage}
 \usepackage{titlesec}
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
@@ -35,7 +35,7 @@
 \pagestyle{fancy}
 \lhead{\includegraphics[scale=0.11]{./res/img/logo.png}}
 \rhead{Norme di progetto}
-\rfoot{Pagina \thepage}
+\rfoot{Pagina \thepage \space di \pageref{LastPage}}
 \lfoot{\small{\texttt{tenners.unipd@gmail.com}}}
 \cfoot{}
 \setlength{\headheight}{40pt}
