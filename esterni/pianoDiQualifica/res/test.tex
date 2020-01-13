@@ -10,14 +10,14 @@ Dove:
 	\begin{itemize}
 		\item \textbf{1:} se i requisiti sono contrassegnati come obbligatori;
 		\item \textbf{2:} se i requisiti sono contrassegnati come desiderabili;
-		\item \textbf{3:} se i requisiti sono contrassegnati come opzionali;
+		\item \textbf{3:} se i requisiti sono contrassegnati come opzionali.
 	\end{itemize}
 	\item \textbf{Tipologia:} indica la tipologia dei requisiti di riferimento. Esso può essere:
 	\begin{itemize}
 		\item \textbf{F:} se i requisiti sono funzionali;
 		\item \textbf{P:} se i requisiti sono prestazionali;
 		\item \textbf{Q:} se i requisiti sono di qualità;
-		\item \textbf{V:} se i requisiti sono di vincolo;
+		\item \textbf{V:} se i requisiti sono di vincolo.
 	\end{itemize}
 	\item \textbf{Codice:} indica il codice identificativo dei requisiti.
 \end{itemize}
@@ -36,7 +36,7 @@ Dove:
 	\tabularnewline
 	\endfirsthead
 	
-	TSDF1 &
+	TA1F1 &
 	L’utente deve poter accedere alla guida dell’applicazione. All’utente viene chiesto di veriﬁcare che: 
 	\begin{itemize}
 		\item venga visualizzata la guida;
@@ -44,12 +44,12 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF2  &
+	TA1F2  &
 	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum\glos}.
 	All’utente è chiesto di veriﬁcare l’avvenuta autenticazione. &
 	ND \\
 	
-	TSDF3 &
+	TA1F3 &
 	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum\glos}. All’utente viene chiesto di veriﬁcare che: 
 	\begin{itemize}
 		\item sia possibile eseguire il comando "login";
@@ -58,23 +58,23 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF3.1 &
+	TA1F3.1 &
 	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum\glos}. All’utente viene chiesto di verificare sia possibile inserire: 
 	\begin{itemize}
-		\item il proprio address;;
+		\item il proprio address;
 		\item la propria \textit{private key\glos}.
 	\end{itemize} &
 	ND \\
 	
-	TSDF3.2 &
+	TA1F3.2 &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui le credenziali non fossero	presenti nella rete \textit{Ethereum\glo}. &
 	ND \\
 	
-	TSDF4 &
+	TA1F4 &
 	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum}. All’utente viene chiesto di verificare che sia possibile utilizzare tutti i comandi presentati nella guida introduttiva. &
 	ND \\
 	
-	TSDF5 &
+	TA1F5 &
 	L’utente non ancora autenticato deve poter effettuare la registrazione alla rete. All’utente viene chiesto di verificare:
 	\begin{itemize}
 		\item sia possibile eseguire il comando "signup" per effettuare la registrazione;
@@ -83,7 +83,7 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF6 &
+	TA2F6 &
 	L'utente che effettua l'accesso sul dispositivo per la prima volta, o che vuole registrarsi alla rete, provocherà la creazione del file di configurazione sul dispositivo. Verificare che nel file sia presente:
 	\begin{itemize}
 		\item un address;
@@ -91,7 +91,7 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF7  &
+	TA1F7  &
 	L’utente deve potersi disconnettere dalla rete. All’utente viene chiesto di:
 	\begin{itemize}
 		\item autenticarsi correttamente nel sistema;
@@ -102,7 +102,7 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF8  &
+	TA1F8  &
 	L’utente autenticato deve poter ricercare una funzione. All’utente viene chiesto di verificare sia possibile:
 	\begin{itemize}
 		\item eseguire il comando "find" per effettuare la ricerca;
@@ -110,11 +110,11 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF8.1  &
+	TA1F8.1  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il nome della funzione non dovesse corrispondere ad alcuna funzione. &
 	ND \\
 	
-	TSDF9  &
+	TA1F9  &
 	L’utente autenticato deve poter eseguire una funzione. All’utente viene chiesto di verificare:
 	\begin{itemize}
 		\item sia possibile eseguire il comando "run" per eseguire una funzione;
@@ -124,36 +124,36 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF9.1  &
+	TA1F9.1  &
 	L’utente deve poter eseguire una funzione attraverso un'utenza \textit{Ethereum\glos}. All’utente viene chiesto di verificare sia possibile inserire il nome della funzione. &
 	ND \\
 	
-	TSDF9.2  &
+	TA1F9.2  &
 	L’utente deve poter passare dei parametri ad una funzione \textit{Ethereum\glos}. All’utente viene chiesto di verificare sia possibile inserire i parametri della funzione. &
 	ND \\
 	
-	TSDF9.3  &
+	TA1F9.3  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il nome della funzione non dovesse corrispondere ad alcuna funzione. &
 	ND \\
 	
-	TSDF9.4  &
+	TA1F9.4  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui i parametri passati alla funzione non dovessero corrispondere a quelli attesi. &
 	ND \\
 	
-	TSDF10  &
+	TA1F10  &
 	L’utente deve pagare per l'esecuzione della funzione \textit{Ethereum\glos} eseguita.
 	All’utente viene chiesto di verificare l'avvenuto pagamento del costo della funzione eseguita. &
 	ND \\
 	
-	TSDF11  &
+	TA1F11  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui lo sviluppatore della funzione eseguita non ne abbia ancora definito il costo. &
 	ND \\
 	
-	TSDF12  &
+	TA1F12  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il costo della funzione fosse maggiore della sua effettiva capacitá di spesa. &
 	ND \\
 	
-	TSDF13  &
+	TA2F13  &
 	L’utente autenticato deve poter visualizzare un report delle funzioni da lui eseguite. All’utente viene chiesto di verificare:
 	\begin{itemize}
 		\item sia possibile eseguire il comando "log";
@@ -165,7 +165,7 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF14  &
+	TA1F14  &
 	L’utente autenticato deve poter visualizzare l'elenco delle funzioni per lui disponibili. All’utente viene chiesto di verificare:
 	\begin{itemize}
 		\item sia possibile eseguire il comando "list";
@@ -177,12 +177,12 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF15  &
+	TA1F15  &
 	L'utente autenticato deve essere in grado di fare il deploy della propria funzione.
 	All’utente viene chiesto di verificare sia possibile eseguire il comando "deploy". &
 	ND \\
 	
-	TSDF15.1  &
+	TA1F15.1  &
 	L'utente autenticato deve essere in grado di fare il deploy della propria funzione.All’utente viene chiesto di verificare sia possibile:
 	\begin{itemize}
 		\item eseguire il comando "deploy";
@@ -190,23 +190,23 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF15.2  &
+	TA1F15.2  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il percorso specificato non corrisponde ad alcun file con estensione .js. &
 	ND \\
 	
-	TSDF15.3  &
+	TA1F15.3  &
 	L'utente autenticato deve essere in grado di fare il deploy della propria funzione. All’utente viene chiesto di inserire il nome della funzione di cui vuole effettuare il deploy. &
 	ND \\
 	
-	TSDF15.4  &
+	TA1F15.4  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il nome specificato appartenga già ad una funzione presente in \textit{Etherium\glo}. &
 	ND \\
 	
-	TSDF16  &
+	TA1F16  &
 	L'utente autenticato deve essere in grado di definire alcune informazioni necessarie all'esecuzione della funzione. All’utente viene chiesto di verificare sia possibile eseguire il comando "set". &
 	ND \\
 	
-	TSDF16.1  &
+	TA1F16.1  &
 	L'utente autenticato deve essere in grado di definire il costo della propria funzione. All’utente viene chiesto di verificare sia possibile:
 	\begin{itemize}
 		\item eseguire il comando "set";
@@ -216,23 +216,23 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF16.2  &
+	TA1F16.2  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il nome specificato non dovesse corrispondere ad alcuna funzione di cui l'utente ha eseguito il deploy. &
 	ND \\
 	
-	TSDF16.3  &
+	TA1F16.3  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il costo specificato sia minore o uguale a 0. &
 	ND \\
 	
-	TSDF16.4  &
+	TA1F16.4  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui la descrizione specificata supera il numero massimo consentito di caratteri. &
 	ND \\
 	
-	TSDF17  &
+	TA1F17  &
 	L'utente autenticato deve essere in grado di rimuovere da \textit{Etehrless} una delle funzioni caricate. All’utente viene chiesto di verificare sia possibile eseguire il comando "delete". &
 	ND \\
 	
-	TSDF17.1  &
+	TA1F17.1  &
 	L'utente autenticato deve essere in grado di definire il costo della propria funzione. All’utente viene chiesto di verificare sia possibile:
 	\begin{itemize}
 		\item eseguire il comando "delete";
@@ -240,15 +240,15 @@ Dove:
 	\end{itemize} &
 	ND \\
 
-	TSDF17.2  &
+	TA1F17.2  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il nome specificato durante la rimozione non dovesse corrispondere ad alcuna funzione di cui l'utente ha eseguito il deploy. &
 	ND \\
 	
-	TSDF18  &
+	TA1F18  &
 	L'utente autenticato deve essere in grado di aggiornare il codice di una propria funzione. All’utente viene chiesto di verificare sia possibile eseguire il comando "update" di una funzione di cui l'utente ha già eseguito il deploy. &
 	ND \\
 	
-	TSDF18.1  &
+	TA1F18.1  &
 	L'utente autenticato deve essere in grado di aggiornare il codice di una propria funzione. All’utente viene chiesto di verificare sia possibile:
 	\begin{itemize}
 		\item eseguire il comando "update";
@@ -257,7 +257,7 @@ Dove:
 	\end{itemize} &
 	ND \\
 	
-	TSDF18.2  &
+	TA1F18.2  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il percorso specificato non corrisponde ad alcun file con estensione .js. &
 	ND \\
 \end{longtable}
