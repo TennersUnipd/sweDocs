@@ -1,18 +1,17 @@
 \subsubsection{Linguaggi e Strumenti}
 \paragraph{Linguaggi}
-Per la stesura dei documenti si è deciso di utilizzare \LaTeX \space in quanto permette una semplice suddivisione in sezioni di un documento e risulta facile da utilizzare in collaborazione. Oltre a ciò, fornisce la generazione automatica degli indici dei contenuti, delle immagini e delle tabelle a seguito della compilazione del file.tex. Questo linguaggio ha anche il vantaggio di avere un numero cospicuo di plug-in che ne permettono una facile estensione delle funzionalità.
+Per la stesura dei documenti si è deciso di utilizzare \LaTeX \space in quanto permette una semplice suddivisione in sezioni di un documento e risulta facile da utilizzare in collaborazione. Oltre a ciò, fornisce la generazione automatica degli indici dei contenuti, delle immagini e delle tabelle a seguito della compilazione del file.tex. Questo linguaggio ha anche il vantaggio di avere un numero cospicuo di \textit{plug-in}\glo che ne permettono una facile estensione delle funzionalità.
 
 \paragraph{Strumenti}
 Per la scrittura effettiva della documentazione, il gruppo Tenners ha concordato l'utilizzo di alcuni strumenti:
 \begin{itemize}
 	\item \textbf{TexStudio:} un software \textit{multipiattaforma\glo} che include un correttore ortografico interattivo;
-	\item \textbf{Script in Python per la generazione del glossario:} per automatizzare l'inserimento dei termini di glossario, è stato sviluppato uno script che, a partire da un file con estensione .csv, genererà il documento corrispondente;
+	\item \textbf{Script in Python per la generazione del Glossario 1.0.0\docs:} per automatizzare l'inserimento dei termini di glossario, è stato sviluppato uno script che, a partire da un file con estensione .csv, genererà il documento corrispondente;
 	\item \textbf{Spell checker}: per facilitare e velocizzare le operazioni di verifica e validazione dei documenti è
-	stato scritto, ed inserito in un \textit{Docker container\glo} apposito, uno script per lo
-	spell checking, ovvero il controllo per gli errori di digitazione.
-	\item \textbf{Compilatore \LaTeX}: si è scelto l'uso di un compilatore in ambiente Docker\glo (\url{https://GitHub.com/dante-ev/docker-texlive}) per garantire l'utilizzo della stessa versione di \LaTeX ed evitare errori derivanti dalla differente codifica dei caratteri sui diversi sistemi operativi. Tale compilatore è stato integrato in un'opportuna \textit{Github Action\glo} resa pubblica sotto licenza MIT. È possibile visionare lo script al link \url{https://GitHub.com/Jatus93/Latex-multicompiler};
-	\item \textbf{Visual Paradigm 13 CE:} Per la rappresentazione dei diagrammi \textit{UML\glo};
-	\item \textbf{Microsoft Project:} per modellare i diagrammi di Grantt.
+	stato scritto, ed inserito in un \textit{Docker container\glo} apposito, uno script per il controllo degli gli errori di digitazione;
+	\item \textbf{Compilatore \LaTeX}: si è scelto l'uso di un compilatore in ambiente\textit{ Docker\glo} (\url{https://GitHub.com/dante-ev/docker-texlive}) per garantire l'utilizzo della stessa versione di \LaTeX ed evitare errori derivanti dalla differente codifica dei caratteri sui diversi sistemi operativi. Tale compilatore è stato integrato in un'opportuna \textit{Github Action\glo} resa pubblica sotto licenza MIT. È possibile visionare lo script al link \url{https://GitHub.com/Jatus93/Latex-multicompiler};
+	\item \textbf{Visual Paradigm 13 CE:} Per la rappresentazione dei diagrammi \textit{UML\glos};
+	\item \textbf{Microsoft Project:} per modellare i \textit{diagrammi di Grantt\glos}.
 \end{itemize} 
 
 %\paragraph{Linguaggi di codifica del software di supporto}
