@@ -22,7 +22,7 @@ Il numero di versione è rappresentato nel formato:\\\\
   \item \textbf{Incremento in Y}: l'incremento in Y avviene quando c'è un'aggiunta
   di una funzionalità o, in caso di un documento, l'aggiunta di un capitolo. In questo caso l'aggiunta di funzionalità avviene in maniera retrocompatibile;
   \item \textbf{Incremento in Z}: l'incremento in Z avviene per modifiche minori,
-  ad esempio \textit{code refactoring\glos}, correzioni di forme verbali o errori di digitazione.
+  ad esempio \textit{code refactoring\glos}, correzioni di forme verbali o errori di digitazione;
   \item \textbf{Cambio di TAG}: i TAG possono essere:
   \begin{itemize}
   	\item \textbf{TBR (To Be Reviewed):} se dev'essere ancora soggetto a revisione;
@@ -87,10 +87,10 @@ Un esempio di path corretto per un documento è:\\
 	\begin{itemize}
 		\item \textbf{Avvio di una nuova attività: } all’inizio di una nuova attività ogni componente del gruppo
 		deve creare un nuovo feature \textit{branch\glos}, partire dal ramo denominato "develop";
-		\item \textbf{Richiesta di verifica: } al termine dell'attività prefissata e dei task associati, occorre eseguire una \textit{pull request\glo} sul \textit{branch\glo} di partenza accertandosi che tutti gli strumenti di verifica automatica siano correttamente funzionanti. 
+		\item \textbf{Richiesta di verifica: } al termine dell'attività prefissata e dei task associati, occorre eseguire una \textit{pull request\glo} sul \textit{branch\glo} di partenza accertandosi che tutti gli strumenti di verifica automatica siano correttamente funzionanti; 
 		\item \textbf{Procedura di verifica:} dopo l'avvenuta \textit{pull request\glo} il verificatore dovrà accertarsi che il controllo degli strumenti automatici non abbia prodotto alcun errore e procederà con la verifica effettiva del prodotto. Gli esiti della verifica potranno essere di due tipi:
 		\begin{itemize}
-			\item \textbf{Accettazione:} viene rimosso il TAG "TBR" aggiunto durante la \textit{pull request\glo} e viene eventualmente aggiunto un TAG "TBA" per segnalare che il prodotto è in attesa di approvazione.
+			\item \textbf{Accettazione:} viene rimosso il TAG "TBR" aggiunto durante la \textit{pull request\glo} e viene eventualmente aggiunto un TAG "TBA" per segnalare che il prodotto è in attesa di approvazione;
 			\item \textbf{Rifiuto:} il verificatore dovrà scrivere nella sezione dedicata della
 			\textit{pull request}\glo il motivo del rifiuto delle modifiche.
 		\end{itemize} 
