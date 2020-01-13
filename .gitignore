@@ -278,7 +278,5 @@ TSWLatexianTemp*
 # Output file
 *.pdf
 *.tar.gz
-
 #DUMB FILES
-*DS_Store*
-
+*.DS_Store*
