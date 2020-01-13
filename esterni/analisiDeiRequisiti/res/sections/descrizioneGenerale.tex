@@ -8,14 +8,14 @@ L'obbiettivo finale è quello di avere un ambiente in cui un utente sviluppatore
 \\\\
 Ogni utente può autenticarsi al servizio mediante un account \textit{Ethereum\glo}, identificato da un indirizzo e da una \textit{private key\glos}. È possibile distinguere varie tipologie di utenza:
 \begin{itemize}
-	\item \textbf{Utente generico} utente che non si è autenticato nella rete \textit{Ethereum\glos}.
-	\item \textbf{Utente utilizzatore} colui che decide di utilizzare funzioni altrui.
-	\item \textbf{Utente sviluppatore}: colui che decide di rendere pubblica una o più funzioni;
+	\item \textbf{Utente generico} utente che non si è autenticato nella rete \textit{Ethereum\glos};
+	\item \textbf{Utente utilizzatore} colui che decide di utilizzare funzioni altrui;
+	\item \textbf{Utente sviluppatore}: colui che decide di rendere pubblica una o più funzioni.
 \end{itemize} 
 Un \textbf{utente generico} può:
 \begin{itemize}
-	\item registrarsi al servizio richiedendo un nuovo account \textit{Ethereum};
-	\item accedere alla sua utenza inserendo le credenziali di accesso;
+	\item registrarsi al servizio richiedendo un nuovo account \textit{Ethereum\glos}
+	\item accedere alla sua utenza inserendo le credenziali di accesso.
 \end{itemize}
 Un \textbf{utente utilizzatore} può:
 \begin{itemize}
@@ -23,13 +23,13 @@ Un \textbf{utente utilizzatore} può:
 	\item eseguire una funzione tra le disponibili;
 	\item effettuare il logout della sua utenza;
 	\item visualizzare un log delle funzioni da lui eseguite;
-	\item ricercare una funzione per nome;
+	\item ricercare una funzione per nome.
 \end{itemize}
 Un utente diventa \textbf{utente sviluppatore} quando decide di rendere disponibile su \textit{Etherless} una delle sue funzioni scritte in linguaggio Javascript. Egli, oltre a poter effettuare le stesse operazioni rese disponibili agli utenti utilizzatori, può inoltre:
 \begin{itemize}
 	\item eseguire il deploy di una funzione su \textit{Etherless};
 	\item eliminare una funzione da lui pubblicata;
-	\item modificare costo, descrizione, firma della funzione.
+	\item modificare costo, descrizione, firma della funzione;
 	\item aggiornare il codice di una sua funzione presente su \textit{Etherless}.
 \end{itemize}
 
@@ -43,7 +43,7 @@ Gli utenti \textit{Etherless} sono identificati univocamente attraverso un accou
 \subsubsection{Autenticazione}
 Per la persistenza della sessione dell'utente, verranno salvati nel \textit{file system\glo} del computer le credenziali di accesso in seguito alla registrazione o al primo accesso dell'utente su una istanza dell'\textit{Etherless-cli}. In particolar modo, un utente generico potrà effettuare le seguenti operazioni:
 \begin{itemize}
-	\item \textbf{Accesso}: nel caso l'utente voglia accedere alla sua utenza \textit{Etherless} mediante un account \textit{Ethereum\glo}, gli verrà chiesto di inserire le sue credenziali;
+	\item \textbf{Accesso}: nel caso l'utente voglia accedere alla sua utenza \textit{Etherless} mediante un account \textit{Ethereum\glos}, gli verrà chiesto di inserire le sue credenziali;
 	\item \textbf{Registrazione}: nel caso della registrazione di una nuova utenza, verrà inoltrata la richiesta alla rete \textit{Ethereum\glo} che genererà un combinazione di credenziali univoca.
 \end{itemize}
 \subsubsection{Crediti}
@@ -68,9 +68,9 @@ Il proponente \textit{Red Babel} ha specificato che la prima versione è accetta
 Una volta stabilito il costo da parte del suo sviluppatore, un utente utilizzatore pagherà per ogni singola esecuzione della funzione quella quota in valuta \textit{Ether\glos}. Una percentuale verrà trattenuta per il mantenimento della piattaforma \textit{Etherless}, mentre la restante verrà accreditata allo sviluppatore.
 
 \subsubsection{Archiviazione dei dati}
-Per l'archiviazione dei dati non è previsto l'utilizzo di database. Dalle specifiche del \textit{capitolato\glo} emerge che non è necessario il salvataggio di dati quali immagini o descrizioni. Informazioni come nomi di funzioni, nome del creatore della funzione e costi di esecuzioni verranno salvati direttamente sulla rete \textit{Ethereum\glo} attraverso lo  \textit{smart-contract\glos}; 
+Per l'archiviazione dei dati non è previsto l'utilizzo di database. Dalle specifiche del \textit{capitolato\glo} emerge che non è necessario il salvataggio di dati quali immagini o descrizioni. Informazioni come nomi di funzioni, nome del creatore della funzione e costi di esecuzioni verranno salvati direttamente sulla rete \textit{Ethereum\glo} attraverso lo  \textit{smart-contract\glos}.
 \\\\
-Nel caso in cui sorga la necessità di salvare quantitativi più grandi di dati, verrà utilizzato un database relazionale o non-relazionale disponibile tramite AWS;
+Nel caso in cui sorga la necessità di salvare quantitativi più grandi di dati, verrà utilizzato un database relazionale o non-relazionale disponibile tramite AWS.
 
 \subsubsection{Tecnologie}
 Le tecnologie da utilizzare per la realizzazione del prodotto sono:
@@ -84,11 +84,11 @@ Le tecnologie da utilizzare per la realizzazione del prodotto sono:
 	\item \textbf{Ropsten}: Rete \textit{Ethereum\glo} pubblica usata per il testing di applicativi in ambiente di staging;
 	\item \textbf{MainNet}: Rete \textit{Ethereum\glo} principale;
 	\item \textbf{Ganache}: Ambiente di sviluppo \textit{Ethereum\glo} utilizzato per la simulazione locale;
-	\item \textbf{TypeScript 3.6}:  linguaggio open-source\glo sviluppato da Microsoft che estende le potenzialità di Javascript;
+	\item \textbf{TypeScript 3.6}:  linguaggio {open-source\glo} sviluppato da Microsoft che estende le potenzialità di Javascript;
 	\item \textbf{Node.js}: ambiente di \textit{runtime\glo} \textit{open-source\glo} per JavaScript;
 	\item \textbf{The Serverless Framework}: \textit{framework\glo} per la costruzione e \textit{deploy\glo}  di ambienti \textit{serverless\glos};
 	\item \textbf{Smart Contract}: protocollo informatico che facilita, verifica, fa rispettare ed esegue un contratto;
-	\item \textbf{ESLint}: strumento di analisi statica del codice JavaScript;
+	\item \textbf{ESLint}: strumento di analisi statica del codice JavaScript.
 \end{itemize}
 \subsubsection{Ambienti}
 Il proponente ha richiesto la possibilità di eseguire il programma nelle seguenti modalità:

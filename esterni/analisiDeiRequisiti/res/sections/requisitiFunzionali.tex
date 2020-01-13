@@ -32,7 +32,7 @@
 	
 	R2F2.2.1 &  L'utente può eseguire automaticamente l'accesso tramite un file salvato sul suo dispositivo durante la prima autenticazione o registrazione mediante \textit{Etherless}.  & \centering Interna \\ UC6 \tabularnewline
 	
-	R1F3 &  L'utente ha la possibilità di registrarsi su \textit{Etherless}  & Capitolato \\
+	R1F3 &  L'utente ha la possibilità di registrarsi su \textit{Etherless}.  & Capitolato \\
 
 	R1F3.1 &  La registrazione su \textit{Etherless} avverrà richiedendo una coppia univoca di address - \textit{private key\glo} alla rete \textit{Ethereum\glos}.  & Capitolato \\	
 	
@@ -76,7 +76,7 @@
 	
 	R2F8.1 &  Il sistema dovrà restituire un log delle funzioni eseguite composto da: data e ora di esecuzione, nome, firma e costo della funzione. & \centering Interna \\ UC13 \tabularnewline
 	
-	R1F9 &  Un utente autenticato può visualizzare un elenco di tutte le funzioni disponibili su \textit{Etherless}. & Capitolato \\	
+	R1F9 &  Un utente autenticato può visualizzare un elenco di tutte le funzioni disponibili su \textit{Etherless} tramite il comando "list". & Capitolato \\	
 	
 	R1F9.1 &  Il sistema dovrà restituire un elenco delle funzioni disponibili composto da: nome, firma, costo e descrizione della funzione. & \centering Interna \\ UC14 \tabularnewline
 	
@@ -100,11 +100,11 @@
 	
 	R1F11.3 &  È possibile inserire la firma della funzione da rendere disponibile agli utenti. & \centering Interna \\ UC16.5 \tabularnewline
 	
+	R1F11.4 &  Il sistema dovrà, in mancanza di errori nell'esecuzione del comando "set", restituire un messaggio di avvenuta modifica dei parametri richiesti. & \centering Interna \\ UC16 \tabularnewline
+	
 	R1F11.1.1 &  Nel caso in cui il costo della funzione inserito sia minore o uguale a 0, è necessario ritornare all'utente un errore e non procedere con la modifica. & \centering Interna \\ UC16.2 \tabularnewline
 	
 	R3F11.2.1 &  Nel caso in cui la descrizione della funzione superi il numero massimo di caratteri consentiti, è necessario ritornare all'utente un errore e non procedere con la modifica. & \centering Interna \\ UC16.4 \tabularnewline
-	
-	R1F11.4 &  Il sistema dovrà, in mancanza di errori nell'esecuzione del comando "set", restituire un messaggio di avvenuta modifica dei parametri richiesti. & \centering Interna \\ UC16 \tabularnewline
 	
 	R1F12 &  Un utente sviluppatore ha la possibilità di eliminare una sua funzione. & Capitolato \\
 	
@@ -122,7 +122,7 @@
 	
 	R1F14.1 &  In ognuno dei comandi "set", "update", "delete", dovrà essere specificata la funzione di riferimento. & \centering Interna \\ UC18.1 \tabularnewline
 	
-	R1F14.1.1 &  Dovrà essere restituito un errore nel caso in cui la funzione di riferimento non sia presente tra quelle rese disponibili su \textit{Etherless} dallo sviluppatore & \centering Interna \\ UC18.2 \tabularnewline
+	R1F14.1.1 &  Dovrà essere restituito un errore nel caso in cui la funzione di riferimento non sia presente tra quelle rese disponibili su \textit{Etherless} dallo sviluppatore. & \centering Interna \\ UC18.2 \tabularnewline
 	\hline
 	
 \end{longtable}
