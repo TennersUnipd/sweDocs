@@ -2,7 +2,7 @@
 \subsubsection{Scopo}
 La gestione della configurazione consiste nel controllo degli oggetti che compongono sistema da realizzare. Questa sezione descrive dove e in che modo verranno conservati i file che compongono il prodotto finale.
 
-\subsubsection{Condivisione e Versionamento del prodotto}
+\subsubsection{Condivisione e sistema di versionamento}
 Per il versionamento del prodotto è stato scelto il software \textit{Git\glos}. Per condividere la repository in remoto, i membri del gruppo hanno optato per \textit{Github\glos}, la piattaforma per lo sviluppo collaborativo più rinomata. \\
 
 \noindent La scelta nell'utilizzo di questi due sistemi per versionamento e condivisione, è dettata dalla precedente esperienza da parte di alcuni membri del team. I componenti del gruppo che non hanno mai avuto esperienza, avranno supporto da parte dei restanti membri e saranno tenuti a documentarsi mediante le apposite guide condivise sui canali di comunicazione del gruppo. \\
@@ -33,25 +33,26 @@ Il numero di versione è rappresentato nel formato:\\\\
 
 
 \subsubsection{Gestione dei repository}
-Stando all'\textit{analisi dei requisiti 1.0.0}\doc sono stati individuati
+Stando all'\textit{Analisi dei Requisiti 1.0.0}\doc sono stati individuati
 tre componenti principali del prodotto software oltre ai documenti.
-Di conseguenza si è deciso di impostare la struttura dei repository in questo modo:
+Il gruppo ha dunque deciso di impostare la struttura dei repository in questo modo:\\\\
 
 \dirtree{%
-.1 Etherless.
-.2 Etherless-Cli.
-.3 Application-Configs.
-.2 Etherless-server.
-.3 Application-Configs.
-.2 Etherless-smart.
-.3 Application-Configs.
-.2 Docs.
-.1 Env-Configs.
+	.1 /.
+	.2 etherless.
+	.3 etherless-cli.
+	.4 applicationConfigs.
+	.3 etherless-server.
+	.4 applicationConfigs.
+	.3 etherless-smart.
+	.4 applicationConfigs.
+	.3 docs.
+	.2 envConfigs.
 }
+\vspace{1cm}
 
-
-Il repository Etherless contiene il progetto in tutte le sue componenti
-ad eccezione di Env-Configs in quanto necessario solo alla gestione interna
+\noindent \\Il repository "etherless" contiene il progetto in tutte le sue componenti
+ad eccezione di "envConfigs" in quanto necessario solo alla gestione interna
 degli strumenti di sviluppo. Questa organizzazione permette di avere repository separate per ogni parte
 del prodotto mantenendole legate in una repository contenitore.
 
@@ -77,4 +78,23 @@ Il repository Docs contiene tutta la documentazione del prodotto. I sorgenti \La
 \end{itemize}
 Un esempio di path corretto per un documento è:\\ 
 
-\centerline{\code{interno/normeDiProgetto/main.tex}}
+\centerline{\code{docs/interno/normeDiProgetto/main.tex}}
+\vspace{0.7cm}
+
+
+\paragraph{Procedure per la gestione dei repository e del flusso di lavoro}
+	
+	\begin{itemize}
+		\item \textbf{Avvio di una nuova attività: } all’inizio di una nuova attività ogni componente del gruppo
+		deve creare un nuovo feature \textit{branch\glos}, partire dal ramo denominato "develop";
+		\item \textbf{Richiesta di verifica: } al termine dell'attività prefissata e dei task associati, occorre eseguire una \textit{pull request\glo} sul \textit{branch\glo} di partenza accertandosi che tutti gli strumenti di verifica automatica siano correttamente funzionanti. 
+		\item \textbf{Procedura di verifica:} dopo l'avvenuta \textit{pull request\glo} il verificatore dovrà accertarsi che il controllo degli strumenti automatici non abbia prodotto alcun errore e procederà con la verifica effettiva del prodotto. Gli esiti della verifica potranno essere di due tipi:
+		\begin{itemize}
+			\item \textbf{Accettazione:} viene rimosso il TAG "TBR" aggiunto durante la \textit{pull request\glo} e viene eventualmente aggiunto un TAG "TBA" per segnalare che il prodotto è in attesa di approvazione.
+			\item \textbf{Rifiuto:} il verificatore dovrà scrivere nella sezione dedicata della
+			\textit{pull request}\glo il motivo del rifiuto delle modifiche.
+		\end{itemize} 
+		\item \textbf{Approvazione e rilascio:} Alla ricezione di una \textit{pull request\glo} dal \textit{branch\glo} "develop" il responsabile deciderà se approvare o meno le modifiche. In caso di accettazione il responsabile dovrà rimuovere ogni TAG "TBR".
+	\end{itemize}
+
+
