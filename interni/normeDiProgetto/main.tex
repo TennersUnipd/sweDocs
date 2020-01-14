@@ -1,16 +1,26 @@
 \documentclass[a4paper]{article}
-
 \input{config/config.tex}
 \makeindex
 
 \begin{document}
-
     \include{res/sections/frontespizio}
     \include{res/sections/registroModifiche}
     \tableofcontents
+    \newpage
+    \listoffigures
+    \newpage
+    \listoftables
     \include{res/sections/introduzione}
-    \include{res/sections/processiPrimari}
-    \include{res/sections/processiDiSupporto}
+    
+    \include{res/sections/processiPrimari/fornitura}
+    \include{res/sections/processiPrimari/sviluppo}
+
+    \include{res/sections/processiDiSupporto/documentazione}
+    \include{res/sections/processiDiSupporto/linguaggiEStrumenti}
+    \include{res/sections/processiDiSupporto/gestioneDellaConfigurazione}
+    \include{res/sections/processiDiSupporto/accertamentoQualita}
+    \include{res/sections/processiDiSupporto/verifica}
+    \include{res/sections/processiDiSupporto/validazione}
     \include{res/sections/processiOrganizzativi}
 
 \end{document}
