@@ -1,0 +1,12 @@
+\subsubsection{UC12 - Visualizzazione errore "Fondi non sufficienti"}
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente autenticato;
+	\item \textbf{Descrizione:} il sistema, in seguito al tentativo di esecuzione e pagamento di una delle funzioni disponibili da parte di un utente, gli notifica che non dispone di crediti \textit{Ether\glo} a sufficienza; 
+	\item \textbf{Pre-condizioni:} l'utente ha utilizzato il comando "run" per l'esecuzione di una specifica funzione;
+	\item \textbf{Post-condizioni:} il sistema notifica un messaggio di errore riguardo l'assenza di crediti \textit{Ether\glos};
+	\item \textbf{Scenario principale:} 
+	\begin{enumerate}
+		\item L'utente tenta l'esecuzione di una funzione con il comando "run";
+		\item Il sistema interrompe l'esecuzione notificando all'utente che l'importo da corrispondere supera i crediti \textit{Ether\glo} presenti nel suo wallet.
+	\end{enumerate}
+\end{itemize}
