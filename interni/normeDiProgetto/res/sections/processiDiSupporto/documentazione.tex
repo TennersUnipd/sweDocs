@@ -1,0 +1,201 @@
+\section{Processi di supporto}
+  \subsection{Documentazione}
+
+  \subsubsection{Scopo}
+  La Documentazione è un processo che aiuta a tener traccia di tutte le informazioni relative ai processi e alle attività significative coinvolte nel ciclo di vita di un prodotto. La Documentazione aiuta a monitorare lo stato di avanzamento del progetto secondo il metodo di sviluppo scelto e disciplinare lo svolgimento dei processi. Questa sezione si occupa di illustrare le caratteristiche necessarie alla stesura di un documento. 
+
+  \subsubsection{Ciclo di vita}
+  Ogni documento è caratterizzato delle seguenti fasi che ne caratterizzano il ciclo di vita:
+%  \begin{itemize}
+%    \item \textbf{Da revisionare}: il documento è stato scritto o modificato ed è
+%    in attesa di revisione da parte del verificatore e prende il TAG di prerelease
+%     TBR nel suo numero di versione;
+%    \item \textbf{Da approvare}: il documento è stato revisionato e verificato ed
+%    è in attesa di approvazione da parte del responsabile e prende il TAG di prerelease
+%    TBA.
+%    \item \textbf{Approvato}: il documento è stato approvato ed è pronto per la release
+%    e perde ogni TAG di prerelease.
+%  \end{itemize}
+	\begin{itemize}
+		\item \textbf{Creazione del documento:} i redattori creano la struttura base del documento mediante l'utilizzo di un template \LaTeX;
+		\item \textbf{Stesura:} i redattori producono il documento apportando delle aggiunte o modifiche in maniera incrementale e migliorativa;
+		\item \textbf{Verifica:} i verificatori avranno il compito di controllare ciò che è stato redatto per controllarne la correttezza, la completezza e la qualità. Essi potranno utilizzare strumenti di controllo automatico per velocizzare l'attività di verifica. Al termine di ciascuna revisione, sarà compito del verificatore segnalare ai redattori eventuali problematiche relative al documento. I redattori avranno il compito di correggere tali segnalazioni;
+		\item \textbf{Validazione:} il responsabile di progetto, solo al termine di opportune verifiche, procederà all'approvazione del documento con conseguente rilascio di una versione stabile.
+	\end{itemize}
+
+  \subsubsection{Template}
+  \`E stato creato un template per velocizzare l'attività di stesura, verifica e
+  approvazione, unificando carattere, logo e stile di formattazione
+  in un documento \LaTeX \space valido.
+
+  \subsubsection{Struttura dei documenti}
+  \paragraph{Frontespizio}
+  Il frontespizio di un documento di progetto deve essere così strutturato:
+  \begin{itemize}
+    \item nome del gruppo di progetto e il \textit{capitolato\glo} che è stato scelto;
+    \item logo del gruppo di progetto;
+    \item titolo del documento;
+    \item tabella di gestione del documento che comprenda i seguenti elementi:
+    \begin{itemize}
+      \item versione;
+      \item redattori;
+      \item verificatori;
+      \item responsabile;
+      \item stato (da revisionare, da approvare, approvato);
+      \item data di creazione;
+      \item data ultima modifica;
+      \item destinatari del documento.
+    \end{itemize}
+    \item descrizione sintetica del contenuto del documento;
+    \item recapito email del gruppo di progetto.
+  \end{itemize}
+  \paragraph{Registro delle modifiche}
+  Ogni documento basato sul template fornito, deve avere una sezione dedicata al registro delle modifiche apportate.
+  La tabella delle modifiche deve essere composta nelle seguenti parti:
+  \begin{itemize}
+    \item \textbf{Versione:} versione a cui fa riferimento la modifica apportata;
+    \item \textbf{Nominativo:} nome di chi ha effettuato, verificato o approvato la modifica;
+    \item \textbf{Ruolo:} ruolo di chi ha apportato la modifica;
+    \item \textbf{Descrizione:} breve descrizione delle modifiche effettuate;
+    \item \textbf{Data:} data della modifica.
+  \end{itemize}
+  \paragraph{Indici}
+  L'indice dei contenuti dell'intero documento viene generato con l'apposito comando al momento della compilazione
+  del documento \LaTeX. Esso è necessario per facilitare la navigazione all'interno del
+  documento. L'indice viene posto dopo la tabella delle modifiche.\\\\
+  Allo stesso modo, a seguito dell'indice dei contenuti, verranno inseriti gli indici delle immagini e delle tabelle presenti nel documento, ove necessario.
+
+	  \paragraph{Intestazione e piè di pagina}
+	Ogni documento deve avere l'intestazione e il piè di pagina così costituiti:
+	\begin{itemize}
+		\item Intestazione:
+		\begin{itemize}
+			\item \textbf{Logo}: deve trovarsi sull'angolo superiore sinistro;
+			\item \textbf{Nome del documento}: deve riportare il nome del documento sull'angolo superiore destro.
+		\end{itemize}
+		\item Piè di pagina:
+		\begin{itemize}
+			\item \textbf{E-mail}: deve riportare l'indirizzo e-mail del gruppo di progetto
+			nell'angolo inferiore destro;
+			\item \textbf{Numero di pagina}: deve riportare il numero di pagina corrente e totali
+			nell'angolo inferiore destro.
+		\end{itemize}
+	\end{itemize}
+	
+
+  \subsubsection{Norme tipografiche}
+
+  \paragraph{Struttura e Gestione delle tabelle}
+  Tutte le tabelle adottano il medesimo stile:
+  \begin{itemize}
+  	\item ad eccezione del registro delle modifiche, tutte le tabelle devono essere numerate;
+  	\item ad eccezione del registro delle modifiche, ogni tabella deve avere una didascalia significativa associata;
+  	\item le celle di intestazione di ogni tabella devono avere il contenuto centrato e in grassetto;
+  	\item le celle relative alla descrizione nel registro delle modifiche hanno il contenuto in corsivo.
+  \end{itemize}
+
+  \paragraph{Uso e gestione delle immagini}
+  Nei documenti e consentito l'uso di immagini che portino un valore esplicativo
+  aggiuntivo alle informazioni in formato testuale. Il redattore del documento è tenuto a
+  \begin{itemize}
+  	\item inserire un indice delle figure presenti nel documento;
+  	\item inserire una breve didascalia significativa;
+  	\item posizionare al centro della pagina le immagini;
+  	\item assicurarsi della corretta visibilità del loro contenuto.
+  \end{itemize}  
+
+  \paragraph{Uso del corsivo e dei pedici}
+  Nella stesura dei documenti è stato adottato l'utilizzo del corsivo per la scrittura delle seguenti parole:
+  \begin{itemize}
+  	\item parole riportate nel \textit{Glossario 1.0.0\docs};
+  	\item riferimenti a documenti prodotti dal gruppo;
+  	\item termini propri del dominio applicativo di riferimento (Es.: \textit{Etherless}, \textit{Etherless-cli}, \textit{Etherless-smart}, \textit{Etherless-server}).
+  \end{itemize} 
+  Sarà evitato l'utilizzo della scrittura in corsivo per i termini elencati in precedenza se già marcati in grassetto.\\\\
+  Per evitare fraintendimenti nell'utilizzo di questa notazione, sono stati utilizzati dei pedici con il seguente significato:
+    \begin{itemize}
+      \item \textbf{Pedice "D":} utilizzato per riferirsi ad un documento redatto dal team;
+      \item \textbf{Pedice "G":} utilizzato quando una parola ha un significato
+      di non immediata comprensione. Viene quindi riportata la definizione nel
+      \textit{Glossario 1.0.0}\doc permettendo a tutti i lettori di capirne il significato.
+    \end{itemize}
+
+  \paragraph{Elenchi puntati e numerati}
+  Gli elenchi puntati e numerati dovranno seguire le seguenti regole di scrittura:
+	\begin{itemize}
+		\item ogni riga dell'elenco deve terminare con il carattere ";" ad eccezione dell'ultima che termina con il carattere ".";
+		\item se l'elenco consiste in una insieme ordinato di definizioni, la parola descritta dovrà esser scritta con la prima lettera in maiuscolo e in grassetto;
+		\item se l'elenco puntato è introdotto da una frase, le parole di ciascuna riga dell'elenco dovranno iniziare con la lettera minuscola. Viceversa se non è presente alcuna frase introduttiva. 
+	\end{itemize}
+
+  \paragraph{Formato date e orari}
+  Le date sono espresse nel seguente formato:\\\\ 
+  \centerline{\textbf{YYYY-MM-DD}} 
+  \begin{itemize}
+  	\item \textbf{Anno (YYYY):} utilizzando quattro cifre;
+  	\item \textbf{Mese (MM):} utilizzando due cifre (con valori compresi tra 0-12);
+  	\item \textbf{Giorno (DD):} utilizzando due cifre (con valori compresi tra 1-31).
+  \end{itemize}
+  L'utilizzo di questo formato permette un corretto ordinamento lessicografico.\\\\
+  Gli orari sono indicati utilizzando il seguente formato:\\\\
+  \centerline{\textbf{hh:mm:ss}} 
+  \begin{itemize}
+  	\item \textbf{Ore (hh):} utilizzando due cifre (con valori compresi tra 0-23);
+  	\item \textbf{Minuti (mm):} utilizzando due cifre (con valori compresi tra 0-59);
+  	\item \textbf{Secondi (ss):} utilizzando due cifre (con valori compresi tra 0-59).
+  \end{itemize}
+  Talvolta, per comodità, potrà essere utilizzato un formato orario ridotto evitando la scrittura dei secondi.
+    
+  
+  \subsubsection{Verbali}
+  Oltre ad ereditare la struttura base dei documenti, i verbali devono seguire
+  una nomenclatura propria relativa alla destinazione d'uso e al giorno della riunione di riferimento.
+  Questa decisione è stata presa per favorire un miglior tracciamento di ciascun verbale.
+  Il nome del documento quindi dovrà essere così composto:\\\\
+  \centerline{\textbf{verbale[Esterno/Interno]\_YYYY-MM-DD}} 
+  
+
+    \paragraph{Tracciabilità delle decisioni}
+      Ogni decisione presa all'interno di una riunione deve essere numerabile, tracciabile e menzionabile negli altri documenti al di fuori del verbale. Quando in un documento si fa rifermento ad una decisione durante una riunione
+      occorre specificare un codice identificativo come mostrato in seguito:\\\\
+      \centerline{\textbf{V[Destinazione]\_YYYY-MM-DD\_ND}} 
+      \begin{itemize}
+      	\item \textbf{V:} sigla per "verbale";
+      	\item \textbf{Destinazione:} a seconda della destinazione del documento verranno inserite le sigle:
+      	\begin{itemize}
+      		\item \textbf{I:} verbale interno;
+      		\item \textbf{E:} verbale esterno.
+      	\end{itemize}
+      	\item \textbf{YYYY-MM-DD:} data del verbale;
+      	\item \textbf{ND:} numero della decisione utilizzando due cifre e iniziando la numerazione da 00.
+      \end{itemize}
+  
+  \subsubsection{Abbreviazioni}
+  Nella stesura dei documenti può essere talvolta utile l'utilizzo di sigle per riferirsi ad alcuni termini. Vengono elencate di seguito le principali:
+  \begin{itemize}
+  	\item \textbf{Documenti:}
+  	\begin{itemize}
+	  	\item \textbf{NdP:} Norme di Progetto;
+	  	\item \textbf{PdQ:} Piano di Qualifica;
+	  	\item \textbf{PdP:} Piano di Progetto;
+	  	\item \textbf{SdF:} Studio di Fattibilità;
+	  	\item \textbf{AdR:} Analisi dei Requisiti.
+  	\end{itemize}
+  	\item \textbf{Ruoli:}
+  	\begin{itemize}
+  		\item \textbf{RE:} Responsabile di progetto;
+  		\item \textbf{AM:} Amministratore;
+  		\item \textbf{AN:} Analista;
+  		\item \textbf{PT:} Progettista;
+  		\item \textbf{PR:} Programmatore;
+  		\item \textbf{VE:} Verificatore. 
+  	\end{itemize}
+  	\item \textbf{Revisioni di avanzamento:}
+  	\begin{itemize}
+  		\item \textbf{RR:} Revisione dei Requisiti;
+  		\item \textbf{RP:} Revisione di Progettazione;
+  		\item \textbf{RQ:} Revisione di Qualifica;
+  		\item \textbf{RA:} Revisione di Accettazione.
+  	\end{itemize}
+  	
+  \end{itemize}

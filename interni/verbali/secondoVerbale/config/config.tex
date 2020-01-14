@@ -23,7 +23,7 @@
 \counterwithin{figure}{subsection}
 
 \usepackage[bottom]{footmisc}
-\usepackage{fancyhdr}
+\usepackage{fancyhdr, pageslts}
 \usepackage{titlesec}
 \setcounter{secnumdepth}{4}
 \usepackage{amsmath, amssymb}
@@ -33,8 +33,8 @@
 %header e footer
 \pagestyle{fancy}
 \lhead{\includegraphics[scale=0.11]{./res/img/logo.png}}
-\rhead{Studio di fattibilità}
-\rfoot{Pagina \thepage}
+\rhead{Verbale interno 2019-11-25}
+\rfoot{Pagina \thepage \space di \pageref{LastPage}}
 \lfoot{\small{\texttt{tenners.unipd@gmail.com}}}
 \cfoot{}
 \setlength{\headheight}{40pt}
@@ -64,3 +64,5 @@
 %codice
 \definecolor{codegray}{gray}{0.9}
 \newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+
+\pagenumbering{arabic}
