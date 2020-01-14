@@ -1,0 +1,112 @@
+%Tutti gli usepackage vanno qui
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{geometry}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{chngcntr}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=magenta,
+	urlcolor=blue,
+}
+% % Numerazione figure
+% \let\counterwithout\relax
+% \let\counterwithin\relax
+% \usepackage{chngcntr}
+
+\counterwithin{table}{subsection}
+\counterwithin{figure}{subsection}
+
+\usepackage[bottom]{footmisc}
+\usepackage{fancyhdr, pageslts}
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\usepackage{amsmath, amssymb}
+\usepackage{array}
+\usepackage{graphicx}
+
+%header e footer
+\pagestyle{fancy}
+\lhead{\includegraphics[scale=0.11]{./res/img/logo.png}}
+\rhead{Piano di Qualifica}
+\rfoot{Pagina \thepage \space di \pageref{LastPage}}
+\lfoot{\small{\texttt{tenners.unipd@gmail.com}}}
+\cfoot{}
+\setlength{\headheight}{40pt}
+\renewcommand{\footrulewidth}{0.4pt}    %linea footer fondo pagina
+
+
+%tabelle
+\usepackage[table]{xcolor}
+\usepackage{multirow}
+\definecolor{pari}{HTML}{EAEAEA}
+\definecolor{dispari}{HTML}{FFFFFF}
+\definecolor{header}{HTML}{b4b4b4}
+
+
+%glossario
+\newcommand{\glo}{$_{G}$ }
+\newcommand{\glos}{$_{G}$} % pedice glossario senza spazio dopo la parola
+
+%documento
+\newcommand{\doc}{$_{D}$ }
+\newcommand{\docs}{$_{D}$}
+
+%label custom
+\makeatletter
+\newcommand{\uclabel}[2]{%
+	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{\thepage}{#2}{#1}{}} }%
+	\hypertarget{#1}{#2}
+}
+\makeatother
+
+%codice
+\definecolor{codegray}{gray}{0.9}
+\newcommand{\code}[1]{\colorbox{codegray}{\texttt{#1}}}
+
+\setlist{after=\vspace{\baselineskip}}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language=Java,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+%\usepackage[defaultfam,tabular,lining]{montserrat} %% Option 'defaultfam'
+%%% only if the base font of the document is to be sans serif
+%\usepackage[T1]{fontenc}
+%\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+
+\pagenumbering{arabic}
