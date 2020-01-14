@@ -1,0 +1,126 @@
+\section{Descrizione generale}
+
+\subsection{Obiettivi del prodotto}
+\textit{Etherless} è un servizio sviluppato con una \textit{architettura decentralizzata\glo} che permette agli sviluppatori di caricare funzioni JavaScript sul \textit{cloud\glo} per poi renderle disponibili ad utenti terzi (utilizzatori). Il servizio si presenta come un CaaS (Computation-as-a-Service  in cui l’utilizzatore paga per la singola esecuzione di una funzione in modo automatico mediante l’utilizzo della rete \textit{Ethereum\glo} e degli \textit{smart-contract\glos}. Una parte del compenso verrà accreditata allo sviluppatore mentre, la restante, verrà trattenuta da \textit{Etherless}.
+
+\subsection{Funzioni del prodotto}
+L'obbiettivo finale è quello di avere un ambiente in cui un utente sviluppatore, dopo aver creato una funzionalità che potrebbe essere di interesse per altri utenti, carica il suo codice JavaScript su \textit{Etherless} e ne imposta un costo di esecuzione. Un utente utilizzatore del servizio che necessita di tale funzionalità, può pagare la quota di esecuzione piuttosto che riscrivere la stessa procedura. Attraverso la sua utenza \textit{Etherless}, l'utente utilizzatore può dunque usufruire della funzione in \textit{cloud\glo} pagandone il costo di esecuzione ad ogni singola chiamata.
+\\\\
+Ogni utente può autenticarsi al servizio mediante un account \textit{Ethereum\glo}, identificato da un indirizzo e da una \textit{private key\glos}. È possibile distinguere varie tipologie di utenza:
+\begin{itemize}
+	\item \textbf{Utente generico} utente che non si è autenticato nella rete \textit{Ethereum\glos};
+	\item \textbf{Utente utilizzatore} colui che decide di utilizzare funzioni altrui;
+	\item \textbf{Utente sviluppatore}: colui che decide di rendere pubblica una o più funzioni.
+\end{itemize} 
+Un \textbf{utente generico} può:
+\begin{itemize}
+	\item registrarsi al servizio richiedendo un nuovo account \textit{Ethereum\glos}
+	\item accedere alla sua utenza inserendo le credenziali di accesso.
+\end{itemize}
+Un \textbf{utente utilizzatore} può:
+\begin{itemize}
+	\item elencare tutte le funzioni disponibili;
+	\item eseguire una funzione tra le disponibili;
+	\item effettuare il logout della sua utenza;
+	\item visualizzare un log delle funzioni da lui eseguite;
+	\item ricercare una funzione per nome.
+\end{itemize}
+Un utente diventa \textbf{utente sviluppatore} quando decide di rendere disponibile su \textit{Etherless} una delle sue funzioni scritte in linguaggio JavaScript. Egli, oltre a poter effettuare le stesse operazioni rese disponibili agli utenti utilizzatori, può inoltre:
+\begin{itemize}
+	\item eseguire il \textit{deploy\glo} di una funzione su \textit{Etherless};
+	\item eliminare una funzione da lui pubblicata;
+	\item modificare costo, descrizione, firma della funzione;
+	\item aggiornare il codice di una sua funzione presente su \textit{Etherless}.
+\end{itemize}
+
+
+
+\subsection{Caratteristiche utenti}
+
+\subsubsection{Identificazione}
+Gli utenti \textit{Etherless} sono identificati univocamente attraverso un account \textit{Ethereum\glos}. Ciò significa che un utente è identificato da una combinazione di \textit{address} e \textit{private-key}\glo specifici delle reti \textit{blockchain\glos}.
+
+\subsubsection{Autenticazione}
+Per la persistenza della sessione dell'utente, verranno salvati nel \textit{file system\glo} del computer le credenziali di accesso in seguito alla registrazione o al primo accesso dell'utente su una istanza dell'\textit{Etherless-cli}. In particolar modo, un utente generico potrà effettuare le seguenti operazioni:
+\begin{itemize}
+	\item \textbf{Accesso}: nel caso l'utente voglia accedere alla sua utenza \textit{Etherless} mediante un account \textit{Ethereum\glos}, gli verrà chiesto di inserire le sue credenziali;
+	\item \textbf{Registrazione}: nel caso della registrazione di una nuova utenza, verrà inoltrata la richiesta alla rete \textit{Ethereum\glo} che genererà un combinazione di credenziali univoca.
+\end{itemize}
+\subsubsection{Crediti}
+Ogni utente ha associato al suo account un certo numero di \textit{Ether\glos}. Non è stato richiesto di prevedere una modalità di ricarica di tali crediti. Ogni account, alla sua creazione, avrà a disposizione un certo numero di \textit{Ether\glos}.
+
+\subsection{Caratteristiche tecniche}
+
+L'intero sistema si basa su tre applicativi software:
+	\begin{itemize}
+		\item \textbf{Etherless-cli:} \textit{CLI\glo} attraverso la quale gli utenti si interfacciano con il servizio ed eseguono le funzionalità disponibili;
+		\item \textbf{Etherless-smart:} applicativo che si occupa della definizione e del \textit{deploy\glo} dello \textit{smart-contract} sulla rete \textit{Ethereum\glos};
+		\item \textbf{Etherless-server:} applicativo server che rimane in ascolto e soddisfa le richieste di esecuzione delle funzioni caricate, interfacciandosi con il servizio AWS Lambda mediante l'apposito \textit{SDK\glos}.
+	\end{itemize}
+
+\subsubsection{Comandi disponibili}
+L'elenco dei comandi a disposizione degli utenti sono:
+\begin{itemize}
+	\item \textbf{etherless init:} avvio dell'applicativo;
+	\item \textbf{etherless login:} autenticazione alla piattaforma \textit{Etherless} mediante la rete \textit{Ethereum\glos};
+	\item \textbf{etherless signup:} registrazione alla piattaforma \textit{Etherless} mediante la rete \textit{Ethereum\glos};
+	\item \textbf{etherless logout:} per eseguire il logout della propria utenza;
+	\item \textbf{etherless run:} per l'esecuzione di una funzione;
+	\item \textbf{etherless list:} per l'elenco delle funzioni disponibili su \textit{Etherless};
+	\item \textbf{etherless log:} per visualizzare il log delle funzioni chiamate da un utente;
+	\item \textbf{etherless find:} per eseguire la ricerca di una funzione per nome;
+	\item \textbf{etherless deploy\glos:} per eseguire il \textit{deploy\glo} di una funzione JavaScript a disposizione;
+	\item \textbf{etherless set:} per la modifica delle informazioni relative al costo, descrizione e firma di una funzione propria;
+	\item \textbf{etherless update:} per modificare il codice di una propria funzione JavaScript esistente su \textit{Etherless};
+	\item \textbf{etherless delete:} per eliminare una propria funziona JavaScript presente su \textit{Etherless}.
+\end{itemize}
+
+\subsubsection{Trasferimento del denaro}
+Ogni qualvolta venga utilizzata una delle funzioni messe a disposizione dagli utenti sviluppatori, deve avvenire il corrispettivo pagamento da parte dell'utilizzatore. Sono state individuate due possibili modalità di trasferimento del denaro:
+\begin{itemize}
+	\item trasferimento diretto dei fondi quando lo \textit{smart-contract\glo} riceve la richiesta di esecuzione;
+	\item mediante \textit{escrow\glos}, i soldi vengono prelevati dall'utilizzatore alla ricezione della richiesta di esecuzione e accreditati allo sviluppatore solamente quando l'output della funzione richiesta raggiunge l'utilizzatore.
+\end{itemize}
+Il proponente \textit{Red Babel} ha specificato che la prima versione è accettata.\\\\
+Una volta stabilito il costo da parte del suo sviluppatore, un utente utilizzatore pagherà per ogni singola esecuzione della funzione quella quota in valuta \textit{Ether\glos}. Una percentuale verrà trattenuta per il mantenimento della piattaforma \textit{Etherless}, mentre la restante verrà accreditata allo sviluppatore.
+
+\subsubsection{Archiviazione dei dati}
+Per l'archiviazione dei dati non è previsto l'utilizzo di database. Dalle specifiche del \textit{capitolato\glo} emerge che non è necessario il salvataggio di dati quali immagini o descrizioni. Informazioni come nomi di funzioni, nome del creatore della funzione e costi di esecuzioni verranno salvati direttamente sulla rete \textit{Ethereum\glo} attraverso lo  \textit{smart-contract\glos}.
+\\\\
+Nel caso in cui sorga la necessità di salvare quantitativi più grandi di dati, verrà utilizzato un database relazionale o non-relazionale disponibile tramite AWS.
+
+\subsubsection{Tecnologie}
+Le tecnologie da utilizzare per la realizzazione del prodotto sono:
+\begin{itemize}
+	\item \textbf{AWS (Amazon Web Services)}: piattaforma che si occupa di fornire servizi di \textit{cloud\glo} computing;
+	\item \textbf{AWS - Lambda}: servizio che consente di eseguire codice nel \textit{cloud\glos};
+	\item \textbf{Ethereum\glos}: una rete globale per il trasferimento di \textit{criptovalute\glo} e per la realizzazione di applicativi decentralizzati;
+	\item \textbf{Solidity}: linguaggio usato per la definizione di \textit{smart-contract\glos};
+	\item \textbf{Truffle}: \textit{framework\glo} per lo sviluppo di \textit{smart-contract\glo} su rete \textit{Ethereum\glos};
+	\item \textbf{Web3}: \textit{API\glo} JavaScript per l'interazione con un nodo \textit{Ethereum\glo} locale o remoto;
+	\item \textbf{Ropsten}: Rete \textit{Ethereum\glo} pubblica usata per il testing di applicativi in ambiente di staging;
+	\item \textbf{MainNet\glos}: Rete \textit{Ethereum\glo} principale;
+	\item \textbf{Ganache}: Ambiente di sviluppo \textit{Ethereum\glo} utilizzato per la simulazione locale;
+	\item \textbf{TypeScript 3.6}:  linguaggio \textit{open-source\glo} sviluppato da Microsoft che estende le potenzialità di JavaScript;
+	\item \textbf{Node.js}: ambiente di \textit{runtime\glo} \textit{open-source\glo} per JavaScript;
+	\item \textbf{The Serverless\glo Framework\glos}: \textit{framework\glo} per la costruzione e \textit{deploy\glo}  di ambienti \textit{serverless\glos};
+	\item \textbf{Smart Contract\glos}: protocollo informatico che facilita, verifica, fa rispettare ed esegue un contratto;
+	\item \textbf{ESLint}: strumento di analisi statica del codice JavaScript.
+\end{itemize}
+\subsubsection{Ambienti}
+Il proponente ha richiesto la possibilità di eseguire il programma nelle seguenti modalità:
+\begin{itemize}
+	\item \textbf{Locale:} simulando una rete \textit{Ethereum\glo} sulla propria macchina;
+	\item \textbf{Test:} simulando una rete Ethereum\glo su un ambiente di test condiviso tra gli sviluppatori del progetto;
+	\item \textbf{Staging:} utlizzando un rete \textit{Ethereum\glo} di test pubblica come Ropsten;
+	\item \textbf{Production:} utilizzando la rete \textit{Ethereum\glo} ufficiale \textit{MainNet\glos}.
+\end{itemize}
+A tale scopo deve essere prevista la configurazione dei vari ambienti su \textit{Etherless-smart}, \textit{Etherless-cli} e \textit{Etherless-server}.
+
+\subsubsection{Vincoli del sistema}
+\begin{itemize}
+	\item \textbf{Per l'utente:} Per l'esecuzione è necessaria una connessione ad Internet, l'installazione di Node.js, e il download di \textit{Etherless-cli}. Per accedere al servizio l'utente dovrà prima creare una utenza oppure accedere con una già esistente. Preferibilmente richieste conoscenze nell' utilizzo della \textit{CLI\glos};
+	\item \textbf{Per il servizio}: Per l'esecuzione serverless\glo del servizio è richiesta una utenza AWS e la corretta configurazione di tale ambiente. Inoltre, è necessario poter accedere a un network \textit{Ethereum\glos}.
+\end{itemize}
+
+	
