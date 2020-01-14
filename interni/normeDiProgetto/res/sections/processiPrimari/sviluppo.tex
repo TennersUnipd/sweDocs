@@ -1,90 +1,135 @@
 \subsection{Sviluppo}
 \subsubsection{Scopo}
-Il processo di Sviluppo contiene tutte le attività volte alla produzione del software dal Analisi dei Requisiti, al  design, codifica, integrazione e testing.
+Il processo di Sviluppo coinvolge tutte le attività volte alla produzione del prodotto finale: \textit{Analisi dei Requisiti 1.0.0\docs},  design, codifica, integrazione, testing e installazione.
 \subsubsection{Analisi dei Requisiti}
-Parte fondamentale dello Sviluppo è descrivere i requisiti per procedere nel progetto. La specifica dei requisiti deve analizzare funzioni e capacità del sistema, interfaccia, operazioni di manutenzione e vincoli di progettazione. I requisiti devono essere verificabili e classificabili in questa maniera:
+L'analisi dei requisiti comprende la descrizione dettagliata delle specifiche del sistema. È compito dell'analista descrivere, oltre che i requisiti funzionali del prodotto, anche quelli prestazionali, di qualità e di vincolo. 
+Il documento di \textit{Analisi dei Requisiti 1.0.0\doc} ha come obiettivo il perseguimento delle seguenti caratteristiche:
+\begin{itemize}
+	\item \textbf{Chiarezza strutturale:} i requisiti devono essere classificati e organizzati in maniera precisa, distinguendo i requisiti funzionali da quelli non funzionali;
+	\item \textbf{Chiarezza espressiva:} è necessario avere una chiarezza espositiva tale da permettere la definizione di requisiti non ambigui;
+	\item \textbf{Atomicità dei requisiti:} occorre analizzare i bisogni fino a ché non si raggiungono requisiti atomici, non ulteriormente suddivisibili.  
+\end{itemize}
 
-\centerline{\textbf{[Priorità][Tipologia][Codice]}}
+\paragraph{Requisiti}
+L'approccio utilizzato per la definizione dei requisiti è stato di tipo \textbf{top-down}: il prodotto finale, a partire dalla sua totalità, è stato scomposto nelle parti che lo compongono sino ad arrivare a requisiti atomici. Le proprietà fondamentali di un requisito sono le seguenti:
+\begin{itemize}
+	\item devono essere verificabili;
+	\item devono soddisfare tutti i bisogni espressi dall'utente;
+	\item non devono soddisfare caratteristiche superflue (solo quelle strettamente necessarie);
+	\item non devono essere contraddittori;
+	\item devono essere tracciabili e modificabili.
+\end{itemize}  
+\noindent Ogni requisito necessità tracciabilità. Verrà dunque utilizzato per ciascuno un codice identificativo strutturato nel seguente modo:
+\\\\
+\centerline{\textbf{[Priorità][Tipologia][Codice]}}\\
 \begin{itemize}
   \item \textbf{Priorità}:
   \begin{itemize}
-    \item \textbf{0 Obbligatorio}: se uno stakeholder richiede esplicitamente che il requisito deve essere presente a tutti i costi
-    \item \textbf{1 Desiderabile}: non necessario, ma che aggiunge valore al progetto
-    \item \textbf{2 Opzionale}: utile, ma contrattabile più avanti durante l'avanzamento del progetto
+    \item \textbf{1 (Obbligatorio)}: necessario per almeno uno degli \textit{stakeholder\glos};
+    \item \textbf{2 (Desiderabile)}: non strettamente necessario, ma di valore aggiunto;
+    \item \textbf{3 (Opzionale)}: relativamente utili e contrattabili con l'avanzare del progetto.
   \end{itemize}
   \item \textbf{Tipologia}:
   \begin{itemize}
-    \item F Funzionali
-    \item P Prestazionali
-    \item Q Qualitativi
-    \item D Dichiarativi
+    \item \textbf{F:} Funzionali;
+    \item \textbf{P:} Prestazionali;
+    \item \textbf{Q:} Qualitativi;
+    \item \textbf{V:} di Vincolo.
   \end{itemize}
-  \item \textbf{Codice Identificativo}: univoco
+  \item \textbf{Codice Identificativo}.
 \end{itemize}
-Devono contenere anche:
+Ogni requisito è opportunamente seguito da:
 \begin{itemize}
-  \item \textbf{Descrizione}: breve descrizione del requisito, in modo da essere il meno ambigui possibili.
-  \item \textbf{Fonte}: da dove proviene il requisito, chi l'ha richiesto o dove è stato ricavato.
+  \item \textbf{Descrizione}: breve descrizione riguardante il requisito;
+  \item \textbf{Fonte}: da dove proviene il requisito, chi l'ha richiesto o dove è stato ricavato. Le fonti di un requisito potranno essere le seguenti:
+  \begin{itemize}
+  	\item \textbf{Capitolato\glos:} se riportato nel \textit{capitolato\glos};
+  	\item \textbf{Interna:} se concordato all'interno del team;
+  	\item \textbf{Caso d'uso:} se derivato da un caso d'uso (verrà riportato il codice identificativo del caso d'uso come descritto nella sezione \textsection2.2.2.2);
+  	\item \textbf{Verbale:} se concordato durante una riunione, verrà riportato il codice identificativo della decisione alla quale viene fatto riferimento.
+  \end{itemize}
 \end{itemize}
-\paragraph{Documento di Analisi dei Requisiti}
-Il documento deve essere:
-\begin{itemize}
-  \item Privo di ambiguità: tramite l'uso di un glossario e di norme per classificare i requisiti su citate.
-  \item Verificabile
-  \item Modificabile
-  \item Tracciabile e Ordinato
-\end{itemize}
-\paragraph{Casi d'Uso}
-Per raccogliere i requisiti è necessario descrivere alcuni casi d'uso e sono composti in questo modo:
-\begin{itemize}
-  \item Nome/Identificatore
-  \item Scenario principale
-  \item Scenari alternativi
-  \item pre-condizioni
-  \item post-condizioni
-  \item Evento scatenante del caso d’uso
-  \item Attori principali
-  \item Attori secondari
-  \item Inclusione
-  \item Esclusione
-  \item Generalizzazione
-\end{itemize}
-Ogni caso d'uso sarà identificato univocamente da un codice formato da
 
-\centerline{\textbf{UC[codiceattuale].[codicefiglio]}}
+\paragraph{Casi d'Uso}
+I casi d'uso descrivono l'insieme delle casistiche con cui il sistema si interfaccia verso l'esterno. Ogni caso d'uso sarà identificato univocamente da un codice formato da:
+\\\\
+\centerline{\textbf{UC[Codicepadre].[Codicefiglio]}}\\
+
 \begin{itemize}
-  \item codicepadre è il codice del caso d'uso a cui questo è associato
-  \item codicefiglio è il codice progressivo che identifica il sottocaso corrente
+	\item \textbf{Codicepadre:} identificativo numerico dato al caso d'uso a cui questo è associato;
+	\item \textbf{Codicefiglio:} identificativo numerico per il sotto-caso corrente.
 \end{itemize}
-\paragraph{UML}
-Il gruppo Tenners utilizzerà la versione del linguaggio UML v2.0.
-\subsubsection{Progettazione}
-La progettazione o design è un processo che si attiva subito dopo l'Analisi dei Requisiti e si prefigge di capire come soddisfare i requisiti in modo efficiente ed efficace. La progettazione deve essere chiara agli stakeholder\glo, i quali devono convincersi della bontà della soluzione proposta ai problemi sollevati nell'Analisi dei Requisiti.
-\paragraph{Architettura}
-È necessario definire un'architettura per comporre le varie parti nel miglior modo. Essa è descritta nei due documenti:
+Ogni caso d'uso, oltre ad avere un relativo diagramma, verrà descritto 
 \begin{itemize}
-  \item \textbf{Technology Baseline}: che descrive il prodotto e la sua architettura e dovrà contenere:
-  \begin{itemize}
-    \item Diagrammi UML (classi package, attvità, sequenza)
-    \item Design Pattern utilizzato
-    \item Tracciamento delle componenti
-    \item Test di integrazione
-  \end{itemize}
-  \item \textbf{Product Baseline}: approfondisce la Technology Baseline, approfondendo:
-  \begin{itemize}
-    \item definizione delle classi: ogni classe è descritta in modo approfondito, descrivendo scopo e funzionalità.
-    \item tracciamento delle classi: è necessario legare ogni requisito a una o più classi che lo soddisfino.
-    \item test di unità: vengono definiti per verificare che ogni componente funzioni.
-  \end{itemize}
+  \item codice;
+  \item nome;
+  \item diagramma del caso d'uso;
+  \item attori principali;
+  \item attori secondari (opzionale);
+  \item pre-condizioni;
+  \item post-condizioni;
+  \item scenario principale;
+  \item inclusioni (opzionale);
+  \item esclusioni (opzionale);
+  \item specializzazioni (opzionale).
+\end{itemize}
+
+\paragraph{UML\glo}
+Il gruppo Tenners utilizzerà la versione del linguaggio \textit{UML\glo} 2.0 per la realizzazione dei diagrammi dei casi d'uso.
+\subsubsection{Progettazione}
+La Progettazione è un processo che si attiva al termine dell'\textit{Analisi dei Requisiti 1.0.0\docs}. Lo scopo dei progettisti è capire come risolvere il problema di partenza e soddisfare i requisiti in modo ottimale. Diversamente da ciò che accade nell'\textit{Analisi dei Requisiti 1.0.0\docs}, in cui il problema viene progressivamente decomposto in parti più piccole, in questa fase si ricompone il tutto per definire la soluzione migliore. La Progettazione descrive come il prodotto debba essere organizzato nelle sue componenti (architettura del sistema) e come esse interagiscono tra loro.
+\paragraph{Architettura}
+È necessario definire un'architettura per comporre le varie parti nel miglior modo. Essa sarà descritta nei due docLenti:
+\begin{itemize}
+  \item \textbf{Technology Baseline\glos}: Selezione delle tecnologie, \textit{framework}\glo e librerie tramite \textit{Proof of Concept (PoC)\glos}. Il \textit{PoC\glo} deve essere accedibile su \textit{GitHub\glos}.
+  \item \textbf{Product Baseline}: viene presentata una \textit{Baseline\glo} architetturale coerente con quanto mostrato in Technology \textit{Baseline\glos}, tramite l'utilizzo di diagrammi delle classi e di sequenza. L'analisi è comprensiva di design pattern contestualizzati all'architettura.
+\end{itemize}
+\paragraph{Diagrammi per la Progettazione}
+Per facilitare la descrizione dell'architettura del prodotto finale, si ricorre all'utilizzo di alcune tipologie di diagrammi \textit{UML\glos}:
+\begin{itemize}
+	\item \textbf{Diagrammi di sequenza:} descrivono uno scenario composto da una sequenza di azioni le cui scelte sono già state effettuate. Non ammette dunque flussi alternativi;
+	\item \textbf{Diagrammi delle classi:} descrivono il tipo di oggetti che fanno parte di un sistema;
+	\item \textbf{Diagrammi dei package:} documentano la dipendenza tra classi;
+	\item \textbf{Diagrammi di attività:} descrivono la logica procedurale che compone un processo;
+	\item \textbf{Diagrammi di oggetti:} descrivono il sistema mediante gli oggetti e le associazioni tra loro.
 \end{itemize}
 \subsubsection{Codifica}
-La Codifica è la fase in cui viene scritto il codice dai programmatori. È fondamentale che questo sia uniforme per migliorare le attività di manutenzione, verifica e validazione. È quindi necessario normare il lavoro in modo tale che il loro codice sia leggibile, attraverso uno stile di codifica.
+Durante la Codifica viene sviluppato il codice del prodotto software dai programmatori. È fondamentale che questo sia uniforme per migliorare le attività di manutenzione, verifica e validazione. È quindi necessario normare il lavoro in modo tale che il loro codice sia leggibile, attraverso uno stile di codifica.
 \paragraph{Stile di Codifica}
-Le regole di codifica cercano di seguire degli standard per i vari linguaggi utilizzati. In generale le norme utilizzate saranno:
+Stabilire convenzioni di codifica comuni, migliora la leggibilità del codice e lo rende più facilmente mantenibile. Il gruppo Tenners, per aumentare l'omogeneità e l'uniformità durante la stesura del codice, ha scelto delle regole comuni da seguire:
 \begin{itemize}
-  \item \textbf{Indentazione}: per l'indentazione dei blocchi saranno utilizzato 4 caratteri spazio (e non il classico carattere tab), per uniformare la decodifica dei sistemi operativi.
-  \item \textbf{Parentesizzazione}: le parentesi vanno inserite in linea con i costrutti stessi.
-  \item \textbf{Nomenclatura}: tutti i nomi devono essere in CamelCase. La distinzione ovvia tra classe in maiuscola e metodi in minuscolo va rispettata. L'unica eccezione sono le costanti che vanno scritte tutte in maiuscolo. I nomi devono essere univoci e devono rispecchiare la funzione di ciò che definiscono.
-  \item \textbf{Lingua}: il codice come anche i commenti vanno scritti in lingua inglese.
+  \item \textbf{Indentazione}: per l'indentazione dei blocchi saranno utilizzati 4 caratteri spazio (e non il classico tab), per uniformare la codifica dei caratteri su diversi sistemi operativi;
+  \item \textbf{Posizione delle parentesi}: le parentesi per l'apertura di un blocco vanno inserite in linea con i costrutti mentre, quelle di chiusura, vanno inserite alla linea successiva rispetto all'ultima istruzione del blocco.
+  Esempio:
+  \begin{lstlisting}
+  	function toCelsius(fahrenheit){
+  		return (5 / 9) * (fahrenheit - 32);
+  	}
+  \end{lstlisting}
+  \item \textbf{Nomenclatura}: i nomi contenuti nel codice devono aderire alle seguenti convenzioni:
+  \begin{itemize}
+  	\item \textbf{Nome delle classi:} scritti in UpperCamelCase, senza l'utilizzo degli spazi, con la prima lettera di ciascuna parola in maiuscolo Esempio:
+  	\begin{lstlisting}
+  	class AccountingDepartment {
+  		....
+  	}
+  	\end{lstlisting}
+  	\item \textbf{Nome dei metodi e delle variabili:} scritti in lowerCamelCase, senza l'utilizzo degli spazi, con la prima lettera di ciascuna parola in maiuscolo eccetto la prima. Esempio:
+  	\begin{lstlisting}
+  	let z = 100;
+  	function addToZ(x, y) {
+  		return x + y + z;
+  	}
+  	\end{lstlisting}
+  \end{itemize}
+  Per facilitare la lettura e la comprensione del codice, tutti i nomi devono essere significativi e parlanti;
+  \item \textbf{Lingua}: il codice e i commenti vanno scritti in lingua inglese;
+  \item \textbf{Spazi intorno agli operatori:} verranno inseriti degli spazi intorno agli operatori ( = + - * / ) , e dopo le virgole. 
+  Esempio:
+  \begin{lstlisting}
+  var x = y + z;
+  var values = ["Volvo", "Saab", "Fiat"];
+  \end{lstlisting}
+  
 \end{itemize}
 %\subparagraph{TypeScript}
