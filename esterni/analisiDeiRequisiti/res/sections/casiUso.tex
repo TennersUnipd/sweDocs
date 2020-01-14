@@ -1,0 +1,85 @@
+\section{Casi d'uso}
+
+\subsection{Attori}
+In un diagramma dei casi d'uso, gli attori rappresentano le entità esterne che interagiscono con il prodotto \textit{Etherless}. Essi si possono distinguere in due categorie:
+\begin{itemize}
+	\item \textbf{Attori primari:} coinvolti nell'esecuzione dei casi d'uso, interagiscono con il servizio per soddisfare i propri bisogni;
+	\item \textbf{Attori secondari:} forniscono servizio o supporto al sistema. 
+\end{itemize}
+
+\subsubsection{Attori primari}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=9.7cm]{res/img/gerarchiaAttoriPrimari.jpg}
+	\caption{Gerarchia attori primari}
+\end{figure}
+
+Sono state identificate quattro diverse tipologie di attori primari relazionati tra loro in maniera gerarchica:
+
+\begin{itemize}
+	\item \textbf{Utente generico:} utente che ha eseguito il comando per l'avvio dell'applicativo tramite \textit{Etherlesss-cli};
+	\item \textbf{Utente non autenticato:} utente che non ha ancora eseguito l'accesso o la registrazione al network \textit{Ethereum\glo} e che dunque non potrà usufruire delle funzionalità dell'applicazione;
+	\item \textbf{Utente autenticato:} utente che ha eseguito l'accesso al network \textit{Ethereum\glo} e che potrà eseguire i comandi messi a disposizione del servizio per gli utenti utilizzatori;
+	\item \textbf{Utente sviluppatore:} utente che ha la possibilità di eseguire il \textit{deploy\glo} di funzioni JavaScript proprie, oltre che eseguire le altre funzioni messe a disposizione dagli altri utenti del servizio.
+\end{itemize}
+
+
+\subsubsection{Attori secondari}
+Dall'analisi sui requisiti del sistema è emersa la presenza di un unico attore secondario:
+\begin{itemize}
+	\item \textbf{Ethereum\glo Network:} l'autenticazione a \textit{Etherless} coinciderà con l'accesso alla rete \textit{Ethereum\glos}. Oltre a ciò, l'\textit{Ethereum\glo} Network sarà coinvolto nei pagamenti tra gli utenti del sistema.
+\end{itemize}
+
+
+\subsection{Elenco dei casi d'uso}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12.3cm]{res/img/useCaseDiagram.jpg}
+	\caption{Casi d'uso principali}
+\end{figure}
+\newpage
+\input{res/sections/UC/UC1}
+\input{res/sections/UC/UC2}
+\newpage
+\input{res/sections/UC/UC5}
+\input{res/sections/UC/UC5.1}
+\input{res/sections/UC/UC5.2}
+\input{res/sections/UC/UC5.3}
+\input{res/sections/UC/UC6}
+\input{res/sections/UC/UC4}
+\input{res/sections/UC/UC3}
+\input{res/sections/UC/UC7}
+\input{res/sections/UC/UC8}
+\input{res/sections/UC/UC8.1}
+\input{res/sections/UC/UC8.2}
+\input{res/sections/UC/UC9}
+\input{res/sections/UC/UC9.1}
+\input{res/sections/UC/UC9.2}
+\input{res/sections/UC/UC9.3}
+\input{res/sections/UC/UC9.4}
+\input{res/sections/UC/UC10}
+\input{res/sections/UC/UC11}
+\input{res/sections/UC/UC12}
+\input{res/sections/UC/UC13}
+\input{res/sections/UC/UC14}
+\input{res/sections/UC/UC15}
+\input{res/sections/UC/UC15.1}
+\input{res/sections/UC/UC15.2}
+\input{res/sections/UC/UC15.3}
+\input{res/sections/UC/UC15.4}
+\newpage
+\input{res/sections/UC/UC16}
+\input{res/sections/UC/UC16.1}
+\input{res/sections/UC/UC16.2}
+\input{res/sections/UC/UC16.3}
+\input{res/sections/UC/UC16.4}
+\input{res/sections/UC/UC16.5}
+\input{res/sections/UC/UC17}
+\newpage
+\input{res/sections/UC/UC18}
+\input{res/sections/UC/UC18.1}
+\input{res/sections/UC/UC18.2}
+\input{res/sections/UC/UC19}
+\input{res/sections/UC/UC19.1}
+\input{res/sections/UC/UC19.2}
