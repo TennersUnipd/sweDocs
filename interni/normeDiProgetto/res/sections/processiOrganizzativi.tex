@@ -1,117 +1,119 @@
 \section{Processi Organizzativi}
 	\subsection{Gestione della pianificazione}
 
-   		\subsubsection{Ruoli di progetto}
-   			Ciascun membro del gruppo, a rotazione, dovrà ricoprire il ruolo che gli viene affidato per un periodo significativo. Nel \textit{Piano di Progetto 1.0.0\docs} vengono organizzate e pianificate le attività e assegnate a ciascun ruolo. Ogni membro dovrà rispettare tali norme.
-   			Nell'assegnamento dei ruoli si verranno evitate situazioni di conflitto, per garantire la qualità, la verifica e l'approvazione dei documenti.
+		\subsubsection{Ruoli di progetto}
+			Ciascun membro del gruppo, a rotazione, dovrà ricoprire il ruolo che gli viene affidato per un periodo significativo. Nel \textit{Piano di Progetto 1.0.0\docs} vengono organizzate e pianificate le attività e assegnate a ciascun ruolo. Ogni membro dovrà rispettare tali norme.
+			Nell'assegnamento dei ruoli si verranno evitate situazioni di conflitto, per garantire la qualità, la verifica e l'approvazione dei documenti.
 
-   			\noindent I ruoli di progetto sono:
-   			\begin{itemize}
-   				\item \textbf{Analista:} l'Analista è colui che effettua l'analisi dei problemi e del dominio applicativo. \`{E} una figura molto importante ai fini della riuscita del progetto, anche se non sarà sempre presente durante tutto il ciclo di vita di quest'ultimo. Sarà suo compito redigere l'\textit{Analisi dei requisiti 1.0.0\doc} e lo \textit{Studio di Fattibilità 1.0.0\doc}. Errori durante l'\textit{Analisi dei Requisiti 1.0.0\doc} possono portare a gravi problemi nelle fasi successive. Per evitare ciò, sarà necessario che l'Analista lavori a stretto contatto con il proponente capendo nel dettaglio tutti i bisogni impliciti ed espliciti e trasformandoli in requisiti per il sistema;
-   				\item \textbf{Progettista:} il Progettista lavora in stretto contatto con l'Analista: il suo compito sarà capire come realizzare in maniera ottimale il sistema partendo dai requisiti forniti. È responsabile di scelte architetturali che portino ad una soluzione ottimale del problema iniziale in termini di efficacia ed efficienza. Per garantire ciò, è necessario che una architettura di qualità che aderisca a best practice consolidate, che risulti manutenibile nel tempo tenendo bassi i costi e le risorse consumate, sicura, modulare e capace di soddisfare tutti i requisiti;
-   				\item \textbf{Programmatore:} lo Sviluppatore si occupa della codifica dell'applicativo software. Il grado di libertà nelle scelte e decisioni sull'architettura finale del prodotto è nulla. Il loro compito si limita all'implementazione dell'architettura elaborata dal Progettista rendendo il codice manutenibile nel tempo. Si occupa inoltre di predisporre le componenti di supporto alle prove di verifica e validazione del codice;
-   				\item \textbf{Verificatore:} il Verificatore svolge un'operazione di controllo sulle attività svolte dagli altri componenti del progetto. Egli fa riferimento alle norme stabilite per sancire la correttezza e la conformità del prodotto rispetto alle attese. Facendo riferimento alle \textit{Norme di Progetto 1.3.1\doc}, il verificatore dovrà segnalare alla figura competente la presenza o l'assenza di difformità. La correzione effettiva degli errori non è compito del Verificatore ma dell'autore della modifica in oggetto. Egli partecipa in maniera continuativa per tutto il ciclo di vita del prodotto e si occuperà della stesura del \textit{Piano di Qualifica 1.0.0\docs};
-   				\item \textbf{Responsabile:} il Responsabile è il punto di riferimento sia per il fornitore che per il committente. Inoltre è colui che raccoglie su di sé le responsabilità decisionali di scelta e approvazione e costituisce il centro di coordinamento per l'intero progetto. Nello specifico, ha il compito di gestire le risorse e le attività, coordinare il gruppo, approvare i documenti redatti;
-   				\item \textbf{Amministratore:} l'Amministratore è colui che controlla e amministra l'ambiente di lavoro supportando il Responsabile. Non compie alcun tipo di scelta gestionale ed è incaricato di gestire  l'ambiente di lavoro compreso il versionamento e le configurazioni del prodotto e amministrare le infrastrutture di supporto.
-   			\end{itemize}
-   		
-   		\subsubsection{Tickecting}
-   		Il tickecting permette ai membri del gruppo di monitorare, in qualsiasi momento, le attività in corso, permette al Responsabile di monitorare l'andamento delle attività.\\   		
-   		\noindent Come strumento di tickecting è stato deciso di usare i servizi di Project Board offerti da \textit{GitHub\glos}.\\   		
-   		Su \textit{GitHub\glo} è stata creata un'organizzazione, contenente tutti i repository del prodotto, in modo da separare le singole componenti.
-   		La Project Board principale del gruppo è collegata alle Project Board di ciascun repository.
-   		Ogni project board è suddivisa in cinque sezioni:
-   		\begin{itemize}
-   			\item \textbf{To do}: indica le attività da svolgere;
-   			\item \textbf{In progress}: indica tutte le attività che sono in fase di svolgimento;
-   			\item \textbf{Review in progress}: indica le verifiche in fase di svolgimento;
-   			\item \textbf{Review approved}: indica tutte le verifiche approvate;
-   			\item \textbf{Done}: indica tutte le attività completate.
-   		\end{itemize}
+			\noindent I ruoli di progetto sono:
+			\begin{itemize}
+				\item \textbf{Analista:} l'Analista è colui che effettua l'analisi dei problemi e del dominio applicativo. \`{E} una figura molto importante ai fini della riuscita del progetto, anche se non sarà sempre presente durante tutto il ciclo di vita di quest'ultimo. Sarà suo compito redigere l'\textit{Analisi dei requisiti 1.0.0\doc} e lo \textit{Studio di Fattibilità 1.0.0\doc}. Errori durante l'\textit{Analisi dei Requisiti 1.0.0\doc} possono portare a gravi problemi nelle fasi successive. Per evitare ciò, sarà necessario che l'Analista lavori a stretto contatto con il proponente capendo nel dettaglio tutti i bisogni impliciti ed espliciti e trasformandoli in requisiti per il sistema;
+				\item \textbf{Progettista:} il Progettista lavora in stretto contatto con l'Analista: il suo compito sarà capire come realizzare in maniera ottimale il sistema partendo dai requisiti forniti. È responsabile di scelte architetturali che portino ad una soluzione ottimale del problema iniziale in termini di efficacia ed efficienza. Per garantire ciò, è necessario che una architettura di qualità che aderisca a best practice consolidate, che risulti manutenibile nel tempo tenendo bassi i costi e le risorse consumate, sicura, modulare e capace di soddisfare tutti i requisiti;
+				\item \textbf{Programmatore:} lo Sviluppatore si occupa della codifica dell'applicativo software. Il grado di libertà nelle scelte e decisioni sull'architettura finale del prodotto è nulla. Il loro compito si limita all'implementazione dell'architettura elaborata dal Progettista rendendo il codice manutenibile nel tempo. Si occupa inoltre di predisporre le componenti di supporto alle prove di verifica e validazione del codice;
+				\item \textbf{Verificatore:} il Verificatore svolge un'operazione di controllo sulle attività svolte dagli altri componenti del progetto. Egli fa riferimento alle norme stabilite per sancire la correttezza e la conformità del prodotto rispetto alle attese. Facendo riferimento alle \textit{Norme di Progetto 1.3.1\doc}, il verificatore dovrà segnalare alla figura competente la presenza o l'assenza di difformità. La correzione effettiva degli errori non è compito del Verificatore ma dell'autore della modifica in oggetto. Egli partecipa in maniera continuativa per tutto il ciclo di vita del prodotto e si occuperà della stesura del \textit{Piano di Qualifica 1.0.0\docs};
+				\item \textbf{Responsabile:} il Responsabile è il punto di riferimento sia per il fornitore che per il committente. Inoltre è colui che raccoglie su di sé le responsabilità decisionali di scelta e approvazione e costituisce il centro di coordinamento per l'intero progetto. Nello specifico, ha il compito di gestire le risorse e le attività, coordinare il gruppo, approvare i documenti redatti;
+				\item \textbf{Amministratore:} l'Amministratore è colui che controlla e amministra l'ambiente di lavoro supportando il Responsabile. Non compie alcun tipo di scelta gestionale ed è incaricato di gestire  l'ambiente di lavoro compreso il versionamento e le configurazioni del prodotto e amministrare le infrastrutture di supporto.
+			\end{itemize}
+		
+		\subsubsection{Tickecting}
+		Il tickecting permette ai membri del gruppo di monitorare, in qualsiasi momento, le attività in corso, permette al Responsabile di monitorare l'andamento delle attività.\\   		
+		\noindent Come strumento di tickecting è stato deciso di usare i servizi di Project Board offerti da \textit{GitHub\glos}.\\   		
+		Su \textit{GitHub\glo} è stata creata un'organizzazione, contenente tutti i repository del prodotto, in modo da separare le singole componenti.
+		La Project Board principale del gruppo è collegata alle Project Board di ciascun repository.
+		Ogni project board è suddivisa in cinque sezioni:
+		\begin{itemize}
+			\item \textbf{To do}: indica le attività da svolgere;
+			\item \textbf{In progress}: indica tutte le attività che sono in fase di svolgimento;
+			\item \textbf{Review in progress}: indica le verifiche in fase di svolgimento;
+			\item \textbf{Review approved}: indica tutte le verifiche approvate;
+			\item \textbf{Done}: indica tutte le attività completate.
+		\end{itemize}
 %   		Inoltre la Project Board principale gruppo contiene le macro attività da svolgere, le quali una volta completate diventano una milestone per il progetto.
 %   		
 %   		\noindent Le varie attività vengono riportate come \textit{milestone\glo} per il repository di riferimento, e vengono analizzati e suddivisi in issues. Questo permette di inserire i vari requisiti usando un approccio top-down, e di usare un metodo bottom-up per soddisfarli.
 %   		
-   	\subsection{Gestione delle comunicazioni}
-   		\subsubsection{Comunicazioni interne}
-   		Per le comunicazioni interne è stato deciso di utilizzare \textit{ Slack\glos}, un'applicazione di messaggistica \textit{multipiattaforma}\glo con funzionalità specifiche per gruppi di lavoro. 
-   		
-   		\noindent All'interno di \textit{Slack\glo} sono stati aggiunti i seguenti canali:
-   		\begin{itemize}
-   			\item \textbf{github}: per la gestione del repository \textit{Github\glos};
-   			\item \textbf{pianificazione-incontri}: dove vengono decise le date per riunioni;
-   			\item \textbf{swe}: canale per discutere di ciò che riguarda l'organizzazione generale;
-   			\item \textbf{logo}: per la scelta del logo del gruppo.
-   			
-   		\end{itemize}
-   		Altri canali telematici, sono stati aggiunti per gestire la corretta stesura dei vari documenti quali:
-   		\begin{itemize}
-   			\item \textbf{norme\_di\_progetto}: per discutere e definire le \textit{Norme di Progetto 1.3.1\doc} alle quali attenersi durante le varie fasi di progetto;
-   			\item \textbf{studio\_di\_fattibilità}: per redigere il relativo documento seguendo i criteri indicati;
-   			\item \textbf{analisi\_requisiti}: per discutere e decidere i casi d'uso, i requisiti, i vincoli e tutto ciò che verrà inserito nel documento \textit{Analisi dei Requisiti 1.0.0\docs};
-   			\item \textbf{piano\_di\_progetto}: per decidere e discutere la ripartizione dei ruoli, le ore totali ad essi collegati nelle varie versioni del \textit{Piano di Progetto 1.0.0\docs};
-   			\item \textbf{piano\_di\_qualifica}: per decidere, discutere e fissare le strategie e gli obiettivi riguardanti la verifica, la validazione e la qualità.
-   		\end{itemize}
-   		Oltre all'applicazione \textit{Slack\glo} viene anche utilizzato un apposito gruppo Telegram e \textit{Google Hangouts\glo}, quando serve una comunicazione immediata, ma non è possibile trovarsi di persona.
-   		
-   		\subsubsection{Comunicazioni esterne}
-   		Le comunicazioni esterne sono affidate al Responsabile, il quale si avvale dell'utilizzo della posta elettronica, attraverso l'indirizzo \href{mailto:tenners.unipd@gmail.com}{tenners.unipd@gmail.com}.
-   		Per comunicare con il proponente \textit{Red Babel}, invece, viene utilizzato un canale \textit{Slack\glo} per la chat testuale e il servizio \textit{Google Hangouts\glos} o \textit{Skype\glo} per le chiamate. 
-   		
-   	\subsection{Gestione degli incontri}
-   		\subsubsection{Incontri interni}
-   		Le riunioni interne del gruppo sono organizzate dal Responsabile in accordo con gli altri componenti del team, attraverso gli appositi canali.
-   		
-   		\noindent Per ogni incontro viene redatto un Verbale. Questo sarà dato in incarico ad una persona nominata dal responsabile, che dovrà tenere traccia delle discussioni affrontate e delle decisioni prese. La struttura dei verbali è descritta in un paragrafo seguente.
-   		
-   		\subsubsection{Incontri esterni}
-   		Il Responsabile ha il compito organizzare e comunicare gli incontri con il proponente o il committente. Se uno o più membri del gruppo, il proponente o il committente volessero organizzare un incontro, sarà compito del Responsabile decidere una data, in accordo tra le parti, e successivamente di comunicarla tramite i canali appositi.
-   		
-   		\noindent Come per gli incontri interni, anche per quelli esterni viene redatto un Verbale.
-   		\subsubsection{Verbali}
-   		La prima parte contiene le informazioni generali quali:
-   		\begin{itemize}
-   			\item \textbf{Luogo}: indica il luogo dove è avvenuto l'incontro;
-   			\item \textbf{Data}: indica la data dell'incontro;
-   			\item \textbf{Ora di inizio};
-   			\item \textbf{Ora di fine};
-   			\item \textbf{Partecipanti}: indica le persone presenti alla riunione, sotto forma di elenco puntato.
-   		\end{itemize}
-   		La seconda parte contiene, sotto forma di elenco puntato, l'ordine del giorno con relativo resoconto per ogni punto.
-   		
-   	\subsection{Gestione degli strumenti di coordinamento}
-  
-   		\subsubsection{Gestione rischi}
-   		Il Responsabile ha il compito di individuare i rischi descritti nel \textit{Piano di Progetto 1.0.0\docs}, e una volta trovati, inserirli nell'analisi dei rischi. Per avere una corretta gestione dei rischi occorre:
-   		\begin{itemize}
-   			\item individuare problemi non calcolati e monitorare i rischi già previsti;
-   			\item registrare ogni riscontro previsto dei rischi nel \textit{Piano di Progetto 1.0.0\docs};
-   			\item aggiungere i nuovi rischi individuati nel \textit{Piano di Progetto 1.0.0\docs};
-   			\item se necessario, ridefinire le strategie di gestione dei rischi.
-   		\end{itemize}  			
-   			
-   		\subsubsection{Strumenti}
-   			Il gruppo durante lo svolgimento del progetto ha utilizzato o utilizzerà i seguenti strumenti:
-   			\begin{itemize}
-   				\item \textbf{Telegram}: come strumento di messaggistica.
-   				\item \textbf{Slack\glos}: come strumento di comunicazione interna e con il proponente;
-   				\item \textbf{Git\glos}: come sistema di controllo di versionamento;
-   				\item \textbf{Gitflow\glos}: come estensione \textit{Git\glo} per il flusso di sviluppo;
-   				\item \textbf{GitHub\glos}: come strumento per il versionamento e il salvataggio in remoto di tutti i file legati al progetto;
-   				\item \textbf{Hangouts\glos}: come strumento per effettuare videoconferenze e chiamate VoIP;
-   				\item \textbf{Sistemi Operativi}: i requisiti non prevedono di utilizzare un sistema operativo specifico, per questo verranno usati, dai membri del team, Windows, MacOS, sistemi di distribuzione Linux.
-   			\end{itemize}
-   		\subsubsection{Formazione}
-   			Ogni singolo membro dovrà studiare in maniera autonoma le tecnologie da impiegare per la realizzazione del progetto. I membri del gruppo potranno creare delle guide, in modo del tutto informale relative ad un singolo argomento, per facilitare l'apprendimento ai restanti componenti del gruppo.
-   			Le guide utilizzate sono:
-   			\begin{itemize}
-   				\item \textbf{GitHub\glos}: \href{https://help.github.com}{https://help.github.com};
-   				\item \textbf{\LaTeX}: \href{https://www.latex-project.org/}{https://www.latex-project.org/};
-   				\item \textbf{AWS}: \href{https://docs.aws.amazon.com/}{https://docs.aws.amazon.com/};
-   				\item \textbf{Ethereum\glos}: \href{https://ethereum.org/}{https://ethereum.org/};
-   				\item \textbf{Solidity}: \href{https://solidity.readthedocs.io/en/develop/}{https://solidity.readthedocs.io/en/develop/};
-   				\item \textbf{ Truffle suite}: \href{https://www.trufflesuite.com/tutorials/ethereum-overview}{https://www.trufflesuite.com/tutorials/ethereum-overview};
-   				\item \textbf{Web3}: \href{https://web3js.readthedocs.io/en/v1.2.4/}{https://web3js.readthedocs.io/en/v1.2.4/};
-   				\item \textbf{Node.js}: \href{https://nodejs.org/it/docs/}{https://nodejs.org/it/docs/};
-   				\item \textbf{ESLint}: \href{https://github.com/eslint/eslint}{https://github.com/eslint/eslint}.
-   			\end{itemize}
+	\subsection{Gestione delle comunicazioni}
+		\subsubsection{Comunicazioni interne}
+		Per le comunicazioni interne è stato deciso di utilizzare \textit{ Slack\glos}, un'applicazione di messaggistica \textit{multipiattaforma}\glo con funzionalità specifiche per gruppi di lavoro. 
+		
+		\noindent All'interno di \textit{Slack\glo} sono stati aggiunti i seguenti canali:
+		\begin{itemize}
+			\item \textbf{github}: per la gestione del repository \textit{Github\glos};
+			\item \textbf{pianificazione-incontri}: dove vengono decise le date per riunioni;
+			\item \textbf{swe}: canale per discutere di ciò che riguarda l'organizzazione generale;
+			\item \textbf{logo}: per la scelta del logo del gruppo.
+			
+		\end{itemize}
+		Altri canali telematici, sono stati aggiunti per gestire la corretta stesura dei vari documenti quali:
+		\begin{itemize}
+			\item \textbf{norme\_di\_progetto}: per discutere e definire le \textit{Norme di Progetto 1.3.1\doc} alle quali attenersi durante le varie fasi di progetto;
+			\item \textbf{studio\_di\_fattibilità}: per redigere il relativo documento seguendo i criteri indicati;
+			\item \textbf{analisi\_requisiti}: per discutere e decidere i casi d'uso, i requisiti, i vincoli e tutto ciò che verrà inserito nel documento \textit{Analisi dei Requisiti 1.0.0\docs};
+			\item \textbf{piano\_di\_progetto}: per decidere e discutere la ripartizione dei ruoli, le ore totali ad essi collegati nelle varie versioni del \textit{Piano di Progetto 1.0.0\docs};
+			\item \textbf{piano\_di\_qualifica}: per decidere, discutere e fissare le strategie e gli obiettivi riguardanti la verifica, la validazione e la qualità.
+		\end{itemize}
+		Oltre all'applicazione \textit{Slack\glo} viene anche utilizzato un apposito gruppo Telegram e \textit{Google Hangouts\glo}, quando serve una comunicazione immediata, ma non è possibile trovarsi di persona.
+		
+		\subsubsection{Comunicazioni esterne}
+		Le comunicazioni esterne sono affidate al Responsabile, il quale si avvale dell'utilizzo della posta elettronica, attraverso l'indirizzo \href{mailto:tenners.unipd@gmail.com}{tenners.unipd@gmail.com}.
+		Per comunicare con il proponente \textit{Red Babel}, invece, viene utilizzato un canale \textit{Slack\glo} per la chat testuale e il servizio \textit{Google Hangouts\glos} o \textit{Skype\glo} per le chiamate. 
+		
+	\subsection{Gestione degli incontri}
+		\subsubsection{Incontri interni}
+		Le riunioni interne del gruppo sono organizzate dal Responsabile in accordo con gli altri componenti del team, attraverso gli appositi canali.
+		
+		\noindent Per ogni incontro viene redatto un Verbale. Questo sarà dato in incarico ad una persona nominata dal responsabile, che dovrà tenere traccia delle discussioni affrontate e delle decisioni prese. La struttura dei verbali è descritta in un paragrafo seguente.
+		
+		\subsubsection{Incontri esterni}
+		Il Responsabile ha il compito organizzare e comunicare gli incontri con il proponente o il committente. Se uno o più membri del gruppo, il proponente o il committente volessero organizzare un incontro, sarà compito del Responsabile decidere una data, in accordo tra le parti, e successivamente di comunicarla tramite i canali appositi.
+		
+		\noindent Come per gli incontri interni, anche per quelli esterni viene redatto un Verbale.
+		\subsubsection{Verbali}
+		La prima parte contiene le informazioni generali quali:
+		\begin{itemize}
+			\item \textbf{Luogo}: indica il luogo dove è avvenuto l'incontro;
+			\item \textbf{Data}: indica la data dell'incontro;
+			\item \textbf{Ora di inizio};
+			\item \textbf{Ora di fine};
+			\item \textbf{Partecipanti}: indica le persone presenti alla riunione, sotto forma di elenco puntato.
+		\end{itemize}
+		La seconda parte contiene, sotto forma di elenco puntato, l'ordine del giorno con relativo resoconto per ogni punto.
+		
+	\subsection{Gestione degli strumenti di coordinamento}
+
+		\subsubsection{Gestione rischi}
+		Il Responsabile ha il compito di individuare i rischi descritti nel \textit{Piano di Progetto 1.0.0\docs}, e una volta trovati, inserirli nell'analisi dei rischi. Per avere una corretta gestione dei rischi occorre:
+		\begin{itemize}
+			\item individuare problemi non calcolati e monitorare i rischi già previsti;
+			\item registrare ogni riscontro previsto dei rischi nel \textit{Piano di Progetto 1.0.0\docs};
+			\item aggiungere i nuovi rischi individuati nel \textit{Piano di Progetto 1.0.0\docs};
+			\item se necessario, ridefinire le strategie di gestione dei rischi.
+		\end{itemize}  			
+			
+		\subsubsection{Strumenti}
+			Il gruppo durante lo svolgimento del progetto ha utilizzato o utilizzerà i seguenti strumenti:
+			\begin{itemize}
+				\item \textbf{Telegram}: come strumento di messaggistica.
+				\item \textbf{Slack\glos}: come strumento di comunicazione interna e con il proponente;
+				\item \textbf{Git\glos}: come sistema di controllo di versionamento;
+				\item \textbf{Gitflow\glos}: come estensione \textit{Git\glo} per il flusso di sviluppo;
+				\item \textbf{GitHub\glos}: come strumento per il versionamento e il salvataggio in remoto di tutti i file legati al progetto;
+				\item \textbf{Hangouts\glos}: come strumento per effettuare videoconferenze e chiamate VoIP;
+				\item \textbf{Sistemi Operativi}: i requisiti non prevedono di utilizzare un sistema operativo specifico, per questo verranno usati, dai membri del team, Windows, MacOS, sistemi di distribuzione Linux.
+			\end{itemize}
+
+   \subsection{Formazione}
+
+      Ogni singolo membro dovrà studiare in maniera autonoma le tecnologie da impiegare per la realizzazione del progetto. I membri del gruppo potranno creare delle guide, in modo del tutto informale relative ad un singolo argomento, per facilitare l'apprendimento ai restanti componenti del gruppo.
+      Le guide utilizzate sono:
+      \begin{itemize}
+         \item \textbf{GitHub\glos}: \href{https://help.github.com}{https://help.github.com};
+         \item \textbf{\LaTeX}: \href{https://www.latex-project.org/}{https://www.latex-project.org/};
+         \item \textbf{AWS}: \href{https://docs.aws.amazon.com/}{https://docs.aws.amazon.com/};
+         \item \textbf{Ethereum\glos}: \href{https://ethereum.org/}{https://ethereum.org/};
+         \item \textbf{Solidity}: \href{https://solidity.readthedocs.io/en/develop/}{https://solidity.readthedocs.io/en/develop/};
+         \item \textbf{Truffle suite}: \href{https://www.trufflesuite.com/tutorials/ethereum-overview}{https://www.trufflesuite.com/tutorials/ethereum-overview};
+         \item \textbf{Web3}: \href{https://web3js.readthedocs.io/en/v1.2.4/}{https://web3js.readthedocs.io/en/v1.2.4/};
+         \item \textbf{Node.js}: \href{https://nodejs.org/it/docs/}{https://nodejs.org/it/docs/};
+         \item \textbf{ESLint}: \href{https://github.com/eslint/eslint}{https://github.com/eslint/eslint}.
+      \end{itemize}
