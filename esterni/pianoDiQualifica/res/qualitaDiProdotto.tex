@@ -1,6 +1,7 @@
 \section{Qualità di Prodotto}
-Per quanto riguarda la qualità del prodotto, si è deciso di aderire allo \textit{standard ISO/IEC 9126\glos}. Esso definisce le caratteristiche che garantiscono l'ottenimento di un prodotto software di qualità. Di queste, ne sono state selezionate alcune ritenute di particolare rilevanza per il progetto software.
-
+Per quanto riguarda la qualità del prodotto, si è deciso di adottare sezioni dello 
+\textit{standard ISO/IEC 9126\glos} le quali sono state ritenute nessarie
+all'ottenimento della qualità.
 \subsection{Funzionalità}
 Rappresenta la capacità del prodotto di soddisfare tutti i requisiti che il sistema deve avere.
 \subsubsection{Obiettivi}
@@ -29,16 +30,16 @@ Rappresenta la capacità del prodotto di soddisfare tutti i requisiti che il sis
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|C{4.5cm}|C{2.25cm}|C{2.25cm}|C{3cm}|}
 	\arrayrulecolor{white}
-	
+
 	\caption{Metriche per la funzionalità del prodotto}\\
 	\hline
 	\rowcolor{header}
-	
+
 	\textbf{Metrica} & \textbf{Intervallo preferibile}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
 	\tabularnewline
 	\endfirsthead
-	
-	Copertura funzionale &  100 & 100 & Percentuale \\ 
+
+	Copertura funzionale &  100 & 100 & Percentuale \\
 
 \end{longtable}
 %\begin{itemize}
@@ -63,24 +64,24 @@ Rappresenta la capacità del prodotto di soddisfare tutti i requisiti che il sis
 %	\begin{itemize}
 %		\item \textbf{R\textsubscript{DS}:} numero di requisiti obbligatori soddisfatti;
 %		\item \textbf{R\textsubscript{D}:} numero di requisiti obbligatori
-%	\end{itemize}	
+%	\end{itemize}
 %\end{itemize}
 %
 %\renewcommand{\arraystretch}{2.2}
 %\rowcolors{2}{pari}{dispari}
 %\begin{longtable}{|C{4.5cm}|C{2.25cm}|C{2.25cm}|C{3cm}|}
 %	\arrayrulecolor{white}
-%	
+%
 %	\caption{Metriche per la funzionalità del prodotto}\\
 %	\hline
 %	\rowcolor{header}
-%	
+%
 %	\textbf{Metrica} & \textbf{Intervallo di accettazione}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
 %	\tabularnewline
 %	\endfirsthead
-%	
-%	Requisiti obbligatori soddisfatti &  100 & 100 & Percentuale \\ 
-%	Requisiti desiderabili soddisfatti &  > 50 & 100 & Percentuale \\ 
+%
+%	Requisiti obbligatori soddisfatti &  100 & 100 & Percentuale \\
+%	Requisiti desiderabili soddisfatti &  > 50 & 100 & Percentuale \\
 %\end{longtable}
 
 
@@ -105,24 +106,24 @@ Rappresenta la capacità del prodotto di essere comprensibile ed utilizzabile da
 	\begin{itemize}
 		\item \textbf{N\textsubscript{F}:} numero dei comandi inseriti in maniera errata durante la sessione di utilizzo;
 		\item \textbf{N\textsubscript{T}:} numero totale di comandi inseriti durante la sessione di utilizzo.
-	\end{itemize}	
+	\end{itemize}
 \end{itemize}
 
 \renewcommand{\arraystretch}{2.2}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|C{4.5cm}|C{2.25cm}|C{2.25cm}|C{3cm}|}
 	\arrayrulecolor{white}
-	
+
 	\caption{Metriche per l'usabilità del prodotto}\\
 	\hline
 	\rowcolor{header}
-	
+
 	\textbf{Metrica} & \textbf{Intervallo preferibile}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
 	\tabularnewline
 	\endfirsthead
-	
-	Numero comandi falliti &  <= 3 & 0 & Valore numerico intero positivo \\ 
-	Percentuale fallimenti in una sessione &  > 70 & 100 & Percentuale \\ 
+
+	Numero comandi falliti &  <= 3 & 0 & Valore numerico intero positivo \\
+	Percentuale fallimenti in una sessione &  > 70 & 100 & Percentuale \\
 \end{longtable}
 
 
@@ -148,7 +149,7 @@ Rappresenta la capacità del prodotto nel subire modifiche o miglioramenti a seg
 		\item \textbf{HV:} rappresenta l'Halstead Volume;
 		\item \textbf{CC:} indica la complessità ciclomatica del codice;
 		\item \textbf{LC:} indica le linee di codice.
-	\end{itemize}	
+	\end{itemize}
 	\item \textbf{Percentuale commenti:} indica, con un valore percentuale, la quantità di documentazione sotto forma di codice commentato nel prodotto software . Il calcolo avviene secondo la formula:\\\\
 	\centerline{
 		\begin{math}
@@ -166,15 +167,15 @@ Rappresenta la capacità del prodotto nel subire modifiche o miglioramenti a seg
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|C{3cm}|C{3cm}|C{3cm}|C{3cm}|}
 	\arrayrulecolor{white}
-	
+
 	\caption{Metriche per la manutenibilità del prodotto}\\
 	\hline
 	\rowcolor{header}
-	
+
 	\textbf{Metrica} & \textbf{Intervallo preferibile}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
 	\tabularnewline
 	\endfirsthead
-	
-	Indice di manutenibilità &  >= 10 e <= 100 & >= 20 e <= 100 & Valore numerico positivo (da 0 a 100) \\ 
-	Percentuale commenti &  >= 20 e <= 50 & >= 20 e <= 50 & Percentuale \\ 
+
+	Indice di manutenibilità &  >= 10 e <= 100 & >= 20 e <= 100 & Valore numerico positivo (da 0 a 100) \\
+	Percentuale commenti &  >= 20 e <= 50 & >= 20 e <= 50 & Percentuale \\
 \end{longtable}
