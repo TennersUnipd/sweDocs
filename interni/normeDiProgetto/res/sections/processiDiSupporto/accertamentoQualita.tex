@@ -1,11 +1,15 @@
 \subsection{Accertamento della qualit\` a}
 \subsubsection{Scopo}
-La Qualità di un prodotto software indica la capacità di soddisfare le aspettative di tutti gli \textit{stakeholders\glo} coinvolti in un progetto.
-La Qualità di un prodotto software dipende dalla maturità dell'organizzazione e dei processi utilizzati da chi lo produce, dall'utilizzo di metriche, strumenti e metodi come supporto.
+La Qualità di un prodotto software indica la capacità di soddisfare le aspettative
+di tutti gli \textit{stakeholders\glo} coinvolti in un progetto.
+La Qualità di un prodotto software dipende dalla maturità dell'organizzazione e
+dei processi utilizzati da chi lo produce, dall'utilizzo di metriche, strumenti
+e metodi come supporto.
 
 
 \subsubsection{Descrizione e attività coinvolte}
-Il controllo dei processi e la loro maturità sono essenziali nel processo di accertamento della qualità (Software Quality Assurance - SQA). 
+Il controllo dei processi e la loro maturità sono essenziali nel processo di
+accertamento della qualità (Software Quality Assurance - SQA).
 Perseguire e migliorare la Qualità di un prodotto, ha come principali obiettivi:
 \begin{itemize}
 	\item un aumento della qualità finale del prodotto;
@@ -18,12 +22,167 @@ Il raggiungimento di questi scopi è determinato da:
 	\item il controllo del livello di Qualità raggiunto in base agli obiettivi prefissati;
 	\item il miglioramento continuo del processo di Qualità.
 \end{itemize}
-Le attività appena descritte fanno parte del modello \textit{PDCA\glo} (anche chiamato "Ciclo di Deming"), un approccio concreto utilizzato per il controllo e il miglioramento continuo dei processi produttivi.\\
-All'interno del \textit{Piano di Qualifica 1.0.0\doc} verranno stabilite le metriche e gli obiettivi specifici per ciascun processo e per il prodotto software in generale. Ogni metrica è stata stabilita con l'obiettivo di garantire l'oggettività e la quantificabilità della misurazione della qualità.
+Le attività appena descritte fanno parte del modello
+\textit{PDCA\glo} (anche chiamato "Ciclo di Deming"), un approccio concreto
+utilizzato per il controllo e il miglioramento continuo dei processi produttivi.\\
+All'interno del \textit{Piano di Qualifica 1.0.0\doc} verranno stabilite
+le metriche e gli obiettivi specifici per ciascun processo e per il prodotto
+software in generale. Ogni metrica è stata stabilita con l'obiettivo di garantire
+l'oggettività e la quantificabilità della misurazione della qualità.
 
 \subsubsection{Riferimenti}
-Per la valutazione della qualità del prodotto e dei processi coinvolti nel progetto, il gruppo ha deciso di aderire ai seguenti standard e modelli:
+Per la valutazione della qualità del prodotto e dei processi coinvolti nel progetto,
+il gruppo ha deciso di aderire ai seguenti standard e modelli:
 \begin{itemize}
 	\item \textbf{ISO/IEC 9126:} per la qualità del prodotto;
 	\item \textbf{CMMI:} per la qualità del prodotto.
+\end{itemize}
+
+\subsubsection{Qualità di processo}
+Il gruppo ha deciso d'instanziare, con le dovute modifiche, i processi descritti
+nell'ISO/IEC 12207 adattandoli secondo esigenze, stabilendo per ciascuno dei processi
+obiettivi e metriche per la qualità.
+I 5 livelli di maturità di un processo descritti nel CMMI,
+aiutano a comprendere quali metriche e obiettivi porre per la misurazione della
+qualità e il suo miglioramento continuo.
+\paragraph{Sviluppo}
+Lo Sviluppo è un processo che raggruppa le attività relative alla realizzazione
+effettiva del prodotto software. Garantendo la qualità delle attività che lo
+compongono mediante le apposite metriche, il Processo di Sviluppo può
+considerarsi a sua volta qualitativamente definito. Si procederà dunque con la
+stesura di un Piano per la Qualità per alcune di esse:
+\begin{itemize}
+	\item Analisi dei Requisiti;
+	\item Progettazione.
+\end{itemize}
+\subsubsection{Analisi dei Requisiti}
+\subparagraph{Obiettivi}
+\begin{itemize}
+	\item l'analisi deve essere formare requisiti chiari e non contraddittori;
+	\item con l'avanzamento del progetto, i requisiti possono esser raffinati;
+	\item i requisiti devono essere completi e approvati da ogni \textit{stakeholder\glos} coinvolto nel progetto.
+\end{itemize}
+\subparagraph{Metriche}
+\begin{itemize}
+	\item \textbf{Requisiti obbligatori soddisfatti:} indica la percentuale di requisiti obbligatori soddisfatti. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		PERC_{OS}=100*\frac{R_{OS}}{R_O}
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{R\textsubscript{OS}:} numero di requisiti obbligatori soddisfatti;
+		\item \textbf{R\textsubscript{O}:} numero di requisiti obbligatori.
+	\end{itemize}
+	\item \textbf{Requisiti desiderabili soddisfatti:} indica la percentuale di requisiti desiderabili soddisfatti. Il calcolo avviene secondo la formula:\\\\
+		\centerline{
+		\begin{math}
+		PERC_{DS}=100*\frac{R_{DS}}{R_D}
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{R\textsubscript{DS}:} numero di requisiti obbligatori soddisfatti;
+		\item \textbf{R\textsubscript{D}:} numero di requisiti obbligatori.
+	\end{itemize}
+\end{itemize}
+
+
+\paragraph{Progettazione}
+\subparagraph{Obiettivi}
+\begin{itemize}
+	\item utilizzo delle best practice derivanti da design pattern strutturali noti e consolidati;
+	\item in caso di modifiche dei requisiti, l'architettura deve permettere la modifica delle sole componenti interessate;
+	\item l'architettura realizzata deve ridurre la complessità di realizzazione del sistema.
+\end{itemize}
+\subparagraph{Metriche}
+\begin{itemize}
+	\item \textbf{Structural Fan-out (SFOUT):} indica il numero di moduli che dipendono dal modulo corrente;
+	\item \textbf{Structural Fan-in (SFIN):} indica il numero di moduli dai quali dipende il modulo corrente. Indica dunque il grado di dipendenza di un modulo.
+\end{itemize}
+
+
+\paragraph{Documentazione}
+La Documentazione è un processo che supporta le attività svolte durante il progetto software. Il compito di questo processo è documentare e gestire in forma scritta le informazioni necessarie per le diverse fasi del ciclo di vita di un prodotto.
+\subparagraph{Obiettivi}
+\begin{itemize}
+	\item semplicità e immediata comprensione da parte di tutti gli \textit{stakeholders\glo};
+	\item correttezza grammaticale e ortografica;
+	\item contenuti completi e coerenti per l'attività documentata.
+\end{itemize}
+\subparagraph{Metriche}
+\begin{itemize}
+	\item \textbf{indice Gulpease:} indice di leggibilità per testi in lingua italiana. La formula per il calcolo dell'indice è:\\\\
+	\centerline{
+		\begin{math}
+		I_{GULP}=89+(\frac{300*N_F-10*N_L}{N_P})
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{N\textsubscript{F}:} numero di frasi del testo;
+		\item \textbf{N\textsubscript{L}:} numero di lettere del testo;
+		\item \textbf{N\textsubscript{P}:} numero di parole del testo.
+	\end{itemize}
+\end{itemize}
+
+
+\paragraph{Verifica}
+Il processo di Verifica si attua mediante controlli basati su norme e metriche che consentono l'accertamento della la correttezza del prodotto software.
+\subparagraph{Obiettivi}
+\begin{itemize}
+	\item provare la correttezza rispetto a norme e metriche;
+	\item correggere errori dei processi implicati nel ciclo di vita software.
+\end{itemize}
+\subparagraph{Metriche}
+\begin{itemize}
+	\item \textbf{Code Coverage (CC):} indica la percentuale di codice sorgente ispezionata e coperta dai test.
+\end{itemize}
+
+
+\paragraph{Gestione}
+\subsubsection{Pianificazione}
+La pianificazione è un'attività del processo di Gestione che si occupa dell'allocazione delle risorse e delle attività disponibili nel tempo, rientrando nei costi prestabiliti.
+\subparagraph{Obiettivi}
+\begin{itemize}
+	\item definizione di un modello di sviluppo opportuno per lo scopo e la complessità del progetto;
+	\item definizione degli obiettivi da perseguire nel tempo;
+	\item allocazione delle risorse disponibili in base al budget a disposizione e alle attività da portare a termine.
+\end{itemize}
+\subparagraph{Metriche}
+\begin{itemize}
+	\item \textbf{Planned Value (PV):} indica il costo stimato, alla data corrente, per la realizzazione di tutte le attività del progetto;
+	\item \textbf{Actual cost (AC):} indica il costo effettivo sostenuto sino alla data corrente;
+	\item \textbf{Budget at Completion (BAC):} indica il costo totale di progetto previsto al termine della pianificazione;
+	\item \textbf{Earned Value (EV):} indica il valore del prodotto alla data corrente. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		EV=\% ProdottoRealizzato*BAC
+		\end{math}
+	}
+	\item \textbf{Estimated at Completion (EAC):} indica una revisione del costo finale del progetto in base all'andamento sostenuto sino a quel momento. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		EAC=\frac{AC}{\% ProdottoRealizzato}
+		\end{math}
+	}
+	\item \textbf{Estimate to Complete (ETC):} indica il costo per realizzare le attività rimanenti, basato sull'andamento attuale del progetto. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		ETC=EAC-AC
+		\end{math}
+	}
+	\item \textbf{Cost Variance	(CV):} indica quanto il costo effettivo per realizzare il progetto sia minore o uguale al costo totale previsto. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		CV=EV-AC
+		\end{math}
+	}
+	\item \textbf{Schedule Variance	(SV):} indica se si è in linea, in anticipo o in ritardo rispetto alla schedulazione delle attività di progetto pianificate nella baseline. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		SV=EV-PV
+		\end{math}
+	}
 \end{itemize}
