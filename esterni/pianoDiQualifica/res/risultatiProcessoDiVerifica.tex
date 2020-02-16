@@ -4,30 +4,128 @@ In questa sezione verranno riportati i risultati del processo di Verifica, secon
 
 \subsection{Revisione dei Requisiti}
 \subsubsection{Documentazione}
-Vengono riportati nella seguente tabella i risultati ottenuti applicando l'indice Gulpease, utile per la misurazione della qualità della Documentazione. I risultati verranno ricapitolati in una tabella organizzata nelle seguenti colonne:
-\begin{itemize}
-	\item documento;
-	\item valore calcolato;
-	\item esito.
-\end{itemize}
+Vengono riportati nei seguenti grafici l'andamento degli indici di Gulpease da
+milestone a milestone.
 
-\renewcommand{\arraystretch}{2.2}
-\rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{5.5cm}|C{2cm}|C{4.5cm}|}
-	\arrayrulecolor{white}
-	
-	\caption{Indice Gulpease dei documenti presentati in RR}\\
-	\hline
-	\rowcolor{header}
-	
-	\textbf{Documento} & \textbf{Valore calcolato}  & \textbf{Esito} 
-	\tabularnewline
-	\endhead
-	
-	Analisi dei Requisiti & 57  & Superato \\
-	Piano di Progetto & 68  & Superato \\
-	Piano di Qualifica & 57  & Superato \\ 
-	Norme di Progetto & 64  & Superato\\	
-	Studio di Fattibilità & 60  & Superato\\
-	Glossario & 48 & Superato\\
-\end{longtable}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Indice di Gulpease per Analisi dei requisiti},
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    rotate=90,
+    anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year.\month.\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/adr.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Indice di Gulpease per Piano di Progetto},
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    rotate=90,
+    anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year.\month.\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdp.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Indice di Gulpease per Piano di Qualifica},
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    rotate=90,
+    anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year.\month.\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdq.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Indice di Gulpease per Norme di Progetto},
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    rotate=90,
+    anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year.\month.\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/ndp.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Indice di Gulpease per Studio di Fattibilità},
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    rotate=90,
+    anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year.\month.\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/sdf.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Indice di Gulpease per il Glossario},
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    rotate=90,
+    anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year.\month.\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/glossario.csv};
+  \end{axis}
+\end{tikzpicture} \\
