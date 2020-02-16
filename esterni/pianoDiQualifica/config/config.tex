@@ -109,4 +109,12 @@
 %\usepackage[T1]{fontenc}
 %\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 
+%% package for plotting graphs
+
+\usepackage{pgfplots}
+    \usetikzlibrary{
+        pgfplots.dateplot,
+    }
+\pgfplotsset{width=15cm,compat=1.9}
+
 \pagenumbering{arabic}
