@@ -1,8 +1,14 @@
-\subsubsection{UC8.2 - Visualizzazione errore "Funzione non esistente"}
+\subsubsection{UC8.2 - Visualizzazione risultati ricerca}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente autenticato;
-	\item \textbf{Descrizione:} il sistema, a seguito dell'inserimento di un nome di funzione non esistente su \textit{Etherless} e all'invio del comando, restituirà un errore; 
-	\item \textbf{Pre-condizioni:} l'utente invia il comando "find" seguito dal nome della funzione da ricercare;
-	\item \textbf{Post-condizioni:} il sistema restituisce un errore sulla \textit{CLI\glo} dopo non aver trovato la funzione richiesta tra le disponibili;
-	\item \textbf{Scenario principale:} il sistema notifica all'utente l'assenza della funzione ricercata.
+	\item \textbf{Descrizione:} l'utente visualizzerà sul \textit{CLI\glo} il risultato della ricerca della funzione della quale potrà vedere i dettagli;
+	\item \textbf{Pre-condizioni:} l'utente ha eseguito il comando "find";
+	\item \textbf{Post-condizioni:} \textit{CLI\glo} visualizza il risultato;
+	\item \textbf{Scenario principale:} Il sistema mostrerà sulla \textit{CLI\glo} le seguenti informazioni della funzione:
+    		\begin{itemize}
+    			\item autore;
+    			\item costo;
+    			\item descrizione;
+    			\item firma della funzione.
+    		\end{itemize}
 \end{itemize}
