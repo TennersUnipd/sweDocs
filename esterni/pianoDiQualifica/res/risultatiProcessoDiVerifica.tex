@@ -3,7 +3,40 @@
 In questa sezione verranno riportati i risultati del processo di verifica con relativi esiti e valutazioni. Ogni misurazione effettuata per ciascuna revisione di avanzamento viene opportunamente rappresentata sia in forma tabellare che mediante l'utilizzo di grafici che permettano il corretto monitoraggio nel tempo del prodotto e dei processi coinvolti. Ogni grafico che descrive l'andamento delle qualità viene accompagnato da una corrispondente valutazione da parte del team.
 
 \subsection{Documentazione}
-Vengono riportati nei seguenti grafici e tabelle l'andamento degli indici di Gulpease utile per la misurazione della qualità della documentazione. I risultati ottenuti vengono ricapitolati in una tabella organizzata nel seguente modo:
+Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 2.0.0\docs}, è stata stabilita una lista di controllo per la verifica dei documenti mediante "inspection". Viene di seguito riportata la tabella contenente i punti critici rilevati.
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4cm}|C{8.5cm}|}
+	\arrayrulecolor{white}
+	\caption{Tabella per la lista di controllo}\\
+	\rowcolor{header}
+	\textbf{Tipologia} & \textbf{Descrizione controllo}\\
+	\endfirsthead
+	
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+	
+	\endhead
+	
+	Grammatica & Devono essere evitati errori grammaticali. Particolare attenzione dovrà esser posta sui tempi verbali, sull'utilizzo corretto di articoli e preposizioni, sulla coerenza di genere e numero nei sostantivi e aggettivi all'interno della stessa frase. \\
+	
+	Struttura della frase & Le frasi devono essere più semplici possibili e preferibilmente poste in forma attiva facendo risaltare il soggetto dell'azione. \\
+	
+	Elenchi puntati & Gli elenchi puntati dovranno essere coerenti con quanto scritto nelle \textit{Norme di Progetto 2.0.0\docs}. \\
+	
+	Glossario & Tutti i termini di Glossario devono essere riportati nel documento coerentemente con quanto scritto nelle \textit{Norme di Progetto 2.0.0\docs}. \\
+	
+	Data e ora & Tutti gli orari e le date devono essere riportate in formato corretto, come descritto nelle \textit{Norme di Progetto 2.0.0\docs}. \\
+	
+	Accenti & Le parole devono avere i corretti accenti gravi o acuti secondo le regole della lingua italiana. Essi non sono interscambiabili tra loro. \\
+	
+	Maiuscole/minuscole & L'utilizzo di lettere maiuscole e minuscole all'inizio di una parola deve essere corretto e coerente all'interno dei documenti\\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\noindent Vengono riportati nei seguenti grafici e tabelle l'andamento degli indici di Gulpease utile per la misurazione della qualità della documentazione. I risultati ottenuti vengono ricapitolati in una tabella organizzata nel seguente modo:
 \begin{itemize}
 	\item documento;
 	\item valore della misurazione ottenuto alla consegna per ciascuna revisione di avanzamento;
@@ -28,28 +61,30 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	
 	Analisi dei Requisiti & 57  & - & - & - & Superato \\
 \end{longtable}
+\begin{center}
+	\begin{tikzpicture} [scale = 0.9]
+	\begin{axis}[
+	title={Grafico indice di Gulpease, Analisi dei requisiti},
+	xlabel={\textbf{Tempo}},
+	ylabel={\textbf{Valore}}, 
+	date coordinates in=x,
+	xmin=2020-01-09,
+	xmax=2020-12-12,
+	ymin=40,
+	ymax=100,
+	xtick=data,
+	xticklabel style={
+		rotate=90,
+		anchor=near xticklabel,
+	},
+	% set the label style of the `xtick's
+	xticklabel=\year-\month-\day,
+	]
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/adr.csv};
+	\end{axis}
+	\end{tikzpicture} \\
+\end{center}
 
-\begin{tikzpicture}
-  \begin{axis}[
-    title={Grafico indice di Gulpease, Analisi dei requisiti},
-    xlabel={\textbf{Tempo}},
-    ylabel={\textbf{Valore}}, 
-    date coordinates in=x,
-    xmin=2020-01-09,
-    xmax=2020-12-12,
-    ymin=40,
-    ymax=100,
-    xtick=data,
-    xticklabel style={
-    rotate=90,
-    anchor=near xticklabel,
-    },
-    % set the label style of the `xtick's
-    xticklabel=\year-\month-\day,
-    ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/adr.csv};
-  \end{axis}
-\end{tikzpicture} \\
 
 \newpage
 \subsubsection{Piano di Progetto}
