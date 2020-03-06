@@ -1,15 +1,13 @@
-\subsubsection{UC13.2 - Log funzioni vuoto}
+\subsubsection{UC13.2 - Visualizzazione del log delle funzioni eseguite}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/img/UC13.2.jpg}
+	\caption{Diagramma UC13.2 - Visualizzazione del log delle funzioni eseguite"}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente autenticato;
-	\item \textbf{Descrizione:} l'utente visualizza il log delle funzioni da lui eseguite mediante l'apposito comando "log"; 
-	\item \textbf{Pre-condizioni:} l'utente ha utilizzato il comando per la visualizzazione del log;
-	\item \textbf{Post-condizioni:} il sistema visualizzerà sulla \textit{CLI\glo} il log delle funzioni eseguite dall'utente;
-	\item \textbf{Scenario principale:} 
-	\begin{enumerate}
-		\item L'utente richiede il log mediante il comando "log";
-		\item Il sistema visualizzerà su schermo un messaggio contente:
-		\begin{itemize}
-			\item Log funzioni vuote;
-		\end{itemize}
-	\end{enumerate}
+	\item \textbf{Descrizione:} l'utente visualizzerà sul \textit{CLI\glo} il risultato del comando "log";
+	\item \textbf{Pre-condizioni:} l'utente ha eseguito il comando "log";
+	\item \textbf{Post-condizioni:} \textit{CLI\glo} il log relativo alle funzioni da lui eseguite;
+	\item \textbf{Scenario principale:} Il sistema mostrerà sulla \textit{CLI\glo} le informazioni relative a tutte le esecuzioni delle funzioni effettuate dall'utente.
 \end{itemize}
