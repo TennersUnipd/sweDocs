@@ -7,12 +7,15 @@
 	\arrayrulecolor{white}
 
 	\caption{Tabella per il tracciamento fonti-requisiti}\\
+	\rowcolor{header}
+	\textbf{Fonte} & \textbf{Requisito}
+	\endfirsthead
+	
 	\hline
 	\rowcolor{header}
-
 	\textbf{Fonte} & \textbf{Requisito}
 	\tabularnewline
-	\endfirsthead
+	\endhead
 
 	Capitolato &
 	\centering
@@ -26,6 +29,7 @@
 	R1F9\\
 	R1F10\\
 	R1F12\\
+	R1F15\\
 	R1Q1\\
 	R1Q2\\
 	R1Q3\\
@@ -53,16 +57,22 @@
 	R1F2.1 \\
 	R2F2.2\\
 	R1F2.1.1\\
-	R1F2.1.2\
+	R1F2.1.2\\
 	R1F2.1.3\\
 	R1F2.1.4\\
 	R2F2.2.1\\
+	R1F3.1.1\\
+	R1F3.1.2\\
 	R2F4\\
 	R2F5\\
 	R2F5.1\\
 	R1F6\\
 	R1F6.1\\
 	R1F6.2\\
+	R1F6.2.1\\
+	R2F6.2.2\\
+	R2F6.2.3\\
+	R1F6.2.4\\
 	R1F6.3\\
 	R1F7.1\\
 	R1F7.2\\
@@ -73,12 +83,26 @@
 	R1F7.3.5\\
 	R2F8\\
 	R2F8.1\\
+	R2F8.1.1\\
+	R2F8.1.2\\
+	R2F8.1.3\\
+	R2F8.1.4\\
+	R2F8.2\\
 	R1F9.1\\
+	R1F9.1.1\\
+	R1F9.1.2\\
+	R1F9.1.3\\
+	R2F9.1.4\\
 	R1F10.1\\
 	R1F10.2\\
 	R1F10.1.1\\
 	R1F10.1.2\\
 	R1F10.1.3\\
+	
+	\tabularnewline
+	
+	Interna &
+	\centering
 	R1F11\\
 	R1F11.1\\
 	R3F11.2\\
@@ -94,7 +118,6 @@
 	R1F14\\
 	R1F14.1\\
 	R1F14.1.1\\
-	R1F15\\
 
 	\tabularnewline
 
@@ -104,10 +127,16 @@
 	UC5.1 & R1F2.1.1 \\
 	UC5.2 & R1F2.1.2 \\
 	UC5.3 & R1F2.1.3 \\
+	UC4.1 & R1F3.1.1 \\
+	UC4.2 & R1F3.1.2 \\
 	UC7 & \centering R2F5 \\ R2F5.1 \tabularnewline
-	UC8 & R1F6.1 \\
 	UC8.1 & R1F6.1 \\
-    UC8.2 & RIF6.2 \\
+%	UC8.1 & R1F6.1 \\
+    UC8.2 & R1F6.2 \\
+    UC8.2.2 & R1F6.2.1 \\
+    UC8.2.3 & R2F6.2.2 \\
+    UC8.2.1 & R2F6.2.3 \\
+    UC8.2.4 & R1F6.2.4 \\
 	UC8.3 & R1F6.3 \\
 	UC9.1 & R1F7.1 \\
 	UC9.2 & R1F7.2 \\
@@ -115,8 +144,18 @@
 	UC9.4 & R1F7.2.1 \\
 	UC12 & R1F7.3.4 \\
 	UC11 & R1F7.3.5 \\
-	UC13 & \centering R2F8 \\ R2F8.1 \tabularnewline
-	UC14 & R1F9.1 \\
+	UC13.1 & R2F8 \\
+	UC13.2 & R2F8.1 \\
+	UC13.2.1 & R2F8.1.1 \\
+	UC13.2.2 & R2F8.1.2 \\
+	UC13.2.3 & R2F8.1.3 \\
+	UC13.2.4 & R2F8.1.4 \\
+	UC13.3 & R2F8.2 \\
+	UC14.2 & R1F9.1 \\
+	UC14.2.1 & R1F9.1.1 \\
+	UC14.2.2 & R1F9.1.2 \\
+	UC14.2.3 & R1F9.1.3 \\
+	UC14.2.4 & R2F9.1.4 \\
 	UC15.1 & R1F10.1 \\
 	UC15.3 & R1F10.2 \\
 	UC15.2 & R1F10.1.1 \\
