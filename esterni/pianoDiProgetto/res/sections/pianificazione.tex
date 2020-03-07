@@ -2,19 +2,16 @@
 La pianificazione del progetto viene suddivisa nei seguenti periodi:
 \begin{itemize}
 	\item \textbf{Analisi dei requisiti;}
-	\item \textbf{Presentazione RR;}
 	\item \textbf{Progettazione architetturale;}
 	\item \textbf{Progettazione di dettaglio e codifica;}
 	\item \textbf{Validazione e collaudo.}
 \end{itemize}
-Ogni periodo ha la sua corrispettiva scadenza (vedi 1.5) e la sua implementazione è considerata pronta per la verifica finale e accettazione quando tutte le sotto-attività atomiche sono complete. Vista la scelta di sviluppo seguendo il modello incrementale, per ogni periodo vengono definiti degli incrementi (e relative milestone).
+Ogni periodo ha la sua corrispettiva scadenza e la sua implementazione è considerata pronta per la verifica finale e accettazione quando tutte le sotto-attività atomiche sono complete. Vista la scelta di sviluppo seguendo il modello incrementale, per ogni periodo vengono definiti degli incrementi.
 \subsection{Analisi dei requisiti}
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{res/img/g1113}
 	\caption{Pianificazione - Analisi dei requisiti}
 \end{figure}
-\underline{Si ricorda che il lavoro sostenuto durante questo periodo non viene rendicontato nei confronti} \\
-\underline{del costo per il cliente.} \\
 Questo periodo è composto dalle seguenti attività:
 \begin{itemize}
 	\item \textbf{Individuazione degli strumenti:} questa attività consiste nel determinare quali strumenti il gruppo deve utilizzare per la comunicazione, per la stesura dei documenti, per il versionamento, lo sviluppo e la verifica del software;
@@ -24,13 +21,12 @@ Questo periodo è composto dalle seguenti attività:
 	\item \textbf{Piano di Qualifica:} in questa attività si individuano le metodologie attraverso le quali si garantisce la qualità del prodotto. A supporto di ciò viene redatto il documento Piano di Qualifica da parte dell'Amministratore e per la parte programmatica dal Progettista;
 	\item \textbf{Glossario:} tutti i termini che possono risultare ambigui vengono individuati e definiti nel documento \textit{Glossario 1.0.0}\docs, che viene redatto durante tutta l'analisi dei requisiti.
 \end{itemize}
-\newpage
-\subsection{Presentazione RR}
+
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{res/img/g2}
 	\caption{Pianificazione presentazione RR}
 \end{figure}
-Viene fornita una pianificazione per la predisposizione e preparazione dei contenuti per la presentazione alla revisione formale.
+
 \newpage
 \subsection{Progettazione architetturale}
 Questo periodo ha come obbiettivo l'individualizzazione di una soluzione architetturale che soddisfi i requisiti del prodotto ed è stata suddiviso nelle attività:
@@ -47,14 +43,14 @@ Sono state identificate tre aree di interesse tecnologico principali:
 	\item \textbf{Serverless\glo}: ambiente server convertito in ambiente serverless\glo
 \end{itemize}
 Questi Proof Of Concept saranno la base della costruzione dei componenti finali di \textit{Etherless}, ovvero \textit{eth-smart, eth-client, eth-server}.
-\subsubsection{Incrementi e milestone}
+\subsubsection{Incrementi previsti}
 \begin{itemize}
 	\item \textbf{\RomanNumeralCaps{1} Incremento:} (entro il 19.02.2020) Correzione e integrazione documenti in base alle conoscenze acquisite durante l'Analisi dei requisiti;
 	\item \textbf{\RomanNumeralCaps{2} Incremento:} (entro il 25.02.2020) Realizzazione del primo Proof Of Concept (Smart Contract);
 	\item \textbf{\RomanNumeralCaps{3} Incremento:} (entro il 28.02.2020) Realizzazione del secondo Proof Of Concept (Comunicazione tra client e server);
 	\item \textbf{\RomanNumeralCaps{4} Incremento:} (entro il 05.03.2020) Realizzazione del terzo Proof Of Concept (Serverless);
 	\item \textbf{\RomanNumeralCaps{5} Incremento:} (entro il 9.03.2020) Aggiornamento dei documenti;
-	\item \textbf{\RomanNumeralCaps{6} Incremento:} (entro il 16.03.2020) Presentazione RP;
+	\item \textbf{\RomanNumeralCaps{6} Incremento:} (entro il 16.03.2020) Presentazione RP.
 \end{itemize}
 	\includegraphics[width=\textwidth]{res/img/gantt/RP/1}
 	\includegraphics[width=\textwidth]{res/img/gantt/RP/2}
@@ -78,14 +74,14 @@ Questi Proof Of Concept saranno la base della costruzione dei componenti finali 
 \end{itemize}
 \subsubsection{Componenti}
 Per la realizzazione del prodotto software è necessaria la codifica e la completa conformità di \textit{eth-smart, eth-client, eth-server} ai requisiti del committente e ai casi d'uso.
-\subsubsection{Incrementi e milestone}
+\subsubsection{Incrementi previsti}
 \begin{itemize}
 	\item \textbf{\RomanNumeralCaps{1} Incremento:} (entro il 20.03.2020) Correzione e integrazione documenti in base alle conoscenze acquisite durante la Progettazione architetturale;
-	\item \textbf{\RomanNumeralCaps{2} Incremento:} (entro il 27.02.2020) Collaudo ed eventuali correzioni;
-	\item \textbf{\RomanNumeralCaps{3} Incremento:} (entro il 03.04.2020) Documentazione codice;
-	\item \textbf{\RomanNumeralCaps{4} Incremento:} (entro il 09.04.2020) Test di accettazione e rilascio in ambiente di produzione;
-	\item \textbf{\RomanNumeralCaps{5} Incremento:} (entro il 13.04.2020) Aggiornamento documenti e consuntivo finale;
-	\item \textbf{\RomanNumeralCaps{5} Incremento:} (entro il 20.03.2020) Presentazione RA;
+	\item \textbf{\RomanNumeralCaps{2} Incremento:} (entro il 27.03.2020) Progettazione del sistema in vista della Product Baseline e stesura dell'allegato tecnico comprensivo dei diagrammi adottati;
+	\item \textbf{\RomanNumeralCaps{3} Incremento:} (entro il 03.04.2020) Implementazione delle funzionalità della componente etherless-cli;
+	\item \textbf{\RomanNumeralCaps{4} Incremento:} (entro il 09.04.2020) Sviluppo componenti etherless-smart e etherless-server, comprensivi di test di unità e di integrazione;
+	\item \textbf{\RomanNumeralCaps{5} Incremento:} (entro il 13.04.2020) Aggiornamento documenti e consuntivo di periodo;
+	\item \textbf{\RomanNumeralCaps{6} Incremento:} (entro il 20.04.2020) Presentazione RQ.
 \end{itemize}
 	\includegraphics[width=\textwidth]{res/img/gantt/RQ/1}
 	\includegraphics[width=\textwidth]{res/img/gantt/RQ/2}
@@ -105,14 +101,14 @@ Questo periodo è stati suddiviso nelle attività:
 	\item \textbf{Validazione e Collaudo:} controlli per verificare la conformità alle del prodotto ai bisogni del cliente;
 	\item \textbf{Documentazione:} incremento della documentazione in base ai nuovi dati rilevati.
 \end{itemize}
-\subsubsection{Incrementi e milestone}
+\subsubsection{Incrementi previsti}
 \begin{itemize}
 	\item \textbf{\RomanNumeralCaps{1} Incremento:} (entro il 29.04.2020) Correzione e integrazione documenti in base alle conoscenze acquisite durante la Progettazione di dettaglio e codifica;
-	\item \textbf{\RomanNumeralCaps{2} Incremento:} (entro il 04.05.2020) Progettazione di dettaglio e allegato tecnico;
-	\item \textbf{\RomanNumeralCaps{3} Incremento:} (entro il 07.04.2020) Sviluppo delle funzionalità di \textit{eth-client};
-	\item \textbf{\RomanNumeralCaps{4} Incremento:} (entro il 09.04.2020) Sviluppo completo di \textit{eth-smart} e ottimizzazione di \textit{eth-server}; test di integrazione;
-	\item \textbf{\RomanNumeralCaps{5} Incremento:} (entro il 11.04.2020) Manuale utente; aggiornamento dei documenti;
-	\item \textbf{\RomanNumeralCaps{5} Incremento:} (entro il 28.03.2020) Presentazione RA;
+	\item \textbf{\RomanNumeralCaps{2} Incremento:} (entro il 04.05.2020) Implementazione dei test di sistema;
+	\item \textbf{\RomanNumeralCaps{3} Incremento:} (entro il 07.05.2020) Redazione della documentazione relativa al codice;
+	\item \textbf{\RomanNumeralCaps{4} Incremento:} (entro il 09.05.2020) Realizzazione dei test di accettazione;
+	\item \textbf{\RomanNumeralCaps{5} Incremento:} (entro il 11.05.2020) Aggiornamento dei documenti da presentare in ingresso alla revisione di accettazione;
+	\item \textbf{\RomanNumeralCaps{6} Incremento:} (entro il 28.05.2020) Presentazione RA.
 \end{itemize}
 	\includegraphics[width=\textwidth]{res/img/gantt/RA/1}
 	\includegraphics[width=\textwidth]{res/img/gantt/RA/2}
