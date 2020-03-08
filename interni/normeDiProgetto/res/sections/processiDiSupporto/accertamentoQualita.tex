@@ -1,38 +1,100 @@
-\subsection{Accertamento della qualit\` a}
-\subsubsection{Scopo}
-La Qualità di un prodotto software indica la capacità di soddisfare le aspettative
-di tutti gli \textit{stakeholders\glo} coinvolti in un progetto.
-La Qualità di un prodotto software dipende dalla maturità dell'organizzazione e
-dei processi utilizzati da chi lo produce, dall'utilizzo di metriche, strumenti
-e metodi come supporto.
+\subsection{Accertamento della qualità}
+\subsubsection{Obiettivi}
+La Qualità di un prodotto software indica la capacità di soddisfare le aspettative di tutti gli \textit{stakeholders\glo} coinvolti in un progetto.
+La Qualità di un prodotto software dipende dalla maturità dell'organizzazione e dei processi utilizzati da chi lo produce, dall'utilizzo di metriche, strumenti e metodi come supporto.
+Questo processo si prefigge di:
+\begin{itemize}
+	\item garantire la qualità dei processi adottati nel ciclo di vita del prodotto;
+	\item ridurre il ciclo di sviluppo rendendolo maggiormente efficiente;
+	\item garantire la qualità del prodotto finale;
+	\item fornire metriche oggettive che permettano di rilevare il livello della qualità raggiunta;
+	\item soddisfare le esigenze del cliente in maniera efficiente in termini di risorse usate e costi;
+	\item permettere a tutti gli \textit{stakeholders\glo} di visualizzare in maniera chiara i risultati qualitativi raggiunti.
+\end{itemize}
+
+Verranno in seguito elencati gli obiettivi qualitativi che il gruppo si prefigge di raggiungere per quanto riguarda la qualità del prodotto e dei processi coinvolti.
+
+\paragraph{Processo di sviluppo}
+\subparagraph*{Analisi dei requisiti}
+\begin{itemize}
+	\item L'analisi deve essere formare requisiti chiari e non contraddittori;
+	\item Con l'avanzamento del progetto, i requisiti possono esser raffinati;
+	\item I requisiti devono essere completi e approvati da ogni \textit{stakeholder\glos} coinvolto nel progetto.
+\end{itemize}
+\subparagraph*{Progettazione}
+\begin{itemize}
+	\item utilizzo delle best practice derivanti da design pattern strutturali noti e consolidati;
+	\item in caso di modifiche dei requisiti, l'architettura deve permettere la modifica delle sole componenti interessate;
+	\item l'architettura realizzata deve ridurre la complessità di realizzazione del sistema.
+\end{itemize}
+
+\paragraph{Processo di documentzione}
+\begin{itemize}
+	\item semplicità e immediata comprensione da parte di tutti gli \textit{stakeholders\glo};
+	\item correttezza grammaticale e ortografica;
+	\item contenuti completi e coerenti per l'attività documentata.
+\end{itemize}
+
+\paragraph{Processo di verifica}
+\begin{itemize}
+	\item provare la correttezza rispetto a norme e metriche;
+	\item correggere errori dei processi implicati nel ciclo di vita software.
+\end{itemize}
+
+\paragraph{Processo di gestione}
+\subparagraph*{Pianificazione}
+\begin{itemize}
+	\item definizione di un modello di sviluppo opportuno per lo scopo e la complessità del progetto;
+	\item definizione degli obiettivi da perseguire nel tempo;
+	\item allocazione delle risorse disponibili in base al budget a disposizione e alle attività da portare a termine.
+\end{itemize}
+
+\paragraph{Funzionalità del prodotto}
+Rappresenta la capacità del prodotto di soddisfare tutti i requisiti che il sistema deve avere. Identificano la funzionalità del prodotto le seguenti proprietà:
+\begin{itemize}
+	\item \textbf{Accuratezza:} il prodotto deve fornire i risultati attesi nel modo più preciso possibile;
+	\item \textbf{Appropriatezza:} il prodotto deve fornire il corretto numero di funzionalità per le specifiche concordate;
+	\item \textbf{Interoperabilità:} il prodotto deve interagire e operare nella maniera corretta con altri sistemi.
+\end{itemize}
+
+\paragraph{Usabilità del prodotto}
+Rappresenta la capacità del prodotto di essere comprensibile ed utilizzabile dall'utente. Identificano l'usabilità del prodotto le seguenti proprietà:
+\begin{itemize}
+	\item \textbf{Comprensibilità:} il prodotto deve essere facile da comprendere nelle funzionalità e nei metodi di utilizzo;
+	\item \textbf{Apprendibilità:} il prodotto deve permettere l'apprendimento delle funzionalità da parte dell'utente in poco tempo e in maniera corretta;
+	\item \textbf{Operabilità:} il prodotto deve consentire all'utente un utilizzo autonomo, per i propri scopi.
+\end{itemize}
+
+\paragraph{Manutenibilità del prodotto}
+Rappresenta la capacità del prodotto nel subire modifiche o miglioramenti a seguito di cambiamenti dell'ambiente, delle specifiche o dei requisiti del sistema. Identificano la manutenibilità del prodotto le seguenti proprietà:
+\begin{itemize}
+	\item \textbf{Analizzabilità:} il prodotto, per come è realizzato, deve permette di rilevare velocemente le cause di possibili errori o malfunzionamenti;
+	\item \textbf{Modificabilità:} una modifica correttiva del prodotto deve causare cambiamenti minimi al resto del sistema;
+	\item \textbf{Stabilità:} apportando una modifica al prodotto, devono essere ridotti al minimo effetti inaspettati.
+\end{itemize}
 
 
-\subsubsection{Descrizione e attività coinvolte}
-Il controllo dei processi e la loro maturità sono essenziali nel processo di
-accertamento della qualità (Software Quality Assurance - SQA).
-Perseguire e migliorare la Qualità di un prodotto, ha come principali obiettivi:
-\begin{itemize}
-	\item un aumento della qualità finale del prodotto;
-	\item una riduzione del ciclo di sviluppo;
-	\item efficienza in termini di risorse usate e costi.
-\end{itemize}
-Il raggiungimento di questi scopi è determinato da:
-\begin{itemize}
-	\item una pianificazione corretta degli obiettivi di qualità da perseguire;
-	\item il controllo del livello di Qualità raggiunto in base agli obiettivi prefissati;
-	\item il miglioramento continuo del processo di Qualità.
-\end{itemize}
-Le attività appena descritte fanno parte del modello
-\textit{PDCA\glo} (anche chiamato "Ciclo di Deming"), un approccio concreto
-utilizzato per il controllo e il miglioramento continuo dei processi produttivi.\\
-All'interno del \textit{Piano di Qualifica 1.0.0\doc} verranno stabilite
-le metriche e gli obiettivi specifici per ciascun processo e per il prodotto
-software in generale. Ogni metrica è stata stabilita con l'obiettivo di garantire
-l'oggettività e la quantificabilità della misurazione della qualità.
+\subsubsection{Attività}
+%Il controllo dei processi e la loro maturità sono essenziali nel processo di accertamento della qualità (Software Quality Assurance - SQA).
+%Perseguire e migliorare la Qualità di un prodotto, ha come principali obiettivi:
+%\begin{itemize}
+%	\item un aumento della qualità finale del prodotto;
+%	\item una riduzione del ciclo di sviluppo;
+%	\item efficienza in termini di risorse usate e costi.
+%\end{itemize}
+%Il raggiungimento di questi scopi è determinato da:
+%\begin{itemize}
+%	\item una pianificazione corretta degli obiettivi di qualità da perseguire;
+%	\item il controllo del livello di Qualità raggiunto in base agli obiettivi prefissati;
+%	\item il miglioramento continuo del processo di Qualità.
+%\end{itemize}
+Le attività coinvolte in questo processo fanno riferimento al modello \textit{PDCA\glo} (anche chiamato "Ciclo di Deming"), un approccio concreto utilizzato per il controllo e il miglioramento continuo dei processi produttivi.\\
+In seguito verranno stabilite le metriche specifiche per ciascun processo e per il prodotto software in generale mentre, al \textit{Piano di Qualifica 2.0.0\doc} sarà affidato il compito di descrivere per ciascuna di essa gli obiettivi qualitativi definendo intervalli e valori ottenuti. Ogni metrica è stata stabilita con l'obiettivo di garantire oggettività e quantificabilità.
+\input{res/sections/processiDiSupporto/qualitaDeiProcessi}
+\input{res/sections/processiDiSupporto/qualitaDiProdotto}
 
 \subsubsection{Riferimenti}
-Per la valutazione della qualità del prodotto e dei processi coinvolti nel progetto,
-il gruppo ha deciso di aderire ai seguenti standard e modelli:
+Per la valutazione della qualità del prodotto e dei processi coinvolti nel progetto, il gruppo ha deciso di istanziare i seguenti standard e modelli:
 \begin{itemize}
 	\item \textbf{ISO/IEC 9126:} per la qualità del prodotto;
 	\item \textbf{CMMI:} per la qualità del prodotto.
