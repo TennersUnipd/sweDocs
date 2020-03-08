@@ -5,7 +5,7 @@ La gestione della configurazione consiste nel controllo degli oggetti che compon
 	\item descrivere dove e in che modo verranno conservati i file che compongono il prodotto finale;
 	\item creare ordine tra le parti del prodotto;
 	\item rendere identificabili i prodotti delle attività.
-\end{itemize} 
+\end{itemize}
 
 \subsubsection{Attività}
 \paragraph{Identificazione della configurazione}
@@ -14,7 +14,7 @@ Per il versionamento del prodotto è stato scelto il software \textit{Git\glos}.
 
 \noindent La scelta nell'utilizzo di questi due sistemi per versionamento e condivisione, è dettata dalla precedente esperienza da parte di alcuni membri del team. I componenti del gruppo che non hanno mai avuto esperienza, avranno supporto da parte dei restanti membri e saranno tenuti a documentarsi mediante le apposite guide condivise sui canali di comunicazione del gruppo. \\
 
-\noindent Non è stato imposto alcun vincolo sulla scelta del client \textit{Git\glos}. Ogni componente del gruppo avrà libertà di scelta nell'utilizzo di un client \textit{Git\glo} dotato di \textit{GUI\glo} o meno. 
+\noindent Non è stato imposto alcun vincolo sulla scelta del client \textit{Git\glos}. Ogni componente del gruppo avrà libertà di scelta nell'utilizzo di un client \textit{Git\glo} dotato di \textit{GUI\glo} o meno.
 
 \subparagraph*{Numero di versione}
 Per tenere traccia dei progressi si utilizza un sistema di numerazione delle versioni
@@ -75,32 +75,32 @@ Il repository Docs contiene tutta la documentazione del prodotto. I sorgenti \La
 	.4 res.
 }
 \vspace{1cm}
-\noindent In particolare: 
+\noindent In particolare:
 \begin{itemize}
 	\item la \textbf{directory del documento} verrà rinominata con il nome del documento di riferimento scritto in lowerCamelCase;
 	\item il \textbf{main.tex} conterrà la struttura principale del documento;
 	\item il file \textbf{config.tex} conterrà tutte le inclusioni dei package e la ridefinizione di comandi utili alla stesura del documento;
 	\item la directory \textbf{res} conterrà tutte le risorse necessarie per la compilazione corretta del documento. Al suo interno verranno poste le immagini e le sezioni che compongono il \textbf{main.tex}.
 \end{itemize}
-Un esempio di path corretto per un documento è:\\ 
+Un esempio di path corretto per un documento è:\\
 
 \centerline{\code{docs/interno/normeDiProgetto/main.tex}}
 \vspace{0.7cm}
 
 \subsubsection{Procedure}
 \paragraph{Gestione dei repository e del flusso di lavoro}
-	
+
 	\begin{enumerate}
 		\item \textbf{Avvio di una nuova attività: } all’inizio di una nuova attività ogni componente del gruppo
-		deve creare un nuovo feature \textit{branch\glos}, partire dal ramo denominato "develop";
-		\item \textbf{Richiesta di verifica: } al termine dell'attività prefissata e dei task associati, occorre eseguire una \textit{pull request\glo} sul \textit{branch\glo} di partenza accertandosi che tutti gli strumenti di verifica automatica siano correttamente funzionanti; 
+		deve creare un nuovo \textit{branch\glos} denominato a seconda dello obbiettivo che si prefigge, partendo dal ramo denominato "develop";
+		\item \textbf{Richiesta di verifica: } al termine dell'attività prefissata e dei task associati, occorre eseguire una \textit{pull request\glo} sul \textit{branch\glo} di partenza accertandosi che tutti gli strumenti di verifica automatica siano correttamente funzionanti;
 		\item \textbf{Procedura di verifica:} dopo l'avvenuta \textit{pull request\glo} il verificatore dovrà accertarsi che il controllo degli strumenti automatici non abbia prodotto alcun errore e procederà con la verifica effettiva del prodotto. Gli esiti della verifica potranno essere di due tipi:
 		\begin{itemize}
 			\item \textbf{Accettazione:} viene eseguito uno "scatto" al numero di versionamento poiché è stato possibile apportare una modifica verificata al prodotto. Verrà tuttavia mantenuto il TAG "TBA" perché la modifica in questione deve ancora essere soggetta ad approvazione da parte del Responsabile;
 			\item \textbf{Rifiuto:} il verificatore dovrà scrivere nella sezione dedicata della
 			\textit{pull request}\glo il motivo del rifiuto delle modifiche.
-		\end{itemize} 
-		\item \textbf{Approvazione e rilascio:} Alla ricezione di una \textit{pull request\glo} dal \textit{branch\glo} "develop" il responsabile deciderà se approvare o meno le modifiche. In caso di accettazione il responsabile dovrà rimuovere ogni TAG "TBA".
+		\end{itemize}
+		\item \textbf{Approvazione e rilascio:} Alla ricezione di una \textit{pull request\glo} da "develop" a "master" il responsabile deciderà se approvare o meno le modifiche. In caso di accettazione il responsabile dovrà rimuovere ogni TAG "TBA".
 	\end{enumerate}
 
 
@@ -114,7 +114,7 @@ Software per il controllo di versione distribuito e utilizzabile da linea di com
 		\item sviluppato in linguaggio C per consentire alte performance.
 	\end{itemize}
 	\item sistema distribuito che consente, a differenza dei sistemi centralizzati, di non perdere dati nel caso in cui il nodo centrale dovesse non essere disponibile;
-	\item ogni commit è identificato da un ID che ne garantisce l'integrità. 
+	\item ogni commit è identificato da un ID che ne garantisce l'integrità.
 \end{itemize}
 
 
