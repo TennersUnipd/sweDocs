@@ -1,5 +1,5 @@
 \section{Test}
-In questa sezione verranno ricapitolati i test da eseguire sul prodotto con relativi codici, descrizioni e esiti, se presenti (altrimenti contrassegnati dalla sigla "ND"). I test seguiranno la logica descritta dal Modello V, di cui menzione e spiegazione sono state fatte nelle \textit{Norme di Progetto 1.3.1}. La sezione sarà dunque progressivamente aggiornata con l'avanzamento del progetto, aggiungendo nuovi test e relativi esiti.
+In questa sezione vengono ricapitolati i test da eseguire sul prodotto con relativi codici, descrizioni e esiti, se presenti (altrimenti contrassegnati dalla sigla "ND"). I test seguono la logica descritta dal Modello V, di cui menzione e spiegazione è fatta nelle \textit{Norme di Progetto 2.0.0\docs}. La sezione sarà dunque progressivamente aggiornata con l'avanzamento del progetto, aggiungendo nuovi test e relativi esiti.
 
 \subsection{Test di accettazione}
 I test di accettazione vengono effettuati per verificare il comportamento del prodotto software rispetto ai suoi requisiti. Essi verranno indicati nel seguente modo:\\\\
@@ -25,7 +25,7 @@ Dove:
 \setlength{\tabcolsep}{0.5em}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{1.5cm}|C{12cm}|C{1.5cm}|}
+\begin{longtable}{|C{1.5cm}|C{10cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 
 	\caption{Test di accettazione }\\
@@ -37,12 +37,8 @@ Dove:
 	\endfirsthead
 
 	TA1F1 &
-	L’utente deve poter accedere alla guida dell’applicazione. All’utente viene chiesto di veriﬁcare che:
-	\begin{itemize}
-		\item venga visualizzata la guida;
-		\item la guida riporti informazioni riguardanti i comandi utilizzabili.
-	\end{itemize} &
-	ND \\[-5ex]
+	L’utente deve poter accedere alla guida dell’applicazione. All’utente viene chiesto di veriﬁcare che venga visualizzata la guida e che riporti le informazioni riguardanti i comandi utilizzabili.  &
+	ND \\
 
 	TA1F2  &
 	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum\glos}.
@@ -50,21 +46,12 @@ Dove:
 	ND \\
 
 	TA1F3 &
-	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum\glos}. All’utente viene chiesto di veriﬁcare che:
-	\begin{itemize}
-		\item sia possibile eseguire il comando "login";
-		\item sia possibile inserire le proprie credenziali;
-		\item sia stato salvato sul proprio dispositivo il file con le credenziali.
-	\end{itemize} &
-	ND \\[-5ex]
+	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum\glos}. All’utente viene chiesto di verificare che sia possibile eseguire il comando "login" inserendo le proprie credenziali e che sia stato salvato sul dispositivo il file con le credenziali. &
+	ND \\
 
 	TA1F3.1 &
-	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum\glos}. All’utente viene chiesto di verificare sia possibile inserire:
-	\begin{itemize}
-		\item il proprio address;
-		\item la propria \textit{private key\glos}.
-	\end{itemize} &
-	ND \\[-5ex]
+	L’utente deve poter autenticarsi nel sistema attraverso un'utenza \textit{Ethereum\glos}. All’utente viene chiesto di verificare sia possibile inserire il proprio address e la propria \textit{private key\glos}. &
+	ND \\
 
 	TA1F3.2 &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui le credenziali non fossero	presenti nella rete \textit{Ethereum\glo}. &
@@ -81,23 +68,17 @@ Dove:
 		\item sia stato salvato sul proprio dispositivo il file con le credenziali;
 		\item sia possibile autenticarsi tramite login automatico.
 	\end{itemize} &
-	ND \\
+	ND \\ [-5ex]
 
 	TA2F6 &
-	L'utente che effettua l'accesso sul dispositivo per la prima volta, o che vuole registrarsi alla rete, provocherà la creazione del file di configurazione sul dispositivo. Verificare che nel file sia presente:
-	\begin{itemize}
-		\item un address;
-		\item la \textit{private key\glo} relativa a quell'address.
-	\end{itemize} &
-	ND \\[-5ex]
+	L'utente che effettua l'accesso sul dispositivo per la prima volta, o che vuole registrarsi alla rete, provocherà la creazione del file di configurazione sul dispositivo. Verificare che nel file sia presente un adress e la relativa \textit{private key\glo}. &
+	ND \\
 
 	TA1F7  &
 	L’utente deve potersi disconnettere dalla rete. All’utente viene chiesto di:
 	\begin{itemize}
 		\item autenticarsi correttamente nel sistema;
-		\item verificare sia possibile eseguire il comando "logout" per disconnettersi;
-		\item confermare di voler eﬀettuare la disconnessione;
-		\item verificare che la disconnessione sia avvenuta correttamente;
+		\item verificare sia possibile eseguire il comando "logout" per disconnettersi e che la disconnessione sia avvenuta con successo;
 		\item verificare l'avvenuta eliminazione del file.
 	\end{itemize} &
 	ND \\[-5ex]
@@ -119,8 +100,7 @@ Dove:
 	\begin{itemize}
 		\item sia possibile eseguire il comando "run" per eseguire una funzione;
 		\item sia possibile inserire il nome della funzione;
-		\item l'avvenuta esecuzione della funzione;
-		\item l'avennuto pagamento della funzione.
+		\item l'avvenuta esecuzione della funzione con relativo pagamento.
 	\end{itemize} &
 	ND \\[-5ex]
 
@@ -157,11 +137,7 @@ Dove:
 	L’utente autenticato deve poter visualizzare un report delle funzioni da lui eseguite. All’utente viene chiesto di verificare:
 	\begin{itemize}
 		\item sia possibile eseguire il comando "log";
-		\item la presenza nel log dell'elenco delle funzioni eseguite;
-		\item la presenza nel log della data e ora dell'esecuzione di ogni funzione;
-		\item la presenza, per ogni funzione, del nome della funzione eseguita;
-		\item la presenza, per ogni funzione, della firma della funzione eseguita;
-		\item la presenza, per ogni funzione, del costo della funzione eseguita.
+		\item la presenza nel log dell'elenco delle funzioni eseguite comprendente la data e l'ora di esecuzione di ciascuna;
 	\end{itemize} &
 	ND \\[-5ex]
 
@@ -170,10 +146,7 @@ Dove:
 	\begin{itemize}
 		\item sia possibile eseguire il comando "list";
 		\item la presenza dell'elenco delle funzioni disponibili;
-		\item la presenza, per ogni funzione, del nome della funzione;
-		\item la presenza, per ogni funzione, della firma della funzione;
-		\item la presenza, per ogni funzione, del costo della funzione;
-		\item la presenza, per ogni funzione, della descrizione della funzione.
+		\item la presenza, per ogni funzione, del nome, della firma, del costo e della descrizione;
 	\end{itemize} &
 	ND \\[-5ex]
 
@@ -261,3 +234,6 @@ Dove:
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il percorso specificato non corrisponde ad alcun file con estensione .js. &
 	ND \\
 \end{longtable}
+
+\subsection{Test di integrazione}
+\subsection{Test di unità}
