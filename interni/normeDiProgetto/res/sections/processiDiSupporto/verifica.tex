@@ -1,54 +1,23 @@
 \subsection{Verifica}
-\subsubsection{Scopo}
-La verifica del prodotto garantisce che tutte le attività di processo compiute in un periodo di tempo del progetto, non abbiano introdotto errori nel prodotto. Per ogni prodotto intermedio che causa variazioni significative rispetto al precedente, è necessario compiere un processo di verifica. Avvenendo in passi intermedi, la verifica supporta la validazione finale del prodotto.
-
-\subsubsection{Tipi di verifica}
-La verifica è un processo analitico che può essere di due tipi:
+\subsubsection{Obiettivi}
+La verifica del prodotto garantisce che tutte le attività di processo compiute in un periodo di tempo del progetto, non abbiano introdotto errori nel prodotto. Per ogni prodotto intermedio che causa variazioni significative rispetto al precedente, è necessario compiere un processo di verifica. Avvenendo in passi intermedi, la verifica supporta la validazione finale del prodotto. Gli obiettivi di questo processo sono dunque:
 \begin{itemize}
-	\item \textbf{Analisi statica:} verifica del prodotto effettuata senza la necessità di esecuzione; 
-	\item \textbf{Analisi dinamica:} verifica del prodotto effettuata eseguendo il software o una sua parte.
+	\item rilevare la presenza di difetti nel prodotto per provi rimedio;
+	\item assicurare che vengano rispettate i requisiti stabiliti per il sistema;
+	\item aumentare la qualità del prodotto fornito.
 \end{itemize}
 
-\subsubsection{Analisi statica}
-\noindent Esistono due metodi per attuare il processo di analisi statica di un prodotto:
+\subsubsection{Attività}
+\paragraph{Analisi statica}
+\noindent L'analisi statica è un tipo di verifica effettuata senza la necessità di esecuzione del software. Esistono due metodi per attuare questo tipo di attività:
 \begin{itemize}
 	\item \textbf{Walkthrough:} verifica a "largo spettro" che analizza il prodotto in tutti i suoi aspetti. Non si basa su una conoscenza pregressa riguardo errori comuni, bensì sulla analisi totalitaria del prodotto, alla ricerca delle difformità e delle criticità. Proprio a causa di queste caratteristiche, è una metodologia di verifica che dispendiosa in termini di tempo;
 	\item \textbf{Inspection:} differentemente dalla metodologia Walkthrough, l'Inspection si basa sull'esperienza. Conoscendo gli errori tipici durante i diversi periodi del ciclo di vita di un prodotto, è possibile stilare una lista di controllo e procedere ad analizzare i soli punti critici della struttura. Ogni qualvolta venga eseguita una verifica e vengano trovati nuovi punti critici per il controllo, si procede con l'aggiornamento della lista messa a disposizione di tutti i verificatori.
 \end{itemize}
-Inizialmente il gruppo procederà con un tipo di verifica Walkthrough, iniziando a stilare progressivamente una lista di controllo utile ad effettuare i successivi controlli con il metodo Inspection.\\
-
-\noindent Viene riportata in seguito la lista di controllo errori e criticità comuni durante la stesura dei documenti:
-
-\renewcommand{\arraystretch}{2.2}
-
-\rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{4cm}|C{8.5cm}|}
-	\arrayrulecolor{white}
-	\caption{Tabella per la lista di controllo}\\
-	\rowcolor{header}
-	\textbf{Tipologia} & \textbf{Descrizione controllo}\\
-	\endfirsthead
-	
-	\rowcolor{white}
-	\caption[]{...Continuazione}
-
-	\endhead
-	
-	Grammatica & Devono essere evitati errori grammaticali. Particolare attenzione dovrà esser posta sui tempi verbali, sull'utilizzo corretto di articoli e preposizioni, sulla coerenza di genere e numero nei sostantivi e aggettivi all'interno della stessa frase. \\
-	
-	Struttura della frase & Le frasi devono essere più semplici possibili e preferibilmente poste in forma attiva facendo risaltare il soggetto dell'azione. \\
-	
-	Elenchi puntati & Gli elenchi puntati dovranno essere coerenti con quanto scritto nella sezione \textsection3.1.5.4. \\
-	
-	Glossario & Tutti i termini di Glossario devono essere riportati nel documento coerentemente con quanto scritto nella sezione \textsection3.1.5.3. \\
-	
-	Data e ora & Tutti gli orari e le date devono essere riportate in formato corretto, come descritto nella sezione \textsection3.1.5.5. \\
-	\hline
-\end{longtable}
+All'interno del \textit{Piano di Qualifica 2.0.0\doc} viene riportata la lista di controllo relativa al processo di documentazione.
 
 
-
-\subsubsection{Analisi dinamica}
+\paragraph{Analisi dinamica}
 L'analisi dinamica viene effettuata tramite l'ausilio di test. Ogni test per essere significativo, deve essere ripetibile. Per soddisfare tale richiesta, ogni test deve possedere le seguenti caratteristiche:
 \begin{itemize}
 	\item considera \textbf{l'ambiente} hardware e software di esecuzione;
@@ -58,7 +27,7 @@ L'analisi dinamica viene effettuata tramite l'ausilio di test. Ogni test per ess
 	\item può contenere delle \textbf{istruzioni aggiuntive} sulle modalità di esecuzione del test e sulla loro interpretazione.
 \end{itemize}
 
-\paragraph{Modello a "V"}
+\subparagraph*{Modello a "V"}
 \begin{figure}[h!]
 	\caption{Schema del Modello a "V"}
 	\centering
@@ -66,17 +35,41 @@ L'analisi dinamica viene effettuata tramite l'ausilio di test. Ogni test per ess
 \end{figure}
 Lo stato di integrazione di un prodotto software è rappresentabile in livelli, ognuno dei quali corrisponde ad una specifica revisione tecnica. Il modello a "V" rappresenta in maniera schematica la corrispondenza tra la tipologia di test e il livello del ciclo di vita software in cui essi vengono eseguiti. A ognuno di questi livelli, corrisponde una tipologia di test specifica. A partire dall'implementazione con i test di unità, si effettuano verifiche del prodotto sempre più complete sino ad arrivare al collaudo finale.
 
-\paragraph{Test di unità}
+\subparagraph*{Test di unità}
 Vengono effettuate delle prove sulle unità che compongono il prodotto software. Le unità rappresentano la più piccola parte del prodotto che è possibile eseguire e verificare autonomamente. Questa tipologia di test è effettuata con l'ausilio degli \textit{stub\glo} e dei \textit{driver\glos}.
 
-\paragraph{Test di integrazione}
+\subparagraph*{Test di integrazione}
 Test che agiscono a livello di componente. Possono essere eseguiti solo su un insieme di unità precedentemente testate. Il compito dei test di integrazione è di verificare se le unità presentano il comportamento atteso quando operano insieme a livello di componente.
 
-\paragraph{Test di sistema} 
-Si basano sull'intero sistema e hanno lo scopo di verificare del funzionamento del prodotto dopo l'assemblamento delle varie componenti che lo costituiscono. Essi dovranno verificare i requisiti definiti nell'\textit{Analisi dei requisiti 1.0.0\docs}.
+\subparagraph*{Test di sistema}
+Si basano sull'intero sistema e hanno lo scopo di verificare del funzionamento del prodotto dopo l'assemblamento delle varie componenti che lo costituiscono. Essi dovranno verificare i requisiti definiti nell'\textit{Analisi dei requisiti 2.0.0\docs}.
 
-\paragraph{Test di accettazione}
+\subparagraph*{Test di accettazione}
 Verificano il prodotto nella sua completezza e si basano sull'esperienza del cliente rispetto ai bisogni espressi nel \textit{capitolato\glos}.
 
-\paragraph{Test di regressione}
-Vengono effettuati a seguito di una modifica apportata al sistema. Ogni modifica deve essere necessariamente seguita dall'esecuzione di tutti i test esistenti. Ciò servirà per accertare che la correttezza della modifica effettuata. 
+\subparagraph*{Test di regressione}
+Vengono effettuati a seguito di una modifica apportata al sistema. Ogni modifica deve essere necessariamente seguita dall'esecuzione di tutti i test esistenti. Ciò servirà per accertare che la correttezza della modifica effettuata.
+
+
+\subsubsection{Procedure}
+\paragraph{Verifica della documentazione mediante inspection}
+\begin{enumerate}
+	\item ispezionare il documento o parte di esso seguendo i punti critici rilevati dalla tabella;
+	\item notificare al responsabile della stesura del documento gli errori commessi;
+	\item aggiornare la tabella degli errori comuni: se durante la verifica sono state rilevate delle ricorrenze per delle tipologie di errori non presenti all'interno della lista, dovranno essere riportate.
+\end{enumerate}
+\paragraph{Ottenimento e gestione esiti misurazioni}
+\begin{enumerate}
+	\item scegliere la metrica coinvolta per la misurazione della qualità di processo e di prodotto;
+	\item calcolare il valore corrispondente all'avvenuta misurazione;
+	\item verificare l'esito in base al risultato ottenuto;
+	\item inserire i risultati ottenuti all'interno di un grafico che metta lo metta a paragone con quelli rilevati negli incrementi precedenti;
+	\item inserire il grafico in appendice del PdQ.
+\end{enumerate}
+
+\subsubsection{Strumenti}
+\paragraph{ESLint}
+Strumento di analisi del codice utilizzato per lo sviluppo in JavaScript. Consente la creazione di codice leggibile e coerente con regole condivise dalla comunità degli sviluppatori. Esso è semplicemente installabile come \textit{plug-in\glo} di Visual Studio Code oppure mediante npm.
+
+\paragraph{Mocha}
+Framework per eseguire unit testing per applicazioni scritte in JavaScript, Typescript e per gli \textit{smart contract\glo} scritti in Solidity. Il framework è supportato da Visual Studio Code.
