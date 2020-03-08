@@ -1,33 +1,556 @@
 \appendix
-\section{Risultati processo di Verifica}
-In questa sezione verranno riportati i risultati del processo di Verifica, secondo ciascuna delle metriche riportate nel documento, per ogni revisione del progetto software.
+\section{Risultati processo di verifica}
+In questa sezione vengono riportati i risultati del processo di verifica con relativi esiti e valutazioni. Ogni misurazione effettuata per ciascuna revisione di avanzamento viene opportunamente rappresentata sia in forma tabellare che mediante l'utilizzo di grafici che permettano il corretto monitoraggio nel tempo del prodotto e dei processi coinvolti. Ogni grafico che descrive l'andamento delle qualità viene accompagnato da una corrispondente valutazione da parte del team.
 
-\subsection{Revisione dei Requisiti}
-\subsubsection{Documentazione}
-Vengono riportati nella seguente tabella i risultati ottenuti applicando l'indice Gulpease, utile per la misurazione della qualità della Documentazione. I risultati verranno ricapitolati in una tabella organizzata nelle seguenti colonne:
+\subsection{Documentazione}
+Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 2.0.0\docs}, è stata stabilita una lista di controllo per la verifica dei documenti mediante "inspection". Viene di seguito riportata la tabella contenente i punti critici rilevati.
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4cm}|C{8.5cm}|}
+	\arrayrulecolor{white}
+	\caption{Tabella per la lista di controllo}\\
+	\rowcolor{header}
+	\textbf{Tipologia} & \textbf{Descrizione controllo}\\
+	\endfirsthead
+	
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+	
+	\endhead
+	
+	Grammatica & Devono essere evitati errori grammaticali. Particolare attenzione dovrà esser posta sui tempi verbali, sull'utilizzo corretto di articoli e preposizioni, sulla coerenza di genere e numero nei sostantivi e aggettivi all'interno della stessa frase. \\
+	
+	Struttura della frase & Le frasi devono essere più semplici possibili e preferibilmente poste in forma attiva facendo risaltare il soggetto dell'azione. \\
+	
+	Elenchi puntati & Gli elenchi puntati dovranno essere coerenti con quanto scritto nelle \textit{Norme di Progetto 2.0.0\docs}. \\
+	
+	Glossario & Tutti i termini di Glossario devono essere riportati nel documento coerentemente con quanto scritto nelle \textit{Norme di Progetto 2.0.0\docs}. \\
+	
+	Data e ora & Tutti gli orari e le date devono essere riportate in formato corretto, come descritto nelle \textit{Norme di Progetto 2.0.0\docs}. \\
+	
+	Accenti & Le parole devono avere i corretti accenti gravi o acuti secondo le regole della lingua italiana. Essi non sono interscambiabili tra loro. \\
+	
+	Maiuscole/minuscole & L'utilizzo di lettere maiuscole e minuscole all'inizio di una parola deve essere corretto e coerente all'interno dei documenti\\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\noindent Vengono riportati nei seguenti grafici e tabelle l'andamento degli indici di Gulpease utile per la misurazione della qualità della documentazione. I risultati ottenuti vengono ricapitolati in una tabella organizzata nel seguente modo:
 \begin{itemize}
 	\item documento;
-	\item valore calcolato;
-	\item esito.
+	\item valore della misurazione ottenuto alla consegna per ciascuna revisione di avanzamento;
+	\item esito ottenuto nell'ultima revisione di avanzamento.
 \end{itemize}
+Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento per questioni pratiche, i grafici tengono in considerazione anche degli incrementi intermedi.
 
+\newpage
+\subsubsection{Analisi dei Requisiti}
 \renewcommand{\arraystretch}{2.2}
 \rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{5.5cm}|C{2cm}|C{4.5cm}|}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 	
-	\caption{Indice Gulpease dei documenti presentati in RR}\\
+	\caption{Tabella indice di Gulpease, Analisi dei Requisiti}\\
 	\hline
 	\rowcolor{header}
 	
-	\textbf{Documento} & \textbf{Valore calcolato}  & \textbf{Esito} 
+	\textbf{Documento} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
 	\tabularnewline
-	\endhead
+	\endfirsthead
 	
-	Analisi dei Requisiti & 57  & Superato \\
-	Piano di Progetto & 68  & Superato \\
-	Piano di Qualifica & 57  & Superato \\ 
-	Norme di Progetto & 64  & Superato\\	
-	Studio di Fattibilità & 60  & Superato\\
-	Glossario & 48 & Superato\\
+	Analisi dei Requisiti & 57  & 62 & - & - & Superato \\
 \end{longtable}
+\begin{center}
+	\begin{tikzpicture} [scale = 0.9]
+	\begin{axis}[
+	title={Grafico indice di Gulpease, Analisi dei requisiti},
+	xlabel={\textbf{Tempo}},
+	ylabel={\textbf{Valore}}, 
+	date coordinates in=x,
+	xmin=2020-01-09,
+	xmax=2020-12-12,
+	ymin=40,
+	ymax=100,
+	xtick=data,
+	xticklabel style={
+		rotate=90,
+		anchor=near xticklabel,
+	},
+	% set the label style of the `xtick's
+	xticklabel=\year-\month-\day,
+	]
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/adr.csv};
+	\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
+
+\newpage
+\subsubsection{Piano di Progetto}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella indice di Gulpease, Analisi dei Requisiti}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Documento} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Piano di Progetto & 68  & 70 & - & - & Superato \\
+\end{longtable}
+
+\begin{tikzpicture}
+  \begin{axis}[
+  title={Grafico indice di Gulpease, Piano di Progetto},
+  xlabel={\textbf{Tempo}},
+  ylabel={\textbf{Valore}}, 
+  date coordinates in=x,
+  xmin=2020-01-09,
+  xmax=2020-12-12,
+  ymin=40,
+  ymax=100,
+  xtick=data,
+  xticklabel style={
+  	rotate=90,
+  	anchor=near xticklabel,
+  },
+  % set the label style of the `xtick's
+  xticklabel=\year-\month-\day,
+  ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdp.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+\newpage
+\subsubsection{Piano di Qualifica}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella indice di Gulpease, Piano di Qualifica}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Documento} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Piano di Qualifica & 57  & 66 & - & - & Superato \\
+\end{longtable}
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Grafico indice di Gulpease, Piano di Qualifica},
+    xlabel={\textbf{Tempo}},
+    ylabel={\textbf{Valore}}, 
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    	rotate=90,
+    	anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year-\month-\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdq.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+
+\newpage
+\subsubsection{Norme di Progetto}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella indice di Gulpease, Norme di Progetto}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Documento} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Norme di Progetto & 64  & 70 & - & - & Superato \\
+\end{longtable}
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Grafico indice di Gulpease, Norme di Progetto},
+    xlabel={\textbf{Tempo}},
+    ylabel={\textbf{Valore}}, 
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    	rotate=90,
+    	anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year-\month-\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/ndp.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+\newpage
+\subsubsection{Studio di Fattibilità}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella indice di Gulpease, Piano di Qualifica}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Documento} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Studio di Fattibilità & 60  & 62 & - & - & Superato \\
+\end{longtable}
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Indice di Gulpease per Studio di Fattibilità},
+    xlabel={\textbf{Tempo}},
+    ylabel={\textbf{Valore}}, 
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    rotate=90,
+    anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year.\month.\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/sdf.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+
+\newpage
+\subsubsection{Glossario}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella indice di Gulpease, Piano di Qualifica}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Documento} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Glossario & 48  & - & - & - & Superato \\
+\end{longtable}
+\begin{tikzpicture}
+  \begin{axis}[
+    title={Indice di Gulpease per il Glossario},
+    xlabel={\textbf{Tempo}},
+    ylabel={\textbf{Valore}}, 
+    date coordinates in=x,
+    xmin=2020-01-09,
+    xmax=2020-12-12,
+    ymin=40,
+    ymax=100,
+    xtick=data,
+    xticklabel style={
+    rotate=90,
+    anchor=near xticklabel,
+    },
+    % set the label style of the `xtick's
+    xticklabel=\year.\month.\day,
+    ]
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/glossario.csv};
+  \end{axis}
+\end{tikzpicture} \\
+
+\newpage
+\subsubsection{Valutazioni}
+\paragraph{RR}
+Gli esiti  delle misurazioni, coerentemente con gli intervalli prestabiliti, ha rilevato una buona qualità della documentazione che, tuttavia, rimane migliorabile. 
+
+\paragraph{RP}
+Gli esiti delle misurazioni ottenute in seguito alle correzioni segnalate in RR hanno consentito il miglioramento generale della documentazione ad eccezione del \textit{Glossario 2.0.0} che non ha subito alcun tipo di modifica migliorativa.\\
+
+\noindent Per il successivo incremento che ha portato sino alla consegna in RP sono state aggiunte delle sezioni all'interno della documentazione che hanno grosso modo mantenuto gli indici precedentemente calcolati salvo piccole variazioni.\\
+
+\noindent In generale è visibile un lieve aumento della qualità della documentazione ad eccezione del \textit{Piano di Progetto 2.0.0\docs}.  
+
+
+
+\newpage
+\subsection{Pianificazione}
+Per le misurazioni inerenti alla pianificazione non vengono misurati valori per ciascuna delle metriche esposte nell'apposita sezione poiché, il calcolo di alcuni di essi, non possiede valore informativo rilevante ma, tuttavia, è necessario per altre misurazioni.
+
+\subsubsection{Actual Cost (AC)}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per l'Actual Cost}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Actual Cost (AC) & -  & 4226\euro & - & - & Superato
+\end{longtable}
+\begin{center}
+\begin{tikzpicture} [scale = 0.9]
+	\begin{axis}[
+	title={Andamento dell'Actual Cost (AC)},
+	xlabel={\textbf{Tempo}},
+	ylabel={\textbf{Valore (in euro)}}, 
+	date coordinates in=x,
+	xmin=2020-01-09,
+	xmax=2020-12-12,
+	ymin=0,
+	ymax=15000,
+	xtick=data,
+	xticklabel style={
+		rotate=90,
+		anchor=near xticklabel,
+	},
+	% set the label style of the `xtick's
+	xticklabel=\year.\month.\day,
+	]
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/pianificazioneCSV/AC.csv};
+	\end{axis}
+\end{tikzpicture} 
+\end{center}
+
+\newpage
+\subsubsection{Earned Value (EV)}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per l'Earned Value}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Earned Value (EV) & -  & 4549\euro & - & - & Superato
+\end{longtable}
+\begin{center}
+	\begin{tikzpicture} 
+	\begin{axis}[
+	title={Andamento del Earned Value (EV)},
+	xlabel={\textbf{Tempo}},
+	ylabel={\textbf{Valore (in euro)}}, 
+	date coordinates in=x,
+	xmin=2020-01-09,
+	xmax=2020-12-12,
+	ymin=0,
+	ymax=15000,
+	xtick=data,
+	xticklabel style={
+		rotate=90,
+		anchor=near xticklabel,
+	},
+	% set the label style of the `xtick's
+	xticklabel=\year.\month.\day,
+	]
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/pianificazioneCSV/EV.csv};
+	\end{axis}
+	\end{tikzpicture} 
+\end{center}
+
+\newpage
+\subsubsection{Estimated At Completion (EAC)}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per l'Estimated At Completion}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Estimated at Completion (EAC) & -  & 13461\euro & - & - & Superato
+\end{longtable}
+\begin{center}
+	\begin{tikzpicture} 
+	\begin{axis}[
+	title={Andamento del Estimated At Completion (EAC)},
+	xlabel={\textbf{Tempo}},
+	ylabel={\textbf{Valore (in euro)}}, 
+	date coordinates in=x,
+	xmin=2020-01-09,
+	xmax=2020-12-12,
+	ymin=0,
+	ymax=15000,
+	xtick=data,
+	xticklabel style={
+		rotate=90,
+		anchor=near xticklabel,
+	},
+	% set the label style of the `xtick's
+	xticklabel=\year.\month.\day,
+	]
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/pianificazioneCSV/EAC.csv};
+	\end{axis}
+	\end{tikzpicture} 
+\end{center}
+
+\newpage
+\subsubsection{Estimated To Complete (ETC)}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per l'Estimated To Complete}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Estimated To Complete (ETC) & -  & 9241\euro & - & - & Superato
+\end{longtable}
+\begin{center}
+	\begin{tikzpicture} 
+	\begin{axis}[
+	title={Andamento del Estimated To Complete (ETC)},
+	xlabel={\textbf{Tempo}},
+	ylabel={\textbf{Valore (in euro)}}, 
+	date coordinates in=x,
+	xmin=2020-01-09,
+	xmax=2020-12-12,
+	ymin=0,
+	ymax=15000,
+	xtick=data,
+	xticklabel style={
+		rotate=90,
+		anchor=near xticklabel,
+	},
+	% set the label style of the `xtick's
+	xticklabel=\year.\month.\day,
+	]
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/pianificazioneCSV/ETC.csv};
+	\end{axis}
+	\end{tikzpicture} 
+\end{center}
+
+
+\newpage
+\subsubsection{Cost Variance (SV)}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per la Cost Variance}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Cost Variance (CV) & -  & 323\euro & - & - & Superato
+\end{longtable}
+\begin{center}
+	\begin{tikzpicture} 
+	\begin{axis}[
+	title={Andamento della Cost Variance (CV)},
+	xlabel={\textbf{Tempo}},
+	ylabel={\textbf{Valore (in euro)}}, 
+	date coordinates in=x,
+	xmin=2020-01-09,
+	xmax=2020-12-12,
+	ymin=-1000,
+	ymax=1000,
+	xtick=data,
+	xticklabel style={
+		rotate=90,
+		anchor=near xticklabel,
+	},
+	% set the label style of the `xtick's
+	xticklabel=\year.\month.\day,
+	]
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/pianificazioneCSV/CV.csv};
+	\end{axis}
+	\end{tikzpicture} 
+\end{center}
+
+\newpage
+\subsubsection{Schedule Variance (SV)}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per la Schedule Variance}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Schedule Variance (SV) & -  & 246\euro & - & - & Superato
+\end{longtable}
+\begin{center}
+	\begin{tikzpicture} 
+	\begin{axis}[
+	title={Andamento della Schedule Variance (SV)},
+	xlabel={\textbf{Tempo}},
+	ylabel={\textbf{Valore (in euro)}}, 
+	date coordinates in=x,
+	xmin=2020-01-09,
+	xmax=2020-12-12,
+	ymin=-1000,
+	ymax=1000,
+	xtick=data,
+	xticklabel style={
+		rotate=90,
+		anchor=near xticklabel,
+	},
+	% set the label style of the `xtick's
+	xticklabel=\year.\month.\day,
+	]
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/pianificazioneCSV/SV.csv};
+	\end{axis}
+	\end{tikzpicture} 
+\end{center}
+
+\newpage
+\subsubsection{Valutazioni}
+L'adozione delle metriche relative alla pianificazione è avvenuta a partire dall'ingresso in RP in quanto, nel periodo precedente al RR, vi è solo un investimento da parte del fornitore e non devono essere conteggiati costi a carico del committente.
+
+\paragraph{RP}
+L'investimento iniziale precedente al RR ha consentito di acquisire dei vantaggi in termini di tempo impiegato e costi. Ciò si può evincere analizzando soprattutto i valori di Schedule Variance (SV) e Cost Variance (CV) che certificano il procedere del progetto con una maggiore efficienza rispetto a quanto preventivato.
