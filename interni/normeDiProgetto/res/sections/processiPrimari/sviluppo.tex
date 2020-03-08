@@ -226,7 +226,7 @@ Il gruppo ha deciso di garantire una buona architettura perseguendo i seguenti o
 \paragraph{Codifica}
 Durante la Codifica viene sviluppato il codice del prodotto software dai programmatori. È fondamentale che questo risulti uniforme per migliorarne le attività di manutenzione, verifica e validazione. È quindi necessario normare il lavoro in modo tale che il loro codice risulti leggibile, attraverso uno stile di codifica.
 \subparagraph*{Stile di Codifica}
-Stabilire convenzioni di codifica comuni, migliora la leggibilità del codice e lo rende più facilmente mantenibile. Il gruppo Tenners, per aumentare l'omogeneità e l'uniformità durante la stesura del codice non chè richiesto da capitolato, ha scelto delle regole comuni da seguire derivanti dallo stile di codfica dettato da eslint-airbnb:
+Stabilire convenzioni di codifica comuni, migliora la leggibilità del codice e lo rende più facilmente mantenibile. Il gruppo Tenners, per aumentare l'omogeneità e l'uniformità durante la stesura del codice richiesta da \textit{capitolato\glos}, ha scelto delle regole comuni da seguire derivanti dallo stile di codfica dettato da eslint-airbnb:
 \begin{itemize}
   \item \textbf{Indentazione}: per l'indentazione dei blocchi saranno utilizzati 2 caratteri spazio (e non il classico tab), per uniformare la codifica dei caratteri su diversi sistemi operativi;
   \item \textbf{Posizione delle parentesi}: le parentesi per l'apertura di un blocco vanno inserite in linea con i costrutti mentre, quelle di chiusura, vanno inserite alla linea successiva rispetto all'ultima istruzione del blocco.
@@ -244,7 +244,7 @@ Stabilire convenzioni di codifica comuni, migliora la leggibilità del codice e 
   		....
   	}
   	\end{lstlisting}
-  	\item \textbf{Nome dei metodi e delle variabili:} scritti in lowerCamelCase, senza l'utilizzo degli spazi, con la prima lettera di ciascuna parola in maiuscolo eccetto la prima e il nome di ogni metodo deve suggerire un'azione. Esempio:
+  	\item \textbf{Nome dei metodi e delle variabili:} scritti in lowerCamelCase, senza l'utilizzo degli spazi, con la prima lettera di ciascuna parola in maiuscolo eccetto la prima. Il loro nome di deve suggerire l'azione eseguita. Esempio:
   	\begin{lstlisting}
   	let z = 100;
   	function addToZ(x, y) {
