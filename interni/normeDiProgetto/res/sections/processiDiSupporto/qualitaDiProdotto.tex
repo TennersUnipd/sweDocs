@@ -1,0 +1,86 @@
+\subsection{Qualità di Prodotto}
+Per quanto riguarda la qualità del prodotto, si è deciso di adottare sezioni dello
+\textit{standard ISO/IEC 9126\glos} le quali sono state ritenute nessarie
+all'ottenimento della qualità.
+\subsubsection{Funzionalità}
+Rappresenta la capacità del prodotto di soddisfare tutti i requisiti che il sistema deve avere.
+\paragraph{Obiettivi}
+\begin{itemize}
+	\item \textbf{Accuratezza:} il prodotto deve fornire i risultati attesi nel modo più preciso possibile;
+	\item \textbf{Appropriatezza:} il prodotto deve fornire il corretto numero di funzionalità per le specifiche concordate;
+	\item \textbf{Interoperabilità:} il prodotto deve interagire e operare nella maniera corretta con altri sistemi.
+\end{itemize}
+\paragraph{Metriche}
+\begin{itemize}
+	\item \textbf{Copertura funzionale:} indica la percentuale di implementazione delle funzionalità prestabilite. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		PERC_{FS}=100*\frac{N_{FS}}{N_FR}
+		\end{math}
+	}
+	\\\\
+	Dove:
+	\begin{itemize}
+		\item \textbf{N\textsubscript{FS}:} numero di funzionalità soddisfatte;
+		\item \textbf{N\textsubscript{FR}:} numero di funzionalità richieste.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Usabilità}
+Rappresenta la capacità del prodotto di essere comprensibile ed utilizzabile dall'utente.
+\paragraph{Obiettivi}
+\begin{itemize}
+	\item \textbf{Comprensibilità:} il prodotto deve essere facile da comprendere nelle funzionalità e nei metodi di utilizzo;
+	\item \textbf{Apprendibilità:} il prodotto deve permettere l'apprendimento delle funzionalità da parte dell'utente in poco tempo e in maniera corretta;
+	\item \textbf{Operabilità:} il prodotto deve consentire all'utente un utilizzo autonomo, per i propri scopi.
+\end{itemize}
+\paragraph{Metriche}
+\begin{itemize}
+	\item \textbf{Numero comandi falliti:} indica il numero di inserimenti errati che l'utente invia tramite \textit{CLI\glos} per l'esecuzione di una specifica funzionalità;
+	\item \textbf{Percentuale fallimenti in una sessione:} indica la percentuale di comandi inseriti e inviati dall'utente in maniera errata durante una sessione di utilizzo dell'applicativo. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		PERC_{F}=100*\frac{N_{F}}{N_T}
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{N\textsubscript{F}:} numero dei comandi inseriti in maniera errata durante la sessione di utilizzo;
+		\item \textbf{N\textsubscript{T}:} numero totale di comandi inseriti durante la sessione di utilizzo.
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Manutenibilità}
+Rappresenta la capacità del prodotto nel subire modifiche o miglioramenti a seguito di cambiamenti dell'ambiente, delle specifiche o dei requisiti del sistema.
+\paragraph{Obiettivi}
+\begin{itemize}
+	\item \textbf{Analizzabilità:} il prodotto, per come è realizzato, deve permette di rilevare velocemente le cause di possibili errori o malfunzionamenti;
+	\item \textbf{Modificabilità:} una modifica correttiva del prodotto deve causare cambiamenti minimi al resto del sistema;
+	\item \textbf{Stabilità:} apportando una modifica al prodotto, devono essere ridotti al minimo effetti inaspettati.
+\end{itemize}
+\paragraph{Metriche}
+\begin{itemize}
+	\item \textbf{Indice di manutenibilità:} indica con un valore numerico, il grado di manutenibilità di un prodotto software, basandosi su metriche note di implementazione. Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		MI= 171-5.2*ln(HV)-0.23*(CC)-16.2*ln(LC)
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{HV:} rappresenta l'Halstead Volume;
+		\item \textbf{CC:} indica la complessità ciclomatica del codice;
+		\item \textbf{LC:} indica le linee di codice.
+	\end{itemize}
+	\item \textbf{Percentuale commenti:} indica, con un valore percentuale, la quantità di documentazione sotto forma di codice commentato nel prodotto software . Il calcolo avviene secondo la formula:\\\\
+	\centerline{
+		\begin{math}
+		PERC_{COD}=100*\frac{NR_{COD}}{NR}
+		\end{math}
+	}
+	\\\\Dove:
+	\begin{itemize}
+		\item \textbf{NR\textsubscript{COD}:} indica il numero di righe commentate nel codice del prodotto;
+		\item \textbf{NR:} indica il numero di righe totali del codice del prodotto.
+	\end{itemize}
+\end{itemize}
