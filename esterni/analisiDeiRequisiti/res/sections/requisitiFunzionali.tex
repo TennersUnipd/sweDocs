@@ -34,7 +34,11 @@
 	
 	R1F3 &  L'utente ha la possibilità di registrarsi su \textit{Etherless}.  & Capitolato \\
 
-	R1F3.1 &  La registrazione su \textit{Etherless} avverrà richiedendo una coppia univoca di address - \textit{private key\glo} alla rete \textit{Ethereum\glos}.  & Capitolato \\	
+	R1F3.1 &  La registrazione su \textit{Etherless} avverrà richiedendo una coppia univoca di address - \textit{private key\glo} alla rete \textit{Ethereum\glos}.  & Capitolato \\
+	
+	R1F3.1.1 &  A seguito dell'avvenuta richiesta di registrazione al network \textit{Etherium\glo} verrà visualizzato l'address tramite \textit{CLI\glos}.  & \centering Interna \\ UC4.1 \tabularnewline	
+	
+	R1F3.1.2 &  A seguito dell'avvenuta richiesta di registrazione al network \textit{Etherium\glo} verrà visualizzata la \textit{private key\glo} tramite \textit{CLI\glos}.  & \centering Interna \\ UC4.2 \tabularnewline	
 	
 	R2F4 &  Ogni qualvolta l'utente effettuerà l'accesso manuale o la registrazione al sistema, verrà salvato un file contenente le credenziali di accesso per permettere l'autenticazione automatica durante le successive esecuzioni della applicazione.  & Interna \\
 	
@@ -42,13 +46,22 @@
 	
 	R2F5.1 &  Dovrà essere restituito all'utente un messaggio in caso di logout eseguito con successo.  & \centering Interna \\ UC7 \tabularnewline
 	
-	R1F6 &  Un utente autenticato può ricercare una funzione caricata da un altro utente sviluppatore sull'\textit{Etherless-server}.  & Interna \\
+	R1F6 &  Un utente autenticato può ricercare una funzione caricata da un altro utente sviluppatore su \textit{Etherless}.  & Interna \\
 	
 	R1F6.1 &  La ricerca della funzione viene effettuata inserendo il comando "find" seguito dal nome della funzione stessa. & \centering Interna \\ UC8.1 \tabularnewline
 	
-	R1F6.2 &  La ricerca della funzione permetterà di visualizzare sull'\textit{Etherless-cli} il nome della funzione, la sua firma, una descrizione riassuntiva delle sue funzionalità, il costo e l'autore.  & \centering Interna \\ UC8 \tabularnewline
+	R1F6.2 &  La ricerca della funzione permetterà di visualizzare sull'\textit{Etherless-cli} alcune informazioni riguardanti la stessa.  & \centering Interna \\ UC8.2 \tabularnewline
 	
-	R1F6.3 &  Verrà segnalato un errore su \textit{Etherless-cli} se il nome della funzione cercata non fosse disponibile su \textit{Etherless-server}.  & \centering Interna \\ UC8.2 \tabularnewline
+	R1F6.2.1 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} il costo della funzione.  & \centering Interna \\ UC8.2.2 \tabularnewline
+%	 il nome della funzione, la sua firma, una descrizione riassuntiva delle sue funzionalità, il costo e l'autore
+
+	R2F6.2.2 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} la descrizione della funzione.  & \centering Interna \\ UC8.2.3 \tabularnewline	
+	
+	R2F6.2.3 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} l'autore della funzione.  & \centering Interna \\ UC8.2.1 \tabularnewline
+	
+	R1F6.2.4 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} la firma della funzione.  & \centering Interna \\ UC8.2.4 \tabularnewline
+	
+	R1F6.3 &  Verrà segnalato un errore su \textit{Etherless-cli} se il nome della funzione cercata non fosse disponibile su \textit{Etherless-server}.  & \centering Interna \\ UC8.3 \tabularnewline
 	
 	R1F7 &  Un utente autenticato può eseguire una funzione caricata da uno sviluppatore sull'\textit{Etherless-server} mediante il comando "run".  & Capitolato \\
 	
@@ -72,13 +85,31 @@
 	
 	R1F7.3.5 &  Il sistema deve restituire un messaggio di errore all'utente nel caso lo sviluppatore della funzione non dovesse averne ancora associato un costo. & \centering Interna \\ UC11 \tabularnewline
 	
-	R2F8 &  Un utente autenticato può richiedere un log di tutte le funzioni eseguite tramite il comando "log". & \centering Interna \\ UC13 \tabularnewline
+	R2F8 &  Un utente autenticato può richiedere un log di tutte le funzioni eseguite tramite il comando "log". & \centering Interna \\ UC13.1 \tabularnewline
 	
-	R2F8.1 &  Il sistema dovrà restituire un log delle funzioni eseguite composto da: data e ora di esecuzione, nome, firma e costo della funzione. & \centering Interna \\ UC13 \tabularnewline
+	R2F8.1 &  Il sistema dovrà restituire tramite \textit{CLI\glo} un log delle funzioni. & \centering Interna \\ UC13.2 \tabularnewline
+	
+	R2F8.1.1 &  Il sistema dovrà restituire l'orario e la data delle funzioni eseguite dall'utente. & \centering Interna \\ UC13.2.1 \tabularnewline
+	
+	R2F8.1.2 &  Il sistema dovrà restituire il nome della funzione eseguita dall'utente. & \centering Interna \\ UC13.2.2 \tabularnewline
+	
+	R2F8.1.3 &  Il sistema dovrà restituire la firma della funzione eseguita dall'utente. & \centering Interna \\ UC13.2.3 \tabularnewline
+	
+	R2F8.1.4 &  Il sistema dovrà restituire il costo della funzione eseguita dall'utente. & \centering Interna \\ UC13.2.4 \tabularnewline
+	
+	R2F8.2 &  Il sistema dovrà restituire messaggio di errore in caso di log vuoto (nel caso l'utente non abbia eseguito alcuna funzione) & \centering Interna \\ UC13.3 \tabularnewline
 	
 	R1F9 &  Un utente autenticato può visualizzare un elenco di tutte le funzioni disponibili su \textit{Etherless} tramite il comando "list". & Capitolato \\	
 	
-	R1F9.1 &  Il sistema dovrà restituire un elenco delle funzioni disponibili composto da: nome, firma, costo e descrizione della funzione. & \centering Interna \\ UC14 \tabularnewline
+	R1F9.1 &  Il sistema dovrà restituire su \textit{CLI\glo} elenco delle funzioni con le relative informazioni per ciascuna di esse. & \centering Interna \\ UC14.2 \tabularnewline
+	
+	R1F9.1.1 &  Il sistema dovrà restituire su \textit{CLI\glo} il nome di ciascuna funzione presente su \textit{Etherless}. & \centering Interna \\ UC14.2.1 \tabularnewline
+	
+	R1F9.1.2 &  Il sistema dovrà restituire su \textit{CLI\glo} il costo di ciascuna funzione presente su \textit{Etherless}. & \centering Interna \\ UC14.2.2 \tabularnewline
+	
+	R1F9.1.3 &  Il sistema dovrà restituire su \textit{CLI\glo} la firma di ciascuna funzione presente su \textit{Etherless}. & \centering Interna \\ UC14.2.3 \tabularnewline
+	
+	R2F9.1.4 &  Il sistema dovrà restituire su \textit{CLI\glo} la descrizione di ciascuna funzione presente su \textit{Etherless}. & \centering Interna \\ UC14.2.4 \tabularnewline
 	
 	R1F10 &  Un utente autenticato ha la possibilità di creare una funzione JavaScript con il comando \textit{"deploy\glos"} e condividerla su \textit{Etherless-server}, diventando un utente sviluppatore. La funzione dovrà essere disponibile al resto degli utenti di \textit{Etherless}. & Capitolato \\
 	
@@ -123,6 +154,8 @@
 	R1F14.1 &  In ognuno dei comandi "set", "update", "delete", dovrà essere specificata la funzione di riferimento. & \centering Interna \\ UC18.1 \tabularnewline
 	
 	R1F14.1.1 &  Dovrà essere restituito un errore nel caso in cui la funzione di riferimento non sia presente tra quelle rese disponibili su \textit{Etherless} dallo sviluppatore. & \centering Interna \\ UC18.2 \tabularnewline
+	
+	R1F15 & Gli \textit{smart-contract\glo} devono essere upgradable. & Capitolato \\
 	\hline
 	
 \end{longtable}
