@@ -1,5 +1,9 @@
 \documentclass[a4paper]{article}
 \input{config/config.tex}
+\usepackage{pdflscape}
+
+\newcommand{\RomanNumeralCaps}[1]
+    {\MakeUppercase{\romannumeral #1}}
 
 \makeindex
 
@@ -18,6 +22,7 @@
 	\include{res/sections/pianificazione}
 	\include{res/sections/preventivo}
 	\include{res/sections/consuntivo}
+	\include{res/sections/attrischi}
 	\appendix
 	\include{res/sections/organigramma}
 \end{document}
