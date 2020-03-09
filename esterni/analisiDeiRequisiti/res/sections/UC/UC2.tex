@@ -1,0 +1,18 @@
+\subsubsection{UC2 - Login}
+\begin{itemize}
+	\item \textbf{Attori primari:} Utente non autenticato;
+	\item \textbf{Attori secondari:} \textit{Ethereum\glo} Network;
+	\item \textbf{Descrizione:} l'utente ha la possibilità di autenticarsi al sistema mediante un'utenza \textit{Ethereum\glos}; 
+	\item \textbf{Pre-condizioni:} l'utente ha visualizzato la guida introduttiva e vuole eseguire l'accesso al network \textit{Ethereum\glos};
+	\item \textbf{Post-condizioni:} il sistema avrà autenticato o meno l'utente a seconda dei valori di accesso forniti;
+	\item \textbf{Scenario principale:} 
+	\begin{enumerate}
+		\item Vengono inserite le credenziali di accesso (address e \textit{private key\glos}) in maniera manuale o automatica;
+		\item L'utente viene autenticato al network \textit{Ethereum\glo} e può usufruire dei comandi messi a disposizione da \textit{Etherless}.
+	\end{enumerate}
+	\item \textbf{Specializzazioni:}
+	\begin{itemize}
+		\item \textbf{UC5:} l'utente ha la possibilità di eseguire il login manuale con l'inserimento di address e \textit{private key\glo} da \textit{CLI\glos};
+		\item \textbf{UC6:} l'utente verrà automaticamente autenticato dal sistema se presente un file sul proprio dispositivo contenente le credenziali di accesso.  
+	\end{itemize}
+\end{itemize}
