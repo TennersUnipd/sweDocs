@@ -1,0 +1,111 @@
+\section{Consuntivo di periodo}
+A seguito di ogni periodo definito nella sezione precedente viene fatto un confronto tra quanto preventivato e le ore effettivamente impiegate per ricoprire i vari ruoli. In particolare, ci interessa definire una metrica che possa riassumere la differenza di costo preventivata ed effettiva, derivante dal residuo di ore impiegate per ruolo. \\ A tale metrica si possono assegnare tre valori distinti:
+\begin{itemize}
+	\item \textbf{Positivo:} il quantitativo di tempo impiegato risulta inferiore rispetto a quanto preventivato;
+	\item \textbf{Pari:} il quantitativo di tempo impiegato è in linea a quanto preventivato (differenza entro il 2\%);
+	\item \textbf{Negativo:} il quantitativo di tempo impiegato risulta superiore rispetto a quanto preventivato.
+\end{itemize}
+La metrica è anche indice delle capacità del gruppo di prevedere i tempi necessari per le varie attività.
+\\Inoltre, per ogni periodo verrà specificato se la data di scadenza per il raggiungimento dell'obbiettivo di tale periodo è stato rispettato.
+\newpage
+\subsection{Analisi dei requisiti}
+\subsubsection{Impiego risorse}
+\begin{table}[h]
+\caption{Tabella consuntivo di periodo, Analisi dei requisiti}  
+\begin{center}
+\begin{tabular}{ |c|c|c|  }
+ \hline
+ Ruolo 		& Ore & Costo (EUR)\\
+ \hline\hline
+	Responsabile	& 31 (+0) & 930 (+0)\\
+	Amministratore	& 47 (+12) & 940 (+240)\\
+	Analista		& 99 (+15) & 2475 (+375)\\
+	Progettista		& 14 (+4) & 308 (+88)\\
+	Programmatore	& 0 (+0) & 0 (+0)\\
+	Verificatore	& 46 (-4) & 690 (-60)\\
+	\hline\hline
+	Totale prev.	& 210 & 4700 \\
+	Totale cons.	& 237 & 5343 \\
+	Differenza		& +27 & +643 \\
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
+%\noindent \underline{Si ricorda che il lavoro sostenuto durante questo periodo non viene rendicontato nei confronti} \\
+%\underline{del costo per il cliente.}
+\subsubsection{Conclusioni}
+E' risultato necessario un numero di ore maggiore rispetto a quanto preventivato per raggiungere l'obbiettivo richiesto da questo periodo. La discrepanza oraria maggiore è stata rilevata nei ruoli di Amministratore e Analista. Il team ha riscontrato difficoltà più di quanto previsto nella parte decisionale e di configurazione degli strumenti e procedure da utilizzare durante la realizzazione del progetto.
+\\Il bilancio di questo periodo è \textbf{Negativo} rispetto a quanto preventivato, con un surplus di 27 ore e uno scarto economico di +643 EUR. Tuttavia, non essendo rendicontato, le ore aggiuntive sono state un investimento che porterà beneficio nel proseguo del progetto. La scadenza temporale prefissata per questo periodo è comunque stata rispettata.
+
+\newpage
+\subsection{Progettazione architetturale}
+\subsubsection{Impiego risorse}
+\begin{table}[h]
+\caption{Tabella consuntivo di periodo, Progettazione architetturale}  
+\begin{center}
+\begin{tabular}{ |c|c|c|  }
+ \hline
+ Ruolo 		& Ore & Costo (EUR)\\
+ \hline\hline
+	Responsabile	& 10 (+0) & 300 (+0)\\
+	Amministratore	& 26 (+0) & 520 (+0)\\
+	Analista		& 34 (-1) & 850 (-25)\\
+	Progettista		& 71 (-1) & 1562 (-22)\\
+	Programmatore	& 35 (-2) & 525 (-30)\\
+	Verificatore	& 30 (+0) & 450 (+0)\\
+	\hline\hline
+	Totale prev.	& 210 & 4284 \\
+	Totale cons.	& 206 & 4207 \\
+	Differenza		& -4 & -77 \\
+ \hline
+\end{tabular}
+\end{center}
+\end{table}
+\newpage
+\noindent In particolare, per ciascun incremento previsto, sono state impiegate le seguenti ore con relativi costi:
+\begin{table}[h]
+	\caption{Tabella ore previste per incremento, Progettazione architetturale}  
+	\begin{center}
+		\begin{tabular}{ |c|c|c|c|c|c|c|c|  }
+			\hline
+			Incremento 		& RE 	& AM 	& AN 	& PT 	& PR 	& VE 	& Tot.\\
+			\hline\hline
+			I		& 2 		& 3			& 10 	& 2 	& 0 		& 4 		& 21\\
+			II		& 2 		& 11 		& 10 	& 26	& 15 		& 9 		& 73\\
+			III		& 2 		& 5 		& 7 	& 22	& 11 		& 7 		& 54\\
+			IV		& 2 		& 5 		& 6 	& 20 	& 9 		& 7 		& 49\\
+			V		& 1 		& 1 		& 1 	& 1		& 0 		& 2	 		& 6\\
+			VI		& 1 		& 1 		& 0 	& 0 	& 0 		& 1 		& 3\\
+			\hline\hline
+			Ore totali		& 10		& 26		& 34 	& 71	 	& 35 	& 30 	& 206\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+
+\subsubsection{Preventivo a finire}
+La seguente tabella ha lo scopo di evidenziare le differenze tra la somma che è stata preventivata e il consuntivo effettivo.
+\begin{table}[h]
+	\caption{Tabella preventivo a finire}  
+	\begin{center}
+		\begin{tabular}{ |c|c|c|  }
+			\hline
+			Periodo 								& Preventivo (EUR) & Consuntivo (EUR)\\
+			\hline\hline
+			Progettazione architetturale			& 4284 				& 4207\\
+			Progettazione di dettaglio e codifica	& 6966 			& -\\
+			Validazione e collaudo					& 2498 			& -\\
+			\hline\hline
+			Totale									& 13748 				& 4207 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+ 
+
+\subsubsection{Conclusioni}
+È risultato necessario un numero di ore minore rispetto a quanto preventivato per raggiungere l'obbiettivo richiesto da questo periodo. La discrepanza oraria è risultata simile nei ruoli di Analista, Progettista e Programmatore. Il team ha potuto godere dell'approfondimento risultato nella Analisi, che ha portato ad una migliore ideazione e realizzazione del PoC presentato durante la Technology Baseline.
+\\Il bilancio di questa periodo è \textbf{Positivo}, con un guadagno di 4 ore e uno scarto economico di -77 EUR. Anche la scadenza temporale prefissata per questo periodo è stata rispettata.
+
+\subsubsection{Pianificazione futura}
+Le seppur poche ore guadagnate in questo periodo nei ruoli di programmatore e progettista permettono una maggiore flessibilità nel periodo successivo di progettazione di dettaglio e codifica. L'impiego di ore sino ad ora rispettato, consente di non effettuare in maniera preventiva delle correzioni sulla pianificazione precedente. 
