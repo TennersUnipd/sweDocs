@@ -1,33 +1,33 @@
 \section{Capitolato C2 - Etherless}
 
 \subsection{Descrizione generale}
-\textit{Etherless} è una piattaforma che permette agli sviluppatori di caricare funzioni JavaScript sul cloud\glo per poi renderle disponibili a terzi. Il servizio si presenta come un CaaS\glo (Computation-as-a-Service) in cui l'utente finale paga per l'esecuzione di una singola funzione in modo automatico mediante l'utilizzo della rete Ethereum\glo e degli smart contract\glos. 
+\textit{Etherless} è una piattaforma che permette agli sviluppatori di caricare funzioni JavaScript sul \textit{cloud\glo} per poi renderle disponibili a terzi. Il servizio si presenta come un CaaS (Computation-as-a-Service) in cui l'utente finale paga per l'esecuzione di una singola funzione in modo automatico mediante l'utilizzo della rete \textit{Ethereum\glo} e degli \textit{smart contract\glos}. 
 \subsection{Finalità del progetto}
-L'obbiettivo finale è quello di avere un ambiente in cui un ipotetico sviluppatore \textit{Bob}, dopo aver sviluppato una funzionalità che potrebbe essere di interesse per altri sviluppatori (es. \textit{Alice}), carica il suo codice JavaScript su \textit{Etherless} mediante la sua utenza e imposta un costo di esecuzione per quella funzione. \textit{Alice}, avendo bisogno di tale funzionalità, ha la possibilità di pagare una quota di esecuzione piuttosto che riscrivere la stessa procedura; attraverso la sua utenza \textit{Etherless}, \textit{Alice} è quindi capace di usufruire della funzione in cloud\glo e sostenere il costo di esecuzione.
+L'obbiettivo finale è quello di avere un ambiente in cui un ipotetico sviluppatore \textit{Bob}, dopo aver sviluppato una funzionalità che potrebbe essere di interesse per altri sviluppatori (es. \textit{Alice}), carica il suo codice JavaScript su \textit{Etherless} mediante la sua utenza e imposta un costo di esecuzione per quella funzione. \textit{Alice}, avendo bisogno di tale funzionalità, ha la possibilità di pagare una quota di esecuzione piuttosto che riscrivere la stessa procedura; attraverso la sua utenza \textit{Etherless}, \textit{Alice} è quindi capace di usufruire della funzione in \textit{cloud\glo} e sostenere il costo di esecuzione.
 \\\\
 La piattaforma deve essere conforme a quanto segue:
 \begin{itemize}
-	\item gli utenti avranno la possibilità elencare le funzioni disponibili,  caricarne di nuove, aggiornarle, eseguirle oppure eliminare attraverso una CLI\glos;
-	\item utilizzo della rete Ethereum\glo per la comunicazione tra i vari componenti di \textit{Etherless}, per la definizione della logica di interazione tra le varie parti (smart contract\glos) e per lo storage di dati;
-	\item il guadagno proveniente dall'esecuzione di una funzione deve essere distribuito tra l'autore della stessa e i proprietari della piattaforma Ethereum\glos, per il sostenimento dell'infrastruttura cloud\glo su cui avviene l'esecuzione;
+	\item gli utenti avranno la possibilità elencare le funzioni disponibili,  caricarne di nuove, aggiornarle, eseguirle oppure eliminare attraverso una \textit{CLI\glos};
+	\item utilizzo della rete \textit{Ethereum\glo} per la comunicazione tra i vari componenti di \textit{Etherless}, per la definizione della logica di interazione tra le varie parti (\textit{smart contract\glos}) e per lo storage di dati;
+	\item il guadagno proveniente dall'esecuzione di una funzione deve essere distribuito tra l'autore della stessa e i proprietari della piattaforma \textit{Ethereum\glos}, per il sostenimento dell'infrastruttura \textit{cloud\glo} su cui avviene l'esecuzione;
 	\item la granularità del pagamento deve corrispondere alla singola esecuzione di una funzione;
-	\item per la realizzazione del back-end\glo deve essere prevista una infrastruttura Serverless\glos.
+	\item per la realizzazione del \textit{back-end\glo} deve essere prevista una infrastruttura \textit{serverless\glos}.
 \end{itemize}
 
 \subsection{Tecnologie interessate}
 \begin{itemize}
-	\item \textbf{AWS (Amazon Web Services)}: piattaforma che si occupa di fornire servizi di cloud\glo computing\glos;
-	\item \textbf{AWS - Lambda}: servizio che consente di eseguire codice nel cloud\glos;
-	\item \textbf{Ethereum\glos}: una rete globale per il trasferimento di criptovalute\glo e per la realizzazione di applicativi decentralizzati;
-	\item \textbf{Solidity}: linguaggio OOP\glo per la definizione di smart contract\glos;
-	\item \textbf{Truffle}: framework per lo sviluppo di smart contract\glo su rete Ethereum\glos;
-	\item \textbf{Web3}: API\glo JavaScript per l'interazione con un nodo Ethereum\glos, locale o remoto;
-	\item \textbf{Ropsten}: rete Ethereum\glo pubblica usato per il testing di applicativi Ethereum\glo prima del porting\glo in produzione sulla \textit{MainNet};
-	\item \textbf{MainNet}: rete Ethereum\glo principale;
-	\item \textbf{Ganache}: ambiente di sviluppo Ethereum\glo utilizzato per la simulazione locale si una rete Ethereum\glo e per l'analisi delle transazioni e log;
+	\item \textbf{AWS (Amazon Web Services)}: piattaforma che si occupa di fornire servizi di \textit{cloud computing\glos};
+	\item \textbf{AWS - Lambda}: servizio che consente di eseguire codice nel \textit{cloud\glos};
+	\item \textbf{Ethereum\glos}: una rete globale per il trasferimento di \textit{criptovalute\glo} e per la realizzazione di applicativi decentralizzati;
+	\item \textbf{Solidity}: linguaggio \textit{OOP\glo} per la definizione di \textit{smart contract\glos};
+	\item \textbf{Truffle}: framework per lo sviluppo di \textit{smart contract\glo} su rete \textit{Ethereum\glos};
+	\item \textbf{Web3}: \textit{API\glo} JavaScript per l'interazione con un nodo \textit{Ethereum\glos}, locale o remoto;
+	\item \textbf{Ropsten}: rete \textit{Ethereum\glo} pubblica usato per il testing di applicativi \textit{Ethereum\glo} prima del \textit{porting\glo} in produzione sulla \textit{MainNet\glos};
+	\item \textbf{MainNet\glos}: rete \textit{Ethereum\glo} principale;
+	\item \textbf{Ganache}: ambiente di sviluppo \textit{Ethereum\glo} utilizzato per la simulazione locale si una rete \textit{Ethereum\glo} e per l'analisi delle transazioni e log;
 	\item \textbf{TypeScript 3.6}: versione standardizzata da Microsoft del linguaggio JavaScript;
-	\item \textbf{Node.js}: ambiente di runtime open-source\glo per JavaScript;
-	\item \textbf{The Serverless Framework}: framework\glo per la costruzione di ambienti serverless\glo
+	\item \textbf{Node.js}: ambiente di runtime \textit{open-source\glo} per JavaScript;
+	\item \textbf{The Serverless\glo Framework\glos}: \textit{framework\glo} per la costruzione di ambienti \textit{serverless\glo}
 	\item \textbf{Smart Contract\glos}: protocollo informatico che facilita, verifica, fa rispettare ed esegue un contratto (insieme di regole);
 	\item \textbf{ESLint}: strumento di analisi del codice utilizzato durante lo sviluppo in JavaScript.
 \end{itemize}
@@ -36,22 +36,22 @@ La piattaforma deve essere conforme a quanto segue:
 \begin{itemize}
 	\item Possibilità di apprendere e utilizzare tecnologie nuove, come ad esempio:
 		\begin{itemize}
-			\item \textbf{Amazon Web Services}, leader nell'industria dei servizi cloud\glo;
-			\item \textbf{Blockchain\glo}, tecnologia in crescita che mette a disposizione strumenti nuovi che permetto la realizzazioni di applicativi con caratteristiche innovative;
+			\item \textbf{Amazon Web Services}, leader nell'industria dei servizi \textit{cloud\glos};
+			\item \textbf{Blockchain\glos}, tecnologia in crescita che mette a disposizione strumenti nuovi che permetto la realizzazioni di applicativi con caratteristiche innovative;
 			\item \textbf{Node.js}, ambiente di sviluppo che negli ultimi anni ha avuto larga diffusione.
 		\end{itemize}
 	\item Si entra in contatto con una azienda estera implicata in tecnologie del futuro;
-	\item Una volta compresi gli aspetti tecnici, l'implementazione non risulta complicata;
+	\item Una volta compresi gli aspetti tecnici, l'implementazione non risulta complicata.
 \end{itemize}
 
 \subsection{Criticità}
 \begin{itemize}
 	\item Seppur stimolante, l'apprendimento e il corretto utilizzo della piattaforma AWS può risultare dispendioso;
 	\item Una progettazione iniziale non adeguata del servizio potrebbe invalidare parte dello sviluppo;
-	\item Alla base del progetto ci sono tecnologie prima non approfondite;
+	\item Alla base del progetto ci sono tecnologie prima non approfondite.
 \end{itemize}
 
 \subsection{Valutazione conclusiva}
-La prima impressione percepita dopo la lettura del capitolato\glo è stata una poco rassicurante in quanto le tecnologie risultano nuove per tutti i membri del team. In seguito ad una accurata analisi dell'obiettivo principale del servizio \textit{Etherless}, il progetto ha preso una sfumatura accattivante. Usare piattaforma Ethereum\glo per realizzare un applicativo decentralizzato ha stimolato l'interesse per la sua diversità dagli ormai tipici standard architetturali per applicativi software.
+La prima impressione percepita dopo la lettura del \textit{capitolato\glo} è stata una poco rassicurante in quanto le tecnologie risultano nuove per tutti i membri del team. In seguito ad una accurata analisi dell'obiettivo principale del servizio \textit{Etherless}, il progetto ha preso una sfumatura accattivante. Usare piattaforma \textit{Ethereum\glo} per realizzare un applicativo decentralizzato ha stimolato l'interesse per la sua diversità dagli ormai tipici standard architetturali per applicativi software.
 \\\\
 In seguito ad approfondimenti sull'argomento, il team è capace di portare a termine il progetto nei tempi richiesti.

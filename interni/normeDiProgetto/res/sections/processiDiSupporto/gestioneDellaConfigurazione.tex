@@ -1,9 +1,127 @@
 \subsection{Gestione della configurazione}
-\subsubsection{Scopo}
-Questa sezione si prefiggi di descrivere come e dove verranno conservati le configurazioni
-per gli strumeti di supporto.
-\subsubsection{Repository e Versionamento}
-Le configurazioni del software e relativi rifermenti verranno conservati nel repository
-apposito sotto TennersUnipd/EnvConfigs.
-Qui sarà possibilie trovare il tempate base di ogni documenti e la relativa configurazione
-per l'automattizazione dei processi di creazione.
+\subsubsection{Obiettivi}
+La gestione della configurazione consiste nel controllo degli oggetti che compongono sistema da realizzare. In particolare, si prefigge gli obiettivi di:
+\begin{itemize}
+	\item descrivere dove e in che modo verranno conservati i file che compongono il prodotto finale;
+	\item creare ordine tra le parti del prodotto;
+	\item rendere identificabili i prodotti delle attività.
+\end{itemize}
+
+\subsubsection{Attività}
+\paragraph{Identificazione della configurazione}
+\subparagraph*{Condivisione e sistema di versionamento\glo}
+Per il versionamento del prodotto è stato scelto il software \textit{Git\glos}. Per condividere la repository in remoto, i membri del gruppo hanno optato per \textit{Github\glos}, la piattaforma per lo sviluppo collaborativo più rinomata. \\
+
+\noindent La scelta nell'utilizzo di questi due sistemi per versionamento e condivisione, è dettata dalla precedente esperienza da parte di alcuni membri del team. I componenti del gruppo che non hanno mai avuto esperienza, avranno supporto da parte dei restanti membri e saranno tenuti a documentarsi mediante le apposite guide condivise sui canali di comunicazione del gruppo. \\
+
+\noindent Non è stato imposto alcun vincolo sulla scelta del client \textit{Git\glos}. Ogni componente del gruppo avrà libertà di scelta nell'utilizzo di un client \textit{Git\glo} dotato di \textit{GUI\glo} o meno.
+
+\subparagraph*{Numero di versione}
+Per tenere traccia dei progressi si utilizza un sistema di numerazione delle versioni
+semantico (\href{https://semver.org/lang/it/}{semver.org}) con un'aggiunta di un TAG.
+Il numero di versione è rappresentato nel formato:\\\\
+
+\centerline{\textbf{X.Y.Z-TAG}}
+
+
+\begin{itemize}
+  \item \textbf{Incremento in X}: l'incremento in X avviene quando le modifiche del componente soggetto all'attività, sono molto significative e non retrocompatibili;
+  \item \textbf{Incremento in Y}: l'incremento in Y avviene quando c'è un'aggiunta
+  di una funzionalità o, in caso di un documento, l'aggiunta di un capitolo. In questo caso l'aggiunta di funzionalità avviene in maniera retrocompatibile;
+  \item \textbf{Incremento in Z}: l'incremento in Z avviene per modifiche minori,
+  ad esempio \textit{code refactoring\glos}, correzioni di forme verbali o errori di digitazione;
+  \item \textbf{Cambio di TAG}: il TAG può essere:
+  \begin{itemize}
+  	\item \textbf{TBA (To Be Approved):} se sottoposto a opportuna verifica ma mancante di approvazione.
+  \end{itemize}
+  In caso di versione approvata, il TAG viene rimosso.
+\end{itemize}
+
+
+\subparagraph*{Gestione dei repository}
+Stando all'\textit{Analisi dei Requisiti 2.0.0}\doc sono stati individuati
+tre componenti principali del prodotto software oltre ai documenti.
+Il gruppo ha dunque deciso di impostare la struttura dei repository in questo modo:\\\\
+
+\dirtree{%
+	.1 /.
+	.2 etherless.
+	.3 etherless-cli.
+	.4 applicationConfigs.
+	.3 etherless-server.
+	.4 applicationConfigs.
+	.3 etherless-smart.
+	.4 applicationConfigs.
+	.3 docs.
+	.2 envConfigs.
+}
+\vspace{1cm}
+
+\noindent \\Il repository "etherless" contiene il progetto in tutte le sue componenti
+ad eccezione di "envConfigs" in quanto necessario solo alla gestione interna
+degli strumenti di sviluppo. Questa organizzazione permette di avere repository separate per ogni parte
+del prodotto mantenendole legate in una repository contenitore.
+
+\subparagraph*{Docs}
+Il repository Docs contiene tutta la documentazione del prodotto. I sorgenti \LaTeX \space dei documenti contenuti al suo interno dovranno essere organizzati secondo questa struttura:\\\\
+
+\dirtree{%
+	.1 /.
+	.2 destinazione d'uso.
+	.3 nome del documento.
+	.4 main.tex.
+	.4 config.
+	.5 config.tex.
+	.4 res.
+}
+\vspace{1cm}
+\noindent In particolare:
+\begin{itemize}
+	\item la \textbf{directory del documento} verrà rinominata con il nome del documento di riferimento scritto in lowerCamelCase;
+	\item il \textbf{main.tex} conterrà la struttura principale del documento;
+	\item il file \textbf{config.tex} conterrà tutte le inclusioni dei package e la ridefinizione di comandi utili alla stesura del documento;
+	\item la directory \textbf{res} conterrà tutte le risorse necessarie per la compilazione corretta del documento. Al suo interno verranno poste le immagini e le sezioni che compongono il \textbf{main.tex}.
+\end{itemize}
+Un esempio di path corretto per un documento è:\\
+
+\centerline{\code{docs/interno/normeDiProgetto/main.tex}}
+\vspace{0.7cm}
+
+\subsubsection{Procedure}
+\paragraph{Gestione dei repository e del flusso di lavoro}
+
+	\begin{enumerate}
+		\item \textbf{Avvio di una nuova attività: } all’inizio di una nuova attività ogni componente del gruppo
+		deve creare un nuovo \textit{branch\glos} denominato a seconda dello obbiettivo che si prefigge, partendo dal ramo "develop";
+		\item \textbf{Richiesta di verifica: } al termine dell'attività prefissata e dei task associati, occorre eseguire una \textit{pull request\glo} sul \textit{branch\glo} di partenza accertandosi che tutti gli strumenti di verifica automatica siano correttamente funzionanti;
+		\item \textbf{Procedura di verifica:} dopo l'avvenuta \textit{pull request\glo} il verificatore dovrà accertarsi che il controllo degli strumenti automatici non abbia prodotto alcun errore e procederà con la verifica effettiva del prodotto. Gli esiti della verifica potranno essere di due tipi:
+		\begin{itemize}
+			\item \textbf{Accettazione:} viene eseguito uno "scatto" al numero di versionamento poiché è stato possibile apportare una modifica verificata al prodotto. Verrà tuttavia mantenuto il TAG "TBA" perché la modifica in questione deve ancora essere soggetta ad approvazione da parte del Responsabile;
+			\item \textbf{Rifiuto:} il verificatore dovrà scrivere nella sezione dedicata della
+			\textit{pull request}\glo il motivo del rifiuto delle modifiche.
+		\end{itemize}
+		\item \textbf{Approvazione e rilascio:} Alla ricezione di una \textit{pull request\glo} da "develop" a "master" il responsabile deciderà se approvare o meno le modifiche. In caso di accettazione il responsabile dovrà rimuovere ogni TAG "TBA".
+	\end{enumerate}
+
+
+\subsubsection{Strumenti}
+\paragraph{Git}
+Software per il controllo di versione distribuito e utilizzabile da linea di comando o tramite interfacce grafiche apposite. Esso presenta diversi vantaggi che hanno portato il team a selezionarlo tra i differenti \textit{VCS\glo} a disposizione:
+\begin{itemize}
+	\item velocità:
+	\begin{itemize}
+		\item la maggior parte delle operazioni viene svolta in locale;
+		\item sviluppato in linguaggio C per consentire alte performance.
+	\end{itemize}
+	\item sistema distribuito che consente, a differenza dei sistemi centralizzati, di non perdere dati nel caso in cui il nodo centrale dovesse non essere disponibile;
+	\item ogni commit è identificato da un ID che ne garantisce l'integrità.
+\end{itemize}
+
+
+\paragraph{GitHub}
+Piattaforma utilizzata per l'hosting del prodotto software nella sua interezza, comprese per le parti documentali. La scelta è stata dettata da alcune motivazioni:
+\begin{itemize}
+	\item piattaforma conosciuta ed utilizzata da alcuni membri del team;
+	\item possibilità di gestire dei sub-repository per suddividere in maniera chiara le diverse componenti del prodotto;
+	\item possibilità di avere una \textit{project board\glo} associata che consente la gestione dei task in maniera veloce.
+\end{itemize}
