@@ -1,15 +1,17 @@
-\subsubsection{UC17 - Rimozione funzione}
+\subsubsection{UC17 - Deploy\glo funzione}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\linewidth]{res/img/UC15.jpg}
+	\caption{Diagramma UC17 - Deploy funzione}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente sviluppatore;
-	\item \textbf{Descrizione:} l'utente potrà rimuovere da \textit{Etherless} una tra le funzioni da lui caricate;
-	\item \textbf{Pre-condizioni:} l'utente ha eseguito il deploy di almeno una funzione su \textit{Etherless};
-	\item \textbf{Post-condizioni:} la funzione inserita specificata dall'utente verrà rimossa;
-	\item \textbf{Scenario principale:}
+	\item \textbf{Descrizione:} l'utente potrà eseguire il \textit{deploy\glo} di una propria funzione JavaScript su \textit{Etherless-server} rendendola disponibile a tutti gli utenti del servizio; 
+	\item \textbf{Pre-condizioni:} l'utente possiede una funzione JavaScript sul proprio dispositivo;
+	\item \textbf{Post-condizioni:} il sistema si occuperà di creare una nuova istanza su AWS Lambda con il nome specificato e rendere disponibile la sua esecuzione a tutti gli utenti di \textit{Etherless}. L'utente visualizzerà a schermo l'esito del comando;
+	\item \textbf{Scenario principale:} 
 	\begin{enumerate}
-		\item L'utente rimuove una sua funzione mediante il comando "delete";
-		\item Il sistema visualizzerà su schermo l'esito dell'operazione effettuata.
+		\item L'utente tramite il comando \textit{"deploy\glos"} crea una nuova istanza della funzione su AWS Lambda;
+		\item Il sistema visualizzerà su schermo l'esito dell'operazione.
 	\end{enumerate}
-\end{itemize}
-\begin{itemize}
-  \item \textbf{UC19}: il nome della funzione non è tra quelle caricate dall'utente
 \end{itemize}
