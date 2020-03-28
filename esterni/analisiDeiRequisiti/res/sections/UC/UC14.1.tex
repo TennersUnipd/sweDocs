@@ -1,16 +1,18 @@
-\subsubsection{UC14.1 - Inserimento comando "list"}
+\subsubsection{UC14.1 - Visualizzazione funzioni log}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente autenticato;
-	\item \textbf{Descrizione:} l'utente potrà inserire tramite \textit{CLI\glo} il comando per visualizzare la lista delle funzioni disponibili su \textit{Etherless} e le informazioni riguardanti ciascuna di esse;
-	\item \textbf{Pre-condizioni:} l'utente ha inserito il comando "list" per ottenere l'elenco delle funzioni disponibili;
-	\item \textbf{Post-condizioni:} il sistema restituisce l'elenco delle funzioni disponibili;
-	\item \textbf{Scenario principale:} l'utente inserisce il comando "list" per visualizzare tutte le funzioni presenti su \textit{Etherless} e visualizzarne i dettagli;
-	\item \textbf{Inclusioni:}
-	\begin{itemize}
-		\item \textbf{UC14.2}: l'inserimento del comando list provoca la visualizzazione dei risulati.
-	\end{itemize}
-	\item \textbf{Estensioni:}
-	\begin{itemize}
-		\item \textbf{UC14.3}: se non è presente in \textit{Etherless} alcuna funzione con il nome inserito, verrà visualizzato un messaggio di errore.
-	\end{itemize}
+	\item \textbf{Descrizione:} l'utente visualizza il log delle funzioni da lui eseguite mediante l'apposito comando "log"; 
+	\item \textbf{Pre-condizioni:} l'utente ha utilizzato il comando per la visualizzazione del log;
+	\item \textbf{Post-condizioni:} il sistema visualizzerà sulla \textit{CLI\glo} il log delle funzioni eseguite dall'utente;
+	\item \textbf{Scenario principale:} 
+	\begin{enumerate}
+		\item L'utente richiede il log mediante il comando "log";
+		\item Il sistema visualizzerà su schermo i log con le seguenti informazioni:
+		\begin{itemize}
+			\item data e ora di esecuzione della funzione;
+			\item nome della funzione eseguita;
+			\item firma della funzione;
+			\item costo della funzione.
+		\end{itemize}
+	\end{enumerate}
 \end{itemize}

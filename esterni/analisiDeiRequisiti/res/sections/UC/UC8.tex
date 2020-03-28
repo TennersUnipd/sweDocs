@@ -1,21 +1,12 @@
-\subsubsection{UC8 - Ricerca funzione}
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=\linewidth]{res/img/UC8.jpg}
-	\caption{Diagramma UC8 - Ricerca funzione}
-\end{figure}
+\subsubsection{UC8 - Logout}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente autenticato;
-	\item \textbf{Descrizione:} l'utente autenticato ricerca per nome i dettagli di una specifica funzione caricata da un utente sviluppatore sulla rete \textit{Etherless};
-	\item \textbf{Pre-condizioni:} l'utente ha effettuato l'accesso ad \textit{Etherless} e vuole ricercare una funzione specifica mediante l'apposito comando;
-	\item \textbf{Post-condizioni:} il sistema visualizzerà a schermo i dettagli della funzione ricercata o un messaggio di errore se la funzione non è stata trovata;
-	\item \textbf{Scenario principale:}
+	\item \textbf{Descrizione:} l'utente autenticato vuole eseguire il logout dal sistema eliminando il file contenente le credenziali di accesso; 
+	\item \textbf{Pre-condizioni:} l'utente ha effettuato l'accesso ad \textit{Etherless};
+	\item \textbf{Post-condizioni:} verrà eseguito il logout dell'utente autenticato;
+	\item \textbf{Scenario principale:} 
 	\begin{enumerate}
-		\item L'utente scriverà un comando da \textit{CLI\glos} composto nel seguente modo:
-		\begin{itemize}
-			\item nome del comando "find";
-			\item nome della funzione da ricercare.
-		\end{itemize}
-        \item L'utente visualizzerà la funzione ricercata e i suoi dettagli.
+		\item L'utente inserisce il comando "logout";
+		\item Il sistema eseguirà il logout dell'utenza eliminando il file per l'accesso automatico.
 	\end{enumerate}
 \end{itemize}
