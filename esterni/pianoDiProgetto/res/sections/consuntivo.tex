@@ -108,7 +108,7 @@ La seguente tabella ha lo scopo di evidenziare le differenze tra la somma che è
 \\Il bilancio di questa periodo è \textbf{Positivo}, con un guadagno di 4 ore e uno scarto economico di -77 EUR. Anche la scadenza temporale prefissata per questo periodo è stata rispettata.
 \subsection{Progettazione di dettaglio e codifica}
 \subsubsection{Impiego e risorse}
-
+In seguito è rappresentato il consuntivo del periodo di progettazione di dettaglio e codifica:
 \begin{table}[h]
 	\caption{Tabella consuntivo di periodo, progettazione di dettaglio e codifica}  
 	\begin{center}
@@ -117,20 +117,20 @@ La seguente tabella ha lo scopo di evidenziare le differenze tra la somma che è
 			Ruolo 		& Ore & Costo (EUR)\\
 			\hline\hline
 			Responsabile	& 24 (-1) & 720,00 (-30,00)\\
-			Amministratore	& 21 (-2) & 420,00 (-40,00)\\
-			Analista		& 11 (-1) & 275,00 (-25,00)\\
-			Progettista		& 79 (-4) & 1.738,00 (-88,00)\\
-			Programmatore	& 176 (+2) & 2.640,00 (+30,00)\\
-			Verificatore	& 68 (+0) & 1020,00 (+0)\\
+			Amministratore	& 23 & 460,00\\
+			Analista		& 12 & 300,00\\
+			Progettista		& 76 (-7) & 1.672,00 (-66,00)\\
+			Programmatore	& 180 (+6) & 2.700,00 (+60,00)\\
+			Verificatore	& 70 (+2) & 1.050,00 (+30)\\
 			\hline\hline
 			Totale prev.	& 385 & 6.966,00 \\
-			Totale cons.	& 379 & 6.813,00 \\
-			Differenza		& -6 & -153,00 \\
+			Totale cons.	& 385 & 6.902,00 \\
+			Differenza		& 0 & -64,00 \\
 			\hline
 		\end{tabular}
 	\end{center}
 \end{table}
-In particolare, per ciascun incremento previsto, sono state impiegate le seguenti ore con relativi costi:
+\noindent In particolare, per ciascun incremento previsto, sono state impiegate le seguenti ore con relativi costi:
 
 \begin{table}[h]
 	\caption{Tabella ore e costo totale previsti per incremento, progettazione di dettaglio e codifica}
@@ -139,14 +139,14 @@ In particolare, per ciascun incremento previsto, sono state impiegate le seguent
 			\hline
 			Incremento 		& RE 	& AM 	& AN 	& PT 	& PR 	& VE 	& Tot. (h) & Tot. (EUR) \\
 			\hline\hline
-			I		& 2 		& 7			& 6 	& 10 	& 22 		& 12 		& 59	 & 1.080,00\\
-			II		& 5 		& 3 		& 1 	& 24	& 58 		& 18 		&109	&1.903,00\\
-			III		& 5 		& 2 		& 1 	& 11	& 46 		& 11 		& 76	&1.312,00\\
-			IV		& 6 		& 4 		& 2 	& 32 	& 49 		& 25 		& 118 	&2.124,00\\
-			V		& 5 		& 4 		& 0 	& 0		& 0 		& 1	 		& 10			&245,00\\
+			I		& 2 		& 7			& 7 	& 10 	& 22 		& 12 		& 60	 & 1.105,00\\
+			II		& 5 		& 4 		& 1 	& 22	& 58 		& 18 		&108	&1.879,00\\
+			III		& 5 		& 2 		& 1 	& 11	& 48 		& 12 		& 79	&1.357,00\\
+			IV		& 6 		& 4 		& 2 	& 31 	& 51 		& 26 		& 120 	&2.147,00\\
+			V		& 5 		& 5 		& 0 	& 0		& 0 		& 1	 		& 11			&265,00\\
 			VI		& 1 		& 1 		& 1 	& 2 	& 1 		& 1 		& 7			&149,00\\
 			\hline\hline
-			Totale		& 24		& 21		& 11 	& 79	 	& 176 	& 68 	& 379 	&6.813,00\\
+			Totale		& 24		& 23		& 12 	& 76	 	& 180 	& 70 	& 385 	&6.902,00\\
 			\hline
 		\end{tabular}
 	\end{center}
@@ -162,16 +162,17 @@ La seguente tabella ha lo scopo di evidenziare le differenze tra la somma che è
 			Periodo 								& Preventivo (EUR) & Consuntivo (EUR)\\
 			\hline\hline
 			Progettazione architetturale			& 4.284,00 				& 4.207,00\\
-			Progettazione di dettaglio e codifica	& 6.966,00 			& 6.813,00\\
+			Progettazione di dettaglio e codifica	& 6.966,00 			& 6.902,00\\
 			Validazione e collaudo					& 2.498,00 			& -\\
 			\hline\hline
-			Totale									& 13.748,00 				& 11.020,00 \\
+			Totale									& 13.748,00 				& 11.109,00 \\
 			\hline
 		\end{tabular}
 	\end{center}
 \end{table}
 \subsubsection{Conclusioni}
-In conclusione, come si può vedere dalla Tabella 6.3.1, per raggiungere l'obbiettivo richiesto da questo periodo è risultato necessario un numero di ore minore rispetto a quanto preventivato. La discrepanza oraria è venuta a risultare in tutti i ruoli a parte in quello di Verificatore.
+Durante il periodo di progettazione di dettaglio e codifica sono state rispettate le ore preventivate però e stato necessario riorganizzare la suddivisione dei ruoli e ore. Sono state risparmiate 7 ore dal ruolo di \textit Progettista, questo principalmente dovuto al ruolo di \textit Programmatore il quale ha impiegato più ore rispetto a quelle preventivate, ci sono state 6 ore di lavoro in più necessarie ad ultimare gli ultimi dettagli dell’applicativo. Sono state necessarie 2 in più per il ruolo di \textit Verificatore per ultimare la verifica dei documenti. Il risultato totale del periodo è stato di 6.902,00 EUR.
+\\Il bilancio di questa periodo è \textbf{Pari}, con con un risparmio economico di -64 EUR. Anche la scadenza temporale prefissata per questo periodo è stata rispettata.
 
 \subsubsection{Pianificazione futura}
-Le poche ore guadagnate in questo periodo nei ruoli di responsabile, amministratore, analista e progettista permettono una maggiore flessibilità nel periodo successivo di validazione e collaudo. L'impiego di ore sino ad ora rispettato, consente di non effettuare in maniera preventiva delle correzioni sulla pianificazione precedente. 
+L'impiego di ore sino ad ora rispettato, consente di non effettuare in maniera preventiva delle correzioni sulla pianificazione precedente. 
