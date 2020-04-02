@@ -49,13 +49,14 @@ Di seguito tutti gli incrementi previsti. Per ogni incremento e sotto-incremento
 	\item \textbf{\RomanNumeralCaps{3} Incremento:} implementazione delle funzionalità della componente etherless-cli.
   Vengono implementati in particolare:
   \begin{itemize}
-    \item login/logout: comando che permette di autenticarsi/disconnettersi dalla rete \textit{Ethereum}\glos;
-    \item registrazione: comando che permette di registrarsi sulla rete \textit{Ethereum}\glo e ottenere la propria private key;
-    \item list: comando che permette di visualizzare la lista delle funzioni disponibili su Etherless e le informazioni riguardanti ciascuna di esse;
-    \item run: comando che permette di eseguire una delle funzioni disponibili;
-    \item create: comando che permette all'utente di creare una funzione in JavaScript e caricarla nel sistema etherless;
-    \item log: comando che permette all'utente di visualizzare la lista delle funzioni da lui eseguite;
-    \item find: comando che permette di ricercare per nome i dettagli di una funzione desiderata.
+  	\item signup: implementazione del comando "signup" collegato al caso d'uso UC4;
+    \item login: implementazione del comando "login" legato ai caso d'uso UC5;
+    \item logout: implementazione del comando "logout" collegato al caso d'uso UC8;
+    \item list: implementazione del comando "list" collegato al caso d'uso UC15;
+    \item run: implementazione del comando "run" collegato al caso d'uso UC10;
+    \item create: implementazione del comando "create" collegato al caso d'uso UC17;
+    %\item log: comando che permette all'utente di visualizzare la lista delle funzioni da lui eseguite;
+    \item find: implementazione del comando "find" collegato al caso d'uso UC9.
   \end{itemize}
 	\item \textbf{\RomanNumeralCaps{4} Incremento:} sviluppo componenti etherless-smart e etherless-server, comprensivi di test di unità e di integrazione:
 	\begin{itemize}
@@ -82,8 +83,13 @@ Di seguito tutti gli incrementi previsti. Per ogni incremento e sotto-incremento
     \item \textit{Piano di progetto}\docs;
     \item \textit{Glossario}\docs.
   \end{itemize}
-	\item \textbf{\RomanNumeralCaps{2} Incremento:} implementazione dei test di sistema e successiva codifica delle correzioni;
-	\item \textbf{\RomanNumeralCaps{3} Incremento:} redazione della documentazione relativa al codice;
+	\item \textbf{\RomanNumeralCaps{2} Incremento:} implementazione requisiti desiderabili o opzionali:
+	\begin{itemize}
+		\item init: implementazione del comando "init" collegato al caso d'uso UC1;
+		\item set: implementazione del comando "set" collegato al caso d'uso UC18;
+		\item find: viene aggiunto al comando "find", la possibilità di visualizzare l'autore e la descrizione delle funzione. Sono legati ai casi d'uso UC9.2.1 e UC9.2.3;
+	\end{itemize}
+	\item \textbf{\RomanNumeralCaps{3} Incremento:} implementazione dei test di sistema e successiva codifica delle correzioni;
 	\item \textbf{\RomanNumeralCaps{4} Incremento:} realizzazione dei test di accettazione;
 	\item \textbf{\RomanNumeralCaps{5} Incremento:} aggiornamento dei documenti da presentare in ingresso alla revisione di accettazione;
 	\item \textbf{\RomanNumeralCaps{6} Incremento:} presentazione RA.
