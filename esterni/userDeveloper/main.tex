@@ -1,0 +1,28 @@
+\documentclass[a4paper]{article}
+\input{config/config.tex}
+\usepackage{pdflscape}
+
+\newcommand{\RomanNumeralCaps}[1]
+    {\MakeUppercase{\romannumeral #1}}
+
+\makeindex
+
+\begin{document}
+    \include{res/sections/frontespizio}
+    \include{res/sections/registroModifiche}
+    \tableofcontents
+    \newpage
+    \listoffigures
+    \newpage
+    \listoftables
+    \newpage
+	\include{res/sections/introduction}
+	%\include{res/sections/rischi}
+	%\include{res/sections/modello}
+	%\include{res/sections/pianificazione}
+	%\include{res/sections/preventivo}
+	%\include{res/sections/consuntivo}
+	%\include{res/sections/attrischi}
+	%\appendix
+	%\include{res/sections/organigramma}
+\end{document}
