@@ -1,6 +1,123 @@
 \appendix
 \section{Risultati processo di verifica}
-In questa sezione vengono riportati i risultati del processo di verifica con relativi esiti e valutazioni. Ogni misurazione effettuata per ciascuna revisione di avanzamento viene opportunamente rappresentata sia in forma tabellare che mediante l'utilizzo di grafici che permettano il corretto monitoraggio nel tempo del prodotto e dei processi coinvolti. Ogni grafico che descrive l'andamento delle qualità viene accompagnato da una corrispondente valutazione da parte del team.
+In questa sezione vengono riportati i risultati del processo di verifica con relativi esiti e valutazioni. Ogni misurazione effettuata viene opportunamente rappresentata sia in forma tabellare che mediante l'utilizzo di grafici che permettano il corretto monitoraggio nel tempo del prodotto e dei processi coinvolti. Ogni grafico che descrive l'andamento delle qualità viene accompagnato da una corrispondente valutazione da parte del team.
+
+\subsection{Sviluppo}
+Di seguito le misure effettuate durante lo sviluppo software organizzate sotto forma tabellare e visualizzando il loro valore attuale. Essendo metriche calcolabili solo con un architettura consistente si è iniziato a calcolarle da dopo aver ultimato la fase di progettazione.
+\subsubsection{Analisi dei Requisiti: PERC\textsubscript{OS} e PERC\textsubscript{DS}}
+Si sono presi in esame i requisiti descritti nell'\textit{Analisi dei Requisiti\docs} e calcolato la percentuale di quelli soddisfatti attualmente dall'architettura, tramite la formula descritta nelle \textit{Norme di Progetto 2.4.0\docs}.\\
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Grafico PERC\_{OS} e PERC\_{DS}, Analisi dei requisiti},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=100,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percos.csv};
+			\addlegendentry{$percos$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percds.csv};
+			\addlegendentry{$percds$}
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
+I valori attuali sono:\\
+\\
+\begin{math}
+PERC_{OS}=56,76\% \\
+PERC_{DS}=41,67\%
+\end{math}
+
+\subsubsection{Progettazione}
+Una volta chiara l'architettura si è proceduto con il calcolo degli indici che misurano le dipendenze in entrata e in uscita alle unità. Di seguito la tabella che contiene questi valori per tutti i moduli della nostra architettura:
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Cli}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		EtherlessContract & 2 & 3 \\
+ 		EtherlessNetwork & 2 & 3 \\
+		EtherlessSession & 2 & 1 \\
+		NetworkFacade & 2 & 4 \\
+		NetworkUtils & 2 & 6 \\
+		Command & 7 & 3 \\
+		Commander & 0 & 2 \\
+		Signup & 0 & 1 \\
+		Login & 0 & 1 \\
+		Logout & 0 & 1 \\
+		Run & 0 & 2 \\
+		Find & 0 & 1 \\
+		Create & 0 & 2 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Smart}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		Etherless-Smart & 0 & 2 \\
+		Utils & 1 & 0 \\
+		FunctionStorage & 1 & 0 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Server}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		Runner & 0 & 2 \\
+		Configurator & 1 & 1 \\
+		Gateway & 2 & 0 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
 
 \subsection{Documentazione}
 Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 2.4.0\docs}, è stata stabilita una lista di controllo per la verifica dei documenti mediante "inspection". Viene di seguito riportata la tabella contenente i punti critici rilevati.
@@ -78,7 +195,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	% set the label style of the `xtick's
 	xticklabel=\year-\month-\day,
 	]
-	\addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/adr.csv};
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/adr.csv};
 	\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -118,7 +235,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
   % set the label style of the `xtick's
   xticklabel=\year-\month-\day,
   ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdp.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/pdp.csv};
   \end{axis}
 \end{tikzpicture} \\
 
@@ -155,7 +272,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year-\month-\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdq.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/pdq.csv};
   \end{axis}
 \end{tikzpicture} \\
 
@@ -193,7 +310,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year-\month-\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/ndp.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/ndp.csv};
   \end{axis}
 \end{tikzpicture} \\
 
@@ -230,7 +347,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year.\month.\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/sdf.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/sdf.csv};
   \end{axis}
 \end{tikzpicture} \\
 
@@ -268,7 +385,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year.\month.\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/glossario.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/glossario.csv};
   \end{axis}
 \end{tikzpicture} \\
 
