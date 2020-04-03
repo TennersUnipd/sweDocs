@@ -15,7 +15,7 @@ Use the command "login <privateKey> <password>"
 
 \subsection{Commands guide}
 \subsubsection{List}
-Use the command "list"
+Use the command "list" to view all the functions deployed to etherless-server. 
 \\aggiungere screen comando
 
 
@@ -24,11 +24,18 @@ Use the command "find <function name>"
 \\aggiungere screen comando
 
 \subsection{Deploy}
-Use the command "deploy <name> <description> <prototype> <cost> <file> <password>"
-\\aggiungere screen comando
+ "deploy <name> <description> <prototype> <cost> <file> <password>"\\
+\\
+The command allows the developer to deploy to etherless-server, the javascript function exported in file. js under the name myFunction. myFunction is also the handler of which the function will be available to the user once deployed. deploy is a synchronous command. Once launched, it returns only when the deploy is successful or an exception if it encounters some problems. 
+\\
+aggiungere screen comando
 
 \subsection{Run}
-use the command "run <functionName> <password> [parameters...]". \\aggiungere screen comando
+This command runs myFunction, on etherless-server, passing param1, ...paramN as parameters. The parameter order follows the order of the function signature. run is a synchronous command. Once launched it returns the result of the function or, in case the functions has some execution problems, an exception. 
+
+use the command "run <functionName> <password> [parameters...]". 
+\\
+aggiungere screen comando
 
 \subsection{Log}
 use the command "log"\\
