@@ -647,3 +647,49 @@ L'adozione delle metriche relative alla pianificazione è avvenuta a partire dal
 
 \paragraph{RP}
 L'investimento iniziale precedente al RR ha consentito di acquisire dei vantaggi in termini di tempo impiegato e costi. Ciò si può evincere analizzando soprattutto i valori di Schedule Variance (SV) e Cost Variance (CV) che certificano il procedere del progetto con una maggiore efficienza rispetto a quanto preventivato.
+
+\subsection{Manutenibilità}
+\subsubsection{Complessità Ciclomatica}
+Di seguito i risultati delle misurazioni della complessità ciclomatica.
+\begin{longtable}{|C{4.5cm}|C{3cm}|C{3cm}|C{3cm}|}
+	\arrayrulecolor{white}
+
+	\caption{Tabella dei valori per la Schedule Variance}\\
+	\hline
+	\rowcolor{header}
+
+	\textbf{Metrica} & \textbf{Valore minimo} & \textbf{Valore massimo} & \textbf{Valore medio}
+	\tabularnewline
+	\endfirsthead
+
+	Complessità ciclomatica	&	2 & 21 & 5.53 \\
+	\hline
+\end{longtable}
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Grafico PERC\_{OS} e PERC\_{DS}, Analisi dei requisiti},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=50,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/average.csv};
+			\addlegendentry{$average$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/max.csv};
+			\addlegendentry{$max$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/min.csv};
+			\addlegendentry{$min$}
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
