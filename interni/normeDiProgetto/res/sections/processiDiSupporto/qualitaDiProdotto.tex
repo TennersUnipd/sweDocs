@@ -60,19 +60,19 @@ all'ottenimento della qualità del prodotto. Le restanti proprietà sono descrit
 %\end{itemize}
 %\paragraph{Metriche}
 \begin{itemize}
-	\item \textbf{Indice di manutenibilità:} indica con un valore numerico, il grado di manutenibilità di un prodotto software, basandosi su metriche note di implementazione. Il calcolo avviene secondo la formula:\\\\
+	\item \textbf{Indice di complessità ciclomatica:} si propone di calcolare con un valore numerico la complessità del flusso di controllo di un programma:\\\\
 	\centerline{
 		\begin{math}
-		MI= 171-5.2*ln(HV)-0.23*(CC)-16.2*ln(LC)
+		v(G) = e-n+p
 		\end{math}
 	}
 	\\\\Dove:
 	\begin{itemize}
-		\item \textbf{HV:} rappresenta l'Halstead Volume;
-		\item \textbf{CC:} indica la complessità ciclomatica del codice;
-		\item \textbf{LC:} indica le linee di codice.
+		\item \textbf{e:} numero degli archi (nel flusso di controllo);
+		\item \textbf{n:} numero dei nodi (istruzioni o espressioni);
+		\item \textbf{p:} numero delle componenti collegate da un arco.
 	\end{itemize}
-	\item \textbf{Percentuale commenti:} indica, con un valore percentuale, la quantità di documentazione sotto forma di codice commentato nel prodotto software . Il calcolo avviene secondo la formula:\\\\
+	\item \textbf{Percentuale commenti:} indica, con un valore percentuale, la quantità di documentazione sotto forma di codice commentato nel prodotto software. Il calcolo avviene secondo la formula:\\\\
 	\centerline{
 		\begin{math}
 		PERC_{COD}=100*\frac{NR_{COD}}{NR}
