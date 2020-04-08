@@ -5,20 +5,24 @@ This component is made with TypeScript and complied upon execution in Javascript
 The interaction with the program happens through the command-line interface.
 At the start of the execution, the program instantiates every class and processes the request made by the user.
 To simplify the component, we divided it into two modules, Network Entities, and Command Entities.
-\subsection{Architecture overview}
-\begin{center}
-\includegraphics[scale = 0.1]{./res/img/Etherless-cli.png}
-\end{center}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./res/img/Etherless-cli.png}
+	\caption{Architecture overview diagram of Etherless-cli}
+\end{figure}
 
 \subsection{The Network Entities}
 We designed the architecture of NetworkEntities with interoperability and ease of use in mind.
 We based the architecture on a \textbf{facade design pattern} that should expose at the user all the functionalities
 of the network through the use of specific interfaces without binding to a specific library for communication
 with the Ethereum network.
-\subsection{Architecture overview}
-\begin{center}
-\includegraphics[scale = 0.15]{./res/img/NetworkFacade.png}
-\end{center}
+\subsubsection{Architecture overview}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./res/img/NetworkFacade.png}
+	\caption{Architecture overview diagram of Network Entities}
+\end{figure}
 The Network Entities module is made by:
 \begin{itemize}
     \item \textbf{NetworkFacade}: This is the class that defines the main object that the Command Entities interact with, and its the main responsible for communicating with the network;
@@ -37,13 +41,15 @@ allowing the developers to use any Ethereum network library, creating independen
 This architecture has one major downside, it is difficult to add functionalities without accessing the NetworkFacade and the etherlessContract; We should consider the use of the \textbf{command design pattern} to solve this issue.
 Another disadvantage is that if a new developer need a new functionality from any of the interfaces every implementation should reflect the new definition.
 
-\subsection{The Command Entities}
+\subsection{Command Entities}
 We base the CommandEntities component on the Command abstract class that is a kind of command design pattern, this means that to add any command to the CLI the developer needs to extend the Command class and implements the exec method.
 The Command's constructor exposes the dependency from NetworkFacade using this kind of approach lets us work with mocks and separate the two components of the CLI.
 \subsubsection{Architecture overview}
-\begin{center}
-\includegraphics[scale = 0.25]{./res/img/CommandEntities.png}
-\end{center}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{./res/img/CommandEntities.png}
+	\caption{Architecture overview diagram of Command Entities}
+\end{figure}
 The Command Entities modules is made by:
 \begin{itemize}
     \item \textbf{Command}: This is the main class that all *Command Class should extend because defines the base behavior of every command class;
