@@ -1,50 +1,77 @@
-\section{Setup and run}
+\section{Setup}
+\subsection{General Requirements}
+\subsubsection{Hardware requirements}
+The only hardware required is to own a CPU newer than a Pentium 4 with SSE2 instruction set.
+\subsubsection{Software requirments}
+This application can run on GNU/Linux on any distribution newer than Ubuntu 14.04, MacOs from 10.10 onward and Windows from 7 and onward;
+Other than an operative system this application needs:
+\begin{itemize}
+    \item \textbf{Node.js}: to install it, the user can refer to the official web page nodejs.org for installation we recommend the LTS version;
+    \item \textbf{npm}: npm is the package manager that comes with Node.Js;
+    \item \textbf{TypeScript}: to install TypeScript the user needs to run npm install typescript -g, the minimum version required is the 3.6.5;
+    \item \textbf{ts-node}: to install ts-node the user needs need to run npm install ts-node -g, this operation will install globally the command ts-node;
+\end{itemize}
+
+For simplicity the user can install multiple packages in one command
+
+\begin{center}
+    \code{npm install typescript ts-node -g}
+\end{center}
+
 \subsection{Etherless-cli}
 \subsubsection{Requirements}
-To run correctly this component you need to install:
-\begin{itemize}
-    \item \textbf{Node.js}: to install it, you can refer to the official web page nodejs.org we recommend the LTS version;
-    \item \textbf{npm}: npm is the package manager that comes with Node.Js;
-    \item \textbf{TypeScript}: to install TypeScript you need to run npm install typescript -g, the minimum version required is the 3.6.5;
-    \item \textbf{ts-node}: to install ts-node you need to run npm install ts-node -g, this operation will install globally the command ts-node;
-    \item \textbf{mocha} \textit{optional, needed only in test environment}: to install mocha you need to run npm install mocha -g, this operation will install globally the command mocha;
-\end{itemize}
+To develop with the unit test the user needs to install \textbf{mocha}
+\begin{center}
+    \code{npm install mocha -g}
+\end{center}
+This command will install mocha functionality globally.
 
 \subsubsection{Setup}
-To install Etherless-cli is sufficient to run npm install --dotenv-extended.
-Before to start using the software you need to register an Ethereum account or login with an already existing one, after the that you need to add funds to your wallet.
-You can do that by importing the new account in MetaMask.
+To install Etherless-cli is sufficient to start the installation process
+
+\begin{center}
+    \code{run npm install --dotenv-extended}
+\end{center} 
+Before to start using the software the user needs need to register an Ethereum account or login with an already existing one, after the that the user needs to add funds to your wallet.
+The user can do that by importing the new account in MetaMask.
+
 \subsubsection{Run}
 To run this program from the command line interface positioning on the main program folder
-and type ts-node . <<command>> where <<command>> is the command that you want to run.
+and type ts-node . <<command>> where <<command>> is the command that the user wants to run.
 \subsection{Etherless-smart}
 \subsubsection{Requirements}
-To run correctly this component you need to install:
+To run correctly this component the user needs to install:
 \begin{itemize}
-    \item \textbf{Truffle}: to install Truffle you need to run npm install Truffle -g, the minimum version required is the 3.6.5;
-    \item \textbf{Ganache}: Ganache is available 
-    \item \textbf{TypeScript}: to install TypeScript you need to run npm with elevate privileges and run npm install typescript -g, the minimun version required is the 3.6.5;
-    \item \textbf{ts-node}: to install ts-node you need to run npm with elevate privileges and run npm install ts-node -g, this operation will install globally the command ts-node;
-    \item \textbf{mocha} \textit{optional, needed only in test environment}: to install mocha you need to run npm with elevate privileges and run npm install mocha -g, this operation will install globally the command mocha;
+    \item \textbf{Truffle}: to install Truffle the user needs to run \code{npm install Truffle -g};
+    \item \textbf{Ganache}: Ganache is available in two variants CLI or GUI, please refer the official web page for the installation;
 \end{itemize}
 
 \subsubsection{Setup}
-Before beginning the installation process you need three different keys: an Etherscan API key, and Infura API key and a private key from your Ethereum account.
-After obtain the credential you need to edit the truffle-config.js file replacing the fields at the top with your own.
-Now you are ready to install Etherless-smart in a production like environment, running the following commands from the component folder will install your smart application in the chosen network.
-
+Before beginning the installation process the user needs three different keys: an Etherscan API
+key, and Infura API key and a private key from an Ethereum account with some founds.\\
+After obtaining the credentials the user needs to edit the truffle-config.js file replacing the fields at the top
+with their own. \\
+To deploy Etherless-smart in a production-like environment
+by running the following commands from the component folder will install in the chosen network.
 \begin{itemize}
-    \item npm install --dotenv-extended
-    \item truffle build
-    \item truffle deploy --network test
-    \item truffle run verify EtherlessSmart --network test
+    \item \code{npm install --dotenv-extended} : installs the package with all its dependencies;
+    \item \code{truffle build}: builds the smart contract to obtain the ABI file that is the Smart Contract representation;
+    \item \code{truffle deploy --network test}: deploys the compiled smart contract to the Ropsten test network;
+    \item \code{truffle run verify EtherlessSmart --network test}: confirms the Contract, this passage is needed for Etherscan to confirm the source code of the application;
 \end{itemize}
-After the deploy is a good practice to save the contract address somewhere safe, that will be needed when you want to retrieve the contract later.
+After the deploy is a good practice to save the contract address somewhere safe, that will be needed to retrieve the contract.
 \subsubsection{Run}
-After the deploy your contract will be always available and runnable through a web3 application like Remix with MetaMask injection.
+After the deploy, the contract will be always available and runnable through a web3 application like Remix with MetaMask injection.
 \subsection{Etherless-Server}
+To run correctly this component the user needs to install:
+\begin{itemize}
+    \item \textbf{serverless}: to install serverless the user needs to run \code{npm install serverless -g}, this operation will install globally the commands serverless and sls;
+    \item \textbf{mocha}: to install mocha the user needs to run \code{npm install mocha -g}, this operation will install globally the command mocha;
+\end{itemize}
 \subsubsection{Setup}
-Before beginning the installation process you need to install the aws credential on your machine, or you can register on Serverless framework website that will handle the deploy and permission management for you.
-If you completed the setup correctly running serverless deploy will upload the application to you lambda account and will be executable from the web.
+Before beginning the installation process the user needs to install the AWS credential on their
+machine and register on the Serverless framework website that will handle the deploy and permission
+management. After the registration on AWS and serverless to complete the setup by running
+npm install on your local machine, when completed executing SLS deploy will upload to AWS.
 \subsubsection{Run}
-If you completed the setup correctly running serverless deploy will upload the application to you lambda account and will be executable from the web.
+If the user completed the setup correctly run \code{serverless deploy} will upload the application to the lambda account and will be executable from the web.
