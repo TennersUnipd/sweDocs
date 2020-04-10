@@ -25,7 +25,7 @@ Il numero di versione è rappresentato nel formato:\\\\
 
 
 \begin{itemize}
-  \item \textbf{Incremento in X}: l'incremento in X avviene quando le modifiche del componente soggetto all'attività, sono molto significative e non retrocompatibili;
+  \item \textbf{Incremento in X}: l'incremento in X avviene quando le modifiche del componente soggetto all'attività, sono molto significative o non retrocompatibili;
   \item \textbf{Incremento in Y}: l'incremento in Y avviene quando c'è un'aggiunta
   di una funzionalità o, in caso di un documento, l'aggiunta di un capitolo. In questo caso l'aggiunta di funzionalità avviene in maniera retrocompatibile;
   \item \textbf{Incremento in Z}: l'incremento in Z avviene per modifiche minori,
@@ -34,8 +34,12 @@ Il numero di versione è rappresentato nel formato:\\\\
   \begin{itemize}
   	\item \textbf{TBA (To Be Approved):} se sottoposto a opportuna verifica ma mancante di approvazione.
   \end{itemize}
-  In caso di versione approvata, il TAG viene rimosso.
+
 \end{itemize}
+  In caso di versione approvata, il TAG viene rimosso.
+ \noindent Il numero di versione viene applicato al prodotto finale in modo ricorsivo. Questo comporta che l'aumento della versione su X di un sottoprodotto, comporta l'aumento in Y della versione del prodotto. Ad esempio un incremento in X di un documento comporta un incremento in Y del prodotto finale, ad eccezione del rilascio dell'applicazione che corrisponde ad un incremento in X del prodotto complessivo.
+
+
 
 
 \subparagraph*{Gestione dei repository}
