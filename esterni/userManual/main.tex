@@ -1,0 +1,25 @@
+\documentclass[a4paper]{article}
+\input{config/config.tex}
+\usepackage{pdflscape}
+
+\newcommand{\RomanNumeralCaps}[1]
+    {\MakeUppercase{\romannumeral #1}}
+\makeindex
+
+\begin{document}
+    \include{res/sections/coverPage}
+    \include{res/sections/changelog}
+    \tableofcontents
+    \newpage
+    \listoffigures
+    \newpage
+    \listoftables
+    \newpage
+	\include{res/sections/introduction}
+	\include{res/sections/installationAndAccessToTheApplication}
+	\include{res/sections/applicationFunctionality}
+	\include{res/sections/troubleshooting}
+	\include{res/sections/problematicReports}
+	\appendix
+	\include{res/sections/glossary}
+\end{document}
