@@ -401,7 +401,31 @@ Gli esiti delle misurazioni ottenute in seguito alle correzioni segnalate in RR 
 
 \noindent In generale è visibile un lieve aumento della qualità della documentazione ad eccezione del \textit{Piano di Progetto 2.2.1\docs}.
 
+\subsection{Verifica}
+\subsubsection{Code Coverage}
 
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Grafico per Code Coverage},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=100,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/codecoverage.csv};
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
 
 \newpage
 \subsection{Pianificazione}
