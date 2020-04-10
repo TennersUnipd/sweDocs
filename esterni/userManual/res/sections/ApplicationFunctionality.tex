@@ -15,7 +15,7 @@ In order to use the functionality of the Etherless application, the user must be
 To do it, you have to use the next command and replace <password>  with a password of your choice.
 \\
 \centerline{\code{signup <password>}}\\
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\textwidth]{res/img/Screenshot_signup.png}
 		\caption{Signup command}
@@ -32,7 +32,7 @@ The system proceeds to register an account and an \textit{Ethereum\glos} wallet 
 \subsubsection{Login}
 The developer can decide to use an account already existing typing the \textit{private-key\glos} of your own \textit{Ethereum\glos} account already existing and the password chosen.\\\\
 \centerline{\code{login <privateKey> <password>}}
-\begin{figure}
+\begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=\textwidth]{res/img/Screenshot_login.png}
 	\caption{Login command}
@@ -43,8 +43,8 @@ The developer can decide to use an account already existing typing the \textit{p
 
 \subsubsection{Logout}
 The user can also disconnect his \textit{Ethereum\glo} account from the \textit{Etherless} application using the command "logout".\\\\
-%\centerline{\code{logout}}
-\begin{figure}
+\centerline{\code{logout}}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{res/img/Screenshot_logout.png}
 	\caption{Logout command}
@@ -55,8 +55,8 @@ The user can also disconnect his \textit{Ethereum\glo} account from the \textit{
 \subsection{Commands guide}
 \subsubsection{List}
 Use the command "list" to view all the available functions deployed\glo to \textit{etherless-server}.\\\\
-%\centerline {\code{list}}
-\begin{figure}
+\centerline {\code{list}}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{res/img/Screenshot_list.jpg}
 	\caption{List command}
@@ -87,22 +87,20 @@ Use the command "list" to view all the available functions deployed\glo to \text
 %aggiungere screen comando
 
 \subsubsection{Run}
-This command runs myFunction, on \textit{etherless-server}, passing param1, ...paramN as parameters. The parameter order follows the order of the function signature. Run is a synchronous command. Once launched it returns the result of the function or, in case the functions has some execution problems, an exception.\\\\
+This command runs myFunction, on \textit{etherless-server}, passing param1, ...paramN as parameters. The parameter order follows the order of the function signature. Run is a synchronous command. Once launched it returns the result of the function or, in case the functions has some execution problems, an exception.\\
 \centerline{\code{run <functionName> <password> [parameters...]}}
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{res/img/Screenshot_run.png}
 	\caption{Run command}
 \end{figure}
-\\
-\\
 
 \subsubsection{Deploy\glo}
 The command allows the user to deploy\glo to etherless-server the JavaScript function exported in \textit{file.js} under the name "myFunction".\\ 
 "myFunction" is also the handler of which the function will be available to the user once deployed. Deploy\glo is a synchronous command. Once launched, it returns only when the deploy\glo is successful or an exception if it encounters some problems.\\
 \\
 \centerline{\code{deploy <name> <description> <prototype> <cost> <file> <password>}}
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{res/img/Screenshot_deploy.png}
 	\caption{Deploy command}
