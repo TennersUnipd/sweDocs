@@ -18,3 +18,67 @@ Il modello incrementale consiste nella realizzazione del prodotto finale per inc
 	\item Un approccio predittivo, differentemente da quello adattivo attuato dal modello incrementale, consentirebbe una stima più precisa di tempi e costi;
 	\item Necessita che l'intero sistema sia preventivamente definito e scomposto in modo tale da poterlo costruire incrementalmente.
 \end{itemize}
+\subsection{Incrementi previsti}
+Di seguito tutti gli incrementi previsti. Ricordiamo che ogni singolo incremento e sotto-incremento viene verificato. Inoltre ogni incremento viene misurato e i risultati inseriti nel relativo cruscotto del \textit{Piano di qualifica}\docs.
+\subsubsection{Progettazione architetturale}
+\begin{itemize}
+  \item \textbf{\RomanNumeralCaps{1} Incremento:} correzione e integrazione documenti in base alle conoscenze acquisite durante l'\textit{Analisi dei requisiti}\docs;
+  \item \textbf{\RomanNumeralCaps{2} Incremento:} realizzazione del primo \textit{Proof Of Concept}\glo (\textit{smart-contract}\glos);
+  \item \textbf{\RomanNumeralCaps{3} Incremento:} realizzazione del secondo \textit{Proof Of Concept}\glo (comunicazione tra client e server);
+  \item \textbf{\RomanNumeralCaps{4} Incremento:} realizzazione del terzo \textit{Proof Of Concept}\glo (\textit{serverless}\glos);
+  \item \textbf{\RomanNumeralCaps{5} Incremento:} aggiornamento dei documenti;
+  \item \textbf{\RomanNumeralCaps{6} Incremento:} presentazione RP.
+\end{itemize}
+\subsubsection{Progettazione di dettaglio e codifica}
+\begin{itemize}
+	\item \textbf{\RomanNumeralCaps{1} Incremento:} correzione e integrazione documenti in base alle conoscenze acquisite durante la progettazione architetturale. Nel seguente ordine:
+  \begin{itemize}
+    \item \textit{Norme di Progetto}\docs;
+    \item \textit{Analisi dei requisiti}\docs;
+    \item \textit{Piano di qualifica}\docs;
+    \item \textit{Piano di progetto}\docs;
+    \item \textit{Glossario}\docs.
+  \end{itemize}
+	\item \textbf{\RomanNumeralCaps{2} Incremento:} progettazione del sistema in vista della \textit{Product Baseline}\glo e stesura dell'allegato tecnico comprensivo dei diagrammi adottati;
+	\item \textbf{\RomanNumeralCaps{3} Incremento:} implementazione delle funzionalità della componente etherless-cli.
+  Vengono implementati in particolare:
+  \begin{itemize}
+    \item login/logout: comando che permette di autenticarsi/disconnettersi dalla rete \textit{ethereum}\glos;
+    \item registrazione: comando che permette di registrarsi sulla rete \textit{ethereum}\glo e ottenere la propria private key;
+    \item list: comando che permette di visualizzare la lista delle funzioni disponibili su Etherless e le informazioni riguardanti ciascuna di esse;
+    \item run: comando che permette di eseguire una delle funzioni disponibili;
+    \item create: comando che permette all'utente di creare una funzione in JavaScript e caricarla nel sistema etherless;
+    \item log:comando che permette all'utente di visualizzare la lista delle funzioni da lui eseguite;
+    \item find: comando che permette di ricercare per nome i dettagli di una funzione desiderata.
+  \end{itemize}
+	\item \textbf{\RomanNumeralCaps{4} Incremento:} sviluppo componenti etherless-smart e etherless-server, comprensivi di test di unità e di integrazione;
+  \begin{itemize}
+    \item Codifica etherless-smart;
+    \item Codifica etherless-server;
+    \item Relativi test di unità;
+    \item Test di integrazione.
+  \end{itemize}
+	\item \textbf{\RomanNumeralCaps{5} Incremento:} aggiornamento documenti e consuntivo di periodo;
+  \begin{itemize}
+    \item Redazione manuale utente;
+    \item Valutazione dei rischi nel consuntivo di periodo del \textit{Piano di progetto}\docs.
+  \end{itemize}
+	\item \textbf{\RomanNumeralCaps{6} Incremento:} presentazione RQ.
+\end{itemize}
+\subsubsection{Validazione e collaudo }
+\begin{itemize}
+  \item \textbf{\RomanNumeralCaps{1} Incremento:} correzione e integrazione documenti in base alle conoscenze acquisite durante la progettazione di dettaglio e codifica;
+  \begin{itemize}
+    \item \textit{Norme di Progetto}\docs;
+    \item \textit{Product Baseline}\glo e allegato tecnico;
+    \item \textit{Analisi dei requisiti}\docs;
+    \item \textit{Piano di qualifica}\docs;
+    \item \textit{Piano di progetto}\docs;
+    \item \textit{Glossario}\docs.
+  \end{itemize}
+	\item \textbf{\RomanNumeralCaps{2} Incremento:} implementazione dei test di sistema;
+	\item \textbf{\RomanNumeralCaps{3} Incremento:} redazione della documentazione relativa al codice;
+	\item \textbf{\RomanNumeralCaps{4} Incremento:} realizzazione dei test di accettazione;
+	\item \textbf{\RomanNumeralCaps{5} Incremento:} aggiornamento dei documenti da presentare in ingresso alla revisione di accettazione;
+	\item \textbf{\RomanNumeralCaps{6} Incremento:} presentazione RA.
+\end{itemize}
