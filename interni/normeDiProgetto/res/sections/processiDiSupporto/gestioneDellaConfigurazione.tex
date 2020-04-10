@@ -37,9 +37,23 @@ Il numero di versione è rappresentato nel formato:\\\\
 \end{itemize}
 %  In caso di versione approvata, il TAG viene rimosso.
  \noindent Il numero di versione è applicato a ogni sottoprodotto in maniera indipendente.
- Viene riallineato a ogni rilascio del prodotto intero, ad esempio dopo un incremento, selezionando il numero di versione maggiore da uno dei sottoprodotti.
- In questo modo si raggiunge una consistenza generale sulla versione attuale ad alto livello e un sistema di versionamento più elastico
- in prospettiva di aderire meglio al modello incrementale.
+ Esso viene poi riallineato a ogni rilascio del prodotto intero, ad esempio dopo un incremento, selezionando il numero di versione maggiore tra i suoi sottoprodotti.
+ In questo modo sarà possibile avere coesione tra le diverse "componenti" e maggiore adesione al modello incrementale, stabilendo una correlazione tra i sotto-prodotti e il prodotto nella sua interezza.
+ 
+
+\noindent Di seguito viene riportato un esempio per chiarire la relazione, in termini di versionamento, tra sotto-prodotto e prodotto complessivo:
+\begin{enumerate}
+	\item Il numero di versione dei documenti si può trovare in uno stato eterogeneo:
+	\begin{itemize}
+		\item \textbf{PdP:} v.2.1.2;
+		\item \textbf{PdQ:} v.2.4.0;
+		\item \textbf{NdP:} v.2.7.0;
+		\item\textbf{AdR:} v.2.2.3;
+	\end{itemize}
+	\item I prodotti delle attività (nel caso specifico i documenti), vengono allineati tutti alla versione maggiore fino a quel momento (v.2.7.0) rilevata prima di un rilascio;
+	\item Verrà infine valutato il versionamento relativo alla parte software e, in maniera analoga, verrà stabilito il numero di rilascio effettivo del prodotto intero. 
+\end{enumerate}
+
 
 
 
