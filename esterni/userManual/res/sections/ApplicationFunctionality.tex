@@ -14,11 +14,11 @@ To have access to the application, use the following  command to view the list o
 In order to use the functionality of the Etherless application, the user must be registered into the platform.\\
 To do it, you have to use the next command and replace <password>  with a password of your choice.
 \\
-\centerline{\code{signup <password>}}
+\centerline{\code{signup <password>}}\\
 	\begin{figure}
 		\centering
-		\includegraphics[width=\textwidth]{res/img/Screenshot_signup.png/}
-		\caption{Sign up command}
+		\includegraphics[width=\textwidth]{res/img/Screenshot_signup.png}
+		\caption{Signup command}
 	\end{figure}\\
 \\\\
 The system proceeds to register an account and an \textit{Ethereum\glos} wallet  and then returns two values: 
@@ -33,19 +33,20 @@ The system proceeds to register an account and an \textit{Ethereum\glos} wallet 
 The developer can decide to use an account already existing typing the \textit{private-key\glos} of your own \textit{Ethereum\glos} account already existing and the password chosen.\\\\
 \centerline{\code{login <privateKey> <password>}}
 \begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{res/img/Screenshot_login.png/}
+	\begin{center}
+	\includegraphics[width=\textwidth]{res/img/Screenshot_login.png}
 	\caption{Login command}
+	\end{center}
 \end{figure}
 \\
 \\
 
 \subsubsection{Logout}
 The user can also disconnect his \textit{Ethereum\glo} account from the \textit{Etherless} application using the command "logout".\\\\
-\centerline{\code{logout}}
+%\centerline{\code{logout}}
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{res/img/Screenshot_logout.png/}
+	\includegraphics[width=\textwidth]{res/img/Screenshot_logout.png}
 	\caption{Logout command}
 \end{figure}
 \\
@@ -54,7 +55,7 @@ The user can also disconnect his \textit{Ethereum\glo} account from the \textit{
 \subsection{Commands guide}
 \subsubsection{List}
 Use the command "list" to view all the available functions deployed\glo to \textit{etherless-server}.\\\\
-\centerline {\code{list}}
+%\centerline {\code{list}}
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{res/img/Screenshot_list.jpg}
@@ -87,10 +88,10 @@ Use the command "list" to view all the available functions deployed\glo to \text
 
 \subsubsection{Run}
 This command runs myFunction, on \textit{etherless-server}, passing param1, ...paramN as parameters. The parameter order follows the order of the function signature. Run is a synchronous command. Once launched it returns the result of the function or, in case the functions has some execution problems, an exception.\\\\
-\centerline{\code{run <functionName> <password> [parameters...]}}\\
+\centerline{\code{run <functionName> <password> [parameters...]}}
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{res/img/Screenshot_run.jpg}
+	\includegraphics[width=\textwidth]{res/img/Screenshot_run.png}
 	\caption{Run command}
 \end{figure}
 \\
@@ -103,11 +104,10 @@ The command allows the user to deploy\glo to etherless-server the JavaScript fun
 \centerline{\code{deploy <name> <description> <prototype> <cost> <file> <password>}}
 \begin{figure}
 	\centering
-	\includegraphics[width=\textwidth]{res/img/Screenshot_deploy.jpg}
+	\includegraphics[width=\textwidth]{res/img/Screenshot_deploy.png}
 	\caption{Deploy command}
 \end{figure}
-\\
-%aggiungere screen comando
+
 
 
 
