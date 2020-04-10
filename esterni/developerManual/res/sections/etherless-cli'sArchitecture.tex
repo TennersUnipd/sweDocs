@@ -40,6 +40,40 @@ allowing the developers to use any Ethereum network library, creating independen
 \subsubsection{Cons}
 This architecture has one major downside, it is difficult to add functionalities without accessing the NetworkFacade and the etherlessContract; We should consider the use of the \textbf{command design pattern} to solve this issue.
 Another disadvantage is that if a new developer need a new functionality from any of the interfaces every implementation should reflect the new definition.
+\subsubsection{Method}
+\paragraph{NetworkFacade}
+\begin{itemize}
+    \item \textbf{signup}: provides the functionality or registration to the service;
+    \item \textbf{logon}: provides the logon service; 
+    \item \textbf{logout}: discards the user credential;
+    \item \textbf{getListOfFunctions}: returns the list of all available contract's methods;
+    \item \textbf{callFunction}: calls the methods from the Ethereum component, all requests to the smart contract goes through this method;
+    \item \textbf{getListOfFunctions}: retrieves the list of the available Contract's methods;
+    \item \textbf{createFunction}: uploads on the AWS endpoint the required function and register it on the eth network;
+    \item \textbf{getAllLoadedFunction}: retrieves all the functions loaded on the smart contract;
+    \item \textbf{getFunctionDetails}: retrieves from the smart contract the details about the requested function;
+    \item \textbf{getCostOfFunction}: retrieves from the smart contract the cost of a specific function loaded on the service;
+    \item \textbf{runFunction}:runs a remote function;
+    \item \textbf{disconnect}: disconnects the application from the network.
+\end{itemize}
+\paragraph{SessionInterface}
+\begin{itemize}
+    \item \textbf{signup}: provides the signup functionality;
+    \item \textbf{logon}: provides the logon functionality using already existing credentials;
+    \item \textbf{logout}: discards the credentials;
+    \item \textbf{signTransaction}: signs the provided transaction;
+    \item \textbf{isUserSignedIn}: checks that the user is logged;
+    \item \textbf{getUserAddress}: retrieves the user address;
+    \item \textbf{getBalance}:retrieves the balance from the account.
+\end{itemize}
+\paragraph{ContractInterface}
+\begin{itemize}
+    \item \textbf{getListOfFunctions}: retrieves all the available contract's methods;
+    \item \textbf{getArgumentsOfFunction}: returns all the parameter required to run the requested function;
+    \item \textbf{isTheFunctionPayable}: 
+\end{itemize}
+
+
 
 \subsection{Command Entities}
 We base the CommandEntities component on the Command abstract class that is a kind of command design pattern, this means that to add any command to the CLI the developer needs to extend the Command class and implements the exec method.
