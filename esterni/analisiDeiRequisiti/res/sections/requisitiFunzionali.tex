@@ -25,10 +25,12 @@
 %	R1F2.1.1 &  L'utente ha la possibilità di inserire il proprio address per l'autenticazione. & \centering Interna \\ UC5.1 \tabularnewline
 
 	R1F2.1.1 &  L'utente ha la possibilità di inserire la propria \textit{private key\glo} per l'autenticazione. & \centering Interna \\ UC5.1 \tabularnewline
+	
+	R1F2.1.2 & L'utente ha la possibilità di inserire la password per l'autenticazione & \centering Interna \\ UC5.2 \tabularnewline
 
-	R1F2.1.2 &  Il sistema dovrà restituire un errore in caso di inserimento di credenziali errate. & \centering Interna \\ UC5.2 \tabularnewline
+	R1F2.1.3 &  Il sistema dovrà restituire un errore in caso di inserimento di credenziali errate. & \centering Interna \\ UC22 \tabularnewline
 
-	R1F2.1.3 &  Il sistema dovrà restituire un messaggio di autenticazione riuscita nel caso in cui esista nel network \textit{Ethereum\glo} un utente con le credenziali inserite. & \centering Interna \\ UC5 \tabularnewline
+	R1F2.1.4 &  Il sistema dovrà restituire un messaggio di autenticazione riuscita nel caso in cui esista nel network \textit{Ethereum\glo} un utente con le credenziali inserite. & \centering Interna \\ UC5 \tabularnewline
 
 	R2F2.2.1 &  L'utente può eseguire automaticamente l'accesso tramite un file salvato sul suo dispositivo durante la prima autenticazione o registrazione mediante \textit{Etherless}.  & \centering Interna \\ UC6 \tabularnewline
 
@@ -69,9 +71,7 @@
 
 	R1F7.2 &  Per eseguire una funzione l'utente deve inserire il valore dei parametri richiesti.  & \centering Interna \\ UC10.2 \tabularnewline
 	
-	R1F
-	
-	7.3 & Per eseguire una funzione l'utente deve inserire la propria password. & \centering Interna \\ UC10.5 \tabularnewline
+	R1F7.3 & Per eseguire una funzione l'utente deve inserire la propria password. & \centering Interna \\ UC10.5 \tabularnewline
 
 	R1F7.1.1 &  Il sistema deve restituire un messaggio di errore nel caso in cui il nome inserito per il comando "run" non corrisponda ad alcuna funzione presente su \textit{Etherless}.  & \centering Interna \\ UC10.3 \tabularnewline
 
@@ -121,11 +121,12 @@
 
 	R1F10.2 &  L'utente eseguirà il \textit{deploy\glo} della sua funzione inserendo il nome con il quale la si vuole rendere disponibile a tutti gli utenti. & \centering Interna \\ UC17.3 \tabularnewline
 
-	R1F10.1.1 &  Il sistema dovrà restituire un messaggio di errore nel caso in cui il nome della funzione che si sta tentando di condividere sia già in uso. & \centering Interna \\ UC17.2 \tabularnewline
 
-	R1F10.1.2 &  Il sistema dovrà restituire un messaggio di errore nel caso in cui il percorso specificato non fosse corretto (il file di riferimento dovrà avere un'estensione .js). & \centering Interna \\ UC17.4 \tabularnewline
+	R1F10.1.1 &  Il sistema dovrà restituire un messaggio di errore nel caso in cui il percorso specificato non fosse corretto (il file di riferimento dovrà avere un'estensione .js). & \centering Interna \\ UC17.2 \tabularnewline
+	
+	R1F10.2.1 &  Il sistema dovrà restituire un messaggio di errore nel caso in cui il nome della funzione che si sta tentando di condividere sia già in uso. & \centering Interna \\ UC17.4 \tabularnewline
 
-	R1F10.1.3 &  Il sistema dovrà, in mancanza di errori nell'esecuzione del comando \textit{"deploy\glos"}, restituire un messaggio di avvenuta condivisione. & \centering Interna \\ UC17 \tabularnewline
+	R1F10.3 &  Il sistema dovrà, in mancanza di errori nell'esecuzione del comando \textit{"deploy\glos"}, restituire un messaggio di avvenuta condivisione. & \centering Interna \\ UC17 \tabularnewline
 
 	R1F11 &  Un utente sviluppatore ha la possibilità di modificare delle informazioni riguardanti una sua funzione con il comando "set". & \centering Interna \\ UC18 \tabularnewline
 
