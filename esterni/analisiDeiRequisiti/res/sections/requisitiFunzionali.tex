@@ -5,157 +5,157 @@
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|c|p{8cm}|C{2cm}|}
 	\arrayrulecolor{white}
-	
+
 	\caption{Tabella riassuntiva dei requisiti funzionali}\\
-	
+
 	\rowcolor{header}
-	
+
 	\textbf{Requisito} & \centering{\textbf{Descrizione}} & \textbf{Fonti}\\
-	
+
 	\endfirsthead
-	
+
 	R1F1 & Un utente ha la possibilità di visualizzare una guida introduttiva contenente la lista dei comandi eseguibili e il loro funzionamento. &  \centering Interna \\ UC1 \tabularnewline
-	
+
 	R1F2 & Un utente ha la possibilità di autenticarsi a \textit{Etherless} mediante un utenza \textit{Ethereum\glos}. & Capitolato \\
-	
+
 	R1F2.1 & L'utente si può autenticare con il login manuale mediante l'inserimento del comando "login" seguito dalle credenziali che lo identificano univocamente all'interno della rete \textit{Ethereum\glos}.  & \centering Interna \\ UC5 \tabularnewline
-	
+
 	R2F2.2 & L'utente si può autenticare mediante login automatico. & \centering Interna \\ UC6 \tabularnewline
-	
-	R1F2.1.1 &  L'utente ha la possibilità di inserire il proprio address per l'autenticazione. & \centering Interna \\ UC5.1 \tabularnewline
-	
-	R1F2.1.2 &  L'utente ha la possibilità di inserire la propria \textit{private key\glo} per l'autenticazione. & \centering Interna \\ UC5.2 \tabularnewline
-	
-	R1F2.1.3 &  Il sistema dovrà restituire un errore in caso di inserimento di credenziali errate. & \centering Interna \\ UC5.3 \tabularnewline
-	
-	R1F2.1.4 &  Il sistema dovrà restituire un messaggio di autenticazione riuscita nel caso in cui esista nel network \textit{Ethereum\glo} un utente con le credenziali inserite. & \centering Interna \\ UC5 \tabularnewline
-	
+
+%	R1F2.1.1 &  L'utente ha la possibilità di inserire il proprio address per l'autenticazione. & \centering Interna \\ UC5.1 \tabularnewline
+
+	R1F2.1.1 &  L'utente ha la possibilità di inserire la propria \textit{private key\glo} per l'autenticazione. & \centering Interna \\ UC5.1 \tabularnewline
+
+	R1F2.1.2 &  Il sistema dovrà restituire un errore in caso di inserimento di credenziali errate. & \centering Interna \\ UC5.2 \tabularnewline
+
+	R1F2.1.3 &  Il sistema dovrà restituire un messaggio di autenticazione riuscita nel caso in cui esista nel network \textit{Ethereum\glo} un utente con le credenziali inserite. & \centering Interna \\ UC5 \tabularnewline
+
 	R2F2.2.1 &  L'utente può eseguire automaticamente l'accesso tramite un file salvato sul suo dispositivo durante la prima autenticazione o registrazione mediante \textit{Etherless}.  & \centering Interna \\ UC6 \tabularnewline
-	
+
 	R1F3 &  L'utente ha la possibilità di registrarsi su \textit{Etherless}.  & Capitolato \\
 
 	R1F3.1 &  La registrazione su \textit{Etherless} avverrà richiedendo una coppia univoca di address - \textit{private key\glo} alla rete \textit{Ethereum\glos}.  & Capitolato \\
-	
-	R1F3.1.1 &  A seguito dell'avvenuta richiesta di registrazione al network \textit{Etherium\glo} verrà visualizzato l'address tramite \textit{CLI\glos}.  & \centering Interna \\ UC4.1 \tabularnewline	
-	
-	R1F3.1.2 &  A seguito dell'avvenuta richiesta di registrazione al network \textit{Etherium\glo} verrà visualizzata la \textit{private key\glo} tramite \textit{CLI\glos}.  & \centering Interna \\ UC4.2 \tabularnewline	
-	
+
+	R1F3.1.1 &  A seguito dell'avvenuta richiesta di registrazione al network \textit{Etherium\glo} verrà visualizzato l'address tramite \textit{CLI\glos}.  & \centering Interna \\ UC4.1 \tabularnewline
+
+	R1F3.1.2 &  A seguito dell'avvenuta richiesta di registrazione al network \textit{Etherium\glo} verrà visualizzata la \textit{private key\glo} tramite \textit{CLI\glos}.  & \centering Interna \\ UC4.2 \tabularnewline
+
 	R2F4 &  Ogni qualvolta l'utente effettuerà l'accesso manuale o la registrazione al sistema, verrà salvato un file contenente le credenziali di accesso per permettere l'autenticazione automatica durante le successive esecuzioni della applicazione.  & Interna \\
-	
+
 	R2F5 &  Un utente autenticato può eseguire il logout richiedendo al sistema di eliminare il file di autenticazione salvato sulla propria macchina.  & \centering Interna \\ UC8 \tabularnewline
-	
+
 	R2F5.1 &  Dovrà essere restituito all'utente un messaggio in caso di logout eseguito con successo.  & \centering Interna \\ UC8 \tabularnewline
-	
+
 	R1F6 &  Un utente autenticato può ricercare una funzione caricata da un altro utente sviluppatore su \textit{Etherless}.  & Interna \\
-	
+
 	R1F6.1 &  La ricerca della funzione viene effettuata inserendo il comando "find" seguito dal nome della funzione stessa. & \centering Interna \\ UC9.1 \tabularnewline
-	
+
 	R1F6.2 &  La ricerca della funzione permetterà di visualizzare sull'\textit{Etherless-cli} alcune informazioni riguardanti la stessa.  & \centering Interna \\ UC9.2 \tabularnewline
-	
+
 	R1F6.2.1 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} il costo della funzione.  & \centering Interna \\ UC9.2.2 \tabularnewline
 %	 il nome della funzione, la sua firma, una descrizione riassuntiva delle sue funzionalità, il costo e l'autore
 
-	R2F6.2.2 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} la descrizione della funzione.  & \centering Interna \\ UC9.2.3 \tabularnewline	
-	
+	R2F6.2.2 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} la descrizione della funzione.  & \centering Interna \\ UC9.2.3 \tabularnewline
+
 	R2F6.2.3 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} l'autore della funzione.  & \centering Interna \\ UC9.2.1 \tabularnewline
-	
+
 	R1F6.2.4 &  La ricerca permetterà di visualizzare sull'\textit{Etherless-cli} la firma della funzione.  & \centering Interna \\ UC9.2.4 \tabularnewline
-	
+
 	R1F6.3 &  Verrà segnalato un errore su \textit{Etherless-cli} se il nome della funzione cercata non fosse disponibile su \textit{Etherless-server}.  & \centering Interna \\ UC9.3 \tabularnewline
-	
+
 	R1F7 &  Un utente autenticato può eseguire una funzione caricata da uno sviluppatore sull'\textit{Etherless-server} mediante il comando "run".  & Capitolato \\
-	
+
 	R1F7.1 &  Per eseguire una funzione l'utente deve conoscere e inserire il nome con la quale è caricata su \textit{Etherless}.  & \centering Interna \\ UC10.1 \tabularnewline
-	
+
 	R1F7.2 &  Per eseguire una funzione l'utente deve inserire il valore dei parametri richiesti.  & \centering Interna \\ UC10.2 \tabularnewline
 
 	R1F7.1.1 &  Il sistema deve restituire un messaggio di errore nel caso in cui il nome inserito per il comando "run" non corrisponda ad alcuna funzione presente su \textit{Etherless}.  & \centering Interna \\ UC10.3 \tabularnewline
-	
+
 	R1F7.2.1 &  Il sistema deve restituire un messaggio di errore nel caso in cui il numero dei valori dei parametri inseriti per il comando "run" non corrispondano con quelli richiesti dalla funzione.  & \centering Interna \\ UC10.4 \tabularnewline
-		
+
 	R1F7.3 &  L'esecuzione di una funzione può avvenire solo previo pagamento al suo sviluppatore e alla piattaforma \textit{Etherless}. & Capitolato \\
-	
+
 	R1F7.3.1 &  Il pagamento dovrà avvenire con valuta \textit{Ether\glos}. & Capitolato \\
-	
+
 	R1F7.3.2 &  La transazione avverrà in maniera diretta. & Interna \\
-	
+
 	R3F7.3.3 &  La transazione avverrà tramite \textit{escrow\glos}. & Capitolato \\
-	
+
 	R1F7.3.4 &  Il sistema deve restituire un messaggio di errore all'utente nel caso non avesse fondi  \textit{Ether\glos} sufficienti per coprire il costo dell'esecuzione. & \centering Interna \\ UC13 \tabularnewline
-	
+
 	R1F7.3.5 &  Il sistema deve restituire un messaggio di errore all'utente nel caso lo sviluppatore della funzione non dovesse averne ancora associato un costo. & \centering Interna \\ UC12 \tabularnewline
-	
+
 	R2F8 &  Un utente autenticato può richiedere un log di tutte le funzioni eseguite tramite il comando "log". & \centering Interna \\ UC14.1 \tabularnewline
-	
+
 	R2F8.1 &  Il sistema dovrà restituire tramite \textit{CLI\glo} un log delle funzioni. & \centering Interna \\ UC14.2 \tabularnewline
-	
+
 	R2F8.1.1 &  Il sistema dovrà restituire l'orario e la data delle funzioni eseguite dall'utente. & \centering Interna \\ UC14.2.1.1 \tabularnewline
-	
+
 	R2F8.1.2 &  Il sistema dovrà restituire il nome della funzione eseguita dall'utente. & \centering Interna \\ UC14.2.1.2 \tabularnewline
-	
+
 	R2F8.1.3 &  Il sistema dovrà restituire la firma della funzione eseguita dall'utente. & \centering Interna \\ UC14.2.1.3 \tabularnewline
-	
+
 	R2F8.1.4 &  Il sistema dovrà restituire il costo della funzione eseguita dall'utente. & \centering Interna \\ UC14.2.1.4 \tabularnewline
-	
+
 	R2F8.2 &  Il sistema dovrà restituire messaggio di errore in caso di log vuoto (nel caso l'utente non abbia eseguito alcuna funzione) & \centering Interna \\ UC14.3 \tabularnewline
-	
-	R1F9 &  Un utente autenticato può visualizzare un elenco di tutte le funzioni disponibili su \textit{Etherless} tramite il comando "list". & Capitolato \\	
-	
+
+	R1F9 &  Un utente autenticato può visualizzare un elenco di tutte le funzioni disponibili su \textit{Etherless} tramite il comando "list". & Capitolato \\
+
 	R1F9.1 &  Il sistema dovrà restituire su \textit{CLI\glo} elenco delle funzioni con le relative informazioni per ciascuna di esse. & \centering Interna \\ UC15.2 \tabularnewline
-	
+
 	R1F9.1.1 &  Il sistema dovrà restituire su \textit{CLI\glo} il nome di ciascuna funzione presente su \textit{Etherless}. & \centering Interna \\ UC15.2.1.1 \tabularnewline
-	
+
 	R1F9.1.2 &  Il sistema dovrà restituire su \textit{CLI\glo} il costo di ciascuna funzione presente su \textit{Etherless}. & \centering Interna \\ UC15.2.1.2 \tabularnewline
-	
+
 	R1F9.1.3 &  Il sistema dovrà restituire su \textit{CLI\glo} la firma di ciascuna funzione presente su \textit{Etherless}. & \centering Interna \\ UC15.2.1.3 \tabularnewline
-	
+
 	R2F9.1.4 &  Il sistema dovrà restituire su \textit{CLI\glo} la descrizione di ciascuna funzione presente su \textit{Etherless}. & \centering Interna \\ UC15.2.1.4 \tabularnewline
-	
+
 	R1F10 &  Un utente autenticato ha la possibilità di creare una funzione JavaScript con il comando \textit{"deploy\glos"} e condividerla su \textit{Etherless-server}, diventando un utente sviluppatore. La funzione dovrà essere disponibile al resto degli utenti di \textit{Etherless}. & Capitolato \\
-	
+
 	R1F10.1 &  L'utente eseguirà il \textit{deploy\glo} della sua funzione inserendo il percorso del file contenente la funzione stessa. & \centering Interna \\ UC17.1 \tabularnewline
-	
+
 	R1F10.2 &  L'utente eseguirà il \textit{deploy\glo} della sua funzione inserendo il nome con il quale la si vuole rendere disponibile a tutti gli utenti. & \centering Interna \\ UC17.3 \tabularnewline
-	
+
 	R1F10.1.1 &  Il sistema dovrà restituire un messaggio di errore nel caso in cui il nome della funzione che si sta tentando di condividere sia già in uso. & \centering Interna \\ UC17.2 \tabularnewline
-	
+
 	R1F10.1.2 &  Il sistema dovrà restituire un messaggio di errore nel caso in cui il percorso specificato non fosse corretto (il file di riferimento dovrà avere un'estensione .js). & \centering Interna \\ UC17.4 \tabularnewline
-	
+
 	R1F10.1.3 &  Il sistema dovrà, in mancanza di errori nell'esecuzione del comando \textit{"deploy\glos"}, restituire un messaggio di avvenuta condivisione. & \centering Interna \\ UC17 \tabularnewline
-	
+
 	R1F11 &  Un utente sviluppatore ha la possibilità di modificare delle informazioni riguardanti una sua funzione con il comando "set". & \centering Interna \\ UC18 \tabularnewline
-	
+
 	R1F11.1 &  È possibile modificare il costo di esecuzione. & \centering Interna \\ UC18.1 \tabularnewline
-	
+
 	R3F11.2 &  È possibile definire una descrizione sommaria che ne riepiloghi le funzionalità. & \centering Interna \\ UC18.3 \tabularnewline
-	
+
 	R1F11.3 &  È possibile inserire la firma della funzione da rendere disponibile agli utenti. & \centering Interna \\ UC18.5 \tabularnewline
-	
+
 	R1F11.4 &  Il sistema dovrà, in mancanza di errori nell'esecuzione del comando "set", restituire un messaggio di avvenuta modifica dei parametri richiesti. & \centering Interna \\ UC18 \tabularnewline
-	
+
 	R1F11.1.1 &  Nel caso in cui il costo della funzione inserito sia minore o uguale a 0, è necessario ritornare all'utente un errore e non procedere con la modifica. & \centering Interna \\ UC18.2 \tabularnewline
-	
+
 	R3F11.2.1 &  Nel caso in cui la descrizione della funzione superi il numero massimo di caratteri consentiti, è necessario ritornare all'utente un errore e non procedere con la modifica. & \centering Interna \\ UC18.4 \tabularnewline
-	
+
 	R1F12 &  Un utente sviluppatore ha la possibilità di eliminare una sua funzione. & Capitolato \\
-	
+
 	R1F12.1 & Il sistema dovrà, in mancanza di errori nell'esecuzione del comando "delete", restituire un messaggio di avvenuta rimozione della funzione. & \centering Interna \\ UC19 \tabularnewline
-	
+
 	R1F13 &  Un utente sviluppatore ha la possibilità di aggiornare il codice di una sua funzione. & \centering Interna \\ UC20 \tabularnewline
-	
+
 	R1F13.1 &  L'aggiornamento del codice deve avvenire inserendo il percorso del nuovo file.js contenente la funzione. & \centering Interna \\ UC20.1 \tabularnewline
-	
+
 	R1F13.1.1 & Il sistema dovrà restituire un errore nel caso in cui il nuovo percorso del file inserito per il comando "update" sia errato. & \centering Interna \\ UC20.2 \tabularnewline
-	
+
 	R1F13.1.2 & Il sistema dovrà, in mancanza di errori nell'esecuzione del comando "update", restituire un messaggio di avvenuta aggiornamento del codice. & \centering Interna \\ UC20 \tabularnewline
-	
+
 	%R1F14 &  Per le operazioni di aggiornamento del codice, rimozione di una funzione, modifica delle informazioni aggiuntive, sarà necessario che l'utente abbia condiviso su \textit{Etherless} almeno una funzione. & \centering Interna \\ UC18 \tabularnewline
-	
+
 	%R1F14.1 &  In ognuno dei comandi "set", "update", "delete", dovrà essere specificata la funzione di riferimento. & \centering Interna \\ UC18.1 \tabularnewline
-	
+
 	R1F14 &  Dovrà essere restituito un errore nel caso in cui la funzione di riferimento non sia presente tra quelle rese disponibili su \textit{Etherless} dallo sviluppatore. & \centering Interna \\ UC21 \tabularnewline
-	
+
 	R1F15 & Gli \textit{smart-contract\glo} devono essere upgradable. & Capitolato \\
 	\hline
-	
+
 \end{longtable}
