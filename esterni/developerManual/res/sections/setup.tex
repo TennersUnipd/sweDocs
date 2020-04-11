@@ -56,7 +56,7 @@ To run correctly this component the user needs to install:
 
 \subsubsection{Setup}
 \paragraph{Deploy on a local network}
-Berfore the deploy starts the ganache server needs to be started on a separate terminal instance \code{ganache-cli}
+Berfore the deploy on a local network starts the ganache server needs to be started on a separate terminal instance \code{ganache-cli}
 \begin{itemize}
     \item \code{npm install -{}-dotenv-extended} : installs the package with all its dependencies;    
     \item \code{truffle build}:
@@ -65,7 +65,7 @@ Berfore the deploy starts the ganache server needs to be started on a separate t
 \end{itemize}
 \includegraphics[width=\textwidth]{res/img/truffleTest.png}
 \paragraph{Deploy on a production like envoirment}
-Before the deploy on a network production like the user needs three different keys: an Etherscan API
+Before the deploy on a production-like network the user needs three different keys: an Etherscan API
 key, and Infura API key and a private key from an Ethereum account with some founds.\\
 After obtaining the credentials the user needs to edit the truffle-config.js file replacing the fields at the top with their own. \\
 To deploy Etherless-smart in a production-like environment
@@ -80,15 +80,26 @@ After the deploy is a good practice to save the contract address somewhere safe,
 \subsubsection{Run}
 After the deploy, the contract will be always available and runnable through a web3 application like Remix with MetaMask injection ether in local that in a live network.
 \subsection{Etherless-Server}
-To run correctly this component the user needs to install:
+This component runs on two AWS services Elastic Beanstalk and Lambda.
+Before the installation process, the user needs to install the AWS credential on their
+machine and register on the Serverless framework website that will handle the deploy.
+\subsubsection{Function package}
+To run correctly the Lambda portion component the user needs to install:
 \begin{itemize}
     \item \textbf{serverless}: to install serverless the user needs to run \code{npm install serverless -g}, this operation will install globally the commands serverless and sls;
     \item \textbf{mocha}: to install mocha the user needs to run \code{npm install mocha -g}, this operation will install globally the command mocha;
 \end{itemize}
-\subsubsection{Setup}
-Before, the installation process the user needs to install the AWS credential on their
-machine and register on the Serverless framework website that will handle the deploy and permission
-management. After the registration on AWS and serverless to complete the setup by running
-npm install on your local machine, when completed executing SLS deploy will upload to AWS.
-\subsubsection{Run}
+\paragraph{Setup}
+Other than that the user needs to create a user and a role for the application on the AWS console,
+with privileges that permit the execution and deploy on the Lambda service, and then set up the serverless.yml accordingly,
+that can be found inside the component folder.
+After the registration on AWS and serverless to complete the setup by running npm install on your local machine, when completed executing SLS deploy will upload to AWS.
+\paragraph{Run}
 If the user completed the setup correctly run \code{serverless deploy} will upload the application to the lambda account and will be executable from the web.
+\subsubsection{Runner}
+The runner component runs on the Elastic Beanstalk Amazon's service, to deploy the application correctly the user has to compile the TypeScript to JavaScript.
+\begin{center}
+    \code{npm tsc}
+\end{center}
+
+Than to deploy the application the command to run is \code{aws update-application}
