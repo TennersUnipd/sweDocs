@@ -40,7 +40,11 @@ PERC_{OS}=58,11\% \\
 PERC_{DS}=41,67\%
 \end{math}
 
-\subsubsection{Progettazione}
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+I risultati sono in linea con lo sviluppo del software. Il team si aspettava questo valore ed è fiducioso di raggiungere il valore ottimale alla prossima revisione.
+
+\subsection{Progettazione}
 Una volta chiara l'architettura si è proceduto con il calcolo degli indici che misurano le dipendenze in entrata e in uscita alle unità. Di seguito la tabella che contiene questi valori per tutti i moduli della nostra architettura:
 
 \renewcommand{\arraystretch}{2.2}
@@ -118,6 +122,10 @@ Una volta chiara l'architettura si è proceduto con il calcolo degli indici che 
 	\hline
 \end{longtable}
 \vspace{0.5cm}
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+I valori ottenuti sono in linea con quelli desiderabili, alcuni sono molto alti, ma in linea con l'architettura e quindi immutabili.
 
 \subsection{Documentazione}
 Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 2.4.0\docs}, è stata stabilita una lista di controllo per la verifica dei documenti mediante "inspection". Viene di seguito riportata la tabella contenente i punti critici rilevati.
@@ -400,6 +408,9 @@ Gli esiti delle misurazioni ottenute in seguito alle correzioni segnalate in RR 
 \noindent Per il successivo incremento che ha portato sino alla consegna in RP sono state aggiunte delle sezioni all'interno della documentazione che hanno grosso modo mantenuto gli indici precedentemente calcolati salvo piccole variazioni.\\
 
 \noindent In generale è visibile un lieve aumento della qualità della documentazione ad eccezione del \textit{Piano di Progetto 2.2.1\docs}.
+
+\paragraph{RQ}
+Le misurazioni hanno avuto tutto sommato un esito positivo. I documenti che non sono stati modificati hanno mantenuto il loro valore. Il \textit{Piano di Qualifica\doc} ha ottenuto un indice più alto, forse a causa dell'aggiunta di parti meno discorsive che hanno alzato il numero di frasi conteggiate. Alcuni documenti hanno avuto un lieve peggioramento nell'indice associato ma entro la consegna ci impegnamo a migliorarlo.
 
 \subsection{Verifica}
 \subsubsection{Code Coverage}
@@ -718,6 +729,11 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 	\end{tikzpicture} \\
 \end{center}
 
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+Il valore di una componente è molto alto a causa di cicli annidati, sicuramente non accettabile. Il team è stato avvisato e alla prossima revisione prenderà provvedimenti.\\
+\noindent Il valore medio e molto buono segno che in generale il codice è di buona qualità.
+
 \subsubsection{Percentuale dei commenti}
 \begin{center}
 	\begin{tikzpicture} [scale = 0.8]
@@ -741,3 +757,6 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+I commenti sono state una priorità importante durante lo sviluppo e grazie a questo il nostro codice risulta leggibile e ha un valore molto alto.
