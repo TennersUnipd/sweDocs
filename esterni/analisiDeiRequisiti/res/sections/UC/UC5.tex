@@ -1,7 +1,7 @@
 \subsubsection{UC5 - Login manuale}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\linewidth]{res/img/UC5.jpg}
+	\includegraphics[width=0.8\linewidth]{res/img/UC5.jpg}
 	\caption{Diagramma UC5 - Login manuale}
 \end{figure}
 \begin{itemize}
@@ -15,9 +15,14 @@
 		\begin{itemize}
 			\item nome del comando "login";
 			\item address;
-			\item \textit{private key\glos}.
+			\item \textit{private key\glos};
+			\item password
 		\end{itemize}
 		\item Verrà visualizzato a schermo un messaggio relativo all'esito dell'autenticazione;
 		\item Sarà salvato un file sul dispositivo contenente le credenziali di accesso.
 	\end{enumerate}
+	\item \textbf{Estensioni:} 
+	\begin{itemize}
+		\item \textbf{UC5.3}: errore di autenticazione dovuto all'inserimento errato di address/\textit{private key\glos} non corrispondenti ad alcun account \textit{Ethereum\glos}.
+	\end{itemize}
 \end{itemize}
