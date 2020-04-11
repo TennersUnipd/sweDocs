@@ -40,41 +40,55 @@ allowing the developers to use any Ethereum network library, creating independen
 \subsubsection{Cons}
 This architecture has one major downside, it is difficult to add functionalities without accessing the NetworkFacade and the etherlessContract; We should consider the use of the \textbf{command design pattern} to solve this issue.
 Another disadvantage is that if a new developer need a new functionality from any of the interfaces every implementation should reflect the new definition.
-\subsubsection{Method}
+\subsubsection{Methods}
 \paragraph{NetworkFacade}
 \begin{itemize}
-    \item \textbf{signup}: provides the functionality or registration to the service;
-    \item \textbf{logon}: provides the logon service; 
-    \item \textbf{logout}: discards the user credential;
-    \item \textbf{getListOfFunctions}: returns the list of all available contract's methods;
-    \item \textbf{callFunction}: calls the methods from the Ethereum component, all requests to the smart contract goes through this method;
-    \item \textbf{getListOfFunctions}: retrieves the list of the available Contract's methods;
-    \item \textbf{createFunction}: uploads on the AWS endpoint the required function and register it on the eth network;
-    \item \textbf{getAllLoadedFunction}: retrieves all the functions loaded on the smart contract;
-    \item \textbf{getFunctionDetails}: retrieves from the smart contract the details about the requested function;
+    \item \textbf{signup}: registers a new user on the system;
+    \item \textbf{logon}: logs in a new user; 
+    \item \textbf{logout}: logs out of the system currently logged user;
+	\item \textbf{getAllLoadedFunction}: returns the list of all available contract methods;
+    \item \textbf{callFunction}: calls the methods of the etherless-smart component; all requests to the smart contract goes through this method;
+    \item \textbf{runFunction}: requests execution of a remote function;
+    \item \textbf{createFunction}: uploads on the AWS endpoint the required function and register it on the eth network through the etherless-smart component;
+    \item \item \textbf{getPatLog}: return a list of past actions taken by the user;
     \item \textbf{getCostOfFunction}: retrieves from the smart contract the cost of a specific function loaded on the service;
-    \item \textbf{runFunction}:runs a remote function;
     \item \textbf{disconnect}: disconnects the application from the network.
 \end{itemize}
 \paragraph{SessionInterface}
 \begin{itemize}
-    \item \textbf{signup}: provides the signup functionality;
-    \item \textbf{logon}: provides the logon functionality using already existing credentials;
-    \item \textbf{logout}: discards the credentials;
-    \item \textbf{signTransaction}: signs the provided transaction;
-    \item \textbf{isUserSignedIn}: checks that the user is logged;
+    \item \textbf{signup}: provides the signup procedure;
+    \item \textbf{logon}: provides the logon procedure using already existing credentials;
+    \item \textbf{logout}: discards the credentials by logging out the current user;
+    \item \textbf{signTransaction}: signs the provided transaction with logged user account;
+    \item \textbf{isUserSignedIn}: checks if there is a singed in user;
     \item \textbf{getUserAddress}: retrieves the user address;
-    \item \textbf{getBalance}:retrieves the balance from the account.
+    \item \textbf{getBalance}:retrieves the balance of the logged in user account.
 \end{itemize}
 \paragraph{ContractInterface}
+\begin{itemize}
+    \item \textbf{getListOfFunctions}: retrieves all the available contract's methods;
+    \item \textbf{getArgumentsOfFunction}: returns all the parameter required to run the requested contract method;
+    \item \textbf{isTheFunctionPayable}: returns weather a contract method is needs to receive ethers or not;
+    \item \textbf{estimateGasCost}: returns an estimate of how much gas is needed to perform a contract method call;
+    \item \textbf{getFunctionTransaction}: builds a transaction object related to a contract method call;
+    \item \textbf{getLog:}: returns past actions of the given eth account; 
+    \item \textbf{getCallable}: maps a contract method name to a its callable form through the network;
+    \item \textbf{getSignal}: start listening for a network event;
+\end{itemize}
+\paragraph{NetworkInterface}
 \begin{itemize}
     \item \textbf{getListOfFunctions}: retrieves all the available contract's methods;
     \item \textbf{getArgumentsOfFunction}: returns all the parameter required to run the requested function;
     \item \textbf{isTheFunctionPayable}: 
 \end{itemize}
-
-
-
+\paragraph{NetworkUtils}
+\begin{itemize}
+    \item \textbf{getEtherlessFacade:}: returns a shared instance of the network interface;
+    \item \textbf{checkABIUpdate}: returns weather there is the need of updating smart contract ABI;
+    \item \textbf{updateABI}: gets an updated copy of the contract ABI from a remote source;
+    \item \textbf{getABIFromFile}: returns a contract ABI retrieved from a local file;
+\end{itemize}
+\newpage
 \subsection{Command Entities}
 We base the CommandEntities component on the Command abstract class that is a kind of command design pattern, this means that to add any command to the CLI the developer needs to extend the Command class and implements the exec method.
 The Command's constructor exposes the dependency from NetworkFacade using this kind of approach lets us work with mocks and separate the two components of the CLI.
@@ -102,3 +116,19 @@ We implemented the basic command functionalities, extending the class abstract c
 This architecture has good expandability about the functionalities because if a developer wants to add a new function should only extend the command class and insert it in the list of function.
 \subsubsection{Cons}
 The way we used to instantiate all the classes is not elegant, because we use a method that reads from a list of all the classes that need to instantiate.
+
+\subsubsection{Methods}
+\paragraph{Commander}
+\begin{itemize}
+    \item \textbf{addCommand}: adds a command to the list of available cli commands;
+    \item \textbf{start}: starts processing command input args;
+    \item \textbf{start}: sets default cli information;
+\end{itemize}
+\paragraph{Command}
+\begin{itemize}
+    \item \textbf{getDescription}: returns the command description;
+    \item \textbf{getCommandAlias}: returns the command alias for the cli;
+    \item \textbf{getCommandsDescriptor}: returns command format for the cli;
+    \item \textbf{parseArgs}: maps cli inputs to a command-specific inputs data structure;
+    \item \textbf{exec}: command execution;
+\end{itemize}
