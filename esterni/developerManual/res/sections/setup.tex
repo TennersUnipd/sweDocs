@@ -76,13 +76,19 @@ by running the following commands from the component folder will install in the 
     \item \code{truffle deploy -{}-network test}: deploys the compiled smart contract to the Ropsten test network;
     \item \code{truffle run verify EtherlessSmart -{}-network test}: confirms the Contract, this passage is needed for Etherscan to confirm the source code of the application, if the deploy is on a local network this command doesn't work;
 \end{itemize}
+\includegraphics[width=\textwidth]{res/img/deployContract.png}
 After the deploy is a good practice to save the contract address somewhere safe, that will be needed to retrieve the contract.
 \subsubsection{Run}
 After the deploy, the contract will be always available and runnable through a web3 application like Remix with MetaMask injection ether in local that in a live network.
 \subsection{Etherless-Server}
+\subsubsection{Requirments}
 This component runs on two AWS services Elastic Beanstalk and Lambda.
 Before the installation process, the user needs to install the AWS credential on their
-machine and register on the Serverless framework website that will handle the deploy.
+machine and registers on the Serverless framework website that will handle the deploy.
+Other than that the user needs to create a user and a role for the application on the AWS console,
+with privileges that permit the execution and deploy on the Lambda service, and then set up the serverless.yml accordingly,
+that can be found inside the component folder.
+After the registration on AWS and serverless to complete the setup by running npm install on your local machine, when completed executing SLS deploy will upload to AWS.
 \subsubsection{Function package}
 To run correctly the Lambda portion component the user needs to install:
 \begin{itemize}
