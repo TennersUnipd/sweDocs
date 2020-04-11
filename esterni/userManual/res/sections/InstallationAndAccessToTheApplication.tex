@@ -11,13 +11,28 @@ This application can run on GNU/Linux on any distribution newer than Ubuntu 14.0
 	\item \textbf{ts-node}: to install ts-node the user needs need to run npm install ts-node -g, this operation will install globally the command ts-node; 
 %	\item Having an \textit{Ethereum\glo} account on the network Ropsten with an amount of credit inside.
 \end{itemize}
-For simplicity the user can install multiple packages in one command\\\\
-\centerline{\code{npm install typescript ts-node -g}}\\
+For simplicity the user can install multiple packages in one command.\\\\
+\centerline{\code{Install typescript ts-node -g}}\\\\
+After entering the command, the CLI should look like the picture.
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{res/img/typescriptInstall.png}
+	\caption{Typescript Install}
+\end{figure}
+\newpage
 \subsection{Etherless-cli}
 \subsubsection{Setup}
 To install Etherless-cli is sufficient to start the installation process\\\\
 \centerline{\code{run npm install –dotenv-extended}}\\\\
-Before starting to use the software the user needs to register an Ethereum account or login with an already existing one, after the that the user needs to add funds to the wallet. The user can do that by importing the new account in MetaMask\glo.
+To check if the setup completed correctly, the user can run the unit test.\\\\
+\centerline{\code{npm run test}}\\\\
+If the output of the command looks like the example than the installation was successful.\\
+\begin{figure}[h!]
+	\includegraphics[width=\textwidth]{res/img/npmruntest.png}
+	\caption{Run test}
+\end{figure}\\
+\newpage
+\noindent Before starting to use the software the user needs to register an Ethereum account or login with an already existing one, after the that the user needs to add funds to the wallet. The user can do that by importing the new account in MetaMask\glo.
 \subsubsection{Run}
 To run this program from the command line interface positioning on the main program folder and type ts-node . «command» where «command» is the command that the user wants to run.
 %To download and install the application it is necessary to open the terminal/shell of your operating system and write the command \\
