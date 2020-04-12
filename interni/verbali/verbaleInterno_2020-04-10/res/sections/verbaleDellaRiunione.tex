@@ -1,8 +1,8 @@
 \section{Verbale della riunione}
 	\begin{itemize}
 		\item \textbf{Progettazione componente \textit{etherless-server}:} 
-		È stata definita una classe per gestire la connessione ad AWS, verrà poi richiamata dai comandi createFunction, updateFunction e deleteFunction. Sono i tre componenti che interagiscono con aws lamba per il caricamento la modifica e l'eliminazione delle funzioni.\\
-		Github aws instance serve a definire i parametri per il collegamento con AWS.
+		è stata definita una classe per gestire la connessione ad AWS, verrà poi richiamata dai comandi createFunction, updateFunction e deleteFunction. Sono le tre funzioni che interagiscono con AWS Lamba per il caricamento, la modifica e l'eliminazione delle funzioni.\\
+		AWS instance serve a definire i parametri per il collegamento con AWS.
 		Si è stabilito di misurare la componente "runner" dalle altre funzioni riguardanti i comandi a disposizione dell'utente.
 		È stato deciso di utilizzare AWS lambda per l'esecuzione del "runner" e mantenere il processo costantemente attivo con l'utilizzo di \textit{cron-job\glos}, grazie ad esso ora possiamo stabilire la frequenza dell'esecuzione del comando automatizzato.
 		
