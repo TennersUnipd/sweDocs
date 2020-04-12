@@ -1,6 +1,131 @@
 \appendix
 \section{Risultati processo di verifica}
-In questa sezione vengono riportati i risultati del processo di verifica con relativi esiti e valutazioni. Ogni misurazione effettuata per ciascuna revisione di avanzamento viene opportunamente rappresentata sia in forma tabellare che mediante l'utilizzo di grafici che permettano il corretto monitoraggio nel tempo del prodotto e dei processi coinvolti. Ogni grafico che descrive l'andamento delle qualità viene accompagnato da una corrispondente valutazione da parte del team.
+In questa sezione vengono riportati i risultati del processo di verifica con relativi esiti e valutazioni. Ogni misurazione effettuata viene opportunamente rappresentata sia in forma tabellare che mediante l'utilizzo di grafici che permettano il corretto monitoraggio nel tempo del prodotto e dei processi coinvolti. Ogni grafico che descrive l'andamento delle qualità viene accompagnato da una corrispondente valutazione da parte del team.
+
+\subsection{Sviluppo}
+Di seguito le misure effettuate durante lo sviluppo software organizzate sotto forma tabellare e visualizzando il loro valore attuale. Essendo metriche calcolabili solo con un architettura consistente si è iniziato a calcolarle da dopo aver ultimato la fase di progettazione.
+\subsubsection{Analisi dei Requisiti: PERC\textsubscript{OS} e PERC\textsubscript{DS}}
+Si sono presi in esame i requisiti descritti nell'\textit{Analisi dei Requisiti\docs} e calcolato la percentuale di quelli soddisfatti attualmente dall'architettura, tramite la formula descritta nelle \textit{Norme di Progetto 2.4.0\docs}.\\
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Grafico PERC\_{OS} e PERC\_{DS}, Analisi dei requisiti},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=100,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percos.csv};
+			\addlegendentry{$percos$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percds.csv};
+			\addlegendentry{$percds$}
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
+I valori attuali sono:\\
+\\
+\begin{math}
+PERC_{OS}=58,11\% \\
+PERC_{DS}=41,67\%
+\end{math}
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+I risultati sono in linea con lo sviluppo del software. Il team si aspettava questo valore ed è fiducioso di raggiungere il valore ottimale alla prossima revisione.
+
+\subsection{Progettazione}
+Una volta chiara l'architettura si è proceduto con il calcolo degli indici che misurano le dipendenze in entrata e in uscita alle unità. Di seguito la tabella che contiene questi valori per tutti i moduli della nostra architettura:
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Cli}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		EtherlessContract & 2 & 3 \\
+ 		EtherlessNetwork & 2 & 3 \\
+		EtherlessSession & 2 & 1 \\
+		NetworkFacade & 2 & 4 \\
+		NetworkUtils & 2 & 6 \\
+		Command & 7 & 3 \\
+		Commander & 0 & 2 \\
+		Signup & 0 & 1 \\
+		Login & 0 & 1 \\
+		Logout & 0 & 1 \\
+		Run & 0 & 2 \\
+		Find & 0 & 1 \\
+		Create & 0 & 2 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Smart}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		Etherless-Smart & 0 & 2 \\
+		Utils & 1 & 0 \\
+		FunctionStorage & 1 & 0 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Server}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		Runner & 0 & 2 \\
+		Configurator & 1 & 1 \\
+		Gateway & 2 & 0 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+I valori ottenuti sono in linea con quelli desiderabili, alcuni sono molto alti, ma in linea con l'architettura e quindi immutabili.
 
 \subsection{Documentazione}
 Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 2.4.0\docs}, è stata stabilita una lista di controllo per la verifica dei documenti mediante "inspection". Viene di seguito riportata la tabella contenente i punti critici rilevati.
@@ -45,13 +170,13 @@ Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 2.4.0
 Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento per questioni pratiche, i grafici tengono in considerazione anche degli incrementi intermedi.
 
 \newpage
-\subsubsection{Analisi dei Requisiti}
+\subsubsection{Analisi dei requisiti}
 \renewcommand{\arraystretch}{2.2}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Tabella indice di Gulpease, Analisi dei Requisiti}\\
+	\caption{Tabella indice di Gulpease, Analisi dei requisiti}\\
 	\hline
 	\rowcolor{header}
 
@@ -59,7 +184,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Analisi dei Requisiti & 57  & 62 & - & - & Superato \\
+	Analisi dei requisiti & 57  & 62 & 61 & - & Superato \\
 \end{longtable}
 \begin{center}
 	\begin{tikzpicture} [scale = 0.9]
@@ -78,20 +203,20 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	% set the label style of the `xtick's
 	xticklabel=\year-\month-\day,
 	]
-	\addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/adr.csv};
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/adr.csv};
 	\end{axis}
 	\end{tikzpicture} \\
 \end{center}
 
 
 \newpage
-\subsubsection{Piano di Progetto}
+\subsubsection{Piano di progetto}
 \renewcommand{\arraystretch}{2.2}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Tabella indice di Gulpease, Analisi dei Requisiti}\\
+	\caption{Tabella indice di Gulpease, Piano di progetto}\\
 	\hline
 	\rowcolor{header}
 
@@ -99,12 +224,12 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Piano di Progetto & 68  & 70 & - & - & Superato \\
+	Piano di Progetto & 68  & 70 & 68 & - & Superato \\
 \end{longtable}
 
 \begin{tikzpicture}
   \begin{axis}[
-  title={Grafico indice di Gulpease, Piano di Progetto},
+  title={Grafico indice di Gulpease, Piano di progetto},
   xlabel={\textbf{Tempo}},
   ylabel={\textbf{Valore}},
   date coordinates in=x,
@@ -118,18 +243,18 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
   % set the label style of the `xtick's
   xticklabel=\year-\month-\day,
   ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdp.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/pdp.csv};
   \end{axis}
 \end{tikzpicture} \\
 
 \newpage
-\subsubsection{Piano di Qualifica}
+\subsubsection{Piano di qualifica}
 \renewcommand{\arraystretch}{2.2}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Tabella indice di Gulpease, Piano di Qualifica}\\
+	\caption{Tabella indice di Gulpease, Piano di qualifica}\\
 	\hline
 	\rowcolor{header}
 
@@ -137,11 +262,11 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Piano di Qualifica & 57  & 66 & - & - & Superato \\
+	Piano di qualifica & 57  & 66 & 76 & - & Superato \\
 \end{longtable}
 \begin{tikzpicture}
   \begin{axis}[
-    title={Grafico indice di Gulpease, Piano di Qualifica},
+    title={Grafico indice di Gulpease, Piano di qualifica},
     xlabel={\textbf{Tempo}},
     ylabel={\textbf{Valore}},
     date coordinates in=x,
@@ -155,19 +280,19 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year-\month-\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdq.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/pdq.csv};
   \end{axis}
 \end{tikzpicture} \\
 
 
 \newpage
-\subsubsection{Norme di Progetto}
+\subsubsection{Norme di progetto}
 \renewcommand{\arraystretch}{2.2}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Tabella indice di Gulpease, Norme di Progetto}\\
+	\caption{Tabella indice di Gulpease, Norme di progetto}\\
 	\hline
 	\rowcolor{header}
 
@@ -175,11 +300,11 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Norme di Progetto & 64  & 70 & - & - & Superato \\
+	Norme di progetto & 64  & 70 & 76 & - & Superato \\
 \end{longtable}
 \begin{tikzpicture}
   \begin{axis}[
-    title={Grafico indice di Gulpease, Norme di Progetto},
+    title={Grafico indice di Gulpease, Norme di progetto},
     xlabel={\textbf{Tempo}},
     ylabel={\textbf{Valore}},
     date coordinates in=x,
@@ -193,18 +318,18 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year-\month-\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/ndp.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/ndp.csv};
   \end{axis}
 \end{tikzpicture} \\
 
 \newpage
-\subsubsection{Studio di Fattibilità}
+\subsubsection{Studio di fattibilità}
 \renewcommand{\arraystretch}{2.2}
 \rowcolors{2}{pari}{dispari}
 \begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Tabella indice di Gulpease, Piano di Qualifica}\\
+	\caption{Tabella indice di Gulpease, Studio di fattibilità}\\
 	\hline
 	\rowcolor{header}
 
@@ -212,11 +337,11 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Studio di Fattibilità & 60  & 62 & - & - & Superato \\
+	Studio di fattibilità & 60  & 62 & 62 & - & Superato \\
 \end{longtable}
 \begin{tikzpicture}
   \begin{axis}[
-    title={Indice di Gulpease per Studio di Fattibilità},
+    title={Indice di Gulpease per Studio di fattibilità},
     xlabel={\textbf{Tempo}},
     ylabel={\textbf{Valore}},
     date coordinates in=x,
@@ -230,7 +355,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year.\month.\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/sdf.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/sdf.csv};
   \end{axis}
 \end{tikzpicture} \\
 
@@ -242,7 +367,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 \begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Tabella indice di Gulpease, Piano di Qualifica}\\
+	\caption{Tabella indice di Gulpease, Glossario}\\
 	\hline
 	\rowcolor{header}
 
@@ -250,7 +375,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Glossario & 48  & - & - & - & Superato \\
+	Glossario & 48  & 48 & 48 & - & Superato \\
 \end{longtable}
 \begin{tikzpicture}
   \begin{axis}[
@@ -268,7 +393,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year.\month.\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/glossario.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/glossario.csv};
   \end{axis}
 \end{tikzpicture} \\
 
@@ -284,7 +409,34 @@ Gli esiti delle misurazioni ottenute in seguito alle correzioni segnalate in RR 
 
 \noindent In generale è visibile un lieve aumento della qualità della documentazione ad eccezione del \textit{Piano di Progetto 2.2.1\docs}.
 
+\paragraph{RQ}
+Le misurazioni hanno avuto tutto sommato un esito positivo. I documenti che non sono stati modificati hanno mantenuto il loro valore. Il \textit{Piano di Qualifica\doc} ha ottenuto un indice più alto, forse a causa dell'aggiunta di parti meno discorsive che hanno alzato il numero di frasi conteggiate. Alcuni documenti hanno avuto un lieve peggioramento nell'indice associato ma entro la consegna ci impegnamo a migliorarlo.
 
+\subsection{Verifica}
+\subsubsection{Code Coverage}
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Grafico per Code Coverage},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=100,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/codecoverage.csv};
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
 
 \newpage
 \subsection{Pianificazione}
@@ -304,7 +456,7 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	\tabularnewline
 	\endfirsthead
 
-	Actual Cost (AC) & -  & \euro4.207	 & - & - & Superato
+	Actual Cost (AC) & -  & \euro4.207,00	 & \euro6.902,00 & - & Superato Ott.
 \end{longtable}
 \begin{center}
 \begin{tikzpicture} [scale = 0.9]
@@ -343,7 +495,7 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	\tabularnewline
 	\endfirsthead
 
-	Earned Value (EV) & -  & \euro4.284 & - & - & Superato
+	Earned Value (EV) & -  & \euro4.536,84 & \euro 9.073,68& - & Superato Ott.
 \end{longtable}
 \begin{center}
 	\begin{tikzpicture}
@@ -382,7 +534,7 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	\tabularnewline
 	\endfirsthead
 
-	Estimated at Completion (EAC) & -  & \euro13.418 & - & - & Superato
+	Estimated at Completion (EAC) & -  & \euro13.418,16 & \euro11.576,32 & - & Superato.
 \end{longtable}
 \begin{center}
 	\begin{tikzpicture}
@@ -421,7 +573,7 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	\tabularnewline
 	\endfirsthead
 
-	Estimated To Complete (ETC) & -  & \euro9.211 & - & - & Superato
+	Estimated To Complete (ETC) & -  & \euro9.211,16 & \euro4.674,32 & - & Superato Ott.
 \end{longtable}
 \begin{center}
 	\begin{tikzpicture}
@@ -461,7 +613,7 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	\tabularnewline
 	\endfirsthead
 
-	Cost Variance (CV) & -  & \euro329 & - & - & Superato
+	Cost Variance (CV) & -  & \euro329,00 & \euro 2.171,68 & - & Superato
 \end{longtable}
 \begin{center}
 	\begin{tikzpicture}
@@ -470,8 +622,8 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	xlabel={\textbf{Tempo}},
 	ylabel={\textbf{Valore (in euro)}},
 	date coordinates in=x,
-	ymin=-1000,
-	ymax=1000,
+	ymin=0,
+	ymax=5000,
 	xtick=data,
 	xticklabel style={
 		rotate=90,
@@ -500,7 +652,7 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	\tabularnewline
 	\endfirsthead
 
-	Schedule Variance (SV) & -  & \euro252 & - & - & Superato
+	Schedule Variance (SV) & -  & \euro252,84 & \euro2.107,68 & - & Superato
 \end{longtable}
 \begin{center}
 	\begin{tikzpicture}
@@ -509,8 +661,8 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	xlabel={\textbf{Tempo}},
 	ylabel={\textbf{Valore (in euro)}},
 	date coordinates in=x,
-	ymin=-1000,
-	ymax=1000,
+	ymin=0,
+	ymax=5000,
 	xtick=data,
 	xticklabel style={
 		rotate=90,
@@ -530,3 +682,81 @@ L'adozione delle metriche relative alla pianificazione è avvenuta a partire dal
 
 \paragraph{RP}
 L'investimento iniziale precedente al RR ha consentito di acquisire dei vantaggi in termini di tempo impiegato e costi. Ciò si può evincere analizzando soprattutto i valori di Schedule Variance (SV) e Cost Variance (CV) che certificano il procedere del progetto con una maggiore efficienza rispetto a quanto preventivato.
+
+\subsection{Manutenibilità}
+\subsubsection{Complessità Ciclomatica}
+Di seguito i risultati delle misurazioni della complessità ciclomatica.
+\begin{longtable}{|C{4.5cm}|C{3cm}|C{3cm}|C{3cm}|}
+	\arrayrulecolor{white}
+
+	\caption{Tabella dei valori per la Schedule Variance}\\
+	\hline
+	\rowcolor{header}
+
+	\textbf{Metrica} & \textbf{Valore minimo} & \textbf{Valore massimo} & \textbf{Valore medio}
+	\tabularnewline
+	\endfirsthead
+
+	Complessità ciclomatica	&	2 & 21 & 5.53 \\
+	\hline
+\end{longtable}
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Complessità Ciclomatica},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=50,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/average.csv};
+			\addlegendentry{$average$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/max.csv};
+			\addlegendentry{$max$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/min.csv};
+			\addlegendentry{$min$}
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+Il valore di una componente è molto alto a causa di cicli annidati, sicuramente non accettabile. Il team è stato avvisato e alla prossima revisione prenderà provvedimenti.\\
+\noindent Il valore medio e molto buono segno che in generale il codice è di buona qualità.
+
+\subsubsection{Percentuale dei commenti}
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Percentuale dei Commenti},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=50,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percComm.csv};
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+I commenti sono state una priorità importante durante lo sviluppo e grazie a questo il nostro codice risulta leggibile e ha un valore molto alto.
