@@ -1,0 +1,69 @@
+\section{Development setup}
+\section{Setup}
+\subsection{General Requirements}
+\subsubsection{Hardware requirements}
+The only hardware required is a CPU newer than a Pentium 4 with SSE2 instruction set.
+\subsubsection{Software requirments}
+This application can run on GNU/Linux on any distribution newer than Ubuntu 14.04, MacOs from 10.10 onward and Windows from 7 and onward;
+Other than an operative system this application needs:
+\begin{itemize}
+    \item \textbf{Node.js}: to install it, you can refer to the official web page nodejs.org we recommend the LTS version;
+    \item \textbf{npm}: npm is the package manager that comes with Node.Js;
+    \item \textbf{TypeScript}: to install TypeScript you need to run npm install typescript -g, the minimum version required is the 3.6.5;
+    \item \textbf{ts-node}: to install ts-node you need to run npm install ts-node -g, this operation will install globally the command ts-node;
+\end{itemize}
+\subsubsection{Development environment}
+We used Visual Studio Code as a text editor, this program includes the linter for TypeScript and JavaScript.
+In the repository, we provide our ESLinter configuration, 
+to properly use it the developer should use an extension that read the configuration and eventually highlights the errors we the extension ESLint
+for Visual Studio Code that can be found at this link https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint.
+To develop in Solidity we used another extension that provides the linting functionalities for this programming language Solidity that can be found
+at this link https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity.
+
+\subsection{Etherless-cli}
+\subsubsection{Setup}
+To complete the development environment is needed to install the mocha environment that provide unit test functionalities
+install it you need to run npm install mocha -g, this operation will install globally the command mocha.
+To install Etherless-cli is sufficient to run npm install --dotenv-extended.
+Before to start using the software you need to register an Ethereum account or login with an already existing one, after the that you need to add funds to your wallet.
+You can do that by importing the new account in MetaMask.
+\subsubsection{Run}
+To run this program from the command line interface positioning on the main program folder
+and type ts-node . <<command>> where <<command>> is the command that you want to run.
+\subsection{Etherless-smart}
+\subsubsection{Requirements}
+To develop for this component you need to install:
+\begin{itemize}
+    \item \textbf{Truffle}: to install Truffle you need to run npm install Truffle -g, the minimum version required is the 3.6.5;
+    \item \textbf{Ganache}: Ganache is available in two variants CLI or GUI, please refer the official web page for the installation;
+\end{itemize}
+
+\subsubsection{Setup}
+Before beginning the installation process you need three different keys: an Etherscan API key, and Infura API key and a private key from your Ethereum account.
+After obtain the credential you need to edit the truffle-config.js file replacing the fields at the top with your own.
+Now you are ready to install Etherless-smart in a production like environment, running the following commands from the component folder will install your smart application in the chosen network.
+
+\begin{itemize}
+    \item npm install --dotenv-extended
+    \item truffle build
+    \item truffle deploy --network test
+    \item truffle run verify EtherlessSmart --network test
+\end{itemize}
+After the deploy is a good practice to save the contract address somewhere safe, that will be needed when you want to retrieve the contract later.
+\subsubsection{Run}
+After the deploy your contract will be always available and runnable through a web3 application like Remix with MetaMask injection.
+\subsection{Etherless-Server}
+To run correctly this component you need to install:
+\begin{itemize}
+    \item \textbf{Node.js}: to install it, you can refer to the official web page nodejs.org we recommend the LTS version;
+    \item \textbf{npm}: npm is the package manager that comes with Node.Js;
+    \item \textbf{TypeScript}: to install TypeScript you need to run npm install typescript -g, the minimum version required is the 3.6.5;
+    \item \textbf{ts-node}: to install ts-node you need to run npm install ts-node -g, this operation will install globally the command ts-node;
+    \item \textbf{serverless}: to install ts-node you need to run npm install serverless -g, this operation will install globally the commands serverless and sls;
+    \item \textbf{mocha} \textit{optional, needed only in test environment}: to install mocha you need to run npm install mocha -g, this operation will install globally the command mocha;
+\end{itemize}
+\subsubsection{Setup}
+Before beginning the installation process you need to install the aws credential on your machine, or you can register on Serverless framework website that will handle the deploy and permission management for you.
+Completed the registration on AWS and serverless you can complete the setup by running npm install on your local machine, when completed executing sls deploy will upload you application to aws.
+\subsubsection{Run}
+If you completed the setup correctly running serverless deploy will upload the application to you lambda account and will be executable from the web.
