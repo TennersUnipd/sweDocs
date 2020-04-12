@@ -1,0 +1,2086 @@
+Tenners - Capitolato 2
+
+Studio di fattibilità
+Versione
+Redazione
+Verifica
+Approvazione
+Stato
+Uso
+Data creazione
+Data ultima modifica
+Destinatari
+
+1.1.0
+Paola Trevisan
+Giovanni Incalza
+Gianmarco Pettinato
+Approvato
+Interno
+2020-02-17
+2019-12-11
+Tenners
+Prof. Tullio Vardanega
+Prof. Riccardo Cardin
+
+Contatto
+tenners.unipd@gmail.com
+
+Studio di fattibilità
+
+Registro delle modifiche
+Versione
+
+Nominativo
+
+Ruolo
+
+Verificatore
+
+Data Verifica
+
+1.1.0
+
+Gianmarco
+Pettinato
+
+Responsabile
+
+Approvato documento con modifiche e
+pronto per il rilascio
+
+2020-02-17
+
+1.0.0
+
+Nicola
+Salvadore
+
+Responsabile
+
+Approvato documento e pronto per il
+rilascio
+
+2019-12-11
+
+0.6.0-TBR
+
+Gezim
+Cikaqi
+
+Analista
+
+Redatta §4 (C3)
+
+2019-12-07
+
+Gianmarco
+Pettinato
+
+2019-12-11
+
+0.5.0-TBR
+
+Giovanni
+Incalza
+
+Analista
+
+Redatta §7 (C6)
+
+2019-12-07
+
+Gianmarco
+Pettinato
+
+2019-12-11
+
+0.4.0-TBR
+
+Paola
+Trevisan
+
+Analista
+
+Redatta §6 (C5)
+
+2019-12-06
+
+Gianmarco
+Pettinato
+
+2019-12-11
+
+0.3.0-TBR
+
+Gabriel
+Ciulei
+
+Analista
+
+Redatta §3 (C2)
+
+2019-12-05
+
+Gianmarco
+Pettinato
+
+2019-12-05
+
+0.2.1-TBR
+
+Simone
+Franconetti
+
+Analista
+
+Modificata
+§2.6 (C1)
+
+2019-12-04
+
+Gianmarco
+Pettinato
+
+2019-12-05
+
+0.2.0-TBR
+
+Simone
+Franconetti
+
+Analista
+
+Redatta §2 (C1)
+
+2019-12-04
+
+Gianmarco
+Pettinato
+
+2019-12-05
+
+0.1.0-TBR
+
+Simone
+Franconetti
+
+Analista
+
+Redatta §5 (C4)
+
+2019-12-04
+
+Gianmarco
+Pettinato
+
+2019-12-05
+
+0.0.1
+
+Simone
+Franconetti
+
+Analista
+
+Creata la struttura
+del documento
+
+2019-12-04
+
+Gianmarco
+Pettinato
+
+2019-12-05
+
+tenners.unipd@gmail.com
+
+Descrizione
+
+§2.2
+
+Data
+
+e
+
+Pagina 1 di 15
+
+Studio di fattibilità
+
+Indice
+1 Introduzione
+1.1 Scopo del Documento
+1.2 Glossario . . . . . . .
+1.3 Riferimenti . . . . . .
+1.3.1 Normativi . . .
+1.3.2 Informativi . .
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+
+4
+4
+4
+4
+4
+4
+
+2 Capitolato C1 - Autonomous
+2.1 Descrizione generale . . . .
+2.2 Finalità del progetto . . . .
+2.3 Tecnologie interessate . . .
+2.4 Aspetti positivi . . . . . . .
+2.5 Criticità . . . . . . . . . . .
+2.6 Valutazione conclusiva . . .
+
+Highlights
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+
+Platform
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+. . . . . . .
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+5
+5
+5
+5
+5
+6
+6
+
+3 Capitolato C2 - Etherless
+3.1 Descrizione generale . .
+3.2 Finalità del progetto . .
+3.3 Tecnologie interessate .
+3.4 Aspetti positivi . . . . .
+3.5 Criticità . . . . . . . . .
+3.6 Valutazione conclusiva .
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+7
+7
+7
+7
+8
+8
+8
+
+4 Capitolato C3 - NaturalAPI
+4.1 Descrizione generale . . . .
+4.2 Finalità del progetto . . . .
+4.3 Tecnologie interessate . . .
+4.4 Aspetti positivi . . . . . . .
+4.5 Criticità . . . . . . . . . . .
+4.6 Valutazione conclusiva . . .
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+9
+9
+9
+9
+9
+10
+10
+
+5 Capitolato C4 - Predire in Grafana
+5.1 Descrizione generale . . . . . . . .
+5.2 Finalità del progetto . . . . . . . .
+5.3 Tecnologie interessate . . . . . . .
+5.4 Aspetti positivi . . . . . . . . . . .
+5.5 Criticità . . . . . . . . . . . . . . .
+5.6 Valutazione conclusiva . . . . . . .
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+11
+11
+11
+11
+11
+11
+12
+
+6 Capitolato C5 - Stalker
+6.1 Descrizione Generale .
+6.2 Finalità di progetto . .
+6.3 Tecnologie interessate
+6.4 Aspetti positivi . . . .
+6.5 Criticità . . . . . . . .
+6.6 Valutazione conclusiva
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+13
+13
+13
+13
+13
+13
+13
+
+tenners.unipd@gmail.com
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+Pagina 2 di 15
+
+Studio di fattibilità
+
+7 Capitolato C6 - Things Relationship Management (ThiReMa)
+7.1 Descrizione generale . . . . . . . . . . . . . . . . . . . . . . . . . .
+7.2 Finalità del progetto . . . . . . . . . . . . . . . . . . . . . . . . . .
+7.3 Tecnologie interessate . . . . . . . . . . . . . . . . . . . . . . . . .
+7.4 Aspetti positivi . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7.5 Criticità . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7.6 Valutazione conclusiva . . . . . . . . . . . . . . . . . . . . . . . . .
+
+tenners.unipd@gmail.com
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+.
+.
+.
+.
+.
+.
+
+14
+14
+14
+14
+14
+14
+15
+
+Pagina 3 di 15
+
+Studio di fattibilità
+
+1
+
+Introduzione
+
+1.1
+
+Scopo del Documento
+
+Con questo documento verrà descritto ed analizzato il processo che ha portato il team Tenners alla
+scelta del capitolatoG C2, motivandone la preferenza rispetto ai restanti. L’analisi di ciascun
+capitolatoG terrà anche in considerazione la presentazione effettuata in data 2019-11-15 e i
+successivi approfondimenti tecnologici da parte delle aziende proponenti.
+
+1.2
+
+Glossario
+
+Come supporto alla documentazione, viene fornito un Glossario 1.1.0D , contenente delle definizioni per termini specifici che possono richiedere chiarimento. Ognuno di questi verrà contrassegnato con un pedice G nel documento e la sua spiegazione verrà riportata sotto la corrispondente
+lettera del glossario. Ciò consentirà di avere un linguaggio comune ed evitare ambiguità.
+
+1.3
+1.3.1
+
+Riferimenti
+Normativi
+
+• Norme di progetto: Norme d Progetto 2.4.0D .
+1.3.2
+
+Informativi
+
+• CapitolatoG d’appalto 1 (Autonomous Highlights Platform):
+https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C1.pdf;
+• CapitolatoG d’appalto 2 (Etherless):
+https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C2.pdf;
+• CapitolatoG d’appalto 3 (NaturalAPI):
+https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C3.pdf;
+• CapitolatoG d’appalto 4 (Predire in Grafana):
+https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C4.pdf;
+• CapitolatoG d’appalto 5 (Stalker):
+https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C5.pdf;
+• CapitolatoG d’appalto 6 (ThiReMa - Things Relationship Management):
+https://www.math.unipd.it/~tullio/IS-1/2019/Progetto/C6.pdf;
+• Approfondimento tecnologico C3: https://www.math.unipd.it/~tullio/IS-1/2019/
+Dispense/C3a.pdf;
+• Approfondimento tecnologico C4: https://www.math.unipd.it/~tullio/IS-1/2019/
+Dispense/C4a.pdf;
+• Approfondimento tecnologico C5: https://www.math.unipd.it/~tullio/IS-1/2019/
+Dispense/C5a.pdf;
+• Approfondimento tecnologico C6: https://www.math.unipd.it/~tullio/IS-1/2019/
+Progetto/C6a.pdf.
+
+tenners.unipd@gmail.com
+
+Pagina 4 di 15
+
+Studio di fattibilità
+
+2
+
+Capitolato C1 - Autonomous Highlights Platform
+
+2.1
+
+Descrizione generale
+
+Il capitolatoG proposto dall’azienda Zero12 ha lo scopo di creare una piattaforma web che riesca
+ad estrarre i momenti salienti, per una durata massima di 5 minuti, a partire dal video di un
+evento sportivo.
+
+2.2
+
+Finalità del progetto
+
+La piattaforma web dovrà essere realizzata perseguendo determinate caratteristiche:
+• l’utente avrà la possibilità di caricare il proprio video dell’evento sportivo da CLIG ;
+• una volta eseguito l’uploadG , avverrà l’identificazione e l’estrazione dei momenti salienti
+per creare successivamente il video finale;
+• l’utente potrà interfacciarsi alla piattaforma web per seguire le operazioni precedentemente
+descritte e visualizzare il risultato finale.
+
+2.3
+
+Tecnologie interessate
+
+• AWS (Amazon Web Services): piattaforma che si occupa di fornire servizi di cloud
+computingG ;
+• Amazon ECS (Elastic Container Service): servizio per l’orchestrazione di contenitori
+altamente dimensionabile ad elevate prestazioni;
+• Amazon DynamoDB: database non relazionale per applicazioni ad elevate performance
+su qualsiasi scala;
+• Amazon Elastic Transcoder: per la conversione dei diversi formati video;
+• Amazon SageMaker: utile per creare e allenare modelli di apprendimento automaticoG ;
+• Amazon Rekognition video: per il riconoscimento di soggetti, volti, oggetti nei fotogrammi all’interno di un video;
+• HTML5, CSS3 e JavaScript: linguaggi per lo sviluppo della piattaforma web;
+• Bootstrap: frameworkG per realizzare il front-endG della piattaforma web;
+• NodeJS: per lo sviluppo di APIG a supporto dell’applicativo;
+• PythonG : per lo sviluppo delle componenti dedicate all’apprendimento automatico G .
+
+2.4
+
+Aspetti positivi
+
+• Possibilità di apprendere e utilizzare le tecnologie AWS;
+• Progetto basato su concetti di apprendimento automatico G , mai affrontati durante il percorso di studi e ritenuti interessanti da molti componenti del gruppo.
+
+tenners.unipd@gmail.com
+
+Pagina 5 di 15
+
+Studio di fattibilità
+
+2.5
+
+Criticità
+
+• Seppur stimolante, l’apprendimento e il corretto utilizzo della piattaforma AWS e dei suoi
+servizi può essere molto dispendioso in termini di tempo.
+
+2.6
+
+Valutazione conclusiva
+
+Il gruppo fin da subito ha ritenuto molto accattivante il capitolatoG . Tuttavia, dopo un’attenta
+analisi dei rischi e vantaggi, si è deciso di focalizzare le attenzioni verso il C2. Sebbene siano
+consigliati linguaggi per lo sviluppo della UIG per lo più già noti, addestrare il modello per
+identificare i momenti significativi dell’evento sportivo e apprendere le nuove tecnologie AWS
+mai utilizzate sino ad ora, hanno demotivato il team nell’intraprendere questo progetto.
+
+tenners.unipd@gmail.com
+
+Pagina 6 di 15
+
+Studio di fattibilità
+
+3
+
+Capitolato C2 - Etherless
+
+3.1
+
+Descrizione generale
+
+Etherless è una piattaforma che permette agli sviluppatori di caricare funzioni JavaScript sul
+cloudG per poi renderle disponibili a terzi. Il servizio si presenta come un CaaS (Computation-asa-Service) in cui l’utente finale paga per l’esecuzione di una singola funzione in modo automatico
+mediante l’utilizzo della rete EthereumG e degli smart contractG .
+
+3.2
+
+Finalità del progetto
+
+L’obbiettivo finale è quello di avere un ambiente in cui un ipotetico sviluppatore Bob, dopo aver
+sviluppato una funzionalità che potrebbe essere di interesse per altri sviluppatori (es. Alice), carica il suo codice JavaScript su Etherless mediante la sua utenza e imposta un costo di esecuzione
+per quella funzione. Alice, avendo bisogno di tale funzionalità, ha la possibilità di pagare una
+quota di esecuzione piuttosto che riscrivere la stessa procedura; attraverso la sua utenza Etherless, Alice è quindi capace di usufruire della funzione in cloudG e sostenere il costo di esecuzione.
+La piattaforma deve essere conforme a quanto segue:
+• gli utenti avranno la possibilità elencare le funzioni disponibili, caricarne di nuove, aggiornarle, eseguirle oppure eliminare attraverso una CLIG ;
+• utilizzo della rete EthereumG per la comunicazione tra i vari componenti di Etherless, per
+la definizione della logica di interazione tra le varie parti (smart contractG ) e per lo storage
+di dati;
+• il guadagno proveniente dall’esecuzione di una funzione deve essere distribuito tra l’autore
+della stessa e i proprietari della piattaforma EthereumG , per il sostenimento dell’infrastruttura cloudG su cui avviene l’esecuzione;
+• la granularità del pagamento deve corrispondere alla singola esecuzione di una funzione;
+• per la realizzazione del back-endG deve essere prevista una infrastruttura serverlessG .
+
+3.3
+
+Tecnologie interessate
+
+• AWS (Amazon Web Services): piattaforma che si occupa di fornire servizi di cloud
+computingG ;
+• AWS - Lambda: servizio che consente di eseguire codice nel cloudG ;
+• EthereumG : una rete globale per il trasferimento di criptovaluteG e per la realizzazione
+di applicativi decentralizzati;
+• Solidity: linguaggio OOPG per la definizione di smart contractG ;
+• Truffle: framework per lo sviluppo di smart contractG su rete EthereumG ;
+• Web3: APIG JavaScript per l’interazione con un nodo EthereumG , locale o remoto;
+• Ropsten: rete EthereumG pubblica usato per il testing di applicativi EthereumG prima
+del portingG in produzione sulla MainNetG ;
+
+tenners.unipd@gmail.com
+
+Pagina 7 di 15
+
+Studio di fattibilità
+
+• MainNetG : rete EthereumG principale;
+• Ganache: ambiente di sviluppo EthereumG utilizzato per la simulazione locale si una rete
+EthereumG e per l’analisi delle transazioni e log;
+• TypeScript 3.6: versione standardizzata da Microsoft del linguaggio JavaScript;
+• Node.js: ambiente di runtime open-sourceG per JavaScript;
+• The ServerlessG FrameworkG : frameworkG per la costruzione di ambienti serverlessG
+• Smart ContractG : protocollo informatico che facilita, verifica, fa rispettare ed esegue un
+contratto (insieme di regole);
+• ESLint: strumento di analisi del codice utilizzato durante lo sviluppo in JavaScript.
+
+3.4
+
+Aspetti positivi
+
+• Possibilità di apprendere e utilizzare tecnologie nuove, come ad esempio:
+– Amazon Web Services, leader nell’industria dei servizi cloudG ;
+– BlockchainG , tecnologia in crescita che mette a disposizione strumenti nuovi che
+permetto la realizzazioni di applicativi con caratteristiche innovative;
+– Node.js, ambiente di sviluppo che negli ultimi anni ha avuto larga diffusione.
+• Si entra in contatto con una azienda estera implicata in tecnologie del futuro;
+• Una volta compresi gli aspetti tecnici, l’implementazione non risulta complicata.
+
+3.5
+
+Criticità
+
+• Seppur stimolante, l’apprendimento e il corretto utilizzo della piattaforma AWS può risultare dispendioso;
+• Una progettazione iniziale non adeguata del servizio potrebbe invalidare parte dello sviluppo;
+• Alla base del progetto ci sono tecnologie prima non approfondite.
+
+3.6
+
+Valutazione conclusiva
+
+La prima impressione percepita dopo la lettura del capitolatoG è stata una poco rassicurante
+in quanto le tecnologie risultano nuove per tutti i membri del team. In seguito ad una accurata
+analisi dell’obiettivo principale del servizio Etherless, il progetto ha preso una sfumatura accattivante. Usare piattaforma EthereumG per realizzare un applicativo decentralizzato ha stimolato
+l’interesse per la sua diversità dagli ormai tipici standard architetturali per applicativi software.
+In seguito ad approfondimenti sull’argomento, il team è capace di portare a termine il progetto
+nei tempi richiesti.
+
+tenners.unipd@gmail.com
+
+Pagina 8 di 15
+
+Studio di fattibilità
+
+4
+
+Capitolato C3 - NaturalAPI
+
+4.1
+
+Descrizione generale
+
+Il progetto NaturalAPI, presentato dall’azienda di Bergamo teal.blue, parte dall’idea di stabilire un linguaggio comune che possa descrivere problemi e soluzioni nell’ambito di un progetto
+software. Gli stakeholdersG coinvolti nella progettazione di un software, hanno infatti metodi
+differenti di comunicare a causa del dominio di appartenenza differente e spesso si può andare
+incontro ad una errata comprensione dei problemi o casi di ambiguità.
+
+4.2
+
+Finalità del progetto
+
+NaturalAPI ha come obiettivo ridurre il divario tra le specifiche di un progetto (espresse in lingua inglese) e le APIG . Per realizzare ciò verrà utilizzata la metodologia del Behaviour Driven
+Development (BDD)G , e il progetto si fonderà concetti chiave come le user storyG e i criteri
+di accettazioneG . Ogni nuova caratteristica da aggiungere al prodotto finale, può essere descritta mediante lo schema "As a", "I want", "So that" e, ad ognuna di esse, corrisponderanno
+uno o più possibili scenari descritti mediante una struttura "Given", "When", "Then". Più
+dettagliatamente, il prodotto dovrà essere dotato delle seguenti suddivisioni a livello logico:
+• un NaturalAPI Discover in grado di estrarre, a partire da un qualsiasi documento non
+strutturato appartenente ad un determinato dominio, le potenziali entità coinvolte, i loro
+processi e le relazioni che le legano tra loro. In altre parole, a partire da un documento
+testuale, ne verranno estratti verbi, nomi e predicati, con relativa frequenza;
+• un NaturalAPI Design il cui compito è quello di utilizzare i diversi scenari descritti
+tramite Gherkin e la lista dei termini precedentemente estratti per creare un business
+application language (BAL) con il quale poter scrivere le APIG ;
+• un NaturalAPI Develop con cui convertire il BAL e testare le APIG in uno dei linguaggi
+di programmazione/frameworkG disponibili.
+
+4.3
+
+Tecnologie interessate
+
+• Gherkin: linguaggio usato per scrivere gli scenari e le features in Cucumber, molto simile
+al linguaggio naturale;
+• Cucumber: software che supporta lo sviluppo basato sul BDDG ;
+• HipTest: piattaforma per il continuous testing con supporto nativo del BDDG ;
+• Jbehave: frameworkG per il BDDG ;
+
+4.4
+
+Aspetti positivi
+
+• Interessante l’utilizzo di approcci statistici o mediante grammatiche context-freeG
+l’elaborazione del linguaggio naturale;
+
+per
+
+• Utilizzo di tecnologie completamente nuove per tutti i componenti del gruppo;
+
+tenners.unipd@gmail.com
+
+Pagina 9 di 15
+
+Studio di fattibilità
+
+4.5
+
+Criticità
+
+Alcune problematiche relative all’ambiguità del linguaggio naturale, spiegate anche durante la
+conferenza di approfondimento del capitolatoG , sembrano apparentemente difficili da risolvere e
+dunque eventualmente dispendiose in termini di tempo.
+
+4.6
+
+Valutazione conclusiva
+
+Natural API non ha creato molto interesse nel gruppo soprattutto se paragonato agli altri capitolati proposti. L’idea generale è stata di un progetto poco spendibile nel mondo del lavoro
+nonostante l’utilizzo di tecnologie e metodi di sviluppo prima sconosciuti al gruppo.
+
+tenners.unipd@gmail.com
+
+Pagina 10 di 15
+
+Studio di fattibilità
+
+5
+
+Capitolato C4 - Predire in Grafana
+
+5.1
+
+Descrizione generale
+
+Zucchetti, prima software houseG italiana, propone lo sviluppo di un plug-inG per il software
+Grafana, prodotto realizzato per monitoraggio e presentazione dei flussi di dati raccolti dall’azienda. In questo contesto, l’applicativo da realizzare avrà lo scopo di utilizzare i dati ricevuti
+per allarmi o segnalazioni, per compiere delle previsioni visualizzabili sotto forma di grafici e
+dashboardG .
+
+5.2
+
+Finalità del progetto
+
+Il prodotto finale deve essere conforme ai seguenti compiti:
+• addestrare il modello producendo un file in formato JSON contenente i parametri per le
+previsioni con SVM o la Regressione Lineare;
+• utilizzare i predittori del file JSON al flusso di dati di cui si vuole compiere la previsione;
+• applicare la previsione e fornire i risultati dei valori attesi con un’adeguata interfaccia
+grafica mediante l’utilizzo di opportuni grafici.
+
+5.3
+
+Tecnologie interessate
+
+• Grafana: software open-sourceG che, a partire da flussi di dati, ne permette il monitoraggio tramite grafici e dashboardG dedicate;
+• Regressione lineare: metodo statistico utilizzato per la stima di un valore atteso mecapcadiante una retta;
+• SVM (Support Vector Machine): modello di apprendimento automatico G che, dato un
+training setG con valori appartenenti a due possibili classi distinte, assegna i nuovi valori
+ad una di esse;
+• Javascript: linguaggio di programmazione utilizzato per sviluppare il plug-inG ;
+• InfluxDB: database open-sourceG a Serie Temporali (Time SeriesG ), efficiente per il basso
+consumo di banda e per l’ottimizzazione della memoria.
+
+5.4
+
+Aspetti positivi
+
+• Stimolante la possibilità di realizzare un prodotto per una grande e rinomata azienda;
+• Possibilità di approfondire nozioni teoriche mai affrontate prima riguardanti i modelli
+statistici.
+
+5.5
+
+Criticità
+
+• Poco interessante dal punto di vista delle tecnologie utilizzate. Il linguaggio JavaScript,
+per esempio, è già stato studiato durante il percorso di studio;
+• Non si ha la possibilità di cimentarsi nello sviluppo di un software stand-aloneG , ma solo
+di un plug-inG dipendente da Grafana.
+tenners.unipd@gmail.com
+
+Pagina 11 di 15
+
+Studio di fattibilità
+
+5.6
+
+Valutazione conclusiva
+
+Sebbene siano stati individuati alcuni aspetti positivi, il gruppo ha ritenuto che l’utilizzo di
+linguaggi di programmazione per lo più già noti, fosse un fattore determinante per non prendere
+in considerazione questo progetto. Oltre a ciò, la presentazione del capitolatoG effettuata dal
+proponente, è sembrata poco dettagliata, incentrata più nella presentazione dell’azienda, del
+software Grafana e di alcuni metodi statistici, piuttosto che nella descrizione effettiva del prodotto
+da realizzare.
+
+tenners.unipd@gmail.com
+
+Pagina 12 di 15
+
+Studio di fattibilità
+
+6
+
+Capitolato C5 - Stalker
+
+6.1
+
+Descrizione Generale
+
+Le nuove normative in merito alla sicurezza dei locali pubblici, impongono una corretta gestione
+del numero di individui presenti al loro interno. In questo contesto, Imola Informatica propone
+la realizzazione di un prodotto software che riesca a tenere traccia del numero di persone presenti
+in una struttura e la loro corretta posizione all’interno di essa.
+
+6.2
+
+Finalità di progetto
+
+Il prodotto finale dovrà prevedere la realizzazione delle seguenti componenti:
+• un applicativo mobile che consenta all’utente finale di registrare la propria presenza. Essa
+verrà segnalata in maniera anonima o trasmettendo al server il proprio identificativo in base
+alla tipologia del luogo di interesse. L’utente avrà la possibilità di visualizzare in tempo
+reale la propria presenza all’interno del luogo e da quanto tempo si trova al suo interno;
+• una sezione dedicata agli amministratori, i quali avranno la possibilità, attraverso un’apposita interfaccia grafica, di eseguire il login all’interno del server e di gestire varie informazioni come ad esempio la lista degli eventi di interesse e lo storico degli ingressi di ciascuna
+persona.
+
+6.3
+
+Tecnologie interessate
+
+• Java(versione 8 o superiori)/PythonG /Node.js: come linguaggi da utilizzare per lo
+sviluppo del server back-endG ;
+• IAAS KubernetesG /PAASG /OpenshiftG /RancherG : piattaforme per applicazioni
+per il rilascio delle componenti del Server e la gestione della scalabilità orizzontale.
+• Android/iOS: sistemi operativi su cui sviluppare l’applicazione;
+
+6.4
+
+Aspetti positivi
+
+Possibilità di comprendere nel dettaglio il funzionamento e le metodologie utilizzate per la
+localizzazione.
+
+6.5
+
+Criticità
+
+Come specificato durante la presentazione del capitolatoG potrebbero esserci difficoltà di tracciamento all’interno di un ambiente chiuso e problematiche derivanti dalla batteria limitata del
+dispositivo.
+
+6.6
+
+Valutazione conclusiva
+
+Il capitolatoG è stato scartato dal gruppo sin dall’inizio per il poco interesse nello sviluppo di un
+applicativo mobile, oltre che per la considerevole mole di lavoro preventivata nello sviluppo delle
+varie parti del prodotto. Oltretutto, la criticità relativa alla localizzazione in ambienti chiusi, ha
+portato l’interesse verso altri capitolati.
+
+tenners.unipd@gmail.com
+
+Pagina 13 di 15
+
+Studio di fattibilità
+
+7
+
+Capitolato C6 - Things Relationship Management (ThiReMa)
+
+7.1
+
+Descrizione generale
+
+Sanmarco Informatica propone lo sviluppo di un software in grado di ricevere misurazioni da sensori eterogenei, divisibili nelle macro-categorie dati operativi e fattori influenzanti, ed accumularli
+in uno o più database. L’applicazione quindi deve poter fornire un servizio di dispatchingG , basato su Telegram, per inoltrare le informazioni più utili o urgenti per la gestione dei dispositivi
+installati.
+
+7.2
+
+Finalità del progetto
+
+Il software ThiReMa deve provvedere all’interazione tra i sensori e il database sviluppando le
+seguenti componenti:
+• uno o più "Producer" con il compito di convertire i dati inviati dai sensori in messaggi
+utilizzabili da KafkaG (in formato .JSON);
+• un "Connect" atto alla scrittura dei dati nel database;
+• una serie di componenti "Stream" per la modifica e trasformazione dei dati presenti nel
+database;
+• dispatchingG delle informazioni basato su Telegram.
+
+7.3
+
+Tecnologie interessate
+
+• Apache KafkaG : clusterG che si interfaccia fra i sensori ed il database;
+• Java: linguaggio di programmazione utilizzato per sviluppare le componenti;
+• PostgreSQL: database relazionale utilizzabile;
+• TimescaleDB: database improntato alla gestione temporale dei dati;
+• ClickHouse: database improntato alla gestione dei dati per colonna;
+• Bootstrap: libreria per la creazione della parte front-endG ;
+• DockerG : containerG nel quale istanziare le componenti custom di Apache KafkaG ;
+• GitHubG : sistema di versionamentoG ;
+• Telegram: servizio tramite il quale effettuare il dispatchingG .
+
+7.4
+
+Aspetti positivi
+
+Stimolante la possibilità di lavorare per un progetto che richiede competenze in ambito IoTG e
+di Big DataG .
+
+7.5
+
+Criticità
+
+Grande complessità di esecuzione dovuta alla mole di applicativi differenti con il quale lavorare.
+tenners.unipd@gmail.com
+
+Pagina 14 di 15
+
+Studio di fattibilità
+
+7.6
+
+Valutazione conclusiva
+
+Il team ha ritenuto interessante la possibilità di realizzare una web application implicata nel
+mondo dell’IoTG e dei Big DataG . Nonostante sia stato preso in considerazione per il gran
+numero di competenze che si sarebbero potute affinare, lo sforzo per imparare così tante tecnologie
+e la possibilità che il lavoro finale non potesse essere all’altezza delle aspettative, lo hanno reso
+meno appetibile.
+
+tenners.unipd@gmail.com
+
+Pagina 15 di 15
+
+
