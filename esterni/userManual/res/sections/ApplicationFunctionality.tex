@@ -1,52 +1,71 @@
 \section{Application functionality}
-\subsection{Access}
-To have access to the application, use the following  command to view the list of all commands with a short description:\\\\
-\centerline {\code{etherless init}}
+\subsection{Account management}
+A user needs to be identified uniquely, and that is done through an Ethereum\glo account. The functions uploaded will be linked to your account, and the execution fees will be detracted from the same account. Also, each Ethereum\glo network call, will consume gas and as a consequence, you will need log in before using all functionalities.\\\\An Ethereum account is not identified by the same means as an usual account (eg. name, email), but by an address and private key which are not user-chosen but assigned by the network when requested.
+\\\\
+Once a user is logged, a session is created and it lasts until the user logs out. To keep the session data safely stored, we encrypt locally your credentials with a password. When a command that needs the account private key is called, the password should also be provided.
+%To have access to the application, use the following  command to view the list of all commands with a short description:\\\\
+%\centerline {\code{etherless init}}
 %\begin{figure}
 %	\centering
 %	\includegraphics[width=\textwidth]{res/img/Screenshot_init.jpg}
 %	\caption{command list}
 %\end{figure}
 \subsubsection{Registration}
-In order to use the functionality of the Etherless application, the user must be registered into the platform.\\
-To do it, you have to use the next command and replace <password>  with a password of your choice.\\
-\centerline{\code{signup <password>}}\\
+To generate a brand new Ethereum account use the following command:\\\\
+\centerline{\code{signup <password>}}\\\\
+The password is a user-chosen string that will be used to encrypt your credentials locally.\\
+The system proceeds to register a brand new account and then displays the following values: 
+\begin{itemize}
+	\item An \textbf{address} identifying the \textit{Ethereum\glos} account;
+	\item A \textbf{private-key\glos} associated with the \textit{Ethereum\glos} account.
+\end{itemize}
+\textbf{Attention!} When a signup is requested, the new account becomes the logged in account.\\\\
+\textbf{Note!} You can use MetaMask\glo and a ether\glo faucet to add ethers\glo to an account on testnets.\\\\
+Example:
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\textwidth]{res/img/Screenshot_signup.png}
 		\caption{Signup command}
-	\end{figure}\\\\\\
-The system proceeds to register an account and an \textit{Ethereum\glos} wallet  and then returns two values: 
-\begin{itemize}
-	\item An \textbf{address} associated to the \textit{Ethereum\glos} account;
-	\item A \textbf{private-key\glos} associated to the \textit{Ethereum\glos} account.
-\end{itemize}
+	\end{figure}\\
 %aggiungere screen del comando 
 \subsubsection{Login}
-The developer can decide to use an account already existing typing the \textit{private-key\glos} of your own \textit{Ethereum\glos} account already existing and the password chosen.\\\\
-\centerline{\code{login <privateKey> <password>}}
+If an account already exists and the intent is to use it for Etherless, then the private key can be used to login using the following command:\\\\
+\centerline{\code{login <privateKey> <password>}}\\\\
+The password is a user-chosen string that will be used to encrypt your credentials locally.\\\\ 
+\textbf{Attention!} The account address is not necessary because it can be deducted from the private key.\\\\
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=\textwidth]{res/img/Screenshot_login.png}
 	\caption{Login command}
 	\end{center}
-\end{figure}\\\\
+\end{figure}
 \subsubsection{Logout}
-The user can also disconnect his \textit{Ethereum\glo} account from the \textit{Etherless} application using the command "logout".\\\\
-\centerline{\code{logout}}
+To disconnect the currently logged account, use the following command:\\\\
+\centerline{\code{logout}}\\\\
+This command will remove all session data and encrypted stored credentials. The password used during login or registration now becomes useless. To be able to use again Etherless functionalities, you will need to login again or generate a new account.\\
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{res/img/Screenshot_logout.png}
 	\caption{Logout command}
 \end{figure}
+\newpage
 \subsection{Commands guide}
 \subsubsection{List}
-Use the command "list" to view all the available functions deployed\glo to \textit{etherless-server}.\\\\
-\centerline {\code{list}}
+This command will show you a list of all functions that have been uploaded to Etherless by its users and it's used as follows:\\\\
+\centerline {\code{list}}\\\\
+For each function found, the following data is displayed:
+\begin{itemize}
+	\item \textbf{NAME}: the name of the function which is used to uniquely identify it (eg. for execution request);
+	\item \textbf{COST}: the fee detracted from the account each time execution is requested;
+	\item \textbf{PROTOTYPE}: a description of the parameters the functions needs;
+	\item \textbf{DESCRIPTION}: a textual function description;
+\end{itemize}
+Example:
 \begin{figure}[h]
-	\centering
+	\begin{center}
 	\includegraphics[width=\textwidth]{res/img/Screenshot_list.jpg}
 	\caption{List command}
+	\end{center}
 \end{figure}
 %\subsubsection{Find}
 %The user can search informations about a %specific function already deployed\glo by %another developer, typing the function %name.\\\\
@@ -68,21 +87,52 @@ Use the command "list" to view all the available functions deployed\glo to \text
 %\end{figure}}
 %aggiungere screen comando
 \subsubsection{Run}
-This command runs myFunction, on \textit{etherless-server}, passing param1, ...paramN as parameters. The parameter order follows the order of the function signature. Run is a synchronous command. Once launched it returns the result of the function or, in case the functions has some execution problems, an exception.\\
-\centerline{\code{run <functionName> <password> [parameters...]}}
+This command is used to request execution of a remote function. This is a synchronous command. Once launched it returns the result of the function or, in case the functions have some execution issues, an exception.\\\\
+\centerline{\code{run <functionName> <password> [parameters...]}}\\\\
+\\\\Other than the name of the the function to be run, password and parameters are necessary. Since the execution of the function will consume credit from your account, the private key needs to be accessed. Function parameters should be passed as function prototype instructs.\\\\
+\textbf{Attention!} The parameters passed to the function need to mirror prototype description, otherwise an error will probably occur.\\\\
+Example:
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{res/img/Screenshot_run.png}
 	\caption{Run command}
 \end{figure}
-\subsubsection{Deploy\glo}
-The command allows the user to deploy\glo to etherless-server the JavaScript function exported in \textit{file.js} under the name "myFunction".\\ 
-"myFunction" is also the handler of which the function will be available to the user once deployed. Deploy\glo is a synchronous command. Once launched, it returns only when the deploy\glo is successful or an exception if it encounters some problems.\\\\
-\centerline{\code{deploy <name> <description> <prototype> <cost> <file> <password>}}
+\subsubsection{Create}
+This command is used to request execution of a remote function. This is a synchronous command. Once launched it returns the result of the function or, in case the functions have some execution issues, an exception.\\\\
+\centerline{\code{create <functionName> <description> <prototype> <cost> <functionFile> <password> [parameters...]}}\\\\
+\\\\
+Input parameters are:
+\begin{itemize}
+	\item \textbf{functionName [string]}: a string containing the name of the function;
+	\item \textbf{description [string]}: a string containing the description of the function;
+	\item \textbf{prototype [string]}: a string containing the description of the parameters that uploaded function takes in;
+	\item \textbf{functionName [int]}: the fee amount (in wei) you wish to receive when your function is used; on top of this amount, service fees will be added;
+	\item \textbf{functionFile [path]}: a path to the file containing the function;
+	\item \textbf{password [string]}: the password you set up during signup/login;
+\end{itemize}
+\textbf{Attention!} JavaScript\glo function needs to be properly formatted so that the system is then able to interface with it.\\\\
+\textbf{Note!} A template function is provided (./prima.js)\\\\
+Example:
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{res/img/Screenshot_deploy.png}
-	\caption{Deploy command}
+	\caption{Create command}
 \end{figure}
-
-
+\subsubsection{Find}
+Retrieves information about a given function and it's used as follows:\\\\
+\centerline {\code{find <functionName>}}\\\\
+The following data is displayed for the searched function:
+\begin{itemize}
+	\item \textbf{NAME}: the name of the function which is used to uniquely identify it (eg. for execution request);
+	\item \textbf{COST}: the fee detracted from the account each time execution is requested;
+	\item \textbf{PROTOTYPE}: a description of the parameters the functions needs;
+	\item \textbf{DESCRIPTION}: a textual function description;
+	\item \textbf{OWNER}: a textual function description;
+\end{itemize}
+Example:
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=\textwidth]{res/img/Screenshot_find.png}
+	\caption{List command}
+	\end{center}
+\end{figure}
