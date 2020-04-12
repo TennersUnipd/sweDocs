@@ -1,0 +1,14 @@
+\section{Verbale della riunione}
+	\begin{itemize}
+		\item \textbf{Progettazione componente \textit{etherless-server}:} 
+		è stata definita una classe per gestire la connessione ad AWS, verrà poi richiamata dai comandi createFunction, updateFunction e deleteFunction. Sono le tre funzioni che interagiscono con AWS Lamba per il caricamento, la modifica e l'eliminazione delle funzioni.\\
+		AWS instance serve a definire i parametri per il collegamento con AWS.
+		Si è stabilito di separare la componente "runner" dalle altre funzioni riguardanti i comandi a disposizione dell'utente.
+		È stato deciso di utilizzare AWS lambda per l'esecuzione del "runner" e mantenere il processo costantemente attivo con l'utilizzo di \textit{cron-job\glos}, grazie ad esso ora possiamo stabilire la frequenza dell'esecuzione del comando automatizzato.
+		
+		\item \textbf{Stesura del manuale utente:} 
+		il manuale contiene le informazioni utili al corretto utilizzo della componente software, ed è destinato a chi deve utilizzare la piattaforma \textit{Etherless}, senza doverne per forza conoscere tutte le caratteristiche interne.\\
+		Al suo interno l'utente troverà la guida all'installazione della piattaforma \textit{Etherless} e tutte le funzionalità messe a disposizione per l'utente finale.\\
+		Come richiesto da \textit{Capitolato}\glo il manuale utente è stato redatto in lingua inglese.
+		
+	\end{itemize}
