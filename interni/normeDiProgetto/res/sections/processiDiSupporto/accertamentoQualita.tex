@@ -93,6 +93,35 @@ In seguito verranno stabilite le metriche specifiche per ciascun processo e per 
 \input{res/sections/processiDiSupporto/qualitaDeiProcessi}
 \input{res/sections/processiDiSupporto/qualitaDiProdotto}
 
+\subsubsection{Procedure}
+\paragraph{Rilevazione misurazioni}
+Per attuare adottare delle misurazioni rispetto alle metriche esposte nel paragrafo precedente, il gruppo si è avvalso dell'utilizzo di alcuni strumenti automatici che permettessero le rilevazioni in maniera rapida e precisa. In particolar modo, l'iter per tenere traccia delle qualità, è il seguente:
+\begin{enumerate}
+	\item adoperare la misurazione relativa al prodotto o al processo coinvolto. Essa può avvenire in due modi:
+	\begin{itemize}
+		\item mediante operazione di merge sul branch principale, vengono scatenati alcuni tipi di verifiche automatiche;
+		\item mediante l'utilizzo di software locali.
+	\item ottenuta la misura, il verificatore procederà con l'inserire l'esito all'interno dell'apposito file.csv contenuto nella folder del PdQ;
+	\item controllare che il corrispettivo grafico, generato dal file.csv, sia riportato all'interno del PdQ in maniera corretta;
+	\item inserire la misura ottenuta, in caso di vicinanza alla revisione di avanzamento, anche all'interno della relativa tabella nel PdQ;
+	\item inserire a seguito del corrispettivo grafico in appendice del PdQ, una valutazione sull'andamento della qualità monitorata.  
+	\end{itemize}
+\end{enumerate}
+
+\subsubsection{Strumenti}
+\paragraph{Code Metrics}
+Tool utilizzato per il calcolo della complessità ciclomatica durante lo sviluppo. Scelto per la facile integrazione con l'ambiente di sviluppo, in particolare per la veloce installazione come plug-in di VSCode.
+
+\paragraph{CLOC}
+Pacchetto installabile mediante \textit{npm\glo} scritto in linguaggio Perl che consente il calcolo in percentuale delle linee di commento rispetto alle linee di codice effettive.
+
+\paragraph{Gulpease Calculator}
+Software utilizzato per il calcolo dell'indice di Gulpease, automatizzato mediante le GitHub Actions ogni qualvolta viene effettuato il merge del branch con il ramo principale del repository.
+
+\paragraph{Excel}
+Sono stati utilizzati i fogli Excel per il calcolo delle metriche relative alla pianificazione. Questa modalità ha reso automatico e semplice il calcolo delle misurazioni, con l'inserimento dei soli valori iniziali in tabella. 
+
+
 \subsubsection{Riferimenti}
 Per la valutazione della qualità del prodotto e dei processi coinvolti nel progetto, il gruppo ha deciso di istanziare i seguenti standard e modelli:
 \begin{itemize}
