@@ -18,26 +18,42 @@ Per il versionamento del prodotto è stato scelto il software \textit{Git\glos}.
 
 \subparagraph*{Numero di versione}
 Per tenere traccia dei progressi si utilizza un sistema di numerazione delle versioni
-semantico (\href{https://semver.org/lang/it/}{semver.org}) con un'aggiunta di un TAG.
+semantico (\href{https://semver.org/lang/it/}{semver.org}).
 Il numero di versione è rappresentato nel formato:\\\\
 
-\centerline{\textbf{X.Y.Z-TAG}}
-
+\centerline{\textbf{X.Y.Z}}
 
 \begin{itemize}
   \item \textbf{Incremento in X}: l'incremento in X avviene quando le modifiche del componente soggetto all'attività, sono molto significative o non retrocompatibili;
-  \item \textbf{Incremento in Y}: l'incremento in Y avviene quando c'è un'aggiunta
-  di una funzionalità o, in caso di un documento, l'aggiunta di un capitolo. In questo caso l'aggiunta di funzionalità avviene in maniera retrocompatibile;
-  \item \textbf{Incremento in Z}: l'incremento in Z avviene per modifiche minori,
-  ad esempio \textit{code refactoring\glos}, correzioni di forme verbali o errori di digitazione;
-  \item \textbf{Cambio di TAG}: il TAG può essere:
-  \begin{itemize}
-  	\item \textbf{TBA (To Be Approved):} se sottoposto a opportuna verifica ma mancante di approvazione.
-  \end{itemize}
+  \item \textbf{Incremento in Y}: l'incremento in Y avviene quando c'è un'aggiunta di una funzionalità o, in caso di un documento, l'aggiunta di un capitolo.
+	In questo caso l'aggiunta di funzionalità dev'essere retrocompatibile;
+  \item \textbf{Incremento in Z}: l'incremento in Z avviene per modifiche minori chiamate \textit{PATCH\glo}, ad esempio \textit{code refactoring\glos},
+	correzioni di forme verbali, errori di digitazione o correzioni di bug minori;
+  %\item \textbf{Cambio di TAG}: il TAG può essere:
+  %\begin{itemize}
+  %	\item \textbf{TBA (To Be Approved):} se sottoposto a opportuna verifica ma mancante di approvazione.
+  %\end{itemize}
 
 \end{itemize}
-  In caso di versione approvata, il TAG viene rimosso.
- \noindent Il numero di versione viene applicato al prodotto finale in modo ricorsivo. Questo comporta che l'aumento della versione su X di un sottoprodotto, comporta l'aumento in Y della versione del prodotto. Ad esempio un incremento in X di un documento comporta un incremento in Y del prodotto finale, ad eccezione del rilascio dell'applicazione che corrisponde ad un incremento in X del prodotto complessivo.
+%  In caso di versione approvata, il TAG viene rimosso.
+ \noindent Il numero di versione è applicato a ogni sottoprodotto in maniera indipendente.
+ Esso viene poi riallineato a ogni rilascio del prodotto intero, ad esempio dopo un incremento, selezionando il numero di versione maggiore tra i suoi sottoprodotti.
+ In questo modo sarà possibile avere coesione tra le diverse "componenti" e maggiore adesione al modello incrementale, stabilendo una correlazione tra i sotto-prodotti e il prodotto nella sua interezza.
+ 
+
+\noindent Di seguito viene riportato un esempio per chiarire la relazione, in termini di versionamento, tra sotto-prodotto e prodotto complessivo:
+\begin{enumerate}
+	\item Il numero di versione dei documenti si può trovare in uno stato eterogeneo:
+	\begin{itemize}
+		\item \textbf{PdP:} v.2.1.2;
+		\item \textbf{PdQ:} v.2.4.0;
+		\item \textbf{NdP:} v.2.7.0;
+		\item\textbf{AdR:} v.2.2.3;
+	\end{itemize}
+	\item I prodotti delle attività (nel caso specifico i documenti), vengono allineati tutti alla versione maggiore fino a quel momento (v.2.7.0) rilevata prima di un rilascio;
+	\item Verrà infine valutato il versionamento relativo alla parte software e, in maniera analoga, verrà stabilito il numero di rilascio effettivo del prodotto intero. 
+\end{enumerate}
+
 
 
 
