@@ -1,4 +1,4 @@
-\paragraph{Qualità di Prodotto}
+\paragraph{Qualità di prodotto}
 Per quanto riguarda la qualità del prodotto, si è deciso di adottare lo
 \textit{standard ISO/IEC 9126\glos} estrapolandone le proprietà ritenute necessarie
 all'ottenimento della qualità del prodotto. Le restanti proprietà sono descritte in maniera dettagliata in appendice.
@@ -26,30 +26,6 @@ all'ottenimento della qualità del prodotto. Le restanti proprietà sono descrit
 	\end{itemize}
 \end{itemize}
 
-\subparagraph*{Usabilità}
-%Rappresenta la capacità del prodotto di essere comprensibile ed utilizzabile dall'utente.
-%\paragraph{Obiettivi}
-%\begin{itemize}
-%	\item \textbf{Comprensibilità:} il prodotto deve essere facile da comprendere nelle funzionalità e nei metodi di utilizzo;
-%	\item \textbf{Apprendibilità:} il prodotto deve permettere l'apprendimento delle funzionalità da parte dell'utente in poco tempo e in maniera corretta;
-%	\item \textbf{Operabilità:} il prodotto deve consentire all'utente un utilizzo autonomo, per i propri scopi.
-%\end{itemize}
-%\paragraph{Metriche}
-\begin{itemize}
-	\item \textbf{Numero comandi falliti:} indica il numero di inserimenti errati che l'utente invia tramite \textit{CLI\glos} per l'esecuzione di una specifica funzionalità;
-	\item \textbf{Percentuale fallimenti in una sessione:} indica la percentuale di comandi inseriti e inviati dall'utente in maniera errata durante una sessione di utilizzo dell'applicativo. Il calcolo avviene secondo la formula:\\\\
-	\centerline{
-		\begin{math}
-		PERC_{F}=100*\frac{N_{F}}{N_T}
-		\end{math}
-	}
-	\\\\Dove:
-	\begin{itemize}
-		\item \textbf{N\textsubscript{F}:} numero dei comandi inseriti in maniera errata durante la sessione di utilizzo;
-		\item \textbf{N\textsubscript{T}:} numero totale di comandi inseriti durante la sessione di utilizzo.
-	\end{itemize}
-\end{itemize}
-
 \subparagraph*{Manutenibilità}
 %Rappresenta la capacità del prodotto nel subire modifiche o miglioramenti a seguito di cambiamenti dell'ambiente, delle specifiche o dei requisiti del sistema.
 %\paragraph{Obiettivi}
@@ -60,19 +36,19 @@ all'ottenimento della qualità del prodotto. Le restanti proprietà sono descrit
 %\end{itemize}
 %\paragraph{Metriche}
 \begin{itemize}
-	\item \textbf{Indice di manutenibilità:} indica con un valore numerico, il grado di manutenibilità di un prodotto software, basandosi su metriche note di implementazione. Il calcolo avviene secondo la formula:\\\\
+	\item \textbf{Indice di complessità ciclomatica:} si propone di calcolare con un valore numerico la complessità del flusso di controllo di un programma:\\\\
 	\centerline{
 		\begin{math}
-		MI= 171-5.2*ln(HV)-0.23*(CC)-16.2*ln(LC)
+		v(G) = e-n+p
 		\end{math}
 	}
 	\\\\Dove:
 	\begin{itemize}
-		\item \textbf{HV:} rappresenta l'Halstead Volume;
-		\item \textbf{CC:} indica la complessità ciclomatica del codice;
-		\item \textbf{LC:} indica le linee di codice.
+		\item \textbf{e:} numero degli archi (nel flusso di controllo);
+		\item \textbf{n:} numero dei nodi (istruzioni o espressioni);
+		\item \textbf{p:} numero delle componenti collegate da un arco.
 	\end{itemize}
-	\item \textbf{Percentuale commenti:} indica, con un valore percentuale, la quantità di documentazione sotto forma di codice commentato nel prodotto software . Il calcolo avviene secondo la formula:\\\\
+	\item \textbf{Percentuale commenti:} indica, con un valore percentuale, la quantità di documentazione sotto forma di codice commentato nel prodotto software. Il calcolo avviene secondo la formula:\\\\
 	\centerline{
 		\begin{math}
 		PERC_{COD}=100*\frac{NR_{COD}}{NR}
