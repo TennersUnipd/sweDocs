@@ -29,7 +29,7 @@ considerarsi a sua volta qualitativamente definito. Viene dunque stabilito un pi
 \begin{longtable}{|C{4.5cm}|C{2.25cm}|C{2.25cm}|C{3cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Metriche per l'Analisi dei Requisiti }\\
+	\caption{Metriche per l'Analisi dei requisiti }\\
 	\hline
 	\rowcolor{header}
 
@@ -43,7 +43,7 @@ considerarsi a sua volta qualitativamente definito. Viene dunque stabilito un pi
 \pagebreak
 
 
-\subsubsection{Progettazione}
+\subsection{Progettazione}
 %\paragraph{Obiettivi}
 %\begin{itemize}
 %	\item utilizzo delle best practice derivanti da design pattern strutturali noti e consolidati;
@@ -51,7 +51,7 @@ considerarsi a sua volta qualitativamente definito. Viene dunque stabilito un pi
 %	\item l'architettura realizzata deve ridurre la complessità di realizzazione del sistema.
 %\end{itemize}
 
-\paragraph{Metriche}
+\subsubsection{Metriche}
 \begin{itemize}
 	\item Structural Fan-out (SFOUT);
 	\item Structural Fan-in (SFIN).
@@ -62,7 +62,7 @@ considerarsi a sua volta qualitativamente definito. Viene dunque stabilito un pi
 \begin{longtable}{|C{4.5cm}|C{2.25cm}|C{2.25cm}|C{3cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Metriche per la Progettazione}\\
+	\caption{Metriche per la progettazione}\\
 	\hline
 	\rowcolor{header}
 
@@ -99,7 +99,7 @@ ciclo di vita del prodotto.
 \begin{longtable}{|C{2.5cm}|C{3.25cm}|C{3.25cm}|C{3cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Metriche per la Documentazione}\\
+	\caption{Metriche per la documentazione}\\
 	\hline
 	\rowcolor{header}
 
@@ -131,7 +131,7 @@ Il processo di Verifica si attua mediante controlli basati su norme e metriche c
 \begin{longtable}{|C{2.5cm}|C{3.25cm}|C{3.25cm}|C{3cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Metriche per la Verifica}\\
+	\caption{Metriche per la verifica}\\
 	\hline
 	\rowcolor{header}
 
@@ -156,11 +156,11 @@ La pianificazione è un'attività del processo di Gestione che si occupa dell'al
 \paragraph{Metriche}
 \begin{itemize}
 	\item \textbf{Planned Value (PV)}
-	\item \textbf{Actual cost (AC)}
-	\item \textbf{Budget at Completion (BAC)}
+	\item \textbf{Actual Cost (AC)}
+	\item \textbf{Budget At Completion (BAC)}
 	\item \textbf{Earned Value (EV)}
-	\item \textbf{Estimated at Completion (EAC)}
-	\item \textbf{Estimate to Complete (ETC)}
+	\item \textbf{Estimated At Completion (EAC)}
+	\item \textbf{Estimate To Complete (ETC)}
 	\item \textbf{Cost Variance	(CV)}
 	\item \textbf{Schedule Variance	(SV)}
 \end{itemize}
@@ -170,11 +170,11 @@ La pianificazione è un'attività del processo di Gestione che si occupa dell'al
 \begin{longtable}{|C{2cm}|C{3.5cm}|C{3.5cm}|C{3cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Metriche per la Pianificazione }\\
+	\caption{Metriche per la pianificazione }\\
 	\hline
 	\rowcolor{header}
 
-	\textbf{Metrica} & \textbf{Intervallo preferibile}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
+	\textbf{Metrica} & \textbf{Intervallo sufficiente}  & \textbf{Intervallo ottimale} & \textbf{Unità di misura}
 	\tabularnewline
 	\endfirsthead
 
@@ -182,7 +182,7 @@ La pianificazione è un'attività del processo di Gestione che si occupa dell'al
 	AC & >= 0 e <= BAC & >= 0 e <= PV & Euro \\
 	BAC & = Preventivo  & = Preventivo & Euro \\
 	EV & >0  & >0 & Euro \\
-	EAC & >= 0 e <= BAC*5\%& >= 0 e <= BAC & Euro \\
+	EAC &  >= 0 e <= BAC& >= (BAC*95\% ) e <= (BAC*105\%)& Euro \\
 	ETC & >= 0 & >= 0 e <= EV & Euro \\
 	CV & > 0 & >= 0 & Euro \\
 	SV & > 0 & = 0 & Euro \\
