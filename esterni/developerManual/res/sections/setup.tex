@@ -10,14 +10,20 @@ Other than an operative system this application needs:
     \item \textbf{Node.js}: version 10.16.3 (or higher) need to be installed on your system. To install it, the user can refer to the official web page nodejs.org for installation we recommend the LTS version;
     \item \textbf{npm}: Node Package Manager (npm) version 6.9.0 (or higher) is the package manager that comes with Node.Js;
     \item \textbf{TypeScript}: install the npm package TypeScriptG globally, minimum version required is the 3.6.5;\\\\ \centerline{\code{npm install typescript -g}}\\
-    \item \textbf{ts-node}: install the ts-node package globally, minimum version required is the 8.6.0; \newline\newline \centerline{\code{npm install ts-node -g}}\\
+    \item \textbf{ts-node}: install the ts-node package globally, minimum version required is the 8.6.0. \newline\newline \centerline{\code{npm install ts-node -g}}\\
 \end{enumerate}
 For ease of use, the user can also install multiple packages in a single command.
 \begin{center}
     \code{npm install typescript ts-node -g}
 \end{center}
-\includegraphics[width=\textwidth]{res/img/typescriptInstall.png}    
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{res/img/typescriptInstall.png}
+	\caption{Typescript install command}
+\end{figure}
+%\includegraphics[width=\textwidth]{res/img/typescriptInstall.png}\\\\   
 Expected procedure outlook.
+\newpage
 \subsection{Software download}
 A copy of each Etherless component can be retrieved by cloning our github.com repos. For a complete setup, proceed with the following instructions:
 \begin{enumerate}
@@ -45,9 +51,14 @@ Unit test can be run to check if setup has been performed properly:
     \code{npm run test}
 \end{center}
 
-If all tests pass than everything is ready the terminal window will look like the following:
-\includegraphics[width=\textwidth]{res/img/npmruntest.png}
-Before using the software, the user needs to register to the Ethereum\glo network or log in with an existing private-key\glo, after that, the user needs to add funds to the wallet that can be done through MetaMask\glo importing the account.
+\noindent If all tests pass than everything is ready the terminal window will look like the following:
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{res/img/npmruntest.png}
+	\caption{Run testing}
+\end{figure}
+%\includegraphics[width=\textwidth]{res/img/npmruntest.png}\\\\
+\noindent \\Before using the software, the user needs to register to the Ethereum\glo network or log in with an existing private-key\glo, after that, the user needs to add funds to the wallet that can be done through MetaMask\glo importing the account.
 \subsubsection{Usage}
 To run this program from the command line interface positioning on the main program folder
 and type ts-node src/index.ts <<command>> where <<command>> is the command that the user wants to run.\\
@@ -85,8 +96,13 @@ To run correctly this component the user needs to perform additional installatio
     \item \code{truffle deploy -{}-network local}: deploys compiled contracts to local network (default connection parameters are used);
     \item \code{truffle test}: run contract tests.
 \end{itemize}
-\textbf{Note!} Ganache can be used with a GUI too.\\\\
-\includegraphics[width=\textwidth]{res/img/truffleTest.png}
+\textbf{Note!} Ganache can be used with a GUI too.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{res/img/truffleTest.png}
+	\caption{Truffle test}
+\end{figure}
+%\includegraphics[width=\textwidth]{res/img/truffleTest.png}\\\\
 Tests execution results.
 \paragraph{Deploy on a production like envoirment}
 Before the deploy on a production-like network the user needs three different keys: an Etherscan API
@@ -100,7 +116,12 @@ by running the following commands from the component folder:
     \item \code{truffle deploy -{}-network test}: deploys the compiled smart contract to the Ropsten test network;
     \item \code{truffle run verify EtherlessSmart -{}-network test}: validates the contract on Etherscan; this step is needed for Etherscan to confirm the source code of the application and make available for a download the contract ABI; other components will use this service to update their ABIs\glo
 \end{itemize}
-\includegraphics[width=\textwidth]{res/img/deployContract.png}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{res/img/deployContract.png}
+	\caption{Deploying a contract}
+\end{figure}
+%\includegraphics[width=\textwidth]{res/img/deployContract.png}\\\\
 After the deploy is a good practice to save the contract address somewhere safe as that will be needed to retrieve the contract later.
 \subsubsection{Usage}
 After the deploy, the contract will be accessible through the network at its assigned address;
