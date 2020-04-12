@@ -1,12 +1,12 @@
-\subsubsection{UC15.1 - Inserimento percorso del file}
+\subsubsection{UC15.1 - Inserimento comando "list"}
 \begin{itemize}
-	\item \textbf{Attori primari:} Utente sviluppatore;
-	\item \textbf{Descrizione:} l'utente potrà inserire tramite \textit{CLI\glo} il percorso del file JavaScript contenente la funzione da condividere su \textit{Etherless}; 
-	\item \textbf{Pre-condizioni:} l'utente ha inserito tramite \textit{CLI\glo} il comando \textit{"deploy\glos"};
-	\item \textbf{Post-condizioni:} l'utente ha inserito, a seguito del comando \textit{"deploy\glos"}, il nome da dare alla funzione che verrà caricata su \textit{Etherless};
-	\item \textbf{Scenario principale:} l'utente inserisce il percorso del file contenente la funzione da caricare su \textit{Etherless};
-	\item \textbf{Estensioni:} 
+	\item \textbf{Attori primari:} Utente autenticato;
+	\item \textbf{Descrizione:} l'utente potrà inserire tramite \textit{CLI\glo} il comando per visualizzare la lista delle funzioni disponibili su \textit{Etherless} e le informazioni riguardanti ciascuna di esse;
+	\item \textbf{Pre-condizioni:} l'utente ha inserito il comando "list" per ottenere l'elenco delle funzioni disponibili;
+	\item \textbf{Post-condizioni:} il sistema restituisce l'elenco delle funzioni disponibili;
+	\item \textbf{Scenario principale:} l'utente inserisce il comando "list" per visualizzare tutte le funzioni presenti su \textit{Etherless} e visualizzarne i dettagli;
+	\item \textbf{Estensioni:}
 	\begin{itemize}
-		\item \textbf{UC15.2}: il percorso inserito non corrisponde ad alcun file con estensione .js.
+		\item \textbf{UC15.3}: se non è presente in \textit{Etherless} alcuna funzione con il nome inserito, verrà visualizzato un messaggio di errore.
 	\end{itemize}
 \end{itemize}
