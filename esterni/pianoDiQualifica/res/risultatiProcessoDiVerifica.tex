@@ -8,7 +8,7 @@ Di seguito le misure effettuate durante lo sviluppo software organizzate sotto f
 Si sono presi in esame i requisiti descritti nell'\textit{Analisi dei Requisiti\docs} e calcolato la percentuale di quelli soddisfatti attualmente dall'architettura, tramite la formula descritta nelle \textit{Norme di Progetto 2.4.0\docs}.\\
 
 \begin{center}
-	\begin{tikzpicture} [scale = 0.8]
+	\begin{tikzpicture} [scale = 0.9]
 		\begin{axis}[
 				title={Grafico PERC\_{OS} e PERC\_{DS}, Analisi dei requisiti},
 				legend pos=outer north east,
@@ -25,10 +25,12 @@ Si sono presi in esame i requisiti descritti nell'\textit{Analisi dei Requisiti\
 				% set the label style of the `xtick's
 				xticklabel=\year-\month-\day,
 			]
+
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percos.csv};
 			\addlegendentry{$percos$}
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percds.csv};
 			\addlegendentry{$percds$}
+			\draw[line width=0.1](2020-03-26,50)--(2020-04-06,50);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -434,6 +436,7 @@ Le misurazioni hanno avuto tutto sommato un esito positivo. I documenti che non 
 				xticklabel=\year-\month-\day,
 			]
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/codecoverage.csv};
+			\draw[line width=0.1](2020-4-4,70)--(2020-4-10,70);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -725,6 +728,7 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 			\addlegendentry{$max$}
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/min.csv};
 			\addlegendentry{$min$}
+			\draw[line width=0.1](2020-3-29,10)--(2020-4-10,10);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -754,6 +758,7 @@ Il valore di una componente è molto alto a causa di cicli annidati, sicuramente
 				xticklabel=\year-\month-\day,
 			]
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percComm.csv};
+			\draw[line width=0.1](2020-3-29,20)--(2020-4-10,20);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
