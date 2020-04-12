@@ -50,7 +50,7 @@ Another disadvantage is that if a new developer need a new functionality from an
     \item \textbf{callFunction}: calls the methods of the etherless-smart component; all requests to the smart contract goes through this method;
     \item \textbf{runFunction}: requests execution of a remote function;
     \item \textbf{createFunction}: uploads on the AWS endpoint the required function and register it on the eth network through the etherless-smart component;
-    \item \item \textbf{getPatLog}: return a list of past actions taken by the user;
+    \item \textbf{getPatLog}: return a list of past actions taken by the user;
     \item \textbf{getCostOfFunction}: retrieves from the smart contract the cost of a specific function loaded on the service;
     \item \textbf{disconnect}: disconnects the application from the network.
 \end{itemize}
@@ -73,20 +73,19 @@ Another disadvantage is that if a new developer need a new functionality from an
     \item \textbf{getFunctionTransaction}: builds a transaction object related to a contract method call;
     \item \textbf{getLog:}: returns past actions of the given eth account; 
     \item \textbf{getCallable}: maps a contract method name to a its callable form through the network;
-    \item \textbf{getSignal}: start listening for a network event;
+    \item \textbf{getSignal}: start listening for a network event.
 \end{itemize}
 \paragraph{NetworkInterface}
 \begin{itemize}
     \item \textbf{getListOfFunctions}: retrieves all the available contract's methods;
     \item \textbf{getArgumentsOfFunction}: returns all the parameter required to run the requested function;
-    \item \textbf{isTheFunctionPayable}: 
 \end{itemize}
 \paragraph{NetworkUtils}
 \begin{itemize}
     \item \textbf{getEtherlessFacade:}: returns a shared instance of the network interface;
     \item \textbf{checkABIUpdate}: returns weather there is the need of updating smart contract ABI;
     \item \textbf{updateABI}: gets an updated copy of the contract ABI from a remote source;
-    \item \textbf{getABIFromFile}: returns a contract ABI retrieved from a local file;
+    \item \textbf{getABIFromFile}: returns a contract ABI retrieved from a local file.
 \end{itemize}
 \newpage
 \subsection{Command Entities}
@@ -98,7 +97,7 @@ The Command's constructor exposes the dependency from NetworkFacade using this k
 	\includegraphics[width=\textwidth]{./res/img/CommandEntities.png}
 	\caption{Architecture overview diagram of Command Entities}
 \end{figure}
-The Command Entities modules is made by:
+\noindent The Command Entities modules is made by:
 \begin{itemize}
     \item \textbf{Command}: This is the main class that all *Command Class should extend because defines the base behavior of every command class;
     \item \textbf{Commander}: This class is a collection of static methods needed to interact with the external library Commander and wraps it, exposing functionalities for adding a new command in the available one.
@@ -122,7 +121,7 @@ The way we used to instantiate all the classes is not elegant, because we use a 
 \begin{itemize}
     \item \textbf{addCommand}: adds a command to the list of available CLI\glo commands;
     \item \textbf{start}: starts processing command input args;
-    \item \textbf{start}: sets default CLI\glo information;
+    \item \textbf{start}: sets default CLI\glo information.
 \end{itemize}
 \paragraph{Command}
 \begin{itemize}
@@ -130,5 +129,5 @@ The way we used to instantiate all the classes is not elegant, because we use a 
     \item \textbf{getCommandAlias}: returns the command alias for the CLI\glo;
     \item \textbf{getCommandsDescriptor}: returns command format for the CLI\glo;
     \item \textbf{parseArgs}: maps CLI\glo inputs to a command-specific inputs data structure;
-    \item \textbf{exec}: command execution;
+    \item \textbf{exec}: command execution.
 \end{itemize}
