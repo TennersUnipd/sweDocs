@@ -4,22 +4,47 @@
 The only hardware required is to own a CPU newer than a Pentium 4 with SSE2 instruction set. 
 \subsubsection{Software requirments }
 This application can run on GNU/Linux on any distribution newer than Ubuntu 14.04, MacOs from 10.10 onward and Windows from 7 and onward; Other than an operative system this application needs: 
-\begin{itemize}
-	\item \textbf{Node.js}: version 10.16.3 (or higher) to be installed on your system. To install it, the user can refer to the official web page nodejs.org for installation we recommend the LTS version;
+\begin{enumerate}
+	\item \textbf{git}: a working version of git cli installed;
+	\item \textbf{Node.js}: version 10.16.3 (or higher) need to be installed on your system. To install it, the user can refer to the official web page nodejs.org for installation we recommend the LTS version;
 	\item \textbf{npm}: Node Package Manager (npm) version 6.9.0 (or higher) is the package manager that comes with Node.Js; 
-	\item \textbf{TypeScript}: to install TypeScript\glo the user needs to run npm install typescript -g, the  minimum version required is the 3.6.5; 
-	\item \textbf{ts-node}: to install ts-node the user needs need to run npm install ts-node -g, this operation will install globally the command ts-node; 
+	\item \textbf{TypeScript}: install the npm package TypeScript\glo globally, minimum version required is the 3.6.5; \newline\newline \centerline{\code{npm install typescript -g}}\\
+	\item \textbf{ts-node}: install the ts-node package globally, minimum version required is the 8.6.0; \newline\newline \centerline{\code{npm install ts-node -g}}\\
 %	\item Having an \textit{Ethereum\glo} account on the network Ropsten with an amount of credit inside.
-\end{itemize}
-For simplicity the user can install multiple packages in one command\\\\
+\end{enumerate}
+For simplicity both packages can be installed with one command after nodejs and npm are set up\\\\
 \centerline{\code{npm install typescript ts-node -g}}\\
+\subsubsection{Application requirements}
+The client component interacts with the Ethereum\glo network directly, but in order to be able to do that an Etherem account and a Internet connection is needed. The account also needs to have a positive balance so that gas and execution costs are covered. Ethereum\glo test network Ropsten\glo is used.\\\\
+\textbf{Attention!} If you don't have any account on the Ropsten network with a positive balance, please use the following account to login:\\\\
+	\code{PRIVATE KEY: 0x42941c8eda235c0102c94793f671b2d6b68080a2ccadd5d5248dafa5b72b94be}\\
+	\code{ADDRESS: 0x6883F8f5efA1fE30f6903A11398b19C25c5E324d}\\
 \subsection{Etherless-cli}
-\subsubsection{Setup}
-To install Etherless-cli is sufficient to start the installation process\\\\
-\centerline{\code{run npm install –dotenv-extended}}\\\\
-Before starting to use the software the user needs to register an Ethereum account or login with an already existing one, after the that the user needs to add funds to the wallet. The user can do that by importing the new account in MetaMask\glo.
-\subsubsection{Run}
-To run this program from the command line interface positioning on the main program folder and type ts-node . «command» where «command» is the command that the user wants to run.
+Assuming a UNIX-based operating system is used.
+\subsection{Software download}
+A copy of Etherless cli can be retrieved by cloning our github.com repo. For a complete setup, proceed with the following instructions:
+\begin{enumerate}
+	\item Clone etherless-cli repository \\\\\centerline{\code{git clone https://github.com/TennersUnipd/etherless-cli.git}}\\
+	\item Move working directory to downloaded folder \\\\\centerline{\code{cd etherless-cli-master}}\\
+	\item Install all missing dependencies \\\\\centerline{\code{npm install}}\\
+\end{enumerate}
+\subsubsection{Usage}
+Since etherless-cli is a command line application, you will make use of specific commands to make use of its features. The commands syntax used is the following:
+\\\\\centerline{\code{ts-node src/index.ts <command> [parameters...]}}\\\\
+\textbf{Attention!} While performing this commands, your working directory needs to match the downloaded repo.\\
+
+The following commands are currently available:
+\begin{itemize}
+	\item login <privateKey> <password>
+	\item logout
+	\item signup <password>
+	\item list
+	\item create <functionName> <description> <prototype> <cost> <file> <password>
+	\item run <functionName> <password> [parameters...]
+	\item find <functionName>
+\end{itemize}
+
+
 %To download and install the application it is necessary to open the terminal/shell of your operating system and write the command \\
 %\centerline{\code{npm install etherless-cli -g}}\\
 %\begin{figure}
