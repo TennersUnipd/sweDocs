@@ -2,8 +2,137 @@
 \section{Risultati processo di verifica}
 In questa sezione vengono riportati i risultati del processo di verifica con relativi esiti e valutazioni. Ogni misurazione effettuata per ciascuna revisione di avanzamento viene opportunamente rappresentata sia in forma tabellare che mediante l'utilizzo di grafici che permettano il corretto monitoraggio nel tempo del prodotto e dei processi coinvolti. Ogni grafico che descrive l'andamento delle qualità viene accompagnato da una corrispondente valutazione da parte del team.
 
+\noindent In alcuni dei grafici sottostanti, è stata inserita una curva di colore verde che segnala il valore ottimale per ciascuna misurazione. L'intervallo sufficiente invece, non è segnalato per evitare confusione informativa
+
+\subsection{Sviluppo}
+Di seguito le misure effettuate durante lo sviluppo software organizzate sotto forma tabellare e visualizzando il loro valore attuale. Essendo metriche calcolabili solo con un architettura consistente si è iniziato a calcolarle da dopo aver ultimato la fase di progettazione.
+\subsubsection{Analisi dei Requisiti: PERC\textsubscript{OS} e PERC\textsubscript{DS}}
+Si sono presi in esame i requisiti descritti nell'\textit{Analisi dei Requisiti\docs} e calcolato la percentuale di quelli soddisfatti attualmente dall'architettura, tramite la formula descritta nelle \textit{Norme di Progetto 3.0.0\docs}.\\
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.9]
+		\begin{axis}[
+				title={Grafico PERC\_{OS} e PERC\_{DS}, Analisi dei requisiti},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=100,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percos.csv};
+			\addlegendentry{$percos$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percds.csv};
+			\addlegendentry{$percds$}
+			\draw[line width=0.1, green](2020-03-26,50)--(2020-04-06,50);
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
+I valori attuali sono:\\
+\\
+\begin{math}
+PERC_{OS}=58,11\% \\
+PERC_{DS}=41,67\%
+\end{math}
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+I risultati sono in linea con lo sviluppo del software. Il team si aspettava questo valore ed è fiducioso, per quanto riguarda la percentuale dei requisiti desiderabili soddisfatti, di raggiungere il valore ottimale entro la prossima revisione di avanzamento.
+
+\subsection{Progettazione}
+Una volta chiara l'architettura si è proceduto con il calcolo degli indici che misurano le dipendenze in entrata e in uscita alle unità. Di seguito la tabella che contiene questi valori per tutti i moduli della nostra architettura:
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Cli}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		EtherlessContract & 2 & 3 \\
+ 		EtherlessNetwork & 2 & 3 \\
+		EtherlessSession & 2 & 1 \\
+		NetworkFacade & 2 & 4 \\
+		NetworkUtils & 2 & 6 \\
+		Command & 7 & 3 \\
+		Commander & 0 & 2 \\
+		Signup & 0 & 1 \\
+		Login & 0 & 1 \\
+		Logout & 0 & 1 \\
+		Run & 0 & 2 \\
+		Find & 0 & 1 \\
+		Create & 0 & 2 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Smart}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		Etherless-Smart & 0 & 2 \\
+		Utils & 1 & 0 \\
+		FunctionStorage & 1 & 0 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\renewcommand{\arraystretch}{2.2}
+
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|p{0.4\textwidth}|p{0.20\textwidth}|p{0.20\textwidth}|}
+	\arrayrulecolor{white}
+	\caption{Tabella indici SFIN e SFOUT per Componente Etherless-Server}\\
+	\rowcolor{header}
+	\textbf{Unità} & \textbf{SFIN} & \textbf{SFOUT}\\
+	\endfirsthead
+
+	\rowcolor{white}
+	\caption[]{...Continuazione}
+
+	\endhead
+	\hline
+		Runner & 0 & 2 \\
+		Configurator & 1 & 1 \\
+		Gateway & 2 & 0 \\
+	\hline
+\end{longtable}
+\vspace{0.5cm}
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+I valori ottenuti per l'accoppiamento tra la componenti sono in linea con quelli desiderabili, alcuni sono molto alti, ma in linea con l'architettura e quindi immutabili.
+
 \subsection{Documentazione}
-Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 2.4.0\docs}, è stata stabilita una lista di controllo per la verifica dei documenti mediante "inspection". Viene di seguito riportata la tabella contenente i punti critici rilevati.
+Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 3.0.0\docs}, è stata stabilita una lista di controllo per la verifica dei documenti mediante "inspection". Viene di seguito riportata la tabella contenente i punti critici rilevati.
 \renewcommand{\arraystretch}{2.2}
 
 \rowcolors{2}{pari}{dispari}
@@ -23,11 +152,11 @@ Secondo le modalità stabilite all'interno delle \textit{Norme di Progetto 2.4.0
 
 	Struttura della frase & Le frasi devono essere più semplici possibili e preferibilmente poste in forma attiva facendo risaltare il soggetto dell'azione. \\
 
-	Elenchi puntati & Gli elenchi puntati dovranno essere coerenti con quanto scritto nelle \textit{Norme di Progetto 2.4.0\docs}. \\
+	Elenchi puntati & Gli elenchi puntati dovranno essere coerenti con quanto scritto nelle \textit{Norme di Progetto 3.0.0\docs}. \\
 
-	Glossario & Tutti i termini di Glossario devono essere riportati nel documento coerentemente con quanto scritto nelle \textit{Norme di Progetto 2.4.0\docs}. \\
+	Glossario & Tutti i termini di Glossario devono essere riportati nel documento coerentemente con quanto scritto nelle \textit{Norme di Progetto 3.0.0\docs}. \\
 
-	Data e ora & Tutti gli orari e le date devono essere riportate in formato corretto, come descritto nelle \textit{Norme di Progetto 2.4.0\docs}. \\
+	Data e ora & Tutti gli orari e le date devono essere riportate in formato corretto, come descritto nelle \textit{Norme di Progetto 3.0.0\docs}. \\
 
 	Accenti & Le parole devono avere i corretti accenti gravi o acuti secondo le regole della lingua italiana. Essi non sono interscambiabili tra loro. \\
 
@@ -78,7 +207,8 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	% set the label style of the `xtick's
 	xticklabel=\year-\month-\day,
 	]
-	\addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/adr.csv};
+	\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/adr.csv};
+	\draw [line width=0.1, green](2020-1-9, 60)--(2020-4-10, 60);
 	\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -118,7 +248,8 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
   % set the label style of the `xtick's
   xticklabel=\year-\month-\day,
   ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdp.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/pdp.csv};
+    \draw[line width=0.1, green](2020-1-9, 60)--(2020-4-10, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -155,7 +286,8 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year-\month-\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/pdq.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/pdq.csv};
+    \draw[line width=0.1, green] (2020-1-9, 60)--(2020-4-10, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -193,7 +325,8 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year-\month-\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/ndp.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/ndp.csv};
+    \draw [line width=0.1, green](2020-1-9, 60)--(2020-4-10, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -230,7 +363,8 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year.\month.\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/sdf.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/sdf.csv};
+    \draw[line width=0.1, green] (2020-1-9, 60)--(2020-4-10, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -268,7 +402,8 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     % set the label style of the `xtick's
     xticklabel=\year.\month.\day,
     ]
-    \addplot table [col sep=comma,x=date,y=value,blue] {res/gulpeaseCSV/glossario.csv};
+    \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/glossario.csv};
+    \draw [line width=0.1, green](2020-1-9, 60)--(2020-2-18, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -283,6 +418,37 @@ Gli esiti delle misurazioni ottenute in seguito alle correzioni segnalate in RR 
 \noindent Per il successivo incremento che ha portato sino alla consegna in RP sono state aggiunte delle sezioni all'interno della documentazione che hanno grosso modo mantenuto gli indici precedentemente calcolati salvo piccole variazioni.\\
 
 \noindent In generale è visibile un lieve aumento della qualità della documentazione ad eccezione del \textit{Piano di Progetto 2.2.1\docs}.
+
+\paragraph{RQ}
+Le misurazioni hanno avuto tutto sommato un esito positivo. I documenti che non sono stati modificati hanno mantenuto il loro valore. Il \textit{Piano di Qualifica\doc} ha ottenuto un indice più alto, forse a causa dell'aggiunta di parti meno discorsive che hanno alzato il numero di frasi conteggiate. Alcuni documenti hanno avuto un lieve peggioramento nell'indice associato, mantenendo tuttavia valori più che sufficienti.
+
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Grafico per Code Coverage},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=100,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/codecoverage.csv};
+			\draw[line width=0.1, green](2020-4-4,70)--(2020-4-10,70);
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+Il valore rilevato facendo la media tra i code coverage delle tre macro componenti del prodotto si aggira intorno al 70\%, valore prefissato come sufficiente. Tuttavia c'è ancora diversa disomogeneità nei test delle diverse componenti. Mentre etherless-cli e etherless-smart, ha una copertura di codice elevata, la parte etherless-server è stata al momento scarsamente verificata. Aumentando i test nella componente server e introducendo i test di unità e di integrazione per tutte le nuove funzionalità inserite, ci si aspetta di ottenere in data di collaudo, un valore più elevato.
 
 
 
@@ -530,3 +696,136 @@ L'adozione delle metriche relative alla pianificazione è avvenuta a partire dal
 
 \paragraph{RP}
 L'investimento iniziale precedente al RR ha consentito di acquisire dei vantaggi in termini di tempo impiegato e costi. Ciò si può evincere analizzando soprattutto i valori di Schedule Variance (SV) e Cost Variance (CV) che certificano il procedere del progetto con una maggiore efficienza rispetto a quanto preventivato.
+
+\paragraph{RQ}
+Come già segnalato in revisione di progettazione, l'avanzamento del progetto procede con maggiore velocità rispetto ai tempi prefissati e, dunque, con un minor dispendio di denaro. Le risorse non sfruttate a pieno in questo periodo e nello scorso, verranno sfruttate a pieno in quello precedente al collaudo per fornire una qualità del prodotto e dei processi più simile possibile ai valori prefissati.
+
+
+\subsection{Funzionalità}
+\subsubsection{Copertura Funzionale}
+Di seguito i risultati delle misurazioni della copertura funzionale.
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+
+	\caption{Tabella dei valori per la copertura funzionale}\\
+	\hline
+	\rowcolor{header}
+
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	Copertura funzionale & -  & - & 46,38 & - & Superato
+\end{longtable}
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Copertura funzionale},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=100,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/funcoverage.csv};
+			\draw[line width=0.1,green](2020-3-26,90)--(2020-4-10,90);
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+La copertura funzionale deve ancora raggiungere il valore ottimale. Ora che il team è riuscito a definire un'architettura, contiamo di completare le funzionalità sia quelle obbligatorie richieste dal capitolato, che quelle desiderabili. 
+
+\subsection{Manutenibilità}
+\subsubsection{Complessità Ciclomatica}
+Di seguito i risultati delle misurazioni della complessità ciclomatica.
+\begin{longtable}{|C{4.5cm}|C{3cm}|C{3cm}|C{3cm}|}
+	\arrayrulecolor{white}
+
+	\caption{Tabella dei valori per la complessità ciclomatica}\\
+	\hline
+	\rowcolor{header}
+
+	\textbf{Metrica} & \textbf{Valore minimo} & \textbf{Valore massimo} & \textbf{Valore medio}
+	\tabularnewline
+	\endfirsthead
+
+
+
+	Complessità ciclomatica	&	2 & 21 & 5.53 \\
+	\hline
+\end{longtable}
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Complessità Ciclomatica},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=50,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/average.csv};
+			\addlegendentry{$average$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/max.csv};
+			\addlegendentry{$max$}
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/min.csv};
+			\addlegendentry{$min$}
+			\draw[line width=0.1, green](2020-3-29,10)--(2020-4-10,10);
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
+
+
+\subsubsection{Percentuale dei commenti}
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Percentuale dei Commenti},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=50,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percComm.csv};
+			\draw[line width=0.1, green](2020-3-29,20)--(2020-4-10,20);
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+\begin{itemize}
+	\item Il valore di complessità ciclomatica di una componente è molto alto a causa di cicli annidati, sicuramente non accettabile. Il team ha concordato all'unanimità la necessità di diminuire la complessità di quel metodo entro il collaudo del prodotto e non introdurre ulteriori unità poco manutenibili.Tuttavia il valore medio e molto basso rispetto agli standard prefissati;
+	\item I commenti sono stati, nella prima parte di implementazione del prodotto, una priorità. Ciò consente di fornire una documentazione adeguata a futuri sviluppatori e aumentare la manutenibilità del prodotto. Come ci si aspetterebbe, tale valore è in costante crescita e si prevede un ulteriore incremento prima del collaudo effettivo del prodotto.
+\end{itemize}
