@@ -706,25 +706,24 @@ Come già segnalato in revisione di progettazione, l'avanzamento del progetto pr
 \subsection{Funzionalità}
 \subsubsection{Copertura Funzionale}
 Di seguito i risultati delle misurazioni della copertura funzionale.
-\begin{longtable}{|C{5cm}|C{5cm}|}
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
 	\arrayrulecolor{white}
 
 	\caption{Tabella dei valori per la copertura funzionale}\\
 	\hline
 	\rowcolor{header}
 
-	\textbf{Metrica} & \textbf{Percentuale per la copertura funzionale}
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
 	\tabularnewline
 	\endfirsthead
-
-	Copertura funzionale & 46,38 \\
-	\hline
+	Copertura funzionale & -  & - & 46,38 & - & Superato
 \end{longtable}
-
 \begin{center}
 	\begin{tikzpicture} [scale = 0.8]
 		\begin{axis}[
-				title={Complessità Ciclomatica},
+				title={Copertura funzionale},
 				legend pos=outer north east,
 				xlabel={\textbf{Tempo}},
 				ylabel={\textbf{Valore}},
@@ -740,10 +739,14 @@ Di seguito i risultati delle misurazioni della copertura funzionale.
 				xticklabel=\year-\month-\day,
 			]
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/funcoverage.csv};
-			\draw[line width=0.1,green](2020-3-26,100)--(2020-4-10,100);
+			\draw[line width=0.1,green](2020-3-26,90)--(2020-4-10,90);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
+
+\subsubsection{Valutazioni}
+\paragraph{RQ}
+La copertura funzionale deve ancora raggiungere il valore ottimale. Ora che il team è riuscito a definire un'architettura, contiamo di completare le funzionalità sia quelle obbligatorie richieste dal capitolato, che quelle desiderabili. 
 
 \subsection{Manutenibilità}
 \subsubsection{Complessità Ciclomatica}
@@ -758,6 +761,8 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 	\textbf{Metrica} & \textbf{Valore minimo} & \textbf{Valore massimo} & \textbf{Valore medio}
 	\tabularnewline
 	\endfirsthead
+
+
 
 	Complessità ciclomatica	&	2 & 21 & 5.53 \\
 	\hline
@@ -826,5 +831,3 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 	\item Il valore di complessità ciclomatica di una componente è molto alto a causa di cicli annidati, sicuramente non accettabile. Il team ha concordato all'unanimità la necessità di diminuire la complessità di quel metodo entro il collaudo del prodotto e non introdurre ulteriori unità poco manutenibili.Tuttavia il valore medio e molto basso rispetto agli standard prefissati;
 	\item I commenti sono stati, nella prima parte di implementazione del prodotto, una priorità. Ciò consente di fornire una documentazione adeguata a futuri sviluppatori e aumentare la manutenibilità del prodotto. Come ci si aspetterebbe, tale valore è in costante crescita e si prevede un ulteriore incremento prima del collaudo effettivo del prodotto.
 \end{itemize}
-
-
