@@ -703,13 +703,55 @@ L'investimento iniziale precedente al RR ha consentito di acquisire dei vantaggi
 Come già segnalato in revisione di progettazione, l'avanzamento del progetto procede con maggiore velocità rispetto ai tempi prefissati e, dunque, con un minor dispendio di denaro. Le risorse non sfruttate a pieno in questo periodo e nello scorso, verranno sfruttate a pieno in quello precedente al collaudo per fornire una qualità del prodotto e dei processi più simile possibile ai valori prefissati.
 
 
+\subsection{Funzionalità}
+\subsubsection{Copertura Funzionale}
+Di seguito i risultati delle misurazioni della copertura funzionale.
+\begin{longtable}{|C{5cm}|C{5cm}|}
+	\arrayrulecolor{white}
+
+	\caption{Tabella dei valori per la copertura funzionale}\\
+	\hline
+	\rowcolor{header}
+
+	\textbf{Metrica} & \textbf{Percentuale per la copertura funzionale}
+	\tabularnewline
+	\endfirsthead
+
+	Copertura funzionale & 46,38 \\
+	\hline
+\end{longtable}
+
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+		\begin{axis}[
+				title={Complessità Ciclomatica},
+				legend pos=outer north east,
+				xlabel={\textbf{Tempo}},
+				ylabel={\textbf{Valore}},
+				date coordinates in=x,
+				ymin=0,
+				ymax=100,
+				xtick=data,
+				xticklabel style={
+					rotate=90,
+					anchor=near xticklabel,
+				},
+				% set the label style of the `xtick's
+				xticklabel=\year-\month-\day,
+			]
+			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/funcoverage.csv};
+			\draw[line width=0.1,green](2020-3-26,100)--(2020-4-10,100);
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+
 \subsection{Manutenibilità}
 \subsubsection{Complessità Ciclomatica}
 Di seguito i risultati delle misurazioni della complessità ciclomatica.
 \begin{longtable}{|C{4.5cm}|C{3cm}|C{3cm}|C{3cm}|}
 	\arrayrulecolor{white}
 
-	\caption{Tabella dei valori per la Schedule Variance}\\
+	\caption{Tabella dei valori per la complessità ciclomatica}\\
 	\hline
 	\rowcolor{header}
 
