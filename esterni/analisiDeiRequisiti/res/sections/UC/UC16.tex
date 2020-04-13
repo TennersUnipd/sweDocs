@@ -1,26 +1,20 @@
-\subsubsection{UC16 - Modifica impostazioni funzione}
+\subsubsection{UC16 - Visione ad alto livello - utente sviluppatore}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\linewidth]{res/img/UC16.jpg}
-	\caption{Diagramma UC16 - Modifica impostazioni funzione}
+	\caption{Diagramma UC16 - visione ad alto livello - utente sviluppatore}
 \end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente sviluppatore;
-	\item \textbf{Descrizione:} l'utente potrà modificare alcune impostazioni della funzioni da rendere disponibili agli altri utenti di \textit{Etherless};
-	\item \textbf{Pre-condizioni:} l'utente ha eseguito il \textit{"deploy\glos"} di almeno una funzione su \textit{Etherless};
-	\item \textbf{Post-condizioni:} verranno modificate le impostazioni di una determinata funzione e saranno rese visibili agli altri utenti della piattaforma. L'utente visualizzerà a schermo l'esito del comando;
+	\item \textbf{Descrizione:} l'utente che ha eseguito l'autenticazione a \textit{Etherless} mediante l'utenza \textit{Ethereum\glo} e, disponendo di una funzione JavaScript da rendere utilizzabile sulla piattaforma, ha accesso ai comandi dedicati agli utenti sviluppatori;
+	\item \textbf{Pre-condizioni:} l'utente ha eseguito l'accesso al sistema e e possiede una funzione JavaScript da caricare sulla piattaforma;
+	\item \textbf{Post-condizioni:} l'utente potrà eseguire i comandi messi a disposizione per gli utenti sviluppatori;
 	\item \textbf{Scenario principale:}
 	\begin{enumerate}
-		\item L'utente esegue la modifica delle impostazioni di una funzione mediante l'apposito comando. Avrà dunque la possibilità di modificarne:
-		\begin{itemize}
-			\item costo;
-			\item descrizione;
-			\item firma.
-		\end{itemize}
-		\item Il sistema visualizzerà su schermo l'esito dell'operazione effettuata.
+		\item L'utente può eseguire il il deploy di una propria funzione JavaScript (UC17);
+		\item L'utente può modificare le impostazione di una sua funzione presente nel sistema (UC18);
+		\item L'utente può rimuovere una sua funzione presente nel sistema (UC19);
+		\item L'utente può aggiornare il codice di una sua funzione presente nel sistema (UC20);
+		\item L'utente può eseguire le operazioni descritte da UC18, UC19, UC20 solo se la funzione esiste all'interno della piattaforma, quindi quando non si presenta UC21.
 	\end{enumerate}
-	\item \textbf{Inclusioni:}
-	\begin{itemize}
-		\item \textbf{UC18:} l'utente può modificare le impostazioni di una sua funzione solo se già presente in \textit{Etherless}.
-	\end{itemize}
 \end{itemize}

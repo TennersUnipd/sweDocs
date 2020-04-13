@@ -1,12 +1,19 @@
-\subsubsection{UC9.2 - Inserimento parametri funzione}
+\subsubsection{UC9.2 - Visualizzazione risultato ricerca}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\linewidth]{res/img/UC9.2.jpg}
+	\caption{Diagramma UC9.2 - Visualizzazione risultato ricerca}
+\end{figure}
 \begin{itemize}
 	\item \textbf{Attori primari:} Utente autenticato;
-	\item \textbf{Descrizione:} l'utente potrà inserire tramite \textit{CLI\glo} il valore dei parametri della funzione presente su \textit{Etherless} da eseguire; 
-	\item \textbf{Pre-condizioni:} l'utente ha inserito da \textit{CLI\glo} il comando "run" seguito dal nome della funzione di interesse;
-	\item \textbf{Post-condizioni:} l'utente ha inserito, a seguito del nome della funzione da eseguire, i valori dei parametri;
-	\item \textbf{Scenario principale:} l'utente inserisce i valori dei parametri della funzione che vuole eseguire;
-	\item \textbf{Estensioni:} 
-	\begin{itemize}
-		\item \textbf{UC9.4}: se il numero dei parametri inseriti non corrispondono ai parametri richiesti dalla funzione inserita.
-	\end{itemize}
+	\item \textbf{Descrizione:} l'utente visualizzerà sulla \textit{CLI\glo} i dettagli relativi alla funzione (unica in \textit{Etherless}) ricercata. L'utente potrà dunque visualizzare a schermo i dettagli di una sola funzione corrispondente alla ricerca effettuata;
+	\item \textbf{Pre-condizioni:} l'utente ha eseguito il comando "find";
+	\item \textbf{Post-condizioni:} \textit{CLI\glo} visualizza le informazioni relative alla funzione;
+	\item \textbf{Scenario principale:} il sistema mostrerà sulla \textit{CLI\glo} le informazioni relative alla funzione ricercata.
+%    		\begin{itemize}
+%    			\item autore;
+%    			\item costo;
+%    			\item descrizione;
+%    			\item firma della funzione.
+%    		\end{itemize}
 \end{itemize}
