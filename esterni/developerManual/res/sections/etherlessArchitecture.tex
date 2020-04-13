@@ -33,7 +33,7 @@ These three following sequence diagrams are informal and could not satisfy fully
 Some functionalities that rely on this communication flow are: functions listing, get function details.
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=0.8\textwidth]{res/img/pattern1.png}
+	\includegraphics[width=0.8\textwidth]{res/img/pattern2.jpg}
 	\caption{Communication pattern 1 overview}
 \end{figure}\\
 \noindent When a user launches a commands that requires the retrivial of information from the smart contract, a contract call is initiated. When the response is received, it gets displayed to the user through the command line window.\newline 
@@ -42,7 +42,7 @@ Some functionalities that rely on this communication flow are: functions listing
 In some cases the smart component will need to speak directly to the server component. Since smart contracts are unable to perform external calls, the only mean of communication is through Ethereum\glo events. There is a part of etherless-server that is always listening for network events and, once captured, an adeguate response is computed and sent back to the contract (via contract call).\newline Since the communication between the smart and server components is asynchronous , events are used to get back to the CLI\glo components as final step.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{res/img/pattern2.png}
+	\includegraphics[width=0.8\textwidth]{res/img/pattern1.jpg}
 	\caption{Communication pattern 2 overview}
 \end{figure}
 \noindent Some functionalities that rely on this communication flow are: function creation.
@@ -51,7 +51,7 @@ In some cases the smart component will need to speak directly to the server comp
 There might be cases when a resource needs to be deployed to the server component and after getting a successful response, the contract can be updated.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\textwidth]{res/img/pattern3.png}
+	\includegraphics[width=0.8\textwidth]{res/img/pattern3.jpg}
 	\caption{Communication pattern 3 overview}
 \end{figure}
 \noindent Some functionalities that rely on this communication flow are: function remote execution. 
