@@ -10,7 +10,7 @@ La gestione della configurazione consiste nel controllo degli oggetti che compon
 \subsubsection{Attività}
 \paragraph{Identificazione della configurazione}
 \subparagraph*{Condivisione e sistema di versionamento\glo}
-Per il versionamento del prodotto è stato scelto il software \textit{Git\glos}. Per condividere la repository in remoto, i membri del gruppo hanno optato per \textit{Github\glos}, la piattaforma per lo sviluppo collaborativo più rinomata. \\
+Per il versionamento del prodotto è stato scelto il software \textit{Git\glos}. Per condividere la repository in remoto, i membri del gruppo hanno optato per \textit{GitHub\glos}, la piattaforma per lo sviluppo collaborativo più rinomata. \\
 
 \noindent La scelta nell'utilizzo di questi due sistemi per versionamento e condivisione, è dettata dalla precedente esperienza da parte di alcuni membri del team. I componenti del gruppo che non hanno mai avuto esperienza, avranno supporto da parte dei restanti membri e saranno tenuti a documentarsi mediante le apposite guide condivise sui canali di comunicazione del gruppo. \\
 
@@ -39,7 +39,7 @@ Il numero di versione è rappresentato nel formato:\\\\
  \noindent Il numero di versione è applicato a ogni sottoprodotto in maniera indipendente.
  Esso viene poi riallineato a ogni rilascio del prodotto intero, ad esempio dopo un incremento, selezionando il numero di versione maggiore tra i suoi sottoprodotti.
  In questo modo sarà possibile avere coesione tra le diverse "componenti" e maggiore adesione al modello incrementale, stabilendo una correlazione tra i sotto-prodotti e il prodotto nella sua interezza.
- 
+
 
 \noindent Di seguito viene riportato un esempio per chiarire la relazione, in termini di versionamento, tra sotto-prodotto e prodotto complessivo:
 \begin{enumerate}
@@ -51,7 +51,7 @@ Il numero di versione è rappresentato nel formato:\\\\
 		\item\textbf{AdR:} v.2.2.3;
 	\end{itemize}
 	\item I prodotti delle attività (nel caso specifico i documenti), vengono allineati tutti alla versione maggiore fino a quel momento (v.2.7.0) rilevata prima di un rilascio;
-	\item Verrà infine valutato il versionamento relativo alla parte software e, in maniera analoga, verrà stabilito il numero di rilascio effettivo del prodotto intero. 
+	\item Verrà infine valutato il versionamento relativo alla parte software e, in maniera analoga, verrà stabilito il numero di rilascio effettivo del prodotto intero.
 \end{enumerate}
 
 
@@ -59,7 +59,7 @@ Il numero di versione è rappresentato nel formato:\\\\
 
 
 \subparagraph*{Gestione dei repository}
-Stando all'\textit{Analisi dei Requisiti 2.0.0}\doc sono stati individuati
+Stando all'\textit{Analisi dei Requisiti 3.0.0}\doc sono stati individuati
 tre componenti principali del prodotto software oltre ai documenti.
 Il gruppo ha dunque deciso di impostare la struttura dei repository in questo modo:\\\\
 
@@ -67,11 +67,8 @@ Il gruppo ha dunque deciso di impostare la struttura dei repository in questo mo
 	.1 /.
 	.2 etherless.
 	.3 etherless-cli.
-	.4 applicationConfigs.
 	.3 etherless-server.
-	.4 applicationConfigs.
 	.3 etherless-smart.
-	.4 applicationConfigs.
 	.3 docs.
 	.2 envConfigs.
 }
