@@ -23,8 +23,8 @@ Each contract class is composed by a set of methods.
 \subsubsection{EtherlessSmart}
 \begin{itemize}
 	\item \textbf{getBalance:} retrieves the amount of credits the contract itself has. The balance increases when function execution requests are triggered as part of the execution cost is kept by Etherless;
-	\item \textbf{listFunctions:} returns a structured list of all functions available and the all associated information; 
-	\item \textbf{findFunction:} returns all according information in regards to a single function, identified by its name; 
+	\item \textbf{listFunctions:} returns a structured list of all functions available and the all associated information;
+	\item \textbf{findFunction:} returns all according information in regards to a single function, identified by its name;
 	\item \textbf{createFunction:} handles the creation of a new function by checking all input requirements and sending it into the storage;
 	\item \textbf{runFunctions:} handles the request of a function execution requested by a user; it's a payable function, which means credits will credited to the contract from the caller wallet;
 	\item \textbf{moveCurrencies:} when a function execution is requested, this method will handle credit split between the involved parties;
@@ -45,7 +45,7 @@ Each contract class is composed by a set of methods.
 \end{itemize}
 \subsubsection{Utils}
 \begin{itemize}
-	\item \textbf{compareStrings:} compares to strings and returns wheater they are the same or not;
+	\item \textbf{compareStrings:} compares to strings and returns whether they are the same or not;
 	\item \textbf{concat:} returns a string by concatenating one after the other;
 	\item \textbf{uint2string:} returns a string representation of and integer.
 \end{itemize}

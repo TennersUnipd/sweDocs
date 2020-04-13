@@ -2,7 +2,7 @@
 \subsection{General Requirements}
 \subsubsection{Hardware requirements}
 The only hardware required is to own a CPU newer than a Pentium 4 with SSE2 instruction set.
-\subsubsection{Software requirments}
+\subsubsection{Software requirements}
 This application can run on GNU/Linux on any distribution newer than Ubuntu 14.04, MacOs from 10.10 onward and Windows from 7 and onward;
 Other than an operative system this application needs:
 \begin{enumerate}
@@ -21,7 +21,7 @@ For ease of use, the user can also install multiple packages in a single command
 	\includegraphics[width=\textwidth]{res/img/typescriptInstall.png}
 	\caption{Typescript install command}
 \end{figure}
-%\includegraphics[width=\textwidth]{res/img/typescriptInstall.png}\\\\   
+%\includegraphics[width=\textwidth]{res/img/typescriptInstall.png}\\\\
 Expected procedure outlook.
 \newpage
 \subsection{Software download}
@@ -73,7 +73,7 @@ Environment configuration files are \textbf{./.env} and \textbf{./.env.productio
 \\Each configuration specifies the following paramters:
 \begin{itemize}
 	\item \textbf{PROVIDER API}: connection string to the Ethereum\glo network;
-	\item \textbf{ABI PATH}: a path to the contract abi; this file is automatically updated through Etherscan when a new contract address is used;
+	\item \textbf{ABI PATH}: a path to the contract ABI; this file is automatically updated through Etherscan when a new contract address is used;
 	\item \textbf{CONTRACT ADDRESS}: deployed smart contract address;
 	\item \textbf{ETHSCAN}: an API key for accessing Etherscan service;
 	\item \textbf{AWS ENDPOINT}: base endpoint for calling serverless functions;
@@ -91,7 +91,7 @@ To run correctly this component the user needs to perform additional installatio
 \paragraph{Deploy on a local network}
  Before the deploy on a local network starts, the ganache server needs to be started on a separate terminal instance \code{ganache-cli}
 \begin{itemize}
-    \item \code{npm install -{}-dotenv-extended} : installs the package with all its dependencies;    
+    \item \code{npm install -{}-dotenv-extended} : installs the package with all its dependencies;
     \item \code{truffle build}: compiles the contracts;
     \item \code{truffle deploy -{}-network local}: deploys compiled contracts to local network (default connection parameters are used);
     \item \code{truffle test}: run contract tests.
@@ -131,9 +131,9 @@ The following components are provided for this component:
 	\item \textbf{local}: contracts are deployed on a local network;
 	\item \textbf{test}: contracts are deployed on the Ropsten\glo test network;
 \end{itemize}
-Each environment might be caracterized by different configuration parameters and they depend on the connection provider. Configurations can be found in the \textbf{truffle-config.js} file.
+Each environment might be characterized by different configuration parameters and they depend on the connection provider. Configurations can be found in the \textbf{truffle-config.js} file.
 \subsubsection{Infura}
-Infura is a service that provides access to Etherem networks through their owned network nodes.
+Infura is a service that provides access to Ethereum networks through their owned network nodes.
 \subsection{Etherless-Server}
 \subsubsection{Requirements}
 The following are required for correctly using and deploying etherless-server:
@@ -150,7 +150,7 @@ To be able to run and deploy etherless-server, the following steps are necessary
 	\item Configure serverless AWS credentials using the command\\\\\centerline{\code{serverless config credentials --provider aws --key <key> --secret <secret>}}\\
     \item \textbf{mocha}: to install mocha the user needs to run \code{npm install mocha -g}, this operation will install globally the command mocha which is used for testing;
     \item \textbf{eb}: to install eb cli please refer to the AWS Elastic Beanstalk documentation;
-    \item Configure eb by following the instrictions provided by: \\\\\centerline{\code{eb init -i}}\\
+    \item Configure eb by following the instructions provided by: \\\\\centerline{\code{eb init -i}}\\
 
 \end{enumerate}
 \subsubsection{Serverless Functions deployment}
