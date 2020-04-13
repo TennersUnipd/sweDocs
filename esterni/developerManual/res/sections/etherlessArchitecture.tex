@@ -22,9 +22,12 @@ Serverless\glo architecture is a software design pattern where applications are 
 \end{itemize}
 This choice gives us the advantage of not having to worry about server infrastructure or scalability.
 Also, JavaScript\glo functions uploaded by users are hosted and run through AWS Lambda which means they too take advantage of all serverless\glo features.
-\subsection{Event driven}
-This distributed asynchronous architecture consists of single-purpose event processing components that listen on events and process them.\newline
-As per requisites, this software design pattern has been used for communication between the three components when a user requests a function execution. The broker topology has been used, as there is not a central events mediator. Events are independent and the smart contract is used as broker as it is the only component that can emit events in the Ethereum\glo network. Event processors are both etherless-cli and etherless-server as they both listen for events at different stages. Check Communication pattern 2 for a more in-depth explanation of events usage.
+%\subsection{Event driven}
+%This distributed asynchronous architecture consists of single-purpose event processing components that listen on events and process them.\newline
+%As per requisites, this software design pattern has been used for communication between the three components when a user requests a function execution.
+%The broker topology has been used, as there is not a central events mediator. Events are independent and the smart contract is used as broker as it is the only component that can emit events in the Ethereum\glo network.
+%Event processors are both etherless-cli and etherless-server as they both listen for events at different stages.
+%Check Communication pattern 2 for a more in-depth explanation of events usage.
 \newpage
 \subsection{Communication}
 The communication between these three components is key in understanding the dynamics of the software. We can identify three patterns that can be used based on what the neccesity is.
