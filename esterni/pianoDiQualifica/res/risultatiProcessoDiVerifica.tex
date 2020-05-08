@@ -444,7 +444,7 @@ Le misurazioni hanno avuto tutto sommato un esito positivo. I documenti che non 
 				xticklabel=\year-\month-\day,
 			]
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/codecoverage.csv};
-			\draw[line width=0.1, green](2020-4-4,70)--(2020-4-10,70);
+			\draw[line width=0.1, green](2020-4-4,70)--(2020-5-8,70);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -746,7 +746,7 @@ Di seguito i risultati delle misurazioni della copertura funzionale.
 
 \subsubsection{Valutazioni}
 \paragraph{RQ}
-La copertura funzionale deve ancora raggiungere il valore ottimale. Ora che il team è riuscito a definire un'architettura, contiamo di completare le funzionalità sia quelle obbligatorie richieste dal capitolato, che quelle desiderabili. 
+La copertura funzionale deve ancora raggiungere il valore ottimale. Ora che il team è riuscito a definire un'architettura, contiamo di completare le funzionalità sia quelle obbligatorie richieste dal capitolato, che quelle desiderabili.
 
 \subsection{Manutenibilità}
 \subsubsection{Complessità Ciclomatica}
@@ -792,7 +792,7 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 			\addlegendentry{$max$}
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/complexity/min.csv};
 			\addlegendentry{$min$}
-			\draw[line width=0.1, green](2020-3-29,10)--(2020-4-10,10);
+			\draw[line width=0.1, green](2020-3-29,10)--(2020-5-8,10);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
