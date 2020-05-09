@@ -1,5 +1,10 @@
 \section{Troubleshooting}
-While using the application, error messages may appear, if the user does not enter correct data or does not follow the correct procedures. 
+While using the application, error messages may appear, if the user does not enter correct data or does not follow the correct procedures.
+\subsection{Installation errors}
+\begin{itemize}
+	\item \textbf{Unable to install dependences:} make sure to update npm references so ensure the package manager is aware of all latest available packages\\\\ \centerline{\code{npm update}}
+	\item \textbf{EACCESS error:} the package manager is unable to install global commands; please refer to the following page to gather further information on this issue\\\\\centerline{\code{https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally}}
+\end{itemize}
 \subsection{Common errors}
 \begin{itemize}
 	\item General errors: internet error, too many parameters;
@@ -16,8 +21,17 @@ While using the application, error messages may appear, if the user does not ent
 	\item Error file: file doesn't exist;
 	\item Error password: incorrect password.
 \end{itemize}
+\subsection{Update\glo errors}
+\begin{itemize}
+	\item Error cost: negative fee;
+	\item Error file: file doesn't exist;
+	\item Error password: incorrect password;
+	\item Invalid property: chosen property to update does not exist;
+	\item Error function: given function does not exist;
+\end{itemize}
 \subsection{Run errors}
 \begin{itemize}
 	\item Function name error: function doesn't exist;
+	\item Execution request: an error occurred while the function was executing;
 	\item Error password: incorrect password.
 \end{itemize}

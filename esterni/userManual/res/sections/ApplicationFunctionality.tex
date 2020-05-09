@@ -12,7 +12,7 @@ Once a user is logged, a session is created and it lasts until the user logs out
 %\end{figure}
 \subsubsection{Registration}
 To generate a brand new Ethereum account use the following command:\\\\
-\centerline{\code{signup <password>}}\\\\
+\centerline{\code{etherless signup <password>}}\\\\
 The password is a user-chosen string that will be used to encrypt your credentials locally.\\
 The system proceeds to register a brand new account and then displays the following values:
 \begin{itemize}
@@ -24,34 +24,34 @@ The system proceeds to register a brand new account and then displays the follow
 Example:
 	\begin{figure}[h]
 		\centering
-		\includegraphics[width=\textwidth]{res/img/Screenshot_signup.png}
+		\includegraphics[width=\textwidth]{res/img/signup.png}
 		\caption{Signup command}
 	\end{figure}\\
 \subsubsection{Login}
 If an account already exists and the intent is to use it for Etherless, then the private key can be used to login using the following command:\\\\
-\centerline{\code{login <privateKey> <password>}}\\\\
+\centerline{\code{etherless login <privateKey> <password>}}\\\\
 The password is a user-chosen string that will be used to encrypt your credentials locally.\\\\
 \textbf{Attention!} The account address is not necessary because it can be deducted from the private key.\\\\
 \begin{figure}[h]
 	\begin{center}
-	\includegraphics[width=\textwidth]{res/img/Screenshot_login.png}
+	\includegraphics[width=\textwidth]{res/img/login.png}
 	\caption{Login command}
 	\end{center}
 \end{figure}
 \subsubsection{Logout}
 To disconnect the currently logged account, use the following command:\\\\
-\centerline{\code{logout}}\\\\
+\centerline{\code{etherless logout}}\\\\
 This command will remove all session data and encrypted stored credentials. The password used during login or registration now becomes useless. To be able to use again Etherless functionalities, you will need to login again or generate a new account.\\
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{res/img/Screenshot_logout.png}
+	\includegraphics[width=\textwidth]{res/img/logout.png}
 	\caption{Logout command}
 \end{figure}
 \newpage
 \subsection{Commands guide}
 \subsubsection{List}
 This command will show you a list of all functions that have been uploaded to Etherless by its users and it's used as follows:\\\\
-\centerline {\code{list}}\\\\
+\centerline {\code{etherless list}}\\\\
 For each function found, the following data is displayed:
 \begin{itemize}
 	\item \textbf{NAME}: the name of the function which is used to uniquely identify it (eg. for execution request);
@@ -62,8 +62,26 @@ For each function found, the following data is displayed:
 Example:
 \begin{figure}[h]
 	\begin{center}
-	\includegraphics[width=\textwidth]{res/img/Screenshot_list.jpg}
+	\includegraphics[width=\textwidth]{res/img/list.png}
 	\caption{List command}
+	\end{center}
+\end{figure}
+\subsubsection{Find}
+Retrieves information about a given function and it's used as follows:\\\\
+\centerline {\code{etherless find <functionName>}}\\\\
+The following data is displayed for the searched function:
+\begin{itemize}
+	\item \textbf{NAME}: the name of the function which is used to uniquely identify it (eg. for execution request);
+	\item \textbf{COST}: the fee detracted from the account each time execution is requested;
+	\item \textbf{PROTOTYPE}: a description of the parameters the functions needs;
+	\item \textbf{DESCRIPTION}: a textual function description;
+	\item \textbf{OWNER}: a textual function description.
+\end{itemize}
+Example:
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=\textwidth]{res/img/find.png}
+	\caption{Find command}
 	\end{center}
 \end{figure}
 
@@ -86,20 +104,9 @@ Example:
 %	\caption{Log command}
 %\end{figure}}
 %aggiungere screen comando
-\subsubsection{Run}
-This command is used to request execution of a remote function. This is a synchronous command. Once launched it returns the result of the function or, in case the functions have some execution issues, an exception.\\\\
-\centerline{\code{run <functionName> <password> [parameters...]}}\\\\
-\\\\Other than the name of the the function to be run, password and parameters are necessary. Since the execution of the function will consume credit from your account, the private key needs to be accessed. Function parameters should be passed as function prototype instructs.\\\\
-\textbf{Attention!} The parameters passed to the function need to mirror prototype description, otherwise an error will probably occur.\\\\
-Example:
-\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{res/img/Screenshot_run.png}
-	\caption{Run command}
-\end{figure}
 \subsubsection{Create}
 This command is used to request execution of a remote function. This is a synchronous command. Once launched it returns the result of the function or, in case the functions have some execution issues, an exception.\\\\
-\centerline{\code{create <functionName> <description> <prototype> <cost> <functionFile> <password> [parameters...]}}\\\\
+\centerline{\code{etherless create <functionName> <description> <prototype> <cost> <functionFile> <password>}}\\\\
 \\\\
 Input parameters are:
 \begin{itemize}
@@ -115,24 +122,74 @@ Input parameters are:
 Example:
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{res/img/Screenshot_deploy.png}
+	\includegraphics[width=\textwidth]{res/img/create.png}
 	\caption{Create command}
 \end{figure}
-\subsubsection{Find}
-Retrieves information about a given function and it's used as follows:\\\\
-\centerline {\code{find <functionName>}}\\\\
-The following data is displayed for the searched function:
+
+\subsubsection{Run}
+This command is used to request execution of a remote function. This is a synchronous command. Once launched it returns the result of the function or, in case the functions have some execution issues, an exception.\\\\
+\centerline{\code{etherless run <functionName> <password> [parameters...]}}\\\\
+\\\\Other than the name of the the function to be run, password and parameters are necessary. Since the execution of the function will consume credit from your account, the private key needs to be accessed. Function parameters should be passed as function prototype instructs.\\\\
+\textbf{Attention!} The parameters passed to the function need to mirror prototype description, otherwise an error will probably occur.\\\\
+Example:
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{res/img/run.png}
+	\caption{Run command}
+\end{figure}
+\subsubsection{Set}
+This command is used to update a function property.\\\\
+\centerline {\code{etherless set <functionName> <property> <newValue> <password>}}\\\\
+The target function to update is identified by \textit{function name}. Only the owner of the function can update function properties.\\\\
+Properties that can be updated are the following:
 \begin{itemize}
-	\item \textbf{NAME}: the name of the function which is used to uniquely identify it (eg. for execution request);
-	\item \textbf{COST}: the fee detracted from the account each time execution is requested;
-	\item \textbf{PROTOTYPE}: a description of the parameters the functions needs;
-	\item \textbf{DESCRIPTION}: a textual function description;
-	\item \textbf{OWNER}: a textual function description.
+	\item \textbf{description}: to update the function description;
+	\item \textbf{cost}: to update the function cost for execution;
+	\item \textbf{prototype}: to update the function prototype.
 \end{itemize}
 Example:
 \begin{figure}[h]
 	\begin{center}
-	\includegraphics[width=\textwidth]{res/img/Screenshot_find.png}
-	\caption{List command}
+	\includegraphics[width=\textwidth]{res/img/set.png}
+	\caption{Set command}
+	\end{center}
+\end{figure}
+\subsubsection{Update}
+Updates the code of an already existing function:\\\\
+\centerline {\code{etherless update <functionName> <functionFile> <password>}}\\\\
+\textit{Function file} will contain a path to the function file on the file system.\\
+A user can only update his own functions. Further requests for function execution will result in usage of the new uploaded code.\\
+Example:
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=\textwidth]{res/img/update}
+	\caption{Update command}
+	\end{center}
+\end{figure}
+\subsubsection{Delete}
+Deletes a function from the service:\\\\
+\centerline {\code{etherless delete <functionName> <password>}}\\\\
+A user can only delete his own functions. Further requests for a deleted function will result in an error.\\
+Example:
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=\textwidth]{res/img/delete}
+	\caption{Delete command}
+	\end{center}
+\end{figure}
+\subsubsection{Log}
+Shows a list of all execution requests a user has taken in the past on his machine.\\\\
+\centerline {\code{etherless log}}\\\\
+Shows a list of past execution requests. The following data is displayed for each log row:
+\begin{itemize}
+	\item \textbf{name}: the name of the function requested;
+	\item \textbf{cost}: execution cost for function request;
+	\item \textbf{datetime}: execution date and time for requested function;
+\end{itemize}
+Example:
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=\textwidth]{res/img/log.png}
+	\caption{Log command}
 	\end{center}
 \end{figure}
