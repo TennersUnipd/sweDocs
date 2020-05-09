@@ -32,7 +32,7 @@ Si sono presi in esame i requisiti descritti nell'\textit{Analisi dei Requisiti\
 			\addlegendentry{$percos$}
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percds.csv};
 			\addlegendentry{$percds$}
-			\draw[line width=0.1, green](2020-03-26,50)--(2020-04-06,50);
+			\draw[line width=0.1, green](2020-03-26,50)--(2020-5-8,50);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -40,8 +40,8 @@ Si sono presi in esame i requisiti descritti nell'\textit{Analisi dei Requisiti\
 I valori attuali sono:\\
 \\
 \begin{math}
-PERC_{OS}=58,11\% \\
-PERC_{DS}=41,67\%
+PERC_{OS}=96,63\% \\
+PERC_{DS}=81,25\%
 \end{math}
 
 \subsubsection{Valutazioni}
@@ -718,7 +718,7 @@ Di seguito i risultati delle misurazioni della copertura funzionale.
 	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
 	\tabularnewline
 	\endfirsthead
-	Copertura funzionale & -  & - & 46,38 & - & Superato
+	Copertura funzionale & -  & - & 46,38 & 95,71 & Superato
 \end{longtable}
 \begin{center}
 	\begin{tikzpicture} [scale = 0.8]
@@ -739,7 +739,7 @@ Di seguito i risultati delle misurazioni della copertura funzionale.
 				xticklabel=\year-\month-\day,
 			]
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/funcoverage.csv};
-			\draw[line width=0.1,green](2020-3-26,90)--(2020-4-10,90);
+			\draw[line width=0.1,green](2020-3-26,90)--(2020-5-8,90);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
