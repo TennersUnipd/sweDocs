@@ -1,12 +1,16 @@
 \section{Test}
 In questa sezione vengono ricapitolati i test da eseguire sul prodotto con relativi codici, descrizioni e esiti, se presenti (altrimenti contrassegnati dalla sigla "ND"). I test seguono la logica descritta dal Modello V, di cui menzione e spiegazione è fatta nelle \textit{Norme di Progetto 3.0.0\docs}. La sezione sarà dunque progressivamente aggiornata con l'avanzamento del progetto, aggiungendo nuovi test e relativi esiti.
 
-Ciascun esito del test viene contrassegnato nei seguenti modi:
+Ogni test viene contrassegnato nei seguenti modi:
 \begin{itemize}
 	\item \textbf{ND:} se il test non è ancora stato implementato;
 	\item \textbf{I:} se il test è stato implementato.
 \end{itemize}
-
+Inoltre ciascun test, se implementato, riporta l'esito effettivo nei seguenti modi:
+\begin{itemize}
+	\item \textbf{TP}: test implementato con successo;
+	\item \textbf{TN}: test implementato senza successo.
+\end{itemize}
 \subsection{Test di accettazione}
 I test di accettazione vengono effettuati per verificare il comportamento del prodotto software rispetto ai suoi requisiti. Essi verranno indicati nel seguente modo:\\\\
 \centerline{\textbf{TA[Priorità][Tipologia][Codice]}}\\\\
@@ -31,14 +35,14 @@ Dove:
 \setlength{\tabcolsep}{0.5em}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{1.5cm}|C{10cm}|C{1.5cm}|}
+\begin{longtable}{|C{1.5cm}|C{8cm}|C{3cm}|C{1cm}|}
 	\arrayrulecolor{white}
 
 	\caption{Test di accettazione }\\
 	\hline
 	\rowcolor{header}
 
-	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Esito}
+	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Implementazione}& \textbf{Esito}
 	\tabularnewline
 	\endfirsthead
 
@@ -253,14 +257,14 @@ Dove:
 \end{itemize}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{1.5cm}|C{10cm}|C{1.5cm}|}
+\begin{longtable}{|C{1.5cm}|C{8cm}|C{3cm}|C{1cm}|}
 	\arrayrulecolor{white}
 
 	\caption{Test di integrazione}\\
 	\hline
 	\rowcolor{header}
 
-	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Esito}
+	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Implementazione}& \textbf{Esito}
 	\tabularnewline
 	\endfirsthead
 	TI1 &
@@ -360,14 +364,14 @@ Dove:
 
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{1.5cm}|C{10cm}|C{1.5cm}|}
+\begin{longtable}{|C{1.5cm}|C{8cm}|C{3cm}|C{1cm}|}
 	\arrayrulecolor{white}
 
 	\caption{Test di unità client}\\
 	\hline
 	\rowcolor{header}
 
-	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Esito}
+	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Implemetazione}& \textbf{Esito}
 	\tabularnewline
 	\endfirsthead
 
@@ -642,14 +646,14 @@ Dove:
 
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{1.5cm}|C{10cm}|C{1.5cm}|}
+\begin{longtable}{|C{1.5cm}|C{8cm}|C{3cm}|C{1cm}|}
 	\arrayrulecolor{white}
 
 	\caption{Test di unità smart-contract}\\
 	\hline
 	\rowcolor{header}
 
-	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Esito}
+	\textbf{Codice} & \textbf{Descrizione test}  &\textbf{Implementazione}& \textbf{Esito}
 	\tabularnewline
 	\endfirsthead
 
