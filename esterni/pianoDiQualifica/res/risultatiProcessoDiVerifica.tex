@@ -47,6 +47,10 @@ PERC_{DS}=81,25\%
 \subsubsection{Valutazioni}
 \paragraph{RQ}
 I risultati sono in linea con lo sviluppo del software. Il team si aspettava questo valore ed è fiducioso, per quanto riguarda la percentuale dei requisiti desiderabili soddisfatti, di raggiungere il valore ottimale entro la prossima revisione di avanzamento.
+\paragraph{RA}
+Entrambi gli indici hanno superato il valore desiderbile. Con questo ci avviamo al
+completamento del software e ci aspettiamo di soddisfare tutti i requisiti alla consegna. I risultati rispecchiano la soddisfazione del proponente durante le riunioni.
+
 
 \subsection{Progettazione}
 Una volta chiara l'architettura si è proceduto con il calcolo degli indici che misurano le dipendenze in entrata e in uscita alle unità. Di seguito la tabella che contiene questi valori per tutti i moduli della nostra architettura:
@@ -188,7 +192,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Analisi dei requisiti & 57  & 62 & 61 & - & Superato \\
+	Analisi dei requisiti & 57  & 62 & 61 & 61 & Superato \\
 \end{longtable}
 \begin{center}
 	\begin{tikzpicture} [scale = 0.9]
@@ -208,7 +212,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	xticklabel=\year-\month-\day,
 	]
 	\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/adr.csv};
-	\draw [line width=0.1, green](2020-1-9, 60)--(2020-4-10, 60);
+	\draw [line width=0.1, green](2020-1-9, 60)--(2020-5-8, 60);
 	\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -229,7 +233,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Piano di Progetto & 68  & 70 & 68 & - & Superato \\
+	Piano di Progetto & 68  & 70 & 68 & 67 & Superato \\
 \end{longtable}
 
 \begin{tikzpicture}
@@ -249,7 +253,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
   xticklabel=\year-\month-\day,
   ]
     \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/pdp.csv};
-    \draw[line width=0.1, green](2020-1-9, 60)--(2020-4-10, 60);
+    \draw[line width=0.1, green](2020-1-9, 60)--(2020-5-8, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -268,7 +272,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Piano di qualifica & 57  & 66 & 76 & - & Superato \\
+	Piano di qualifica & 57 & 66 & 76 & 68 & Superato \\
 \end{longtable}
 \begin{tikzpicture}
   \begin{axis}[
@@ -287,7 +291,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     xticklabel=\year-\month-\day,
     ]
     \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/pdq.csv};
-    \draw[line width=0.1, green] (2020-1-9, 60)--(2020-4-10, 60);
+    \draw[line width=0.1, green] (2020-1-9, 60)--(2020-5-8, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -307,7 +311,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Norme di progetto & 64  & 70 & 76 & - & Superato \\
+	Norme di progetto & 64  & 70 & 76 & 76 & Superato \\
 \end{longtable}
 \begin{tikzpicture}
   \begin{axis}[
@@ -326,7 +330,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     xticklabel=\year-\month-\day,
     ]
     \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/ndp.csv};
-    \draw [line width=0.1, green](2020-1-9, 60)--(2020-4-10, 60);
+    \draw [line width=0.1, green](2020-1-9, 60)--(2020-5-8, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -345,7 +349,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
 	\tabularnewline
 	\endfirsthead
 
-	Studio di fattibilità & 60  & 62 & 62 & - & Superato \\
+	Studio di fattibilità & 60  & 62 & 62 & 62 & Superato \\
 \end{longtable}
 \begin{tikzpicture}
   \begin{axis}[
@@ -364,7 +368,7 @@ Mentre le tabelle utilizzano come riferimento le sole revisioni di avanzamento p
     xticklabel=\year.\month.\day,
     ]
     \addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/gulpeaseCSV/sdf.csv};
-    \draw[line width=0.1, green] (2020-1-9, 60)--(2020-4-10, 60);
+    \draw[line width=0.1, green] (2020-1-9, 60)--(2020-5-8, 60);
   \end{axis}
 \end{tikzpicture} \\
 
@@ -422,6 +426,9 @@ Gli esiti delle misurazioni ottenute in seguito alle correzioni segnalate in RR 
 \paragraph{RQ}
 Le misurazioni hanno avuto tutto sommato un esito positivo. I documenti che non sono stati modificati hanno mantenuto il loro valore. Il \textit{Piano di Qualifica\doc} ha ottenuto un indice più alto, forse a causa dell'aggiunta di parti meno discorsive che hanno alzato il numero di frasi conteggiate. Alcuni documenti hanno avuto un lieve peggioramento nell'indice associato, mantenendo tuttavia valori più che sufficienti.
 
+\paragraph{RA}
+I documenti risultano in buono stato. In generale si registra qualche inflessione negativa, dato che rispecchia la correzione di alcune parti, con parti più discorsive che abbaso il valore. In conclusione i documenti sono pronti per la consegna finale e le correzioni sono state applicate in modo tempestivo.
+
 \subsection{Verifica}
 \subsubsection{Code Coverage}
 
@@ -452,7 +459,11 @@ Le misurazioni hanno avuto tutto sommato un esito positivo. I documenti che non 
 \paragraph{RQ}
 Il valore rilevato facendo la media tra i code coverage delle tre macro componenti del prodotto si aggira intorno al 70\%, valore prefissato come sufficiente. Tuttavia c'è ancora diversa disomogeneità nei test delle diverse componenti. Mentre etherless-cli e etherless-smart, ha una copertura di codice elevata, la parte etherless-server è stata al momento scarsamente verificata. Aumentando i test nella componente server e introducendo i test di unità e di integrazione per tutte le nuove funzionalità inserite, ci si aspetta di ottenere in data di collaudo, un valore più elevato.
 
-
+\paragraph{RA}
+Nonostante gli ultimi fix e l'aggiunta di nuove funzionalità etherless-cli non ha
+registrato nessun calo nel valore di code coverage, grazie all'implementazione di test
+contestuale all'implementazione. Avere dei test validi e automatici su tutto il codice c'è stato di grande aiuto, soprattutto nel gestire l'integrazione continua del software.
+Su alcune componenti si può sicuramente migliorare, ma per i nostri mezzi è il massimo che siamo riusciti a ottenere.
 
 \newpage
 \subsection{Pianificazione}
@@ -473,7 +484,7 @@ Per le misurazioni inerenti alla pianificazione non vengono misurati valori per 
 	\endfirsthead
 
 	Actual Cost (AC) & -  & \euro4.207,00 & \euro6.902,00 & \euro2.498,00 & Superato Ott.
-\end{longtable} 
+\end{longtable}
 \begin{center}
 \begin{tikzpicture} [scale = 0.9]
 	\begin{axis}[
@@ -748,6 +759,9 @@ Di seguito i risultati delle misurazioni della copertura funzionale.
 \paragraph{RQ}
 La copertura funzionale deve ancora raggiungere il valore ottimale. Ora che il team è riuscito a definire un'architettura, contiamo di completare le funzionalità sia quelle obbligatorie richieste dal capitolato, che quelle desiderabili.
 
+\paragraph{RA}
+Con l'avvicinarsi della consegna siamo riusciti a completare buona parte delle funzionalità. Il team ritiene che raggiungere il valore massimo sia impossibile, dato che si tratta di raffinamenti o funzionalità opzionali irraggiungibili con le nostre competenze e i nostri strumenti.
+
 \subsection{Manutenibilità}
 \subsubsection{Complessità Ciclomatica}
 Di seguito i risultati delle misurazioni della complessità ciclomatica.
@@ -819,7 +833,7 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 				xticklabel=\year-\month-\day,
 			]
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percComm.csv};
-			\draw[line width=0.1, green](2020-3-29,20)--(2020-4-10,20);
+			\draw[line width=0.1, green](2020-3-29,20)--(2020-5-8,20);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -830,4 +844,10 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 \begin{itemize}
 	\item Il valore di complessità ciclomatica di una componente è molto alto a causa di cicli annidati, sicuramente non accettabile. Il team ha concordato all'unanimità la necessità di diminuire la complessità di quel metodo entro il collaudo del prodotto e non introdurre ulteriori unità poco manutenibili.Tuttavia il valore medio e molto basso rispetto agli standard prefissati;
 	\item I commenti sono stati, nella prima parte di implementazione del prodotto, una priorità. Ciò consente di fornire una documentazione adeguata a futuri sviluppatori e aumentare la manutenibilità del prodotto. Come ci si aspetterebbe, tale valore è in costante crescita e si prevede un ulteriore incremento prima del collaudo effettivo del prodotto.
+\end{itemize}
+
+\paragraph{RA}
+\begin{itemize}
+	\item Dopo la Revisione di qualifica il team si è dedicato al miglioramento del codice, lavorando anche sull'indice di complessità ciclomatica. Il valore massimo è sensibilmente diminuito rimanendo comunque sopra la soglia accettabile. Il gruppo è consapevole che si può migliorare da questo punto di vista. Per quanto riguarda la media tra le componenti il valore rimane sotto controllo e sicuramente accettabile, segno di un codice in generale leggibile e riutilizzabile.
+	\item Il valore in percentuale dei commenti è sensibilmente diminuito a causa dell'aumento delle linee del codice. Il team ha notato che con l'aumento delle funzionalità queste ultime sono aumentate sensibilmente e non si è riusciti a tenere il passo con i commenti. In conclusione il valore rimane comunque soddisfacente e al di sopra del valore desiderbile.
 \end{itemize}
