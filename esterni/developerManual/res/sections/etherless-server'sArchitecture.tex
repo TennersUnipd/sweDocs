@@ -59,3 +59,5 @@ This component runs persistently listening events from Smart Contract deployed o
 	\item \textbf{uploadFunction} upload effectively a file.js containing the user's function.
 
 \end{itemize}
+\subsubsection{Extension}
+Extendability of the etherless-server component can come as a development of the \textit{Runner} or a new function added to the ones available on the serverless functions environment.\\\\Developing a new serverless function means creating its own file and logic and exposing the function itself to the serverless environment. The serverless framework keeps track of all the functions through the .yml configuration file. Adding a to the configuration will mean that on the next deploy, a lambda function will be created and be made pubicly available on the http endpoint.

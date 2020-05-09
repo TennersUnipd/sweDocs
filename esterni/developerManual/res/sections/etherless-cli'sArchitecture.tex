@@ -131,3 +131,25 @@ The way we used to instantiate all the classes is not elegant, because we use a 
     \item \textbf{parseArgs}: maps CLI\glo inputs to a command-specific inputs data structure;
     \item \textbf{exec}: command execution.
 \end{itemize}
+\subsection{Extensions}
+Extendability can be divided in two main categories:
+\begin{itemize}
+	\item commands;
+	\item network functionalities.
+\end{itemize}
+\subsubsection{Commands}
+Since application functionalities are mainly represented by the available commands, it is necessary to provide a quick way of adding a new command.
+The advised way of creating a new command is the following:
+\begin{itemize}
+	\item Create a subclass that extends the Command class. That will provide by definition all the crucial parts necessary to deploy a new command. The command syntax, arguments handling and command logic is then developed through the subclassing of the abstract methods;
+	\item Add the command to the list of available commands inside the "index.ts" file. The commands will then match the user-typed command to the relative command implementation.
+\end{itemize}
+The main command method "exec" should return a string representation of what the user should finally see on the screen.
+\subsubsection{Network}
+Extendability of the network is done through the re-definition of the main components by implementing the relative interface which are:
+\begin{itemize}
+	\item \textbf{Contract Interface:} a high-level representation and handling of the main smart contract;
+	\item \textbf{Session Interface:} provides functionality for handling sessions;
+	\item \textbf{Network Interface:} used to define a way of connecting to the Ethereum network.
+\end{itemize}
+

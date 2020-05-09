@@ -49,3 +49,12 @@ Each contract class is composed by a set of methods.
 	\item \textbf{concat:} returns a string by concatenating one after the other;
 	\item \textbf{uint2string:} returns a string representation of and integer.
 \end{itemize}
+\subsubsection{Extensions}
+Three main areas can be defined for further extendability:
+\begin{itemize}
+	\item \textbf{EtherlessSmart}: this is the main contract which exposes methods publicly available to the etherless-cli and etherless-server applications; adding a method here will make it callable from the outside world;
+	\item \textbf{FunctionsStorage}: adding new types of data to be stored or managing new storage operations should be handled in this class;
+\end{itemize}
+
+
+
