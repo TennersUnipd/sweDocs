@@ -26,7 +26,10 @@ Each contract class is composed by a set of methods.
 	\item \textbf{listFunctions:} returns a structured list of all functions available and the all associated information;
 	\item \textbf{findFunction:} returns all according information in regards to a single function, identified by its name;
 	\item \textbf{createFunction:} handles the creation of a new function by checking all input requirements and sending it into the storage;
-	\item \textbf{runFunctions:} handles the request of a function execution requested by a user; it's a payable function, which means credits will credited to the contract from the caller wallet;
+	\item \textbf{runFunction:} handles the request of a function execution requested by a user; it's a payable function, which means credits will credited to the contract from the caller wallet;
+	\item \textbf{setFunctionProperty:} updates a given property of a function to a new value. Only function owners can change properties;
+	\item \textbf{deleteFunction:} deletes a function from the storage. Only function owners can delete their functions;
+	\item \textbf{getArn:} return the remote resource identifier. Only function owners can request the resource identifier for their functions;
 	\item \textbf{moveCurrencies:} when a function execution is requested, this method will handle credit split between the involved parties;
 	\item \textbf{sendResponse:} an entry point for our server component which is used to forward a function request result to the client side;
 	\item \textbf{costOfFunction:} returns the cost of a given function, identified by its name; necessary to identify the amount of credits that need to be sent out while requesting execution;
@@ -40,7 +43,11 @@ Each contract class is composed by a set of methods.
 	\item \textbf{existsFunction:} checks if a function with a given name is available in the storage;
 	\item \textbf{storeFunction:} stores a function by setting accordingly values inside the storage properties;
 	\item \textbf{getFunctions:} returns a list of all stored functions;
+	\item \textbf{setFunctionProperty:} updates a function property;
+	\item \textbf{ifPropertyExists:} checks if a given propery name matches one that is part of the function;
 	\item \textbf{costOfFunction:}  returns the cost of a function;
+	\item \textbf{findIndexName:} searches for the position of a function;
+	\item \textbf{deleteFunction:} removes a function from the storage permanently. 
 	\item \textbf{buildFunction:} a utility method for properly formatting a function data structure.
 \end{itemize}
 \subsubsection{Utils}
@@ -48,6 +55,7 @@ Each contract class is composed by a set of methods.
 	\item \textbf{compareStrings:} compares to strings and returns whether they are the same or not;
 	\item \textbf{concat:} returns a string by concatenating one after the other;
 	\item \textbf{uint2string:} returns a string representation of and integer.
+	\item \textbf{stringToUint:} return an integer rapresentation of the given string;
 \end{itemize}
 \subsubsection{Extensions}
 Three main areas can be defined for further extendability:
