@@ -1,23 +1,59 @@
 \section{Troubleshooting}
-While using the application, error messages may appear, if the user does not enter correct data or does not follow the correct procedures. 
+While using the application, error messages may appear, if the user does not enter correct data or does not follow the correct procedures.
+\subsection{Installation errors}
+\begin{itemize}
+	\item \textbf{Unable to install dependences:} make sure to update npm references so ensure the package manager is aware of all latest available packages\\\\ \centerline{\code{npm update}}
+	\item \textbf{EACCESS error:} the package manager is unable to install global commands; please refer to the following page to gather further information on this issue\\\\\centerline{\code{https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally}}
+\end{itemize}
 \subsection{Common errors}
 \begin{itemize}
-	\item General errors: internet error, too many parameters;
-	\item Command not found error: given command does not match command syntax.
+	\item \textbf{Internet error:} no internet connection;
+%	\item Given too many parameters;
+	\item \textbf{Key derivation failed - possibly wrong password:} incorrect password;
+	\item \textbf{Command not found error:} given command does not match command syntax;
+	\item \textbf{Missing required argument};
+\end{itemize}
+\subsection{Logout errors}
+\begin{itemize}
+	\item \textbf{Already logged out.}
+\end{itemize}
+\subsection{Login errors}
+\begin{itemize}
+	\item \textbf{Private key must have 66 characters long: check the presence of the prefix 0x;}
+	\item \textbf{Already logged in.}
+\end{itemize}
+\subsection{Signup errors}
+\begin{itemize}
+	\item \textbf{Already logged in.}
 \end{itemize}
 \subsection{Find errors}
 \begin{itemize}
-	\item Function name error: function doesn't exist.
+	\item \textbf{Function not found:} function doesn't exist.
 \end{itemize}
-\subsection{Deploy\glo errors}
+\subsection{Create errors}
 \begin{itemize}
-	\item Error Name: existing name, too long name, special characters;
-	\item Error cost: negative fee;
-	\item Error file: file doesn't exist;
-	\item Error password: incorrect password.
+	\item \textbf{Resource not available:} function already exists on Etherless;
+	\item \textbf{Description too long:} description is longer than 50 characters;
+	\item \textbf{No existing path}: file doesn't exist.
+\end{itemize}
+\subsection{Update errors}
+\begin{itemize}
+	\item \textbf{No existing path}: file doesn't exist;
+	\item \textbf{Resource not available:} function name does not exists on Etherless or you're not the function owner.
+\end{itemize}
+\subsection{Delete errors}
+\begin{itemize}
+ 	\item \textbf{Resource not available:} function name does not exists on Etherless or you're not the function owner.
 \end{itemize}
 \subsection{Run errors}
 \begin{itemize}
-	\item Function name error: function doesn't exist;
-	\item Error password: incorrect password.
+	\item \textbf{Returned error: }insufficient funds for gas * price + value;
+	\item \textbf{Resource not available:} function name does not exists on Etherless.
 \end{itemize}
+\subsection{Set errors}
+\begin{itemize}
+	\item \textbf{Invalid property. Only cost, description and prototype can be updated};
+	\item \textbf{Resource not available:} function name does not exists on Etherless or you're not the function owner.
+\end{itemize}
+
+

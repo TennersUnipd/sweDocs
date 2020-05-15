@@ -1,5 +1,4 @@
-\section{Etherless-cli architecture}
-\subsection{The architecture}
+\subsection{Etherless-cli architecture}
 The Etherless-cli is the client component that communicates with the AWS applications and the smart contract in the Ethereum\glo network.
 This component is made with TypeScript and complied upon execution in Javascript ES6.
 The interaction with the program happens through the command-line interface.
@@ -12,15 +11,15 @@ To simplify the component, we divided it into two modules, Network Entities, and
 	\caption{Architecture overview diagram of Etherless-cli}
 \end{figure}
 
-\subsection{The Network Entities}
+\subsubsection{Network Entities}
 We designed the architecture of NetworkEntities with interoperability and ease of use in mind.
 We based the architecture on a \textbf{facade design pattern} that should expose at the user all the functionalities
 of the network through the use of specific interfaces without binding to a specific library for communication
 with the Ethereum\glo network.
-\subsubsection{Architecture overview}
+\paragraph{Architecture overview}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=\textwidth]{./res/img/NetworkFacade.png}
+	\includegraphics[width=\textwidth]{./res/img/networkEntities.jpeg}
 	\caption{Architecture overview diagram of Network Entities}
 \end{figure}
 The Network Entities module is made by:
@@ -34,27 +33,31 @@ The Network Entities module is made by:
 The Network Entities module should not expose the constructor of any classes.
 The correct way to interact and instantiate the NetworkFacade class is through the static method getNetworkFacadeInstance from NetworkUtils,
 this method instantiates our implementation of SessionInterface, ContractInterface, NetworkInterface, and uses them to instantiate the network facade.
-\subsubsection{Pros}
+\paragraph{Pros}
 This architecture has a good separation of external behavior and internal implementation,
 allowing the developers to use any Ethereum\glo network library, creating independence between every component.
-\subsubsection{Cons}
+\paragraph{Cons}
 This architecture has one major downside, it is difficult to add functionalities without accessing the NetworkFacade and the etherlessContract; We should consider the use of the \textbf{command design pattern} to solve this issue.
 Another disadvantage is that if a new developer need a new functionality from any of the interfaces every implementation should reflect the new definition.
-\subsubsection{Methods}
-\paragraph{NetworkFacade}
+\paragraph{Methods}
+\subparagraph{NetworkFacade}
 \begin{itemize}
     \item \textbf{signup}: registers a new user on the system;
     \item \textbf{logon}: logs in a new user;
     \item \textbf{logout}: logs out of the system currently logged user;
+    \item \textbf{getUserAccount:} returns user's credentials;
+    \item \textbf{callFunction:} executes the function on the \textit{Ethereum} network;
+    \item \textbf{createFunction}: uploads on the AWS endpoint the required function and register it on the eth network through the etherless-smart component
 	\item \textbf{getAllLoadedFunction}: returns the list of all available contract methods;
-    \item \textbf{callFunction}: calls the methods of the etherless-smart component; all requests to the smart contract goes through this method;
-    \item \textbf{runFunction}: requests execution of a remote function;
-    \item \textbf{createFunction}: uploads on the AWS endpoint the required function and register it on the eth network through the etherless-smart component;
-    \item \textbf{getPastLog}: return a list of past actions taken by the user;
-    \item \textbf{getCostOfFunction}: retrieves from the smart contract the cost of a specific function loaded on the service;
+	\item \textbf{getFunctionDetails:} retrieves from the smart contract the details about the requested function;
+	\item \textbf{getCostOfFunction}: retrieves from the smart contract the cost of a specific function loaded on the service;
+	\item \textbf{runFunction}: requests execution of a remote function;
+	\item \textbf{setFunctionProperty:} updates function properties like cost, description and prototype;
+	\item \textbf{deleteFunction:} deletes a function;
+	\item \textbf{updateFunction:} updates the user's function;    
     \item \textbf{disconnect}: disconnects the application from the network.
 \end{itemize}
-\paragraph{SessionInterface}
+\subparagraph{SessionInterface}
 \begin{itemize}
     \item \textbf{signup}: provides the signup procedure;
     \item \textbf{logon}: provides the logon procedure using already existing credentials;
@@ -62,36 +65,36 @@ Another disadvantage is that if a new developer need a new functionality from an
     \item \textbf{signTransaction}: signs the provided transaction with logged user account;
     \item \textbf{isUserSignedIn}: checks if there is a singed in user;
     \item \textbf{getUserAddress}: retrieves the user address;
-    \item \textbf{getBalance}:retrieves the balance of the logged in user account.
+    \item \textbf{getBalance}: retrieves the balance of the logged in user account;
+    \item \textbf{getAccount:} returns the account information.
 \end{itemize}
-\paragraph{ContractInterface}
+\subparagraph{ContractInterface}
 \begin{itemize}
-    \item \textbf{getListOfFunctions}: retrieves all the available contract's methods;
-    \item \textbf{getArgumentsOfFunction}: returns all the parameter required to run the requested contract method;
-    \item \textbf{isTheFunctionPayable}: returns weather a contract method is needs to receive ethers or not;
-    \item \textbf{estimateGasCost}: returns an estimate of how much gas is needed to perform a contract method call;
-    \item \textbf{getFunctionTransaction}: builds a transaction object related to a contract method call;
+	\item \textbf{isTheFunctionPayable:} returns if the requested function is payable;
+	\item \textbf{estimateGasCost}: returns an estimate of how much gas is needed to perform a contract method call;
+	\item \textbf{getFunctionTransaction}: builds a transaction object related to a contract method call;
+	\item \textbf{decodeResponse:} get in input the function with the relative output and decode the ABI response;
     \item \textbf{getLog}: returns past actions of the given eth account;
-    \item \textbf{getCallable}: maps a contract method name to a its callable form through the network;
     \item \textbf{getSignal}: start listening for a network event.
 \end{itemize}
-\paragraph{NetworkInterface}
+\subparagraph{NetworkInterface}
 \begin{itemize}
-    \item \textbf{getListOfFunctions}: retrieves all the available contract's methods;
-    \item \textbf{getArgumentsOfFunction}: returns all the parameter required to run the requested function.
+	\item \textbf{disconnect:} terminate the connection to the provider;
+    \item \textbf{sendTransaction}: this method sends an signed transaction;
+    \item \textbf{callMethod}: used to ask at the contract the execution of non payable methods;
+    \item \textbf{postRequest:} this method is used for postRequest with json body.
 \end{itemize}
-\paragraph{NetworkUtils}
+\subparagraph{NetworkUtils}
 \begin{itemize}
-    \item \textbf{getEtherlessFacade:}: returns a shared instance of the network interface;
-    \item \textbf{checkABIUpdate}: returns weather there is the need of updating smart contract ABI;
+    \item \textbf{getEtherlessNetworkFacadeInstance:}: initialize the NetworkFacade and returns an instance;
     \item \textbf{updateABI}: gets an updated copy of the contract ABI from a remote source;
-    \item \textbf{getABIFromFile}: returns a contract ABI retrieved from a local file.
+    \item \textbf{getAbi}: checks if the ABI is due for an update or returs the local one.
 \end{itemize}
 \newpage
-\subsection{Command Entities}
+\subsubsection{Command Entities}
 We base the CommandEntities component on the Command abstract class that is a kind of command design pattern, this means that to add any command to the CLI\glo the developer needs to extend the Command class and implements the exec method.
 The Command's constructor exposes the dependency from NetworkFacade using this kind of approach lets us work with mocks and separate the two components of the CLI\glo.
-\subsubsection{Architecture overview}
+\paragraph{Architecture overview}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\textwidth]{./res/img/Etherless-cli_commandEntities.jpg}
@@ -111,19 +114,19 @@ We implemented the basic command functionalities, extending the class abstract c
     \item \textbf{CreateCommand}: This class implements the create command and allows the user to upload in the system a new function to be executed through our service;
     \item \textbf{RunCommand}:This class implements the run command and allows the user to run a deployed function through our service, and moves the credit from his account to our and the function owner.
 \end{itemize}
-\subsubsection{Pros}
+\paragraph{Pros}
 This architecture has good expandability about the functionalities because if a developer wants to add a new function should only extend the command class and insert it in the list of function.
-\subsubsection{Cons}
+\paragraph{Cons}
 The way we used to instantiate all the classes is not elegant, because we use a method that reads from a list of all the classes that need to instantiate.
 
-\subsubsection{Methods}
-\paragraph{Commander}
+\paragraph{Methods}
+\subparagraph{Commander}
 \begin{itemize}
     \item \textbf{addCommand}: adds a command to the list of available CLI\glo commands;
     \item \textbf{start}: starts processing command input args;
     \item \textbf{start}: sets default CLI\glo information.
 \end{itemize}
-\paragraph{Command}
+\subparagraph{Command}
 \begin{itemize}
     \item \textbf{getDescription}: returns the command description;
     \item \textbf{getCommandAlias}: returns the command alias for the CLI\glo;
@@ -131,3 +134,25 @@ The way we used to instantiate all the classes is not elegant, because we use a 
     \item \textbf{parseArgs}: maps CLI\glo inputs to a command-specific inputs data structure;
     \item \textbf{exec}: command execution.
 \end{itemize}
+\subsection{Extensions}
+Extendability can be divided in two main categories:
+\begin{itemize}
+	\item commands;
+	\item network functionalities.
+\end{itemize}
+\subsubsection{Commands}
+Since application functionalities are mainly represented by the available commands, it is necessary to provide a quick way of adding a new command.
+The advised way of creating a new command is the following:
+\begin{itemize}
+	\item Create a subclass that extends the Command class. That will provide by definition all the crucial parts necessary to deploy a new command. The command syntax, arguments handling and command logic is then developed through the subclassing of the abstract methods;
+	\item Add the command to the list of available commands inside the "index.ts" file. The commands will then match the user-typed command to the relative command implementation.
+\end{itemize}
+The main command method "exec" should return a string representation of what the user should finally see on the screen.
+\subsubsection{Network}
+Extendability of the network is done through the re-definition of the main components by implementing the relative interface which are:
+\begin{itemize}
+	\item \textbf{Contract Interface:} a high-level representation and handling of the main smart contract;
+	\item \textbf{Session Interface:} provides functionality for handling sessions;
+	\item \textbf{Network Interface:} used to define a way of connecting to the Ethereum network.
+\end{itemize}
+
