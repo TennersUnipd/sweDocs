@@ -427,11 +427,71 @@ Gli esiti delle misurazioni ottenute in seguito alle correzioni segnalate in RR 
 Le misurazioni hanno avuto tutto sommato un esito positivo. I documenti che non sono stati modificati hanno mantenuto il loro valore. Il \textit{Piano di Qualifica\doc} ha ottenuto un indice più alto, forse a causa dell'aggiunta di parti meno discorsive che hanno alzato il numero di frasi conteggiate. Alcuni documenti hanno avuto un lieve peggioramento nell'indice associato, mantenendo tuttavia valori più che sufficienti.
 
 \paragraph{RA}
-I documenti risultano in buono stato. In generale si registra qualche inflessione negativa, dato che rispecchia la correzione di alcune parti, con parti più discorsive che abbaso il valore. In conclusione i documenti sono pronti per la consegna finale e le correzioni sono state applicate in modo tempestivo.
+I documenti risultano in buono stato. In generale si registra qualche inflessione negativa, dato che rispecchia la correzione di alcune parti, con parti più discorsive che abbassano il valore. In conclusione i documenti sono pronti per la consegna finale e le correzioni sono state applicate in modo tempestivo.
 
 \subsection{Verifica}
-\subsubsection{Code Coverage}
 
+\begin{longtable}{|C{4.5cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per la percentuale dei test soddisfatti}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR} & \textbf{RP} & \textbf{RQ} & \textbf{RA}
+	\tabularnewline
+	\endfirsthead
+	
+	Percentuale test soddisfatti	&	- & - & 72 & 97\\
+	\hline
+	\end{longtable}
+\subsubsection{Percentuale test soddisfatti}
+\begin{center}
+	\begin{tikzpicture} [scale = 0.8]
+	\begin{axis}[
+		title={Grafico per Percentuale test soddisfatti},
+		legend pos=outer north east,
+		xlabel={\textbf{Tempo}},
+		ylabel={\textbf{Valore}},
+		date coordinates in=x,
+		ymin=0,
+		ymax=100,
+		xtick=data,
+		xticklabel style={
+			rotate=90,
+			anchor=near xticklabel,
+		},
+		% set the label style of the `xtick's
+		xticklabel=\year-\month-\day,
+		]
+		\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percentualeTest.csv};
+		\draw[line width=0.1, green](2020-4-23,70)--(2020-5-9,70);
+		\end{axis}
+	\end{tikzpicture} \\
+\end{center}
+\subsubsection{Valutazioni}
+\paragraph{RA}
+Il gruppo ha implementato un gran numero di test di unità e di integrazione e con un'alta percentuale rispetto a quella prefissata. 
+
+
+
+\subsubsection{Code Coverage}
+\begin{longtable}{|C{4.5cm}|C{2cm}|C{2cm}|C{2cm}|C{2cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per la code coverage}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR} & \textbf{RP} & \textbf{RQ} & \textbf{RA}
+	\tabularnewline
+	\endfirsthead
+	
+	
+	
+	Code Coverage	&	- & - & 72 & 73\\
+	\hline
+\end{longtable}
 \begin{center}
 	\begin{tikzpicture} [scale = 0.8]
 		\begin{axis}[
@@ -462,8 +522,7 @@ Il valore rilevato facendo la media tra i code coverage delle tre macro componen
 \paragraph{RA}
 Nonostante gli ultimi fix e l'aggiunta di nuove funzionalità etherless-cli non ha
 registrato nessun calo nel valore di code coverage, grazie all'implementazione di test
-contestuale all'implementazione. Avere dei test validi e automatici su tutto il codice c'è stato di grande aiuto, soprattutto nel gestire l'integrazione continua del software.
-Su alcune componenti si può sicuramente migliorare, ma per i nostri mezzi è il massimo che siamo riusciti a ottenere.
+contestuale all'implementazione. Avere dei test validi e automatici su tutto il codice è stato di grande aiuto, soprattutto nel gestire l'integrazione continua del software.
 
 \newpage
 \subsection{Pianificazione}
@@ -713,6 +772,9 @@ L'investimento iniziale precedente al RR ha consentito di acquisire dei vantaggi
 \paragraph{RQ}
 Come già segnalato in revisione di progettazione, l'avanzamento del progetto procede con maggiore velocità rispetto ai tempi prefissati e, dunque, con un minor dispendio di denaro. Le risorse non sfruttate a pieno in questo periodo e nello scorso, verranno sfruttate a pieno in quello precedente al collaudo per fornire una qualità del prodotto e dei processi più simile possibile ai valori prefissati.
 
+\paragraph{RA}
+Il progetto è stato concluso all'interno dei tempi prefissati, secondo le stime previste iniziali. Le misurazioni relative alla pianificazione hanno dimostrato che il progetto ha avuto, in data di consegna, un guadagno in termini di impiego di risorse.
+
 
 \subsection{Funzionalità}
 \subsubsection{Copertura Funzionale}
@@ -814,6 +876,23 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 
 
 \subsubsection{Percentuale dei commenti}
+Di seguito i risultati delle misurazioni della percentuale di commenti nel codice.
+\renewcommand{\arraystretch}{2.2}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{4.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|C{1.5cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Tabella dei valori per la percentuale di commenti}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Metrica} & \textbf{RR}  & \textbf{RP} & \textbf{RQ} & \textbf{RA} & \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	Percentuale commenti & -  & - & 35 & 34 & Superato
+\end{longtable}
+
 \begin{center}
 	\begin{tikzpicture} [scale = 0.8]
 		\begin{axis}[
@@ -833,7 +912,7 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 				xticklabel=\year-\month-\day,
 			]
 			\addplot table [col sep=comma,x=date,y=value,blue] {res/MisurazioniCSV/percComm.csv};
-			\draw[line width=0.1, green](2020-3-29,20)--(2020-5-8,20);
+			\draw[line width=0.1, green](2020-3-29,20)--(2020-5-14,20);
 		\end{axis}
 	\end{tikzpicture} \\
 \end{center}
@@ -849,5 +928,5 @@ Di seguito i risultati delle misurazioni della complessità ciclomatica.
 \paragraph{RA}
 \begin{itemize}
 	\item Dopo la Revisione di qualifica il team si è dedicato al miglioramento del codice, lavorando anche sull'indice di complessità ciclomatica. Il valore massimo è sensibilmente diminuito rimanendo comunque sopra la soglia accettabile. Il gruppo è consapevole che si può migliorare da questo punto di vista. Per quanto riguarda la media tra le componenti il valore rimane sotto controllo e sicuramente accettabile, segno di un codice in generale leggibile e riutilizzabile.
-	\item Il valore in percentuale dei commenti è sensibilmente diminuito a causa dell'aumento delle linee del codice. Il team ha notato che con l'aumento delle funzionalità queste ultime sono aumentate sensibilmente e non si è riusciti a tenere il passo con i commenti. In conclusione il valore rimane comunque soddisfacente e al di sopra del valore desiderbile.
+	\item Il valore in percentuale dei commenti, all'inizio del periodo, sensibilmente diminuito a causa dell'aumento delle linee del codice. Il team ha notato che con l'aumento delle funzionalità queste ultime sono aumentate e non si è riusciti inizialmente a tenere il passo con i commenti. Nell'ultima parte del progetto, il team ha focalizzato le sue attenzioni su questo aspetto ed è riuscito a riportare il valore ad una percentuale buona. In conclusione la percentuale di commenti rimane soddisfacente e ben al di sopra del valore desiderabile.
 \end{itemize}
