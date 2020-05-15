@@ -1,5 +1,5 @@
-\section{Etherless-server architecture}
-\subsection{Architecture overview}
+\subsection{Etherless-server architecture}
+\subsubsection{Architecture overview}
 Etherless-server architecture is composed of two different modules:
 \begin{itemize}
 	\item Funcions
@@ -10,11 +10,13 @@ Etherless-server architecture is composed of two different modules:
 	\includegraphics[width=\textwidth]{res/img/etherlessServer.jpg}
 	\caption{Architecture overview of etherless-server}
 \end{figure}
-\subsubsection{Functions}
+\paragraph{Functions}
 Functions module contains all the command functions which are stored on AWS Lambda. \\
 In particular, here will be implemented three files corresponding these three following commands:
 \begin{itemize}
 	\item \textbf{createFunction (FunctionDeployer):} creates a new AWS Lambda function with the JavaScript resource uploaded by developer users from CLI\glo;
+	\item \textbf{deleteFunction (FunctionDestroyer):} deletes an AWS Lambda function already uploaded by the same developer;
+	\item \textbf{updateFunction (FunctionUpdater):} updates an AWS Lambda function already existing on \textit{Etherless};
 	\item \textbf{removeFunction:} deletes the corresponding Lambda function on AWS Lambda;
 	\item \textbf{updateFunction:} used to update the implementation of a function already deployed by a user on AWS Lambda.
 \end{itemize}
@@ -25,26 +27,26 @@ All these three files depend on a class called "AWSInstance" containing all the 
 	\item \textbf{FN TIMEOUT:} about timeout given to function's execution.
 \end{itemize}
 
-\subsubsection{Runner}
+\paragraph{Runner}
 This component runs persistently listening events from Smart Contract deployed on Ethereum\glo Network. Once the smart-contract \textit{ABI\glo} has been downloaded, Runner use the "executeLambdaFunction" method to run the corresponding Lambda function on AWS.\\ Runner component is deployed on AWS Elastic Beanstalks which reduces management complexity and allows to keep it always alive.
 
 
 \subsection{Methods}
-\subsubsection{Runner}
-\begin{itemize}
-	\item \textbf{config:} Creates the smart-contract instance downloading the corresponding \textit{ABI\glo} and then calls start method;
-	\item \textbf{start:} Start to listen Ethereum\glo events emitted by Etherless-smart, calls "executeLambdaFunctionMethod" to run the Lambda requested and then returns the response;
-	\item \textbf{getAbi:} retrieves and parses the smart-contract \textit{ABI\glo} from Etherscan;
-	\item \textbf{executeLambdaFunction:} invoke the AWS Lambda function requested;
-	\item \textbf{transactContractMethod:} calls a smart-contract method through a transaction.
-\end{itemize}
-\subsubsection{AWSInstance}
-\begin{itemize}
-	\item \textbf{getLambda:} returns a new AWS Lambda object;
-	\item \textbf{getRuntime:} returns the version of the AWS runtime;
-	\item \textbf{getRole:} returns the AWS Lambda function's execution role;
-	\item \textbf{getTimeout:} returns AWS Lambda function's \textit{timeout\glos}.
-\end{itemize}
+%\subsubsection{Runner}
+%\begin{itemize}
+%	\item \textbf{config:} Creates the smart-contract instance downloading the corresponding \textit{ABI\glo} and then calls start method;
+%	\item \textbf{start:} Start to listen Ethereum\glo events emitted by Etherless-smart, calls "executeLambdaFunctionMethod" to run the Lambda requested and then returns the response;
+%	\item \textbf{getAbi:} retrieves and parses the smart-contract \textit{ABI\glo} from Etherscan;
+%	\item \textbf{executeLambdaFunction:} invoke the AWS Lambda function requested;
+%	\item \textbf{transactContractMethod:} calls a smart-contract method through a transaction.
+%\end{itemize}
+%\subsubsection{AWSInstance}
+%\begin{itemize}
+%	\item \textbf{getLambda:} returns a new AWS Lambda object;
+%	\item \textbf{getRuntime:} returns the version of the AWS runtime;
+%	\item \textbf{getRole:} returns the AWS Lambda function's execution role;
+%	\item \textbf{getTimeout:} returns AWS Lambda function's \textit{timeout\glos}.
+%\end{itemize}
 \subsubsection{Runner}
 \begin{itemize}
 	\item \textbf{config:} Creates the smart-contract instance downloading the corresponding \textit{ABI\glo} and then calls start method;
@@ -55,7 +57,21 @@ This component runs persistently listening events from Smart Contract deployed o
 \end{itemize}
 \subsubsection{FunctionDeployer}
 \begin{itemize}
-	\item \textbf{createFunction:} calls prepareFunctionToStore and uploadFunction methods and then return the upload's result;
-	\item \textbf{uploadFunction} upload effectively a file.js containing the user's function.
-
+	\item \textbf{createFunction:} instantiate the FunctionDeployer class and returns the ARN of deploy;
+	\item \textbf{uploadFunction:}  sends the request to the AWS service and encapsulate it in a promise;
+	\item \textbf{prepareFunctionToStore:} prepare the data structure for the request.        .
 \end{itemize}
+\subsubsection{FunctionDestroyer}
+\begin{itemize}
+	\item \textbf{deleteFunction:} instantiate the class FunctionDestroyer and returns the result;
+	\item \textbf{letFunctionDelete:}  parse the data and sends the delete request;
+	\item \textbf{prepareFunctionToDelete:} prepare the data structure for the request.        .
+\end{itemize}
+\subsubsection{FunctionUpdater}
+\begin{itemize}
+	\item \textbf{updateFunction:} instantiate the class FunctionUpdater and returns the result;
+	\item \textbf{letUpdateFunction:}  prepare and sends the request to the AWS service for the upload of a new function;
+	\item \textbf{prepareFunctionToUpdate:} prepares the data structure for the update.        .
+\end{itemize}
+\subsubsection{Extension}
+Extendability of the etherless-server component can come as a development of the \textit{Runner} or a new function added to the ones available on the serverless functions environment.\\\\Developing a new serverless function means creating its own file and logic and exposing the function itself to the serverless environment. The serverless framework keeps track of all the functions through the .yml configuration file. Adding a to the configuration will mean that on the next deploy, a lambda function will be created and be made pubicly available on the http endpoint.
