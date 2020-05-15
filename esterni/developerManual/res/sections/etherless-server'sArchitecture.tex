@@ -1,5 +1,5 @@
-\section{Etherless-server architecture}
-\subsection{Architecture overview}
+\subsection{Etherless-server architecture}
+\subsubsection{Architecture overview}
 Etherless-server architecture is composed of two different modules:
 \begin{itemize}
 	\item Funcions
@@ -10,7 +10,7 @@ Etherless-server architecture is composed of two different modules:
 	\includegraphics[width=\textwidth]{res/img/etherlessServer.jpg}
 	\caption{Architecture overview of etherless-server}
 \end{figure}
-\subsubsection{Functions}
+\paragraph{Functions}
 Functions module contains all the command functions which are stored on AWS Lambda. \\
 In particular, here will be implemented three files corresponding these three following commands:
 \begin{itemize}
@@ -27,7 +27,7 @@ All these three files depend on a class called "AWSInstance" containing all the 
 	\item \textbf{FN TIMEOUT:} about timeout given to function's execution.
 \end{itemize}
 
-\subsubsection{Runner}
+\paragraph{Runner}
 This component runs persistently listening events from Smart Contract deployed on Ethereum\glo Network. Once the smart-contract \textit{ABI\glo} has been downloaded, Runner use the "executeLambdaFunction" method to run the corresponding Lambda function on AWS.\\ Runner component is deployed on AWS Elastic Beanstalks which reduces management complexity and allows to keep it always alive.
 
 

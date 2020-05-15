@@ -1,0 +1,10 @@
+\section{Verbale della riunione}
+	\begin{itemize}
+		\item \textbf{Implementazione del comando "log"}
+		Il team ha discusso le possibili metodologie di implementazione rispetto al comando "log", relativo all'esecuzione di ogni singola funzione da parte dell'utente finale, avente ciascuna vantaggi e svantaggi. 
+		\begin{itemize}
+			\item \textbf{Log con raccolta delle informazioni dal contratto:} il team ha esaminato la possibilità di utilizzare le API di Etherscan oppure di Web3 per prelevare le informazioni relative alle richieste di esecuzione delle funzioni da parte dell'utente. Sebbene fosse la modalità di implementazione, alcuni componenti del gruppo hanno avuto modo di testare che non era possibile recuperare in modo completo e facile tali informazioni direttamente dallo \textit{smart-contract\glos};
+			\item \textbf{Log locale:} il team ha deciso di implementare il log localmente alla macchina utilizzata, senza alcuna iterazione con il contratto. Alla ricezione di risposta in seguito ad un comando "run", vengono salvate all'interno di un file locale le informazioni relative all'orario di esecuzione, al nome della funzione chiamata e al suo costo. Richiamando successivamente il comando "log", verranno prelevate le informazioni da questo file salvato localmente e visualizzate a display. Gli svantaggi di questo approccio sono chiaramente relative al cambio di terminale: se un utente, autenticato su una macchina, decidesse di cambiare terminale, perderebbe tutte la cronologia delle esecuzioni poiché strettamente legate al dispositivo di esecuzione.
+		\end{itemize}
+
+	\end{itemize}
