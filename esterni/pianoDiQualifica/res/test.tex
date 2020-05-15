@@ -32,17 +32,19 @@ Dove:
 	\item \textbf{Codice:} indica il codice identificativo dei requisiti.
 \end{itemize}
 
+\noindent Per i test di accettazione non è stata inserita la colonna relativa agli esiti poichè, la loro verifica, deve avvenire insieme a tutti gli stakeholders (cliente compreso) coinvolti nel progetto.
+
 \setlength{\tabcolsep}{0.5em}
 \renewcommand{\arraystretch}{1.5}
 \rowcolors{2}{pari}{dispari}
-\begin{longtable}{|C{1.5cm}|C{8cm}|C{3cm}|C{1cm}|}
+\begin{longtable}{|C{1.5cm}|C{9cm}|C{3cm}|}
 	\arrayrulecolor{white}
 
 	\caption{Test di accettazione }\\
 	\hline
 	\rowcolor{header}
 
-	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Implementazione}& \textbf{Esito}
+	\textbf{Codice} & \textbf{Descrizione test}  & \textbf{Implementazione}
 	\tabularnewline
 	\endfirsthead
 
@@ -243,6 +245,7 @@ Dove:
 	TA1F18.2  &
 	L’utente deve poter visualizzare un messaggio di errore nel caso in cui il percorso specificato non corrisponde ad alcun file con estensione .js. &
 	ND \\
+	
 \end{longtable}
 
 
@@ -268,88 +271,49 @@ Dove:
 	\tabularnewline
 	\endfirsthead
 	TI1 &
-	Viene verificata l'effettivo logout e disconnessione dell'utente, a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificata l'effettivo logout e disconnessione dell'utente.  &
+	ND & TN\\
 
 	TI2 &
-	Viene verificata la disponibilità della funzionalità registrazione di una nuova utenza \textit{Ethereum\glo} a livello di interfaccia di rete.  &
-	I \\
+	Viene verificata la disponibilità della funzionalità registrazione di una nuova utenza \textit{Ethereum\glo}.  &
+	ND & TN\\
 
 	TI3 &
-	Viene verificata la disponibilità della funzionalità di accesso con credenziali già esistenti a livello di interfaccia di rete.  &
-	I \\
+	Viene verificata la disponibilità della funzionalità di accesso con credenziali già esistenti.  &
+	ND & TN\\
 
 	TI4 &
-	Viene verificata la corretta restituzione di tutte le funzioni caricate dagli utenti sul contratto a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificata la corretta restituzione di tutte le funzioni caricate dagli utenti sul contratto.  &
+	ND & TN \\
 
 	TI5 &
-	Viene verificata la corretta restituzione del costo di una funzione caricata da un utente sul contratto, a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificata la corretta restituzione di tutti i dettagli di una funzione caricata da un utente sul contratto.  &
+	ND & TN\\
 
 	TI6 &
-	Viene verificata la corretta esecuzione di una funzione remota, a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificata la corretta esecuzione di una funzione remota.  &
+	ND & TN\\
 
 	TI7 &
-	Viene verificato il corretto caricamento di una funzione sul contratto, a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificato il corretto caricamento di una funzione sul contratto.  &
+	ND & TN \\
 
 	TI8 &
-	Viene verificata la corretta eliminazione di una funzione sul contratto, a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificata la corretta eliminazione di una funzione sul contratto.  &
+	ND & TN\\
 
 	TI9 &
-	Viene verificato il corretto aggiornamento di una funzione sul contratto, a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificato il corretto aggiornamento di una funzione sul contratto.  &
+	ND & TN\\
 
 	TI10 &
-	Viene verificato la corretta restituzione della cronologia delle operazioni effettuate sul contratto, a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificato la corretta restituzione della cronologia delle operazioni effettuate sul contratto.  &
+	ND & TN\\
 
 	TI11 &
-	Viene verificato la corretta disconnessione di una sessione, a livello di interfaccia di rete.  &
-	ND \\
+	Viene verificato la corretta disconnessione di una sessione.  &
+	ND & TN\\
 
-	TI12 &
-	Viene verificato la corretta disconnessione di una sessione, a livello di interfaccia di rete.  &
-	ND \\
-
-	TI12 &
-	Viene verificato la corretta disconnessione di una sessione, a livello di interfaccia di rete.  &
-	ND \\
-
-	TI13 &
-	Viene verificata la corretta creazione di una funzione.  &
-	I \\
-
-	TI14 &
-	Viene verificata la corretta restituzione di tutte le funzioni aggiunte al sistema.  &
-	I \\
-
-	TI15 &
-	Viene verificata la corretta restituzione di tutti i dettagli di una specifica funzione del sistema.  &
-	I \\
-
-	TI16 &
-	Viene verificato il corretto rilevamento di una funzione non esistente .  &
-	I \\
-
-	TI17 &
-	Viene verificata la capacità di eseguire una funzione del sistema.  &
-	I \\
-
-	TI18 &
-	Viene verificata la restituzione corretta del costo (netto + costo di servizio) di esecuzione di una funzione.  &
-	I \\
-
-	TI19 &
-	Viene verificata la corretta transazione di credito in seguito all'esecuzione di una funzione.  &
-	I \\
-
-	TI20 &
-	Viene verificata la corretta transazione di credito in seguito all'esecuzione di una funzione.  &
-	I \\
 \end{longtable}
 
 \newpage
@@ -377,271 +341,295 @@ Dove:
 
 	TU1 &
 	Viene verificata la disponibilità della funzionalità registrazione di una nuova utenza \textit{Ethereum\glo} a livello di sessione.  &
-	I \\
+	I & TP\\
 
 	TU2 &
 	Viene verificata la disponibilità della funzionalità di accesso con credenziali già esistenti a livello di sessione.  &
-	I \\
+	I & TP\\
 
 	TU3 &
 	Viene verificata la disponibilità della funzionalità "logout" a livello di sessione.  &
-	I \\
+	I & TP\\
 
 	TU4 &
 	Viene verificata la disponibilità della funzionalità di firma di una transazione a livello di sessione.  &
-	I \\
+	I & TP\\
 
 	TU5 &
 	Viene verificata l'effettiva autenticazione dell'utente a livello di sessione.  &
-	I \\
+	I & TP\\
 
 	TU6 &
 	Viene verificato la corretta restituzione dell'indirizzo pubblico dell'account \textit{Ethereum\glo} dell'utente a livello di sessione.  &
-	I \\
+	I & TP\\
 
 	TU7 &
 	Viene verificata la corretta restituzione del bilancio dell'account \textit{Ethereum\glos}.  &
-	I \\
+	I & TP\\
 
 	TU8 &
 	Viene verificata la corretta restituzione dell'indirizzo pubblico e della \textit{private-key\glos}.  &
-	ND \\
+	I & TP\\
 
 	TU9 &
 	Viene verificata la corretta restituzione della lista delle funzionalità disponibili sul contratto.  &
-	I \\
+	I & TP\\
 
 	TU10 &
 	Viene verificata la corretta restituzione degli argomenti della funzionalità richiesta del contratto.  &
-	I \\
+	I & TP\\
 
 	TU11 &
 	Viene verificato se la funzionalità del contratto richiede un pagamento da parte dell'utente.  &
-	I \\
+	I & TP\\
 
 	TU12 &
 	Viene verificata la stima del costo di esecuzione di una funzione sulla rete \textit{Ethereum\glos}.  &
-	I \\
+	I & TP\\
 
 	TU13 &
 	Viene verificata la restituzione di una transazione necessaria per l'esecuzione di una funzione sulla rete \textit{Ethereum\glo}.  &
-	I \\
+	I & TP\\
 
 	TU14 &
 	Viene verificata la restituzione di una funzione eseguibile sul contratto disponibile sulla rete \textit{Ethereum\glo} senza necessità di una transazione.  &
-	ND \\
-
-	TU15 &
-	Viene verificata la restituzione della cronologia delle operazioni effettuate sul contratto.  &
-	ND \\
+	ND & TN \\
 
 	TU16 &
 	Viene verificata la cattura dei segnali provenienti dal contratto sulla rete \textit{Ethereum\glos}.  &
-	ND \\
+	I & TP\\
 
 	TU17 &
 	Viene verificata la corretta disconnessione dalla rete \textit{Ethereum\glos}.  &
-	I \\
+	I & TP\\
 
 	TU18 &
 	Viene verificata l'invio di una transazione firmata al contratto sulla rete \textit{Ethereum\glos}.  &
-	I \\
+	I & TP\\
 
 	TU19 &
 	Viene verificata la richiesta di esecuzione di una funzionalità sul contratto senza necessità di una transazione.  &
-	I \\
+	I & TP\\
 
 	TU20 &
 	Viene verificata la richiesta di esecuzione di una funzionalità sul contratto senza necessità di una transazione.  &
-	I \\
+	I & TP\\
 
 	TU21 &
-	Viene verificata l'effettivo logout e disconnessione dell'utente.  &
-	ND \\
+	Viene verificato l'effettivo logout e disconnessione dell'utente.  &
+	I & TP\\
 
 	TU22 &
 	Viene verificata la disponibilità della funzionalità registrazione di una nuova utenza \textit{Ethereum\glo} a livello di interfaccia di rete.  &
-	I \\
+	I & TP\\
 
 	TU23 &
 	Viene verificata la disponibilità della funzionalità di accesso con credenziali già esistenti a livello di interfaccia di rete.  &
-	I \\
+	I & TP\\
 
 	TU24 &
 	Viene verificata la corretta restituzione di tutte le funzioni caricate dagli utenti sul contratto a livello di interfaccia di rete.  &
-	I \\
+	I & TP\\
 
 	TU25 &
 	Viene verificata la corretta restituzione del costo di una funzione caricata da un utente sul contratto, a livello di interfaccia di rete.  &
-	I \\
+	I & TP\\
 
 	TU26 &
 	Viene verificata la corretta esecuzione di una funzione remota, a livello di interfaccia di rete.  &
-	ND \\
+	I & TP\\
 
 	TU27 &
 	Viene verificato il corretto caricamento di una funzione sul contratto, a livello di interfaccia di rete.  &
-	ND \\
+	I & TP\\
 
 	TU28 &
 	Viene verificata la corretta eliminazione di una funzione sul contratto, a livello di interfaccia di rete.  &
-	ND \\
+	I & TP\\
 
 	TU29 &
 	Viene verificato il corretto aggiornamento di una funzione sul contratto, a livello di interfaccia di rete.  &
-	ND \\
-
-	TU30 &
-	Viene verificato la corretta restituzione della cronologia delle operazioni effettuate sul contratto, a livello di interfaccia di rete.  &
-	ND \\
+	I & TP\\
 
 	TU31 &
 	Viene verificato la corretta disconnessione di una sessione, a livello di interfaccia di rete.  &
-	ND \\
+	I & TP\\
 
 	TU32 &
 	Viene verificata la corretta esecuzione del comando "create", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU33 &
 	Viene verificata la corretta restituzione della descrizione del comando "create", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU34 &
 	Viene verificata la corretta restituzione della alias del comando "create", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU33 &
 	Viene verificata la corretta restituzione del nome del comando "create", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU34 &
 	Viene verificata la corretta esecuzione del comando "find", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU35 &
 	Viene verificata la corretta restituzione della descrizione del comando "find", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU36 &
 	Viene verificata la corretta restituzione della alias del comando "find", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU37 &
 	Viene verificata la corretta restituzione del nome del comando "find", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU38 &
 	Viene verificata la corretta esecuzione del comando "list", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU39 &
 	Viene verificata la corretta restituzione della descrizione del comando "list", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU40 &
 	Viene verificata la corretta restituzione della alias del comando "list", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU41 &
 	Viene verificata la corretta restituzione del nome del comando "list", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU42 &
 	Viene verificata la corretta esecuzione del comando "login", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU43 &
 	Viene verificata la corretta restituzione della descrizione del comando "login", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU44 &
 	Viene verificata la corretta restituzione della alias del comando "login", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU45 &
 	Viene verificata la corretta restituzione del nome del comando "login", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU46 &
 	Viene verificata la corretta esecuzione del comando "logout", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU47 &
 	Viene verificata la corretta restituzione della descrizione del comando "logout", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU48 &
 	Viene verificata la corretta restituzione della alias del comando "logout", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU49 &
 	Viene verificata la corretta restituzione del nome del comando "logout", a livello di comando.  &
-	I \\
+	I & TP \\
 
 	TU50 &
 	Viene verificata la corretta esecuzione del comando "run", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU51 &
 	Viene verificata la corretta restituzione della descrizione del comando "run", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU52 &
 	Viene verificata la corretta restituzione della alias del comando "run", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU53 &
 	Viene verificata la corretta restituzione del nome del comando "run", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU54 &
 	Viene verificata la corretta esecuzione del comando "signup", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU55 &
 	Viene verificata la corretta restituzione della descrizione del comando "signup", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU56 &
 	Viene verificata la corretta restituzione della alias del comando "signup", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU57 &
 	Viene verificata la corretta restituzione del nome del comando "signup", a livello di comando.  &
-	I \\
+	I & TP\\
 
 	TU58 &
 	Viene verificata la corretta esecuzione del comando "delete", a livello di comando.  &
-	ND \\
+	I & TP\\
 
 	TU59 &
 	Viene verificata la corretta restituzione della descrizione del comando "delete", a livello di comando.  &
-	ND \\
+	I & TP\\
 
 	TU60 &
 	Viene verificata la corretta restituzione della alias del comando "delete", a livello di comando.  &
-	ND \\
+	I & TP\\
 
 	TU61 &
 	Viene verificata la corretta restituzione del nome del comando "delete", a livello di comando.  &
-	ND \\
+	I & TP\\
 
 	TU62 &
 	Viene verificata la corretta esecuzione del comando "update", a livello di comando.  &
-	ND \\
+	I & TP\\
 
 	TU63 &
 	Viene verificata la corretta restituzione della descrizione del comando "update", a livello di comando.  &
-	ND \\
+	I & TP\\
 
 	TU64 &
 	Viene verificata la corretta restituzione della alias del comando "update", a livello di comando.  &
-	ND \\
+	I & TP\\
 
 	TU65 &
 	Viene verificata la corretta restituzione del nome del comando "update", a livello di comando.  &
-	ND \\
+	I & TP\\
+	
+	TU66 &
+	Viene verificata la corretta esecuzione del comando "set", a livello di comando.  &
+	I & TP\\
+	
+	TU67 &
+	Viene verificata la corretta restituzione della descrizione del comando "set", a livello di comando.  &
+	I & TP\\
+	
+	TU68 &
+	Viene verificata la corretta restituzione della alias del comando "set", a livello di comando.  &
+	I & TP\\
+	
+	TU69 &
+	Viene verificata la corretta restituzione del nome del comando "set", a livello di comando.  &
+	I & TP\\
+	
+	TU70 &
+	Viene verificata la corretta esecuzione del comando "log", a livello di comando.  &
+	I & TP\\
+	
+	TU71 &
+	Viene verificata la corretta restituzione della descrizione del comando "log", a livello di comando.  &
+	I & TP\\
+	
+	TU72 &
+	Viene verificata la corretta restituzione della alias del comando "log", a livello di comando.  &
+	I & TP\\
+	
+	TU73 &
+	Viene verificata la corretta restituzione del nome del comando "log", a livello di comando.  &
+	I & TP\\
 \end{longtable}
 
 \renewcommand{\arraystretch}{1.5}
@@ -657,37 +645,37 @@ Dove:
 	\tabularnewline
 	\endfirsthead
 
-	TU66 &
+	TU74 &
 	Viene verificata la presenza di almeno una funzione nel contratto.  &
-	I \\
+	I & TP\\
 
-	TU67 &
+	TU75 &
 	Viene verificato il credito del contratto quando ne viene eseguito il deploy.  &
-	I \\
+	I & TP\\
 
-	TU68 &
+	TU76 &
 	Viene verificata la corretta creazione di una funzione.  &
-	I \\
+	I & TP\\
 
-	TU69 &
+	TU77 &
 	Viene verificata la corretta restituzione di tutte le funzioni aggiunte al sistema.  &
-	I \\
+	I & TP\\
 
-	TU70 &
+	TU78 &
 	Viene verificata la corretta restituzione di tutti i dettagli di una specifica funzione del sistema.  &
-	I \\
+	I & TP\\
 
-	TU71 &
+	TU79 &
 	Viene verificato il corretto rilevamento di una funzione non esistente .  &
-	I \\
+	I & TP\\
 
 %	TU72 &
 %	Viene verificata la capacità di eseguire una funzione del sistema.  &
 %	I \\
 
-	TU72 &
+	TU80 &
 	Viene verificata la restituzione corretta del costo  di esecuzione di una funzione.  &
-	I \\
+	I & TP\\
 
 %	TU74 &
 %	Viene verificata la corretta transazione di credito in seguito all'esecuzione di una funzione.  &
@@ -697,49 +685,89 @@ Dove:
 %	Viene verificata la corretta transazione di credito in seguito all'esecuzione di una funzione.  &
 %	I \\
 
-	TU73 &
+	TU81 &
 	Viene verificata la corretta transazione di credito dal contratto ad un utente.  &
-	ND \\
+	ND  & TN \\
 
-	TU74 &
+	TU82 &
 	Viene verificata la corretta eliminazione di una funzione.  &
-	ND \\
+	I & TP\\
 
-	TU75 &
+	TU83 &
 	Viene verificata il corretto aggiornamento di una funzione.  &
-	ND \\
+	I & TP\\
 
-	TU76 &
+	TU84 &
 	Viene verificata il corretto confronto tra due stringhe, a livello di smart contract.  &
-	I \\
+	I & TP\\
 
-	TU77 &
+	TU85 &
 	Viene verificata la corretta concatenazione tra due stringhe, a livello di smart contract.  &
 	I \\
 
-	TU78 &
+	TU86 &
 	Viene verificata la corretta conversione di un uint256 in stringa, a livello di smart contract.  &
-	I \\
+	I & TP\\
 
-	TU79 &
+	TU87 &
 	Viene verificata l'assenza di funzioni appena effettuato il deploy del contratto.  &
-	I \\
+	I & TP\\
 
-	TU80 &
+	TU88 &
 	Viene verificata l'impossibilità di aggiungere una funzione se già esistente.  &
-	I \\
+	I & TP\\
 
-	TU81 &
+	TU89 &
 	Viene verificata la presenza di una data funzione nel sistema.  &
-	I \\
+	I & TP\\
 
-	TU81 &
+	TU90 &
 	Viene verificata la corretta creazione della richiesta di salvataggio su AWS Lambda della funzione.  &
-	I \\
+	I & TP\\
 
-	TU82 &
+	TU91 &
 	Viene verificato il corretto invio della funzione su AWS Lambda.  &
-	I \\
+	I & TP\\
+	
+	TU92 &
+	Viene verificato la corretta restituzione dell'ARN all'utente.  &
+	I & TP\\
 
 
 \end{longtable}
+
+
+
+
+
+\renewcommand{\arraystretch}{1.5}
+\rowcolors{2}{pari}{dispari}
+\begin{longtable}{|C{1.5cm}|C{8cm}|C{3cm}|C{1cm}|}
+	\arrayrulecolor{white}
+	
+	\caption{Test di unità server}\\
+	\hline
+	\rowcolor{header}
+	
+	\textbf{Codice} & \textbf{Descrizione test}  &\textbf{Implementazione}& \textbf{Esito}
+	\tabularnewline
+	\endfirsthead
+	
+	TU93 &
+	Viene verificato il deploy di una nuova funzione.  &
+	I & TP\\
+	
+	TU94 &
+	Viene verificato la rimozione di una nuova funzione.  &
+	I & TP\\
+	
+	TU95 &
+	Viene verificato l'update di una nuova funzione.  &
+	I & TP\\
+	
+	
+	
+\end{longtable}
+
+
+
